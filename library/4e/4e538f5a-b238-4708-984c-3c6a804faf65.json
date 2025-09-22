@@ -895,7 +895,7 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "_hoverSprite": {
-      "__uuid__": "8f73bdfc-d7bb-48e3-9b00-8db3412b8dd2@f9941",
+      "__uuid__": "ac2c590c-5e3f-4ca5-a253-5c9ea1d35cdc@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_pressedSprite": {
@@ -907,7 +907,7 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "_duration": 0.1,
-    "_zoomScale": 1.2,
+    "_zoomScale": 1.1,
     "_target": {
       "__id__": 24
     },
@@ -1267,7 +1267,7 @@
     "_pressedSprite": null,
     "_disabledSprite": null,
     "_duration": 0.1,
-    "_zoomScale": 1.2,
+    "_zoomScale": 1.1,
     "_target": {
       "__id__": 38
     },

@@ -1530,3 +1530,1858 @@ Class ID: "1d91754ySdJrYQYeh4eXucR"
     at IpcRenderer.emit (node:events:519:28)
     at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
 2025-9-22 15:00:16 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:03:30 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:03:30 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:03:30 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:03:30 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:03:30 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:03:30 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:03:30 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:04:10 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:04:11 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:04:26 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:04:26 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:04:26 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:04:26 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:04:26 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:04:26 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:04:26 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:06:51 - error: [Scene] Rect width exceeds maximum margin: flowerpot/ 232 200Error: [Scene] Rect width exceeds maximum margin: flowerpot/ 232 200
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:165242:12)
+    at errorID (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:165420:5)
+    at SpriteFrame.checkRect (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:93168:13)
+    at SpriteFrame._refreshTexture (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:93647:74)
+    at SpriteFrame.set _textureSource [as _textureSource] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:92798:18)
+    at updateAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\asset\asset-watcher.ccc:1:4601)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\asset\asset-watcher.ccc:1:4997
+    at Map.forEach (<anonymous>)
+    at AssetUpdater.update (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\asset\asset-watcher.ccc:1:4905)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\asset\asset-watcher.ccc:1:4869
+    at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 15:06:53 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:06:53 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:06:53 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:06:53 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:06:53 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:06:53 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:06:53 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:06:53 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:07:13 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:07:29 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:07:29 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:07:29 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:07:29 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:07:29 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:07:29 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:07:29 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:09:00 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:09:01 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:09:01 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:09:01 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:09:01 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:09:01 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:09:01 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:09:01 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:09:20 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:09:20 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:09:21 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:13:43 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:13:43 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:13:43 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:13:43 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:13:43 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:13:43 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:13:43 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:18:15 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:18:15 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:18:15 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:18:15 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:18:15 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:18:15 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:18:16 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:18:16 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:19:56 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:19:56 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:19:56 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:22:52 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:22:52 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:22:52 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:22:52 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:22:52 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:22:52 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:22:52 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:23:01 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:27:05 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:27:05 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:27:05 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:27:05 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:27:05 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:27:05 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:27:05 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:29:16 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:29:16 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:29:16 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:29:16 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:29:16 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:29:17 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:29:17 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:29:17 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:29:53 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:30:24 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:30:24 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:30:24 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:30:24 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:30:25 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:30:25 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:30:25 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:33:09 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:33:09 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:33:45 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:33:45 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:33:45 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:33:45 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:33:45 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:33:45 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:33:45 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:34:02 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:34:02 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:34:19 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:34:19 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:34:19 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:34:19 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:34:19 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:34:19 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:34:19 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:36:43 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:36:44 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:36:54 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:36:54 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:36:54 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:36:54 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:36:55 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:36:55 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:36:55 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:43:25 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:45:32 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:45:32 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:45:32 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:45:32 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:45:32 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:45:33 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:45:33 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:46:26 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:46:26 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:46:26 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:46:26 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:46:26 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:46:26 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:46:26 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:46:26 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:46:26 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:46:49 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:46:49 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:46:49 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:46:49 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:46:49 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:46:49 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:46:50 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:46:50 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:47:04 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:47:04 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:47:04 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:47:04 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:47:04 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:47:04 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:47:05 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:47:05 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:47:05 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:47:20 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:47:20 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:47:20 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:47:20 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:47:20 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:47:20 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:47:20 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:47:20 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:47:20 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:47:38 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:47:39 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:47:39 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:47:39 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:47:39 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:47:39 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:47:39 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:47:39 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:47:39 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:48:02 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:48:02 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:48:02 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:48:02 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:48:02 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:48:02 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:48:03 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:48:03 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:48:03 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:48:17 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:48:17 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:48:17 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:48:17 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:48:17 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:48:17 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:48:17 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:48:17 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:48:17 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:48:18 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:48:18 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:48:18 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:50:01 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:50:02 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:51:04 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:51:04 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:51:04 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:51:04 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:51:04 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:51:04 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:51:04 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:53:06 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:53:06 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:53:06 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:53:06 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:53:06 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:53:07 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:53:07 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:53:07 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:56:33 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:56:33 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:56:51 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:56:51 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:56:51 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:56:51 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:56:51 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:56:51 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:56:51 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:57:17 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:57:18 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:58:09 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:58:09 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:58:09 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:58:09 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:58:09 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:58:09 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:58:09 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:58:41 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:58:41 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:58:41 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:58:41 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:58:41 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:58:41 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:58:41 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:58:42 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:58:42 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:58:42 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:59:08 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:59:08 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:59:08 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:59:08 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:59:08 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:59:09 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:59:09 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:59:09 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:59:20 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:59:20 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:59:35 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:59:35 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:59:35 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:59:35 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:59:35 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:59:35 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:59:35 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:59:42 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 15:59:53 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 15:59:53 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 15:59:53 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 15:59:53 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 15:59:54 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 15:59:54 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 15:59:54 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 16:01:54 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 16:01:55 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:01:55 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:01:55 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:01:55 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:01:55 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:01:55 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:01:55 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:01:55 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 16:13:21 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:13:22 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:13:22 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:13:22 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:13:22 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:13:22 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:13:22 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:13:22 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 16:13:39 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:13:45 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:13:45 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:13:45 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:13:45 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:13:46 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:13:46 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:13:46 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 16:15:27 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:16:29 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:16:29 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:16:29 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:16:29 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:16:29 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:16:29 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:16:29 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 16:18:18 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 16:18:18 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:18:18 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:18:18 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:18:18 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:18:18 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:18:18 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:18:18 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:18:18 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 16:18:27 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:18:45 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:18:45 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:18:45 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:18:45 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:18:45 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:18:45 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:18:45 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 16:20:33 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 16:20:33 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:20:33 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:20:33 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:20:33 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:20:33 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:20:33 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:20:33 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:20:33 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 16:22:55 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:22:55 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:22:55 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:22:55 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:22:55 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:22:56 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:22:56 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:22:56 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 16:26:49 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 16:26:49 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:27:08 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:27:08 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:27:08 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:27:08 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:27:09 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:27:09 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:27:09 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 16:30:20 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:31:25 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:31:25 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:31:25 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:31:25 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:31:26 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:31:26 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:31:31 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:31:31 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:31:32 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:31:33 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:31:33 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:31:33 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:31:33 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:31:34 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:31:36 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:31:39 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:31:41 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:31:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:31:41 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:31:58 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:32:00 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:32:01 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:32:02 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:32:05 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:32:06 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:32:13 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:32:20 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:32:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:32:31 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:29 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:33:29 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:33:29 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:33:29 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:33:29 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:33:29 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:33:29 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:33:35 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:36 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:37 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:37 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:37 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:37 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:38 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:38 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:38 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:39 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:39 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:39 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:41 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:43 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:43 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:43 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:44 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:44 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:44 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:44 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:45 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:45 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:48 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:49 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:33:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:33:50 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:07 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:35:07 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:35:07 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:35:07 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:35:07 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:35:08 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:35:08 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:35:13 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:13 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:20 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:26 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:28 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:31 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:32 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:33 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:34 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:36 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:37 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:40 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:40 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:41 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:43 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:43 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:43 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:43 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:47 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:47 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:49 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:50 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:35:50 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:35:51 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:38:12 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:38:12 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:38:12 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:38:12 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:38:12 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:38:13 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:38:13 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:38:18 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:38:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:38:19 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:38:20 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:38:26 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 16:40:16 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 16:40:16 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 16:40:16 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 16:40:16 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 16:40:16 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 16:40:16 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 16:40:20 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:40:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:40:25 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:40:25 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:40:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:40:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 16:40:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 16:40:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:06 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 17:01:06 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 17:01:06 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 17:01:06 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 17:01:06 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 17:01:06 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 17:01:06 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 17:01:14 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:15 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:16 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:17 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:18 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:19 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:20 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:22 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:22 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:23 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:27 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:27 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:35 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:36 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:39 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:45 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:52 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 17:01:53 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 17:01:53 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 17:01:53 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 17:01:53 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 17:01:53 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 17:01:53 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 17:01:53 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 17:01:57 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:01:57 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:01:59 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:02:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:03:20 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 17:03:48 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 17:03:48 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 17:03:48 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 17:03:48 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 17:03:48 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 17:03:48 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 17:04:24 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:04:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:04:25 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:04:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:04:29 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:04:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:04:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:04:31 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:04:37 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 17:04:37 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 17:12:42 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 17:12:42 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 17:12:42 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 17:12:42 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 17:12:42 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 17:12:42 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 17:12:47 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:12:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:12:49 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:12:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:12:50 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:12:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:13:35 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 17:13:36 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 17:13:36 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 17:13:36 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 17:13:36 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 17:13:36 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 17:13:36 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 17:13:36 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 17:13:41 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:13:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:13:42 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:13:43 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:13:44 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:13:44 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:13:45 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:13:45 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:13:46 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:13:47 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:13:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:13:47 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:13:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:13:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:13:49 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:13:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:13:50 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:13:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:14:02 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 17:14:02 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 17:14:03 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 17:14:03 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 17:14:03 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 17:14:03 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 17:14:03 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 17:14:03 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 17:14:07 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 17:14:07 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 17:14:59 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 17:14:59 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 17:14:59 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 17:14:59 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 17:15:00 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 17:15:00 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 17:15:04 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:04 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:04 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:05 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:06 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:07 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:09 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:09 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:09 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:09 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:11 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:11 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:13 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:14 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:15 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:15 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:15 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:15 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:18 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:18 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:20 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:20 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:20 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:21 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:21 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:23 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:23 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:23 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:23 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:24 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:24 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:26 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:26 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:27 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:27 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:28 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:28 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:29 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:15:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:15:39 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 17:59:04 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 17:59:05 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 17:59:15 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 17:59:16 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 17:59:17 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 17:59:17 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 17:59:28 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:59:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:59:29 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:59:32 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:59:41 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:59:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:59:42 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:59:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:59:55 - log: [PreviewInEditor] onBeginContact
+2025-9-22 17:59:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 17:59:56 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:04 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:05 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:05 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:06 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:07 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:07 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:08 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:09 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:09 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:10 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:10 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:12 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:12 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:12 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:12 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:13 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:13 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:14 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:14 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:15 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:16 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:16 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:17 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:19 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:19 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:21 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:21 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:25 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:25 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:25 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:26 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:27 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:28 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:28 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:00:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:00:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:03:44 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 18:03:44 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 18:03:44 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 18:03:44 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 18:03:44 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 18:03:45 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 18:03:45 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 18:03:54 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:03:54 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:03:55 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:03:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:03:56 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:03:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:03:57 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:03:57 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:03:58 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:03:58 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:03:58 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:03:59 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:03:59 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:03:59 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:03:59 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:03:59 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:00 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:01 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:01 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:01 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:01 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:01 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:02 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:03 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:03 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:03 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:04 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:04 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:04 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:05 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:06 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:06 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:07 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:08 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:08 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:09 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:09 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:09 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:09 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:09 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:10 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:50 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:50 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:52 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:54 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:54 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:54 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:54 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:55 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:56 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:57 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:58 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:04:59 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:04:59 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:05:00 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:05:00 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:05:03 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:05:07 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:05:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:05:13 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:05:16 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:05:19 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:05:19 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:05:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:05:20 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:05:23 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:05:25 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:05:43 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 18:05:43 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 18:06:21 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 18:06:21 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 18:06:21 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 18:06:21 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 18:06:21 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 18:06:22 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 18:13:18 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 18:13:19 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 18:13:19 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 18:13:19 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 18:13:19 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 18:13:20 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 18:13:22 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 18:13:28 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:28 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:32 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:32 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:34 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:34 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:35 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:35 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:36 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:36 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:36 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:36 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:36 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:37 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:37 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:38 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:39 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:39 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:39 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:39 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:39 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:39 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:41 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:41 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:42 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:43 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:43 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:43 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:43 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:44 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:44 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:45 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:45 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:45 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:45 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:46 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:46 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:46 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:48 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:49 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:49 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:50 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:50 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:50 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:51 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:51 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:51 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:51 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:52 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:52 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:53 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:53 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:53 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:53 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:54 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:54 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:54 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:55 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:13:56 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:13:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:00 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 18:14:01 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 18:14:07 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 18:14:07 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 18:14:07 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 18:14:07 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 18:14:08 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 18:14:09 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 18:14:18 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:18 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:19 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:19 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:19 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:20 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:21 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:22 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:22 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:23 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:23 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:24 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:25 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:25 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:26 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:26 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:27 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:28 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:29 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:30 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:31 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:31 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:32 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:32 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:32 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:32 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:32 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:32 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:32 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:32 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:33 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:33 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:34 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:34 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:14:35 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:14:35 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:33 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:34 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:34 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:35 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:36 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:36 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:38 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:39 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:39 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:39 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:40 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:40 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:41 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:41 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:42 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:46 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:46 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:47 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:48 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:20:49 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:20:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:21:25 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:21:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:21:28 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:21:34 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:21:35 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:21:36 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:21:52 - log: [PreviewInEditor] onBeginContact
+2025-9-22 18:21:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:23:08 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 18:23:09 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 18:23:09 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 18:23:09 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 18:23:09 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 18:23:09 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 18:23:10 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 18:23:17 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:23:25 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:23:47 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:23:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:23:51 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:23:52 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:24:02 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:24:02 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:24:22 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:24:23 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:24:27 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:24:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:46:14 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 18:46:19 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 18:46:19 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 18:46:19 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 18:46:19 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 18:46:19 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 18:46:20 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 18:46:32 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 18:46:32 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 18:46:32 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 18:46:32 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 18:46:32 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 18:46:33 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 18:46:33 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 18:46:44 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 18:46:44 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 18:46:44 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 18:46:44 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 18:46:44 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 18:46:45 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 18:46:45 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 18:46:52 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:46:52 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:46:52 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:46:53 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:46:53 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:46:53 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:46:55 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:46:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:46:55 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:46:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:46:56 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:46:57 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:46:57 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:46:57 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:46:57 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:46:57 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:46:57 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:46:58 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:04 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 18:47:05 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 18:47:05 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 18:47:05 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 18:47:05 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 18:47:05 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 18:47:06 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 18:47:25 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 18:47:30 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 18:47:30 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 18:47:30 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 18:47:30 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 18:47:31 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 18:47:31 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 18:47:42 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:43 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:43 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:43 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:44 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:45 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:45 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:46 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:46 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:46 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:46 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:46 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:51 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:51 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:51 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:51 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:51 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:52 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:54 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:54 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:54 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:54 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:54 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:54 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:54 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:54 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:54 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:47:55 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:47:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:42 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:42 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:42 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:44 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:44 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:44 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:44 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:45 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:45 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:45 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:45 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:45 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:46 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:47 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:48 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:48 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:48 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:50 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:50 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:51 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:53 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:53 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:53 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:53 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:55 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:55 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:56 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:56 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:58 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:58 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:48:58 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:48:58 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:00 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:00 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:00 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:00 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:01 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:01 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:01 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:01 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:06 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:06 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:07 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:07 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:07 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:08 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:08 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:10 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:10 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:10 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:10 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:12 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:12 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:12 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:12 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:12 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:12 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:13 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:13 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:13 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:13 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:13 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:13 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:15 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:15 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:15 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:16 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:18 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:18 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:18 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:19 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:19 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:19 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:20 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:20 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:20 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:20 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:23 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:23 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:23 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:25 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:26 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:26 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:28 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:28 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:49:29 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 18:49:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 18:54:09 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 19:25:44 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 19:25:44 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 19:25:47 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 19:25:48 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 19:25:48 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 19:25:49 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 19:25:56 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:25:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:25:56 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:25:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:00 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:00 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:01 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:01 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:03 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:03 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:04 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:04 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:04 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:04 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:04 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:04 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:09 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 19:26:10 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 19:26:21 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 19:26:21 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 19:26:21 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 19:26:21 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 19:26:22 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 19:26:22 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 19:26:46 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:46 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:46 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:46 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:47 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:47 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:48 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:50 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:50 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:51 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:55 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:55 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:56 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:56 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:57 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:58 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:58 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:58 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:58 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:59 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:59 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:26:59 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:26:59 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:27:00 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:27:00 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:27:00 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:27:01 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:27:01 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:27:02 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:27:02 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:27:02 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:27:03 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:27:03 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:27:03 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:27:04 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:27:10 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 19:35:18 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 19:35:18 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 19:35:18 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 19:35:21 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 19:35:22 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 19:35:22 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 19:35:32 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:33 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:33 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:34 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:35 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:35 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:35 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:39 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:40 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:41 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:41 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:43 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:44 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:44 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:45 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:45 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:45 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:46 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:48 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:48 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:51 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:51 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:55 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:57 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:35:58 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:35:59 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:00 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:00 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:00 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:01 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:01 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:01 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:02 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:03 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:03 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:03 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:03 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:04 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:04 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:04 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:04 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:05 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:05 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:05 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:05 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:05 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:05 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:06 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:06 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:08 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:08 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:09 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:10 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:10 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:10 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:12 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:14 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:14 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:14 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:14 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:15 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:15 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:15 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:15 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:16 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:17 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:17 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:19 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:19 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:22 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:22 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:22 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:25 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:26 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:31 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:31 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:31 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:31 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:31 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:31 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:31 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:33 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:34 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:34 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:35 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:35 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:36 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:36 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:58 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:58 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:36:58 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:36:59 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:00 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:00 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:00 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:00 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:01 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:01 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:02 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:02 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:02 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:02 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:03 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:03 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:03 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:03 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:05 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:05 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:06 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:06 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:08 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:08 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:08 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:08 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:09 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:09 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:10 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:10 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:10 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:11 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:12 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:12 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:12 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:13 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:14 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:14 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:14 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:15 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:15 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:15 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:15 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:15 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:16 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:17 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:17 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:17 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:19 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:20 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:21 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:22 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:23 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:26 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:28 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:30 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:31 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:31 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:32 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:33 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:33 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:34 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:34 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:35 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:36 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:37:40 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:37:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:40:09 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:40:10 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:40:11 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:40:13 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:40:13 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:40:13 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:40:13 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:40:14 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:40:14 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:40:15 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:41:45 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 19:41:46 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 19:41:46 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 19:41:46 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 19:41:46 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 19:41:47 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 19:41:47 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 19:41:53 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:41:53 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:03 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:03 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:04 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:04 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:04 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:05 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:06 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:06 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:07 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:07 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:07 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:08 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:08 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:08 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:09 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:09 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:09 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:09 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:11 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:11 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:12 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:12 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:13 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:13 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:14 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:15 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:16 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:16 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:17 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:17 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:18 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:18 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:18 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:19 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:19 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:20 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:20 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:20 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:21 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:22 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:22 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:22 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:22 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:23 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:23 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:23 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:23 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:24 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:42:24 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:42:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:45:38 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 19:45:39 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 19:45:39 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 19:45:39 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 19:45:39 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 19:45:40 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 19:45:40 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 19:45:46 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:45:46 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:45:47 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:45:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:45:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:45:50 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:45:50 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:45:51 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:45:52 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:45:52 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:45:53 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:45:53 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:45:54 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:45:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:45:56 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:45:59 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:46:19 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:46:22 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:46:23 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:46:23 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:46:24 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:46:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:46:24 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:46:25 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:46:25 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:46:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:46:27 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:46:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:16 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 19:48:16 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 19:48:16 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 19:48:16 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 19:48:16 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 19:48:16 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 19:48:17 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 19:48:17 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 19:48:23 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:23 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:23 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:24 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:25 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:25 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:25 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:25 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:26 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:26 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:26 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:27 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:27 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:27 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:28 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:28 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:28 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:28 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:29 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:29 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:29 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:30 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:30 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:31 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:31 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:31 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:31 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:32 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:32 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:32 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:33 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:34 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:34 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:34 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:35 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:35 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:35 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:36 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:36 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:36 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:36 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:37 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:37 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:37 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:37 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:38 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:38 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:38 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:38 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:39 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:39 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:40 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:40 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:41 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:41 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:41 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:42 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:42 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:42 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:43 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:43 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:43 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:44 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:45 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:45 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:46 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:46 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:46 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:47 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:48 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:48 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:48 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:49 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:49 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:52 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:52 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:52 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:53 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:53 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:53 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:54 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:54 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:54 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:54 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:55 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:55 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:55 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgRight<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:56 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:57 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:57 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:57 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgLeft<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:57 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:58 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:59 - log: [PreviewInEditor] onEndContact
+2025-9-22 19:48:59 - log: [PreviewInEditor] onBeginContact: selfname = FlowerImgMid<BoxCollider2D> othername = FlowerPotLayout<BoxCollider2D>
+2025-9-22 19:48:59 - log: [PreviewInEditor] onEndContact
