@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, instantiate, Node, resources, Sprite, SpriteFrame, UITransform, Vec3, Flower, _dec, _dec2, _class, _class2, _descriptor, _crd, ccclass, property, FlowerName, FlowerPlatform;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, BoxCollider2D, Component, instantiate, Node, resources, Sprite, SpriteFrame, UITransform, Vec3, Flower, _dec, _dec2, _class, _class2, _descriptor, _class3, _crd, ccclass, property, FlowerName, FlowerPlatform;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -21,6 +21,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       __checkObsolete__ = _cc.__checkObsolete__;
       __checkObsoleteInNamespace__ = _cc.__checkObsoleteInNamespace__;
       _decorator = _cc._decorator;
+      BoxCollider2D = _cc.BoxCollider2D;
       Component = _cc.Component;
       instantiate = _cc.instantiate;
       Node = _cc.Node;
@@ -37,7 +38,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       _cclegacy._RF.push({}, "1d91754ySdJrYQYeh4eXucR", "FlowerPlatform", undefined);
 
-      __checkObsolete__(['_decorator', 'Camera', 'Component', 'director', 'EventTouch', 'Input', 'input', 'instantiate', 'Node', 'resources', 'Scene', 'Sprite', 'SpriteFrame', 'sys', 'tween', 'UIOpacity', 'UITransform', 'Vec2', 'Vec3']);
+      __checkObsolete__(['_decorator', 'BoxCollider2D', 'Camera', 'Component', 'director', 'EventTouch', 'Input', 'input', 'instantiate', 'Node', 'resources', 'Scene', 'Sprite', 'SpriteFrame', 'sys', 'tween', 'UIOpacity', 'UITransform', 'Vec2', 'Vec3']);
 
       ({
         ccclass,
@@ -51,7 +52,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         return FlowerName;
       }({}));
 
-      _export("FlowerPlatform", FlowerPlatform = (_dec = ccclass('FlowerPlatform'), _dec2 = property(Node), _dec(_class = (_class2 = class FlowerPlatform extends Component {
+      _export("FlowerPlatform", FlowerPlatform = (_dec = ccclass('FlowerPlatform'), _dec2 = property(Node), _dec(_class = (_class2 = (_class3 = class FlowerPlatform extends Component {
         constructor() {
           super(...arguments);
 
@@ -102,7 +103,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 var flowerPotLayoutClone = instantiate(flowerPotLayout);
 
                 if (flowerPotLayoutClone) {
-                  this.InitFlowers(data[i], flowerPotLayoutClone);
+                  var collider = flowerPotLayoutClone.getComponent(BoxCollider2D);
+
+                  if (collider) {
+                    FlowerPlatform.s_FlowerPotTag += 1;
+                    collider.tag = FlowerPlatform.s_FlowerPotTag;
+                  }
+
+                  this.InitFlowers(collider.tag, data[i], flowerPotLayoutClone);
                   flowerPotLayoutClone.active = true;
                   flowerPotRoot.addChild(flowerPotLayoutClone);
                 }
@@ -118,21 +126,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }
         }
 
-        InitFlowers(data, flowerPotLayoutClone) {
+        InitFlowers(tag, data, flowerPotLayoutClone) {
           if (flowerPotLayoutClone) {
             var flowerRootBlack = flowerPotLayoutClone.getChildByName("FlowerRootBlack");
 
             if (data.length >= 1) {
-              this.setFlowerData(flowerRootBlack, data[1]);
+              this.setFlowerData(flowerRootBlack, tag, data[1]);
             }
 
             flowerRootBlack.active = false;
             var flowerRootLight = flowerPotLayoutClone.getChildByName("FlowerRootLight");
-            this.setFlowerData(flowerRootLight, data[0]);
+            this.setFlowerData(flowerRootLight, tag, data[0]);
           }
         }
 
-        setFlowerData(flowerRoot, data) {
+        setFlowerData(flowerRoot, tag, data) {
           if (data === void 0) {
             data = null;
           }
@@ -146,7 +154,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           if (data && data.left) {
             left.active = true;
-            this.setImg(left, data.left, -1);
+            this.setImg(left, data.left, -1, tag);
           } else {
             left.active = false;
           }
@@ -155,7 +163,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           if (data && data.mid) {
             mid.active = true;
-            this.setImg(mid, data.mid, 0);
+            this.setImg(mid, data.mid, 0, tag);
           } else {
             mid.active = false;
           }
@@ -164,7 +172,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           if (data && data.right) {
             right.active = true;
-            this.setImg(right, data.right, 1);
+            this.setImg(right, data.right, 1, tag);
           } else {
             right.active = false;
           }
@@ -173,7 +181,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         } //imgPos: 0-中间 1-右边 -1-左边
 
 
-        setImg(root, imgId, imgPos) {
+        setImg(root, imgId, imgPos, tag) {
           var img = null;
 
           if (root == null || root == undefined) {
@@ -199,17 +207,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
               imgNode.setRotationFromEuler(this.m_RotationRight);
             }
 
-            var flowerScript = imgNode.getComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
-              error: Error()
-            }), Flower) : Flower);
-
-            if (flowerScript == null || flowerScript == undefined) {
-              flowerScript = imgNode.addComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
-                error: Error()
-              }), Flower) : Flower);
-            }
-
-            flowerScript.init(root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight);
             imgNode.active = false;
             var uiTrans = imgNode.getComponent(UITransform);
 
@@ -230,6 +227,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                     img.spriteFrame = sp;
                   }
 
+                  var flowerScript = imgNode.getComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
+                    error: Error()
+                  }), Flower) : Flower);
+
+                  if (flowerScript == null || flowerScript == undefined) {
+                    flowerScript = imgNode.addComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
+                      error: Error()
+                    }), Flower) : Flower);
+                  }
+
+                  flowerScript.init(root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight, tag);
                   imgNode.active = true;
                 });
               }
@@ -239,7 +247,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }
         }
 
-      }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "m_PlatFormRoot", [_dec2], {
+      }, _class3.s_FlowerPotTag = 0, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "m_PlatFormRoot", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,

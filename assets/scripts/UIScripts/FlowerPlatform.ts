@@ -1,4 +1,4 @@
-import { _decorator, Camera, Component, director, EventTouch, Input, input, instantiate, Node, resources, Scene, Sprite, SpriteFrame, sys, tween, UIOpacity, UITransform, Vec2, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Camera, Component, director, EventTouch, Input, input, instantiate, Node, resources, Scene, Sprite, SpriteFrame, sys, tween, UIOpacity, UITransform, Vec2, Vec3 } from 'cc';
 import { Flower } from './Flower';
 const { ccclass, property } = _decorator;
 
@@ -12,6 +12,8 @@ export enum FlowerName{
 export class FlowerPlatform extends Component {
     @property(Node)
     m_PlatFormRoot:Node = null;
+
+    static s_FlowerPotTag:number = 0;
 
     m_RotationLeft:Vec3 = new Vec3(0, 0, 25);
     m_RotationRight:Vec3 = new Vec3(0, 0, -25);
@@ -55,7 +57,12 @@ export class FlowerPlatform extends Component {
                 for(var i:number = 0;i < flowerPotNum; ++i){
                     var flowerPotLayoutClone = instantiate(flowerPotLayout);
                     if(flowerPotLayoutClone){
-                        this.InitFlowers(data[i], flowerPotLayoutClone);                        
+                        var collider = flowerPotLayoutClone.getComponent(BoxCollider2D);
+                        if(collider){
+                            FlowerPlatform.s_FlowerPotTag += 1;
+                            collider.tag = FlowerPlatform.s_FlowerPotTag;
+                        }
+                        this.InitFlowers(collider.tag, data[i], flowerPotLayoutClone);                        
                         flowerPotLayoutClone.active = true;
                         flowerPotRoot.addChild(flowerPotLayoutClone);
                     }
@@ -70,20 +77,20 @@ export class FlowerPlatform extends Component {
         }        
     }
 
-    InitFlowers(data:any, flowerPotLayoutClone:Node):void{
+    InitFlowers(tag:number, data:any, flowerPotLayoutClone:Node):void{
         if(flowerPotLayoutClone){
             var flowerRootBlack = flowerPotLayoutClone.getChildByName("FlowerRootBlack");
             if(data.length >= 1){
-                this.setFlowerData(flowerRootBlack, data[1]);
+                this.setFlowerData(flowerRootBlack, tag, data[1]);
             }
             flowerRootBlack.active = false;
 
             var flowerRootLight = flowerPotLayoutClone.getChildByName("FlowerRootLight");
-            this.setFlowerData(flowerRootLight, data[0]);
+            this.setFlowerData(flowerRootLight, tag, data[0]);
         }
     }
 
-    setFlowerData(flowerRoot:Node, data:any = null):void {
+    setFlowerData(flowerRoot:Node, tag:number, data:any = null):void {
         if(flowerRoot == null){
             return;
         }
@@ -92,7 +99,7 @@ export class FlowerPlatform extends Component {
         var left = flowerRoot.getChildByName("Left");
         if(data && data.left){
             left.active = true;
-            this.setImg(left, data.left, -1);
+            this.setImg(left, data.left, -1, tag);
         }
         else{
             left.active = false;
@@ -101,7 +108,7 @@ export class FlowerPlatform extends Component {
         var mid = flowerRoot.getChildByName("Mid");
         if(data && data.mid){
             mid.active = true;
-            this.setImg(mid, data.mid, 0);
+            this.setImg(mid, data.mid, 0, tag);
         }
         else{
             mid.active = false;
@@ -110,7 +117,7 @@ export class FlowerPlatform extends Component {
         var right = flowerRoot.getChildByName("Right");
         if(data && data.right){
             right.active = true;
-            this.setImg(right, data.right, 1);
+            this.setImg(right, data.right, 1, tag);
         }
         else{
             right.active = false;
@@ -120,7 +127,7 @@ export class FlowerPlatform extends Component {
     }
 
     //imgPos: 0-中间 1-右边 -1-左边
-    setImg(root:Node, imgId:string, imgPos:number){
+    setImg(root:Node, imgId:string, imgPos:number, tag:number){
         var img = null;
         if(root == null || root == undefined){
             return;
@@ -144,12 +151,6 @@ export class FlowerPlatform extends Component {
                 imgNode.setRotationFromEuler(this.m_RotationRight);
             }
 
-            var flowerScript = imgNode.getComponent(Flower);   
-            if(flowerScript == null || flowerScript == undefined){
-                flowerScript = imgNode.addComponent(Flower);                
-            }  
-            flowerScript.init(root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight);
-
             imgNode.active = false;                
             
             var uiTrans = imgNode.getComponent(UITransform);
@@ -168,6 +169,13 @@ export class FlowerPlatform extends Component {
                         if(sp){
                             img.spriteFrame = sp;
                         }
+
+                        var flowerScript = imgNode.getComponent(Flower);   
+                        if(flowerScript == null || flowerScript == undefined){
+                            flowerScript = imgNode.addComponent(Flower);                
+                        }  
+                        flowerScript.init(root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight, tag);
+
                         imgNode.active = true;
                     });
                 }

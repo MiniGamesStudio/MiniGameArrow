@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 19880957.5073,
+      "mTimestamp": 28606598.8162,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2230,7 +2230,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Launcher.ts": {
       "mTimestamp": {
-        "mtime": 1758022428165.024,
+        "mtime": 1758527943734.9626,
         "uuid": "6bd473a9-b885-4cf7-ad19-f480985edc0e"
       },
       "chunkId": "e35b82836c454cea5a42eb6b84dd63452d168bff",
@@ -2250,11 +2250,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 125
+              "column": 163
             },
             "end": {
               "line": 1,
-              "column": 129
+              "column": 167
             }
           }
         },
@@ -3034,7 +3034,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts": {
       "mTimestamp": {
-        "mtime": 1758523772920.8174,
+        "mtime": 1758531825375.6292,
         "uuid": "1d917e78-c927-49ad-8418-7a1e1e5ee711"
       },
       "chunkId": "c49cca4f2e70ea229467afa8ec4c50f60abd4fc4",
@@ -3054,11 +3054,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 188
+              "column": 203
             },
             "end": {
               "line": 1,
-              "column": 192
+              "column": 207
             }
           }
         },
@@ -3274,7 +3274,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/Flower.ts": {
       "mTimestamp": {
-        "mtime": 1758505797490.7542,
+        "mtime": 1758532496766.975,
         "uuid": "c50538aa-7778-4ac9-9299-be20c356b8ad"
       },
       "chunkId": "37df99fb108c57d335f31e2872f46de72838fe1c",
@@ -3290,11 +3290,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 82
+              "column": 200
             },
             "end": {
               "line": 1,
-              "column": 86
+              "column": 204
             }
           }
         }

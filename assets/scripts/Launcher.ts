@@ -1,4 +1,4 @@
-import { _decorator, Camera, Component, director, instantiate, Node, resources, Sprite, SpriteFrame, Vec2, game, Game } from 'cc';
+import { _decorator, Camera, Component, director, instantiate, Node, resources, Sprite, SpriteFrame, Vec2, game, Game, PhysicsSystem2D, EPhysics2DDrawFlags } from 'cc';
 import { ScreenAdapter } from "./ScreenAdapter";
 import { GameManager } from "./Core/GameManager";
 import { UIManager } from './Core/UIManager';
@@ -17,9 +17,16 @@ export class Launcher extends Component {
     @property(Node)
     m_GameWorld = null;
 
-    protected onLoad(): void {        
-        director.addPersistRootNode(this.node);
+    protected onLoad(): void {    
+        PhysicsSystem2D.instance.enable = true;
+        PhysicsSystem2D.instance.debugDrawFlags = EPhysics2DDrawFlags.Aabb |
+        EPhysics2DDrawFlags.Pair |
+        EPhysics2DDrawFlags.CenterOfMass |
+        EPhysics2DDrawFlags.Joint |
+        EPhysics2DDrawFlags.Shape;
 
+        director.addPersistRootNode(this.node);
+        
         // 监听游戏进入后台事件
         game.on(Game.EVENT_HIDE, this.onGameHide, this);
         // 监听游戏回到前台事件
