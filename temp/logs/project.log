@@ -1,0 +1,19 @@
+2025-9-20 20:06:58 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine
+2025-9-20 20:06:58 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\native
+2025-9-20 20:06:59 - log: Request namespace: device-list
+2025-9-20 20:07:04 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-20 20:07:05 - log: [Scene] meshopt wasm decoder initialized
+2025-9-20 20:07:05 - log: [Scene] [box2d]:box2d wasm lib loaded.
+2025-9-20 20:07:05 - log: [Scene] [bullet]:bullet wasm lib loaded.
+2025-9-20 20:07:05 - log: [Scene] [PHYSICS]: using builtin.
+2025-9-20 20:07:05 - log: [Scene] Cocos Creator v3.8.7
+2025-9-20 20:07:05 - log: [Scene] Using custom pipeline: Builtin
+2025-9-20 20:07:05 - log: [Scene] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-20 20:07:10 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-20 20:07:10 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-20 20:07:10 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-20 20:07:10 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-20 20:07:10 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-20 20:07:10 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-20 20:07:10 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-20 20:07:30 - info: [PreviewInEditor] 预览环境初始化完毕

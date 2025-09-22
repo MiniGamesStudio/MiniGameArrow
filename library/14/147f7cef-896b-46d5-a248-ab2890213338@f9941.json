@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "flower01",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 119,
+      "height": 150
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 119,
+      "height": 150
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -59.5,
+        -75,
+        0,
+        59.5,
+        -75,
+        0,
+        -59.5,
+        75,
+        0,
+        59.5,
+        75,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        150,
+        119,
+        150,
+        0,
+        0,
+        119,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -59.5,
+        "y": -75,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 59.5,
+        "y": 75,
+        "z": 0
+      }
+    },
+    "texture": "147f7cef-896b-46d5-a248-ab2890213338@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

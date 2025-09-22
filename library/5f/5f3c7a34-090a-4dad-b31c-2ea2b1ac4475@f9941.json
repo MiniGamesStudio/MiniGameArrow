@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Icon_Stopwatch",
+    "atlas": "",
+    "rect": {
+      "x": 5,
+      "y": 0,
+      "width": 54,
+      "height": 63
+    },
+    "offset": {
+      "x": 0,
+      "y": 0.5
+    },
+    "originalSize": {
+      "width": 64,
+      "height": 64
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -27,
+        -31.5,
+        0,
+        27,
+        -31.5,
+        0,
+        -27,
+        31.5,
+        0,
+        27,
+        31.5,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        5,
+        64,
+        59,
+        64,
+        5,
+        1,
+        59,
+        1
+      ],
+      "nuv": [
+        0.078125,
+        0.015625,
+        0.921875,
+        0.015625,
+        0.078125,
+        1,
+        0.921875,
+        1
+      ],
+      "minPos": {
+        "x": -27,
+        "y": -31.5,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 27,
+        "y": 31.5,
+        "z": 0
+      }
+    },
+    "texture": "5f3c7a34-090a-4dad-b31c-2ea2b1ac4475@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}
