@@ -1,19 +1,1532 @@
-2025-9-20 20:06:58 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine
-2025-9-20 20:06:58 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\native
-2025-9-20 20:06:59 - log: Request namespace: device-list
-2025-9-20 20:07:04 - info: [PreviewInEditor] 预览环境初始化完毕
-2025-9-20 20:07:05 - log: [Scene] meshopt wasm decoder initialized
-2025-9-20 20:07:05 - log: [Scene] [box2d]:box2d wasm lib loaded.
-2025-9-20 20:07:05 - log: [Scene] [bullet]:bullet wasm lib loaded.
-2025-9-20 20:07:05 - log: [Scene] [PHYSICS]: using builtin.
-2025-9-20 20:07:05 - log: [Scene] Cocos Creator v3.8.7
-2025-9-20 20:07:05 - log: [Scene] Using custom pipeline: Builtin
-2025-9-20 20:07:05 - log: [Scene] [PHYSICS2D]: switch from builtin to box2d.
-2025-9-20 20:07:10 - log: [PreviewInEditor] meshopt wasm decoder initialized
-2025-9-20 20:07:10 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
-2025-9-20 20:07:10 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
-2025-9-20 20:07:10 - log: [PreviewInEditor] [PHYSICS]: using builtin.
-2025-9-20 20:07:10 - log: [PreviewInEditor] Cocos Creator v3.8.7
-2025-9-20 20:07:10 - log: [PreviewInEditor] Using custom pipeline: Builtin
-2025-9-20 20:07:10 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
-2025-9-20 20:07:30 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:18:13 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine
+2025-9-22 09:18:13 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\native
+2025-9-22 09:18:13 - log: Request namespace: device-list
+2025-9-22 09:18:19 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:18:19 - log: [Scene] meshopt wasm decoder initialized
+2025-9-22 09:18:19 - log: [Scene] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:18:19 - log: [Scene] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:18:19 - log: [Scene] [PHYSICS]: using builtin.
+2025-9-22 09:18:19 - log: [Scene] Cocos Creator v3.8.7
+2025-9-22 09:18:19 - log: [Scene] Using custom pipeline: Builtin
+2025-9-22 09:18:19 - log: [Scene] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:20:14 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:20:14 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:20:14 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:20:14 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:20:14 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:20:15 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:20:15 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:30:42 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:30:42 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:30:42 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:30:42 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:30:42 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:30:42 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:30:42 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:30:42 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:34:04 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 09:34:04 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:34:05 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:34:05 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:34:05 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:34:05 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:34:05 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:34:05 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:34:05 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:35:11 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:35:11 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:35:11 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:35:11 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:35:11 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:35:12 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:35:12 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:35:12 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:37:38 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:37:38 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:37:38 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:37:38 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:37:38 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:37:38 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:37:38 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:37:38 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:38:48 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:38:48 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:38:48 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:38:48 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:38:48 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:38:48 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:38:48 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:38:48 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:39:22 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:39:23 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:39:23 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:39:23 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:39:23 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:39:23 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:39:23 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:39:23 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:41:02 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:41:02 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:41:02 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:41:02 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:41:02 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:41:02 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:41:02 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:41:02 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:41:27 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:41:27 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:41:27 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:41:27 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:41:27 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:41:27 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:41:27 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:41:27 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:42:59 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:42:59 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:42:59 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:42:59 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:42:59 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:42:59 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:42:59 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:42:59 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:46:50 - error: (node:59744) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 render-view-deleted listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `CocosCreator --trace-warnings ...` to show where the warning was created)
+2025-9-22 09:46:50 - error: (node:59744) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 new-window listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2025-9-22 09:46:51 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:47:52 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:47:52 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:47:52 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:47:52 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:47:52 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:47:52 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:47:52 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:48:27 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 09:48:39 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 09:48:39 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 09:48:39 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 09:48:39 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 09:48:39 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 09:48:39 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 09:48:39 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 09:49:10 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 10:23:39 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 10:23:39 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 10:23:39 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 10:23:39 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 10:23:39 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 10:23:39 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 10:23:39 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 10:28:36 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 10:28:36 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 10:28:36 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 10:28:36 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 10:28:36 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 10:28:36 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 10:28:36 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 10:28:36 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 10:30:49 - warn: [Scene] The type of "GamePanel.m_LevelData" must be CCFloat or CCInteger, not Number.Error: [Scene] The type of "GamePanel.m_LevelData" must be CCFloat or CCInteger, not Number.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:165229:12)
+    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:165417:5)
+    at parseType (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:278516:11)
+    at preprocessAttrs (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:278621:11)
+    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146157:7)
+    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146186:5)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:276445:21)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:277456:18)
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/7c/7c3afa6f72cc51142efdd7377aaf9dd6b0d4b395.js:68:172)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+2025-9-22 10:30:50 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 10:30:50 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 10:53:37 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 10:53:37 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 10:53:37 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 10:53:37 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 10:53:37 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 10:53:37 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 10:53:37 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 10:53:41 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 10:53:41 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 10:54:35 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 10:54:35 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 10:54:35 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 10:54:35 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 10:54:35 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 10:54:35 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 10:54:35 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 10:54:42 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 10:54:42 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 11:44:22 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 11:44:22 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 11:44:22 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 11:44:22 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 11:44:22 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 11:44:22 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 11:44:22 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 11:44:26 - error: [PreviewInEditor] Cannot set properties of null (setting 'active')TypeError: Cannot set properties of null (setting 'active')
+    at FlowerPlatform.InitPlatForm (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/c4/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts:39:13)
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/7c/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/GamePanel.ts:54:41
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:135368:9)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169410:9)
+    at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 11:44:31 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 11:46:50 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 11:46:50 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 11:46:50 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 11:46:50 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 11:46:50 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 11:46:50 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 11:46:50 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 11:47:00 - error: [PreviewInEditor] Cannot read properties of undefined (reading 'length')TypeError: Cannot read properties of undefined (reading 'length')
+    at FlowerPlatform.InitFlowerPot (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/c4/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts:54:64)
+    at FlowerPlatform.InitPlatForm (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/c4/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts:43:26)
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/7c/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/GamePanel.ts:54:41
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:135368:9)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169410:9)
+    at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 11:47:07 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 13:23:35 - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (75:28)
+
+  73 |     }
+  74 |
+> 75 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+     |                             ^
+  76 |         if(flowerRoot == null){
+  77 |             return;
+  78 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/d5/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(75%3A28)%0A%0A%20%2073%20%7C%20%20%20%20%20%7D%0A%20%2074%20%7C%0A%3E%2075%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2076%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2077%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2078%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (75:28)
+
+  73 |     }
+  74 |
+> 75 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+  78 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/d5/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(75%3A28)%0A%0A%20%2073%20%7C%20%20%20%20%20%7D%0A%20%2074%20%7C%0A%3E%2075%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2076%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2077%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2078%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at ScriptManager._handleImportException (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5678)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3834)
+    at Executor._onModuleLoaded (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:401:22)
+    at SystemJS.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:99:18)
+    at triggerOnload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+2025-9-22 13:23:35 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+2025-9-22 13:23:35 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:23:35 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132730:11)
+    at finale (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131673:27)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:135152:11)
+    at XMLHttpRequest.xhr.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131225:11)
+    at XMLHttpRequest.sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 13:23:35 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:28:21 - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (76:28)
+
+  74 |     }
+  75 |
+> 76 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+     |                             ^
+  77 |         if(flowerRoot == null){
+  78 |             return;
+  79 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/e9/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(76%3A28)%0A%0A%20%2074%20%7C%20%20%20%20%20%7D%0A%20%2075%20%7C%0A%3E%2076%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2077%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2078%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2079%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (76:28)
+
+  74 |     }
+  75 |
+> 76 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+  79 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/e9/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(76%3A28)%0A%0A%20%2074%20%7C%20%20%20%20%20%7D%0A%20%2075%20%7C%0A%3E%2076%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2077%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2078%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2079%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at ScriptManager._handleImportException (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5678)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3834)
+    at Executor._onModuleLoaded (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:401:22)
+    at SystemJS.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:99:18)
+    at triggerOnload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+2025-9-22 13:28:21 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+2025-9-22 13:28:21 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:28:21 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132730:11)
+    at finale (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131673:27)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:135152:11)
+    at XMLHttpRequest.xhr.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131225:11)
+    at XMLHttpRequest.sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 13:28:21 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:30:54 - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (79:28)
+
+  77 |     }
+  78 |
+> 79 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+     |                             ^
+  80 |         if(flowerRoot == null){
+  81 |             return;
+  82 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/65/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(79%3A28)%0A%0A%20%2077%20%7C%20%20%20%20%20%7D%0A%20%2078%20%7C%0A%3E%2079%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2080%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2081%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2082%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (79:28)
+
+  77 |     }
+  78 |
+> 79 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+  82 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/65/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(79%3A28)%0A%0A%20%2077%20%7C%20%20%20%20%20%7D%0A%20%2078%20%7C%0A%3E%2079%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2080%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2081%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2082%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at ScriptManager._handleImportException (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5678)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3834)
+    at Executor._onModuleLoaded (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:401:22)
+    at SystemJS.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:99:18)
+    at triggerOnload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+2025-9-22 13:30:54 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+2025-9-22 13:30:54 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:30:54 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132730:11)
+    at finale (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131673:27)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:135152:11)
+    at XMLHttpRequest.xhr.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131225:11)
+    at XMLHttpRequest.sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 13:30:54 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:31:52 - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (78:28)
+
+  76 |     }
+  77 |
+> 78 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+     |                             ^
+  79 |         if(flowerRoot == null){
+  80 |             return;
+  81 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/48/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(78%3A28)%0A%0A%20%2076%20%7C%20%20%20%20%20%7D%0A%20%2077%20%7C%0A%3E%2078%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2079%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2080%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2081%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (78:28)
+
+  76 |     }
+  77 |
+> 78 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+  81 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/48/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(78%3A28)%0A%0A%20%2076%20%7C%20%20%20%20%20%7D%0A%20%2077%20%7C%0A%3E%2078%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2079%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2080%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2081%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at ScriptManager._handleImportException (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5678)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3834)
+    at Executor._onModuleLoaded (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:401:22)
+    at SystemJS.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:99:18)
+    at triggerOnload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+2025-9-22 13:31:52 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+2025-9-22 13:31:52 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132730:11)
+    at finale (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131673:27)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:135152:11)
+    at XMLHttpRequest.xhr.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131225:11)
+    at XMLHttpRequest.sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 13:31:52 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:31:52 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:33:06 - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (79:28)
+
+  77 |     }
+  78 |
+> 79 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+     |                             ^
+  80 |         if(flowerRoot == null){
+  81 |             return;
+  82 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/65/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(79%3A28)%0A%0A%20%2077%20%7C%20%20%20%20%20%7D%0A%20%2078%20%7C%0A%3E%2079%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2080%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2081%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2082%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (79:28)
+
+  77 |     }
+  78 |
+> 79 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+  82 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/65/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(79%3A28)%0A%0A%20%2077%20%7C%20%20%20%20%20%7D%0A%20%2078%20%7C%0A%3E%2079%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2080%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2081%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2082%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at ScriptManager._handleImportException (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5678)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3834)
+    at Executor._onModuleLoaded (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:401:22)
+    at SystemJS.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:99:18)
+    at triggerOnload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+2025-9-22 13:33:06 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+2025-9-22 13:33:06 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:33:06 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132730:11)
+    at finale (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131673:27)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:135152:11)
+    at XMLHttpRequest.xhr.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131225:11)
+    at XMLHttpRequest.sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 13:33:06 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:33:39 - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (83:28)
+
+  81 |     }
+  82 |
+> 83 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+     |                             ^
+  84 |         if(flowerRoot == null){
+  85 |             return;
+  86 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/62/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(83%3A28)%0A%0A%20%2081%20%7C%20%20%20%20%20%7D%0A%20%2082%20%7C%0A%3E%2083%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2084%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2085%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2086%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:Program Files (x86)CocosDashboardile:D:WorksCocosWxMiniGamesFlowersArrangementassetsscriptsUIScriptsFlowerPlatform.ts: Did not expect a type annotation here. (83:28)
+
+  81 |     }
+  82 |
+> 83 |     setFlowerData(flowerRoot:Node, data:any = null):void {
+  86 |         }
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/62/data:text/javascript,%0A%2F%2F%20This%20module%20is%20auto-generated%20to%20report%20error%20emitted%20when%20try%20to%20load%20module%20file%3A%2F%2F%2FD%3A%2FWorks%2FCocos%2FWxMiniGames%2FFlowersArrangement%2Fassets%2Fscripts%2FUIScripts%2FFlowerPlatform.ts%20at%20runtime.%0Athrow%20new%20Error(%60SyntaxError%3A%20D%3A%5CProgram%20Files%20(x86)%5CCocosDashboard%5Cfile%3A%5CD%3A%5CWorks%5CCocos%5CWxMiniGames%5CFlowersArrangement%5Cassets%5Cscripts%5CUIScripts%5CFlowerPlatform.ts%3A%20Did%20not%20expect%20a%20type%20annotation%20here.%20(83%3A28)%0A%0A%20%2081%20%7C%20%20%20%20%20%7D%0A%20%2082%20%7C%0A%3E%2083%20%7C%20%20%20%20%20setFlowerData(flowerRoot%3ANode%2C%20data%3Aany%20%3D%20null)%3Avoid%20%7B%0A%20%20%20%20%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5E%0A%20%2084%20%7C%20%20%20%20%20%20%20%20%20if(flowerRoot%20%3D%3D%20null)%7B%0A%20%2085%20%7C%20%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%2086%20%7C%20%20%20%20%20%20%20%20%20%7D%60)%3B%0A%20%20%20%20%20%20%20%20:3:7)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at ScriptManager._handleImportException (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5678)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3834)
+    at Executor._onModuleLoaded (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:401:22)
+    at SystemJS.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:99:18)
+    at triggerOnload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
+    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
+    at C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1893
+    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2290)
+    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
+2025-9-22 13:33:39 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+2025-9-22 13:33:39 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "should_hide_in_hierarchy/FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:33:39 - warn: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucRError: [Scene] Missing class: 1d91754ySdJrYQYeh4eXucR
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at Object.classFinder (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:982)
+    at _Deserializer.classFinder [as _classFinder] (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131121:34)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44100:30)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at _Deserializer._deserializeArray (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44082:40)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44060:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44233:36)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer._deserializeAndAssignField (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44221:38)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43822:15)
+    at _Deserializer._deserializeFireClass (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44204:11)
+    at _Deserializer._deserializeInto (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44146:18)
+    at _Deserializer._deserializeTypeTaggedObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44118:18)
+    at _Deserializer._deserializeObject (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44054:29)
+    at _Deserializer.deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44026:42)
+    at deserializeDynamic (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43876:30)
+    at deserialize (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:44741:13)
+    at deserializeAsset (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131134:15)
+    at parseImport (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133294:22)
+    at Parser.parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133377:11)
+    at parse (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132790:20)
+    at Pipeline._flow (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133660:11)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:133670:22)
+    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:132730:11)
+    at finale (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131673:27)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:135152:11)
+    at XMLHttpRequest.xhr.onload (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:131225:11)
+    at XMLHttpRequest.sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 13:33:39 - error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+Error: [Scene] Script "1d91754ySdJrYQYeh4eXucR" attached to "FlowerPlatform" is missing or invalid. Detailed information:
+Node path: "FlowerPlatform"
+Script UUID: "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+Class ID: "1d91754ySdJrYQYeh4eXucR"
+
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at report (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:25)
+    at reportByWalker (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:7:127)
+2025-9-22 13:37:31 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 13:37:31 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 13:37:31 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 13:37:31 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 13:37:31 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 13:37:31 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 13:37:31 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 13:37:41 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 13:37:41 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 13:54:42 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 13:54:43 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 13:54:43 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 13:54:43 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 13:54:43 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 13:54:43 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 13:54:43 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 13:54:49 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 13:57:05 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 13:57:05 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 13:57:05 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 13:57:05 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 13:57:05 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 13:57:05 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 13:57:05 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 13:57:13 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 13:57:13 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 13:57:13 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 13:57:13 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 13:57:13 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 13:57:13 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 13:57:13 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 13:57:13 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 13:57:19 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 13:57:19 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 13:59:06 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 13:59:06 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 13:59:06 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 13:59:06 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 13:59:07 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 13:59:07 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 13:59:07 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 13:59:57 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:02:58 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:02:58 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:02:58 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:02:58 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:02:58 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:02:59 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:02:59 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:03:02 - error: [PreviewInEditor] Cannot read properties of undefined (reading 'length')TypeError: Cannot read properties of undefined (reading 'length')
+    at FlowerPlatform.InitFlowerPot (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/c4/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts:50:56)
+    at FlowerPlatform.InitPlatForm (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/c4/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts:36:26)
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/7c/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/GamePanel.ts:54:41
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:135368:9)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169410:9)
+    at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 14:03:05 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:05:37 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:05:37 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:05:37 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:05:37 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:05:37 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:05:37 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:05:37 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:05:52 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:05:53 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:08:00 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:08:00 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:08:00 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:08:00 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:08:00 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:08:00 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:08:00 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:08:13 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:10:20 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:10:20 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:10:20 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:10:20 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:10:20 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:10:20 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:10:20 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:12:39 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:12:39 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:12:39 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:12:39 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:12:39 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:12:39 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:12:39 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:12:40 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:12:40 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:12:40 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:12:47 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:12:47 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:14:23 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:14:23 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:14:23 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:14:23 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:14:23 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:14:23 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:14:23 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:14:29 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:14:30 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:14:34 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:14:34 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:14:34 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:14:34 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:14:34 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:14:34 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:14:34 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:14:41 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:15:28 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:15:28 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:15:28 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:15:28 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:15:29 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:15:29 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:15:29 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:16:28 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:16:28 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:16:28 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:16:28 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:16:28 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:16:28 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:16:28 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:16:28 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:16:37 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:16:38 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:17:04 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:17:04 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:17:04 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:17:04 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:17:04 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:17:05 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:17:05 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:24:16 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:24:16 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:24:16 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:24:16 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:24:16 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:24:16 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:24:16 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:24:16 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:24:19 - error: [PreviewInEditor] platFormRootClone is not definedReferenceError: platFormRootClone is not defined
+    at FlowerPlatform.InitFlowers (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/c4/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts:74:31)
+    at FlowerPlatform.InitFlowerPot (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/c4/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts:58:30)
+    at FlowerPlatform.InitPlatForm (file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/c4/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts:40:26)
+    at file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/temp/programming/packer-driver/targets/editor/chunks/7c/file:/D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/GamePanel.ts:54:41
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:135368:9)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169410:9)
+    at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\browser\src\helpers.ts:116:17)
+2025-9-22 14:24:31 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:24:31 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:24:31 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:24:31 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:24:31 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:24:31 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:24:31 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:24:31 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:24:47 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:24:47 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:24:47 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:24:47 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:24:47 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:24:47 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:24:47 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:24:47 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:24:47 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:24:57 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:25:08 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:25:08 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:25:08 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:25:08 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:25:08 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:25:08 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:25:08 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:25:35 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:25:35 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:25:35 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:25:48 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:25:48 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:25:48 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:25:48 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:25:48 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:25:48 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:25:48 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:25:56 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:25:56 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:26:51 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:26:51 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:26:51 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:26:51 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:26:51 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:26:51 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:26:51 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:27:43 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:27:49 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:27:49 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:27:49 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:27:49 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:27:49 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:27:49 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:27:49 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:36:28 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:36:28 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:36:28 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:36:28 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:36:28 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:36:28 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:36:28 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:36:28 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:36:28 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:36:28 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:45:07 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:45:08 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:45:08 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:45:08 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:45:08 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:45:08 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:45:08 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:45:08 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:48:34 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:49:34 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:49:34 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:49:34 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:49:34 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:49:34 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:49:34 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:49:34 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:50:21 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:50:22 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:50:22 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:50:22 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:50:22 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:50:22 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:50:22 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:50:22 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:50:38 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:50:38 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:50:38 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:50:38 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:50:38 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:50:38 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:50:38 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:50:38 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:50:38 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:50:59 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:50:59 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:50:59 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:50:59 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:50:59 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:50:59 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:50:59 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:50:59 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:53:48 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:53:48 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:53:48 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:53:48 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:53:48 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:53:48 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:53:48 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:53:48 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:55:20 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:55:32 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:55:32 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:55:32 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:55:32 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:55:32 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:55:32 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:55:32 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 14:56:03 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 14:56:04 - info: [PreviewInEditor] 预览环境初始化完毕
+2025-9-22 14:58:47 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2025-9-22 14:58:47 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2025-9-22 14:58:47 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2025-9-22 14:58:47 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2025-9-22 14:58:47 - log: [PreviewInEditor] Cocos Creator v3.8.7
+2025-9-22 14:58:47 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2025-9-22 14:58:47 - log: [PreviewInEditor] [PHYSICS2D]: switch from builtin to box2d.
+2025-9-22 15:00:16 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.7\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-22 15:00:16 - info: [PreviewInEditor] 预览环境初始化完毕

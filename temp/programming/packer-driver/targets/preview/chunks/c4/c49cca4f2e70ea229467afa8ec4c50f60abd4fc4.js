@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, instantiate, Node, resources, Sprite, SpriteFrame, UITransform, Vec3, FlowerMove, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, FlowerName, FlowerPlatform;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, instantiate, Node, resources, Sprite, SpriteFrame, UITransform, Vec3, Flower, _dec, _dec2, _class, _class2, _descriptor, _crd, ccclass, property, FlowerName, FlowerPlatform;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -9,8 +9,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
 
-  function _reportPossibleCrUseOfFlowerMove(extras) {
-    _reporterNs.report("FlowerMove", "./FlowerMove", _context.meta, extras);
+  function _reportPossibleCrUseOfFlower(extras) {
+    _reporterNs.report("Flower", "./Flower", _context.meta, extras);
   }
 
   return {
@@ -30,7 +30,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       UITransform = _cc.UITransform;
       Vec3 = _cc.Vec3;
     }, function (_unresolved_2) {
-      FlowerMove = _unresolved_2.FlowerMove;
+      Flower = _unresolved_2.Flower;
     }],
     execute: function () {
       _crd = true;
@@ -51,18 +51,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         return FlowerName;
       }({}));
 
-      _export("FlowerPlatform", FlowerPlatform = (_dec = ccclass('FlowerPlatform'), _dec2 = property(UITransform), _dec3 = property(Node), _dec4 = property(Node), _dec(_class = (_class2 = class FlowerPlatform extends Component {
+      _export("FlowerPlatform", FlowerPlatform = (_dec = ccclass('FlowerPlatform'), _dec2 = property(Node), _dec(_class = (_class2 = class FlowerPlatform extends Component {
         constructor() {
           super(...arguments);
 
-          _initializerDefineProperty(this, "m_PlatFormUITrans", _descriptor, this);
+          _initializerDefineProperty(this, "m_PlatFormRoot", _descriptor, this);
 
-          _initializerDefineProperty(this, "m_FlowerPotRoot", _descriptor2, this);
-
-          _initializerDefineProperty(this, "m_FlowerPotLayout", _descriptor3, this);
-
-          this.m_RotationLeft = new Vec3(0, 0, 20);
-          this.m_RotationRight = new Vec3(0, 0, -20);
+          this.m_RotationLeft = new Vec3(0, 0, 25);
+          this.m_RotationRight = new Vec3(0, 0, -25);
           this.m_FlowerMoveRoot = null;
         }
 
@@ -70,26 +66,69 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
         onDestroy() {}
 
-        InitPlatForm(data, flowerMoveRoot) {
+        InitPlatForm(raw, platFormNum, data, flowerMoveRoot) {
           this.m_FlowerMoveRoot = flowerMoveRoot;
-          var cSize = this.m_PlatFormUITrans.contentSize;
-          this.m_PlatFormUITrans.setContentSize(cSize.width * data.length, cSize.height);
-          this.m_FlowerPotLayout.active = false;
 
           if (data) {
-            for (var i = 0; i < data.length; ++i) {
-              var flowerPotRootClone = instantiate(this.m_FlowerPotLayout);
+            this.m_PlatFormRoot.active = false;
 
-              if (flowerPotRootClone) {
-                var flowerRootBlack = flowerPotRootClone.getChildByName("FlowerRootBlack");
-                this.setFlowerData(flowerRootBlack, data[i]);
-                flowerRootBlack.active = false;
-                var flowerRootLight = flowerPotRootClone.getChildByName("FlowerRootLight");
-                this.setFlowerData(flowerRootLight, data[i]);
-                flowerPotRootClone.active = true;
-                this.m_FlowerPotRoot.addChild(flowerPotRootClone);
+            for (var i = 0; i < platFormNum; ++i) {
+              var platFormRootClone = instantiate(this.m_PlatFormRoot);
+
+              if (platFormRootClone) {
+                var fpNum = data.FlowerPot[raw];
+
+                if (platFormNum > 1) {
+                  fpNum = data.FlowerPot[raw][i];
+                }
+
+                this.InitFlowerPot(fpNum, data.FlowerArr[raw][i], platFormRootClone);
+                platFormRootClone.active = true;
+                this.node.addChild(platFormRootClone);
               }
             }
+          }
+        }
+
+        InitFlowerPot(flowerPotNum, data, platFormRootClone) {
+          if (data) {
+            var flowerPotRoot = platFormRootClone.getChildByName("FlowerPotRoot");
+            var flowerPotLayout = flowerPotRoot.getChildByName("FlowerPotLayout");
+
+            if (flowerPotLayout) {
+              flowerPotLayout.active = false;
+
+              for (var i = 0; i < flowerPotNum; ++i) {
+                var flowerPotLayoutClone = instantiate(flowerPotLayout);
+
+                if (flowerPotLayoutClone) {
+                  this.InitFlowers(data[i], flowerPotLayoutClone);
+                  flowerPotLayoutClone.active = true;
+                  flowerPotRoot.addChild(flowerPotLayoutClone);
+                }
+              }
+            }
+
+            var platFormUITrans = platFormRootClone.getChildByName("Platform").getComponent(UITransform);
+
+            if (platFormUITrans) {
+              var cSize = platFormUITrans.contentSize;
+              platFormUITrans.setContentSize(cSize.width * flowerPotNum, cSize.height);
+            }
+          }
+        }
+
+        InitFlowers(data, flowerPotLayoutClone) {
+          if (flowerPotLayoutClone) {
+            var flowerRootBlack = flowerPotLayoutClone.getChildByName("FlowerRootBlack");
+
+            if (data.length >= 1) {
+              this.setFlowerData(flowerRootBlack, data[1]);
+            }
+
+            flowerRootBlack.active = false;
+            var flowerRootLight = flowerPotLayoutClone.getChildByName("FlowerRootLight");
+            this.setFlowerData(flowerRootLight, data[0]);
           }
         }
 
@@ -105,27 +144,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           flowerRoot.active = false;
           var left = flowerRoot.getChildByName("Left");
 
-          if (data) {
+          if (data && data.left) {
             left.active = true;
-            this.setImg(left, data[0], -1);
+            this.setImg(left, data.left, -1);
           } else {
             left.active = false;
           }
 
           var mid = flowerRoot.getChildByName("Mid");
 
-          if (data) {
+          if (data && data.mid) {
             mid.active = true;
-            this.setImg(mid, data[1], 0);
+            this.setImg(mid, data.mid, 0);
           } else {
             mid.active = false;
           }
 
           var right = flowerRoot.getChildByName("Right");
 
-          if (data) {
+          if (data && data.right) {
             right.active = true;
-            this.setImg(right, data[2], 1);
+            this.setImg(right, data.right, 1);
           } else {
             right.active = false;
           }
@@ -135,13 +174,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
 
         setImg(root, imgId, imgPos) {
-          if (imgId == null || imgId == undefined) {
-            return;
-          }
-
           var img = null;
 
           if (root == null || root == undefined) {
+            return;
+          }
+
+          if (imgId == null || imgId == undefined) {
+            root.active = false;
             return;
           }
 
@@ -159,14 +199,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
               imgNode.setRotationFromEuler(this.m_RotationRight);
             }
 
-            var moveScript = imgNode.addComponent(_crd && FlowerMove === void 0 ? (_reportPossibleCrUseOfFlowerMove({
+            var flowerScript = imgNode.getComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
               error: Error()
-            }), FlowerMove) : FlowerMove);
+            }), Flower) : Flower);
 
-            if (moveScript) {
-              moveScript.init(root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight);
+            if (flowerScript == null || flowerScript == undefined) {
+              flowerScript = imgNode.addComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
+                error: Error()
+              }), Flower) : Flower);
             }
 
+            flowerScript.init(root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight);
             imgNode.active = false;
             var uiTrans = imgNode.getComponent(UITransform);
 
@@ -196,21 +239,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }
         }
 
-      }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "m_PlatFormUITrans", [_dec2], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: function initializer() {
-          return null;
-        }
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "m_FlowerPotRoot", [_dec3], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: function initializer() {
-          return null;
-        }
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "m_FlowerPotLayout", [_dec4], {
+      }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "m_PlatFormRoot", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,

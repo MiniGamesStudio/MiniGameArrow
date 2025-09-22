@@ -468,5 +468,25 @@
     "texture": {
       "mipfilter": "none"
     }
+  },
+  "fcf0c788-fb5e-4b24-8acc-ea73c39d769c": {
+    "texture": {
+      "mipfilter": "none"
+    }
+  },
+  "9532aa35-ad91-4f19-b3e7-b58366796daf": {
+    "texture": {
+      "mipfilter": "none"
+    }
+  },
+  "3bf25aa3-df77-4011-a29d-020e61ca8403@6c48a": {
+    "texture": {
+      "mipfilter": "none"
+    }
+  },
+  "773ec3ce-cc47-496a-bd67-710371d8c490@6c48a": {
+    "texture": {
+      "mipfilter": "none"
+    }
   }
 }

@@ -73,13 +73,16 @@
             "scripts\\Core\\GameManager.ts",
             "scripts\\Core\\UIBase.ts",
             "scripts\\Core\\UIManager.ts",
-            "scripts\\UIScripts\\FlowerMove.ts",
             "scripts\\UIScripts\\FlowerPlatform.ts",
             "scripts\\UIScripts\\GamePage.ts",
             "scripts\\UIScripts\\GamePanel.ts",
             "scripts\\UIScripts\\LoadingPanel.ts",
             "scripts\\UIScripts\\MainPanel.ts",
-            "scripts\\UIScripts\\UIData.ts"
+            "scripts\\UIScripts\\UIData.ts",
+            "scripts\\UIScripts\\Flower.ts",
+            "resources\\flowers\\flowerAtlas.pac",
+            "resources\\levelData",
+            "resources\\levelData\\level_1.json"
         ]
     }
 }

@@ -2813,5 +2813,34 @@
     "url": "db://assets/scripts/UIScripts/FlowerMove.ts",
     "value": {},
     "versionCode": 1
+  },
+  "c50538aa-7778-4ac9-9299-be20c356b8ad": {
+    "url": "db://assets/scripts/UIScripts/Flower.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "fcf0c788-fb5e-4b24-8acc-ea73c39d769c": {
+    "url": "db://assets/resources/flowers/flowerAtlas.pac",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "9532aa35-ad91-4f19-b3e7-b58366796daf": {
+    "url": "db://assets/resources/flowers/auto-atlas.pac",
+    "value": {},
+    "versionCode": 1
+  },
+  "4d536a9d-5411-449b-99d3-4d77286ddc04": {
+    "url": "db://assets/resources/levelData",
+    "value": {},
+    "versionCode": 1
+  },
+  "9dc05920-17e8-473c-8697-703e985789f9": {
+    "url": "db://assets/resources/levelData/level_1.json",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
   }
 }

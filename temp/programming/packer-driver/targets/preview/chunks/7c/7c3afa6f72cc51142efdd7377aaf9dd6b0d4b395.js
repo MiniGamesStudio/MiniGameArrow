@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Button, instantiate, Node, Prefab, resources, UIBase, UIManager, UIID, FlowerPlatform, FlowerConfig, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, GamePanel;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Button, instantiate, JsonAsset, Node, Prefab, resources, UIBase, UIManager, UIID, FlowerPlatform, FlowerConfig, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, GamePanel;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -39,6 +39,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _decorator = _cc._decorator;
       Button = _cc.Button;
       instantiate = _cc.instantiate;
+      JsonAsset = _cc.JsonAsset;
       Node = _cc.Node;
       Prefab = _cc.Prefab;
       resources = _cc.resources;
@@ -58,14 +59,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _cclegacy._RF.push({}, "ea5e5mJV7VOVr7BGYii9KiJ", "GamePanel", undefined);
 
-      __checkObsolete__(['__private', '_decorator', 'Button', 'Component', 'instantiate', 'Layout', 'Node', 'PageView', 'Prefab', 'ProgressBar', 'resources', 'Slider', 'SpriteFrame', 'UITransform']);
+      __checkObsolete__(['__private', '_decorator', 'Button', 'Component', 'instantiate', 'JsonAsset', 'Layout', 'Node', 'PageView', 'Prefab', 'ProgressBar', 'resources', 'Slider', 'SpriteFrame', 'UITransform']);
 
       ({
         ccclass,
         property
       } = _decorator);
 
-      _export("GamePanel", GamePanel = (_dec = ccclass('GamePanel'), _dec2 = property(Button), _dec3 = property(Node), _dec4 = property(Node), _dec(_class = (_class2 = class GamePanel extends (_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
+      _export("GamePanel", GamePanel = (_dec = ccclass('GamePanel'), _dec2 = property(Button), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property([]), _dec(_class = (_class2 = class GamePanel extends (_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
         error: Error()
       }), UIBase) : UIBase) {
         constructor() {
@@ -76,6 +77,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "m_LevelRoot", _descriptor2, this);
 
           _initializerDefineProperty(this, "m_FlowerImgMoveRoot", _descriptor3, this);
+
+          _initializerDefineProperty(this, "m_LevelData", _descriptor4, this);
         }
 
         onOpen() {
@@ -97,6 +100,36 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), UIID) : UIID).MainPanel);
           });
+          this.initGameLevel();
+        }
+
+        initGameLevel() {
+          resources.load("levelData/level_1", JsonAsset, (err, jsonAsset) => {
+            if (err) {
+              return;
+            }
+
+            var levelData = jsonAsset.json;
+            resources.load("ui/FlowerPlatform", Prefab, (err, prefab) => {
+              if (prefab) {
+                for (var i = 0; i < levelData.FlowerRow; ++i) {
+                  var temp = instantiate(prefab);
+
+                  if (temp) {
+                    this.m_LevelRoot.addChild(temp);
+                    var tScript = temp.getComponent(_crd && FlowerPlatform === void 0 ? (_reportPossibleCrUseOfFlowerPlatform({
+                      error: Error()
+                    }), FlowerPlatform) : FlowerPlatform);
+
+                    if (tScript) {
+                      tScript.InitPlatForm(i, levelData.FlowerPlatform[i], levelData, this.m_FlowerImgMoveRoot);
+                    }
+                  }
+                }
+              }
+            });
+          });
+          return;
           var gameData = [[[(_crd && FlowerConfig === void 0 ? (_reportPossibleCrUseOfFlowerConfig({
             error: Error()
           }), FlowerConfig) : FlowerConfig).Flower01, (_crd && FlowerConfig === void 0 ? (_reportPossibleCrUseOfFlowerConfig({
@@ -198,6 +231,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: function initializer() {
           return null;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "m_LevelData", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return [];
         }
       })), _class2)) || _class));
 
