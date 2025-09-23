@@ -97,8 +97,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onCheckFlowerDissolve(args) {
-          console.log("onCheckFlowerDissolve");
-
+          //console.log("onCheckFlowerDissolve");
           if (!args) {
             return;
           }
@@ -190,6 +189,42 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               this.InitFlowers(flowerTag, flowerData, idx, flowerpot);
             }
           }
+
+          var isVictory = this.checkVictory();
+
+          if (isVictory) {
+            console.log("Victory!");
+          }
+        }
+
+        checkVictory() {
+          var victory = true;
+          this.m_FlowerPotMap.forEach((value, key) => {
+            if (!value) {
+              return;
+            }
+
+            var flowerRoot = value.getChildByName("FlowerRootLight");
+
+            if (!flowerRoot) {
+              return;
+            }
+
+            var flowers = flowerRoot.getComponentsInChildren(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
+              error: Error()
+            }), Flower) : Flower);
+
+            if (!flowers) {
+              return;
+            }
+
+            if (flowers.length <= 0) {
+              return;
+            }
+
+            victory = false;
+          });
+          return victory;
         }
 
         InitPlatForm(raw, platFormNum, data, flowerMoveRoot) {

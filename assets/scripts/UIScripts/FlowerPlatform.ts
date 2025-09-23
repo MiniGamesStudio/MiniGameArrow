@@ -35,7 +35,7 @@ export class FlowerPlatform extends Component {
     }
 
     onCheckFlowerDissolve(args:any):void {
-        console.log("onCheckFlowerDissolve");
+        //console.log("onCheckFlowerDissolve");
         if(!args){
             return;
         }
@@ -101,15 +101,51 @@ export class FlowerPlatform extends Component {
 
     checkBlackFlowers(flowerpot:Node, flowerTag:number){
         var flowerRootBlack = flowerpot.getChildByName("FlowerRootBlack");
-            if(flowerRootBlack){
-                var blackFlowers = flowerRootBlack.getComponentsInChildren(Flower);
-                if(blackFlowers && blackFlowers.length > 0){
-                    var idx = this.m_FlowerPotTagIndexMap.get(flowerTag) + 1;
-                    this.m_FlowerPotTagIndexMap.set(flowerTag, idx);
-                    var flowerData = this.m_FlowerPotTagDataMap.get(flowerTag);
-                    this.InitFlowers(flowerTag, flowerData, idx, flowerpot);   
-                }
+        if(flowerRootBlack){
+            var blackFlowers = flowerRootBlack.getComponentsInChildren(Flower);
+            if(blackFlowers && blackFlowers.length > 0){
+                var idx = this.m_FlowerPotTagIndexMap.get(flowerTag) + 1;
+                this.m_FlowerPotTagIndexMap.set(flowerTag, idx);
+                var flowerData = this.m_FlowerPotTagDataMap.get(flowerTag);
+                this.InitFlowers(flowerTag, flowerData, idx, flowerpot);   
             }
+        }
+
+        var isVictory = this.checkVictory();
+        if(isVictory){
+            console.log("Victory!");
+        }
+    }
+
+    checkVictory():boolean {
+        var victory = true;
+        this.m_FlowerPotMap.forEach((value, key)=>{
+            if(!value)
+            {
+                return;
+            }
+
+            var flowerRoot = value.getChildByName("FlowerRootLight");
+            if(!flowerRoot)
+            {
+                return;
+            }
+
+            var flowers = flowerRoot.getComponentsInChildren(Flower);
+            if(!flowers)
+            {
+                return;
+            }
+            
+            if(flowers.length <= 0)
+            {
+                return;
+            }
+
+            victory = false;
+        });
+
+        return victory;
     }
 
     public InitPlatForm(raw:number, platFormNum:number, data:any, flowerMoveRoot:Node):void {
