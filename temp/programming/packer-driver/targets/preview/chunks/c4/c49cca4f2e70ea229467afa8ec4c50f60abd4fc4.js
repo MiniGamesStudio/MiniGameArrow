@@ -97,7 +97,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onCheckFlowerDissolve(args) {
-          //console.log("onCheckFlowerDissolve");
+          console.log("onCheckFlowerDissolve");
+
           if (!args) {
             return;
           }

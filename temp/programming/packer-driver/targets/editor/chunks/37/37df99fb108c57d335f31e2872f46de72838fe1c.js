@@ -332,13 +332,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }
 
           if (event.target) {
+            var flowerTagTemp = this.m_FlowerTag;
+
             if (this.m_IsChangePot) {
               this.m_IsChangePot = false;
-              (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
-                error: Error()
-              }), EventManager) : EventManager).getInstance().emit((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
-                error: Error()
-              }), CustomClientEvent) : CustomClientEvent).FlowerDissolve, this.m_FlowerTag);
               this.m_ImgPos = this.m_TempImgPos;
               this.m_FlowerStartPos = this.m_TempFlowerStartPos;
               this.m_FlowerRoot = this.m_TempFlowerRoot;
@@ -365,6 +362,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
               this.node.parent = this.m_FlowerRoot;
               this.node.setPosition(Vec3.ZERO);
               this.m_FlowerRoot.active = true;
+              (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
+                error: Error()
+              }), EventManager) : EventManager).getInstance().emit((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+                error: Error()
+              }), CustomClientEvent) : CustomClientEvent).FlowerDissolve, flowerTagTemp);
               (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
                 error: Error()
               }), EventManager) : EventManager).getInstance().emit((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({

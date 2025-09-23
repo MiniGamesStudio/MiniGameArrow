@@ -35,7 +35,7 @@ export class FlowerPlatform extends Component {
     }
 
     onCheckFlowerDissolve(args:any):void {
-        //console.log("onCheckFlowerDissolve");
+        console.log("onCheckFlowerDissolve");
         if(!args){
             return;
         }

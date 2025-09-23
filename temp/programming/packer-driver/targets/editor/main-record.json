@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 1469107.265,
+      "mTimestamp": 3982847.1286,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2251,7 +2251,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Launcher.ts": {
       "mTimestamp": {
-        "mtime": 1758542211933.957,
+        "mtime": 1758603742071.4868,
         "uuid": "6bd473a9-b885-4cf7-ad19-f480985edc0e"
       },
       "chunkId": "e35b82836c454cea5a42eb6b84dd63452d168bff",
@@ -3034,7 +3034,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts": {
       "mTimestamp": {
-        "mtime": 1758601524315.0588,
+        "mtime": 1758601822175.6216,
         "uuid": "1d917e78-c927-49ad-8418-7a1e1e5ee711"
       },
       "chunkId": "c49cca4f2e70ea229467afa8ec4c50f60abd4fc4",
@@ -3316,7 +3316,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/Flower.ts": {
       "mTimestamp": {
-        "mtime": 1758598587427.8074,
+        "mtime": 1758604036341.2097,
         "uuid": "c50538aa-7778-4ac9-9299-be20c356b8ad"
       },
       "chunkId": "37df99fb108c57d335f31e2872f46de72838fe1c",

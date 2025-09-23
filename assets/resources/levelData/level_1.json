@@ -44,7 +44,8 @@
                     {"left":"flower03", "mid":"flower04", "right":"flower06"}
                 ],
                 [
-                    {"left":"flower07", "mid":"flower07", "right":"flower02"}
+                    {"left":"flower07", "mid":"flower07", "right":"flower02"},
+                    {"left":"flower07", "mid":"flower03", "right":"flower04"}
                 ],
                 [
                     {"left":"flower06", "mid":"flower03", "right":"flower01"}

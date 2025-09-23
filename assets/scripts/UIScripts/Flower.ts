@@ -290,10 +290,10 @@ export class Flower extends Component {
             return;
         }
         
-        if(event.target){     
+        if(event.target){   
+            var flowerTagTemp = this.m_FlowerTag;
             if(this.m_IsChangePot){
                 this.m_IsChangePot = false;
-                EventManager.getInstance().emit(CustomClientEvent.FlowerDissolve, this.m_FlowerTag);
                 this.m_ImgPos = this.m_TempImgPos;
                 this.m_FlowerStartPos = this.m_TempFlowerStartPos;
                 this.m_FlowerRoot = this.m_TempFlowerRoot;
@@ -321,6 +321,7 @@ export class Flower extends Component {
                 this.node.setPosition(Vec3.ZERO);
                 this.m_FlowerRoot.active = true;
 
+                EventManager.getInstance().emit(CustomClientEvent.FlowerDissolve, flowerTagTemp);
                 EventManager.getInstance().emit(CustomClientEvent.FlowerDissolve, this.m_FlowerTag);
             }).start();
         }
