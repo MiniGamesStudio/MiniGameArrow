@@ -113,7 +113,9 @@ export class FlowerPlatform extends Component {
                 var idx = this.m_FlowerPotTagIndexMap.get(flowerTag) + 1;
                 this.m_FlowerPotTagIndexMap.set(flowerTag, idx);
                 var flowerData = this.m_FlowerPotTagDataMap.get(flowerTag);
-                this.InitFlowers(flowerTag, flowerData, idx, flowerpot);   
+                if(idx < flowerData.length){
+                    this.InitFlowers(flowerTag, flowerData, idx, flowerpot);
+                }   
             }
         }
 

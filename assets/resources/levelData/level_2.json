@@ -3,7 +3,7 @@
     "levelName":"关卡2",
     "FlowerRow":4,
     "FlowerPlatform":[2,1,1,1],
-    "FlowerPot":[[1,2],4,4,4],
+    "FlowerPot":[[1,2],3,4,4],
     "FlowerArr":
     [
         [
@@ -11,6 +11,10 @@
                 [
                     {"mid":"flower03"},
                     {"mid":"flower03", "right":"flower04"}
+                ]
+            ],
+            [
+                [
                 ],
                 [
                     {"left":"flower05", "mid":"flower05", "right":"flower06"}
@@ -19,9 +23,6 @@
         ],
         [
             [
-                [
-                    
-                ],
                 [
                     {"left":"flower03", "right":"flower04"}
                 ],
