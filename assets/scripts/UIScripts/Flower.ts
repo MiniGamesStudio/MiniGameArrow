@@ -32,13 +32,15 @@ export class Flower extends Component {
     m_OtherCollider: Collider2D = null;
 
     m_FlowerId:string = "";
+    m_IsBlack:boolean = false;
 
     public getFlowerID():string{
         return this.m_FlowerId;
     }
 
     //imgPos: 0-中间 1-右边 -1-左边
-    init(imgId:string, flowerRoot : Node, flowerMoveRoot : Node, imgPos:number, rLeft:Vec3, rRight:Vec3, tag:number){
+    init(imgId:string, flowerRoot : Node, flowerMoveRoot : Node, imgPos:number, rLeft:Vec3, rRight:Vec3, tag:number, isBlack:boolean){
+        this.m_IsBlack = isBlack;
         this.m_FlowerId = imgId;
         this.m_FlowerTag = tag;
         this.m_IsDragingFlower = false;
@@ -55,13 +57,19 @@ export class Flower extends Component {
     start() {
         this.m_FlowerUITransform = this.node.getComponent(UITransform);
 
-        this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this, true);
-        this.node.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this, true);
-        this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this, true);
-        this.node.on(Node.EventType.TOUCH_CANCEL, this.onTouchCancel, this, true);
+        if(!this.m_IsBlack){
+            this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this, true);
+            this.node.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this, true);
+            this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this, true);
+            this.node.on(Node.EventType.TOUCH_CANCEL, this.onTouchCancel, this, true);
+        }
     }
 
     protected onDestroy(): void {        
+        this.offNodeEvent();
+    }
+
+    offNodeEvent():void{
         this.node.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
         this.node.off(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
         this.node.off(Node.EventType.TOUCH_END, this.onTouchEnd, this);
@@ -285,6 +293,7 @@ export class Flower extends Component {
         if(event.target){     
             if(this.m_IsChangePot){
                 this.m_IsChangePot = false;
+                EventManager.getInstance().emit(CustomClientEvent.FlowerDissolve, this.m_FlowerTag);
                 this.m_ImgPos = this.m_TempImgPos;
                 this.m_FlowerStartPos = this.m_TempFlowerStartPos;
                 this.m_FlowerRoot = this.m_TempFlowerRoot;

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, BoxCollider2D, Component, instantiate, Node, resources, Sprite, SpriteFrame, tween, UITransform, Vec3, Flower, CustomClientEvent, EventManager, _dec, _dec2, _class, _class2, _descriptor, _class3, _crd, ccclass, property, FlowerName, FlowerPlatform;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, BoxCollider2D, color, Component, instantiate, Node, resources, Sprite, SpriteFrame, tween, UITransform, Vec3, Flower, CustomClientEvent, EventManager, _dec, _dec2, _class, _class2, _descriptor, _class3, _crd, ccclass, property, FlowerName, FlowerPlatform;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -30,6 +30,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       __checkObsoleteInNamespace__ = _cc.__checkObsoleteInNamespace__;
       _decorator = _cc._decorator;
       BoxCollider2D = _cc.BoxCollider2D;
+      color = _cc.color;
       Component = _cc.Component;
       instantiate = _cc.instantiate;
       Node = _cc.Node;
@@ -51,7 +52,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _cclegacy._RF.push({}, "1d91754ySdJrYQYeh4eXucR", "FlowerPlatform", undefined);
 
-      __checkObsolete__(['_decorator', 'BoxCollider2D', 'Camera', 'Component', 'director', 'EventTouch', 'Input', 'input', 'instantiate', 'Node', 'resources', 'Scene', 'Sprite', 'SpriteFrame', 'sys', 'tween', 'UIOpacity', 'UITransform', 'Vec2', 'Vec3']);
+      __checkObsolete__(['_decorator', 'BoxCollider2D', 'Camera', 'color', 'Component', 'director', 'EventTouch', 'Input', 'input', 'instantiate', 'Node', 'resources', 'Scene', 'Sprite', 'SpriteFrame', 'sys', 'tween', 'UIOpacity', 'UITransform', 'Vec2', 'Vec3']);
 
       ({
         ccclass,
@@ -75,6 +76,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.m_RotationRight = new Vec3(0, 0, -30);
           this.m_FlowerMoveRoot = null;
           this.m_FlowerPotMap = new Map();
+          this.m_FlowerPotTagIndexMap = new Map();
+          this.m_FlowerPotTagDataMap = new Map();
         }
 
         start() {
@@ -108,15 +111,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
 
           var flowerRoot = flowerpot.getChildByName("FlowerRootLight");
+
+          if (!flowerRoot) {
+            return;
+          }
+
           var flowers = flowerRoot.getComponentsInChildren(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
             error: Error()
           }), Flower) : Flower);
 
           if (!flowers) {
+            this.checkBlackFlowers(flowerpot, flowerTag);
             return;
           }
 
           if (flowers.length < 3) {
+            if (flowers.length <= 0) {
+              this.checkBlackFlowers(flowerpot, flowerTag);
+            }
+
             return;
           }
 
@@ -143,7 +156,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               var flowerNode = flowers[i].node;
 
               if (flowerNode) {
-                tween(flowerNode).to(0.3, {
+                tween(flowerNode).to(0.5, {
                   angle: 0
                 }, {
                   onComplete: target => {
@@ -152,14 +165,37 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                       target.destroy();
                     }
                   }
+                }).call(() => {
+                  if (i == flowers.length) {
+                    this.checkBlackFlowers(flowerpot, flowerTag);
+                  }
                 }).start();
               }
             }
           }
         }
 
+        checkBlackFlowers(flowerpot, flowerTag) {
+          var flowerRootBlack = flowerpot.getChildByName("FlowerRootBlack");
+
+          if (flowerRootBlack) {
+            var blackFlowers = flowerRootBlack.getComponentsInChildren(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
+              error: Error()
+            }), Flower) : Flower);
+
+            if (blackFlowers && blackFlowers.length > 0) {
+              var idx = this.m_FlowerPotTagIndexMap.get(flowerTag) + 1;
+              this.m_FlowerPotTagIndexMap.set(flowerTag, idx);
+              var flowerData = this.m_FlowerPotTagDataMap.get(flowerTag);
+              this.InitFlowers(flowerTag, flowerData, idx, flowerpot);
+            }
+          }
+        }
+
         InitPlatForm(raw, platFormNum, data, flowerMoveRoot) {
           this.m_FlowerPotMap.clear();
+          this.m_FlowerPotTagIndexMap.clear();
+          this.m_FlowerPotTagDataMap.clear();
           this.m_FlowerMoveRoot = flowerMoveRoot;
 
           if (data) {
@@ -203,7 +239,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                   }
 
                   this.m_FlowerPotMap.set(collider.tag, flowerPotLayoutClone);
-                  this.InitFlowers(collider.tag, data[i], flowerPotLayoutClone);
+                  this.m_FlowerPotTagIndexMap.set(collider.tag, 0);
+                  this.m_FlowerPotTagDataMap.set(collider.tag, data[i]);
+                  this.InitFlowers(collider.tag, data[i], 0, flowerPotLayoutClone);
                   flowerPotLayoutClone.active = true;
                   flowerPotRoot.addChild(flowerPotLayoutClone);
                 }
@@ -219,21 +257,29 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
         }
 
-        InitFlowers(tag, data, flowerPotLayoutClone) {
+        InitFlowers(tag, data, idx, flowerPotLayoutClone) {
           if (flowerPotLayoutClone) {
             var flowerRootBlack = flowerPotLayoutClone.getChildByName("FlowerRootBlack");
 
-            if (data.length >= 1) {
-              this.setFlowerData(flowerRootBlack, tag, data[1]);
+            if (data.length >= idx + 1) {
+              this.setFlowerData(flowerRootBlack, tag, data[idx + 1], true);
+              flowerRootBlack.active = true;
+            } else {
+              flowerRootBlack.active = false;
             }
 
-            flowerRootBlack.active = false;
             var flowerRootLight = flowerPotLayoutClone.getChildByName("FlowerRootLight");
-            this.setFlowerData(flowerRootLight, tag, data[0]);
+
+            if (data.length >= idx) {
+              this.setFlowerData(flowerRootLight, tag, data[idx], false);
+              flowerRootLight.active = true;
+            } else {
+              flowerRootLight.active = false;
+            }
           }
         }
 
-        setFlowerData(flowerRoot, tag, data = null) {
+        setFlowerData(flowerRoot, tag, data, isBlack) {
           if (flowerRoot == null) {
             return;
           }
@@ -243,7 +289,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (data && data.left) {
             left.active = true;
-            this.setImg(left, data.left, -1, tag);
+            this.setImg(left, data.left, -1, tag, isBlack);
           } else {
             left.active = false;
           }
@@ -252,7 +298,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (data && data.mid) {
             mid.active = true;
-            this.setImg(mid, data.mid, 0, tag);
+            this.setImg(mid, data.mid, 0, tag, isBlack);
           } else {
             mid.active = false;
           }
@@ -261,7 +307,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (data && data.right) {
             right.active = true;
-            this.setImg(right, data.right, 1, tag);
+            this.setImg(right, data.right, 1, tag, isBlack);
           } else {
             right.active = false;
           }
@@ -270,7 +316,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         } //imgPos: 0-中间 1-右边 -1-左边
 
 
-        setImg(root, imgId, imgPos, tag) {
+        setImg(root, imgId, imgPos, tag, isBlack) {
           var img = null;
 
           if (root == null || root == undefined) {
@@ -326,7 +372,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                     }), Flower) : Flower);
                   }
 
-                  flowerScript.init(imgId, root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight, tag);
+                  flowerScript.init(imgId, root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight, tag, isBlack);
+
+                  if (isBlack) {
+                    img.color = color(60, 60, 60, 255);
+                  } else {
+                    img.color = color(255, 255, 255, 255);
+                  }
+
                   imgNode.active = true;
                 });
               }

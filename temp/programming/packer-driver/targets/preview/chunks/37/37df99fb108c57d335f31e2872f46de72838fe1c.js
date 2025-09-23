@@ -70,6 +70,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.m_SelfCollider = null;
           this.m_OtherCollider = null;
           this.m_FlowerId = "";
+          this.m_IsBlack = false;
         }
 
         getFlowerID() {
@@ -77,7 +78,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         } //imgPos: 0-中间 1-右边 -1-左边
 
 
-        init(imgId, flowerRoot, flowerMoveRoot, imgPos, rLeft, rRight, tag) {
+        init(imgId, flowerRoot, flowerMoveRoot, imgPos, rLeft, rRight, tag, isBlack) {
+          this.m_IsBlack = isBlack;
           this.m_FlowerId = imgId;
           this.m_FlowerTag = tag;
           this.m_IsDragingFlower = false;
@@ -95,13 +97,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         start() {
           this.m_FlowerUITransform = this.node.getComponent(UITransform);
-          this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this, true);
-          this.node.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this, true);
-          this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this, true);
-          this.node.on(Node.EventType.TOUCH_CANCEL, this.onTouchCancel, this, true);
+
+          if (!this.m_IsBlack) {
+            this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this, true);
+            this.node.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this, true);
+            this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this, true);
+            this.node.on(Node.EventType.TOUCH_CANCEL, this.onTouchCancel, this, true);
+          }
         }
 
         onDestroy() {
+          this.offNodeEvent();
+        }
+
+        offNodeEvent() {
           this.node.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
           this.node.off(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
           this.node.off(Node.EventType.TOUCH_END, this.onTouchEnd, this);
@@ -325,6 +334,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           if (event.target) {
             if (this.m_IsChangePot) {
               this.m_IsChangePot = false;
+              (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
+                error: Error()
+              }), EventManager) : EventManager).getInstance().emit((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+                error: Error()
+              }), CustomClientEvent) : CustomClientEvent).FlowerDissolve, this.m_FlowerTag);
               this.m_ImgPos = this.m_TempImgPos;
               this.m_FlowerStartPos = this.m_TempFlowerStartPos;
               this.m_FlowerRoot = this.m_TempFlowerRoot;

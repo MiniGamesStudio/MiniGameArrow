@@ -1,4 +1,4 @@
-import { _decorator, BoxCollider2D, Camera, Component, director, EventTouch, Input, input, instantiate, Node, resources, Scene, Sprite, SpriteFrame, sys, tween, UIOpacity, UITransform, Vec2, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Camera, color, Component, director, EventTouch, Input, input, instantiate, Node, resources, Scene, Sprite, SpriteFrame, sys, tween, UIOpacity, UITransform, Vec2, Vec3 } from 'cc';
 import { Flower } from './Flower';
 import { CustomClientEvent } from '../Config/Config';
 import { EventManager } from '../Core/EventManager';
@@ -23,6 +23,8 @@ export class FlowerPlatform extends Component {
     m_FlowerMoveRoot:Node = null;
 
     private m_FlowerPotMap:Map<number, Node> = new Map();
+    private m_FlowerPotTagIndexMap:Map<number, number> = new Map();
+    private m_FlowerPotTagDataMap:Map<number, any> = new Map();
 
     protected start(): void {        
         EventManager.getInstance().on(CustomClientEvent.FlowerDissolve, this.onCheckFlowerDissolve, this);
@@ -45,12 +47,20 @@ export class FlowerPlatform extends Component {
         }
 
         var flowerRoot = flowerpot.getChildByName("FlowerRootLight");
+        if(!flowerRoot){
+            return;
+        }
+
         var flowers = flowerRoot.getComponentsInChildren(Flower);
         if(!flowers){
+            this.checkBlackFlowers(flowerpot, flowerTag);
             return;
         }
 
         if(flowers.length < 3){
+            if(flowers.length <= 0){
+                this.checkBlackFlowers(flowerpot, flowerTag);
+            }
             return;
         }
 
@@ -74,19 +84,39 @@ export class FlowerPlatform extends Component {
             for(var i:number = 0; i < flowers.length; ++i){
                 var flowerNode = flowers[i].node;
                 if(flowerNode){
-                    tween(flowerNode).to(0.3, {angle : 0}, {onComplete:(target:Node)=>{
+                    tween(flowerNode).to(0.5, {angle : 0}, {onComplete:(target:Node)=>{
                         if(target){
                             target.removeFromParent();
                             target.destroy();
                         }
-                    }}).start();
+                    }}).call(()=>{
+                        if(i == flowers.length){                            
+                            this.checkBlackFlowers(flowerpot, flowerTag);
+                        }
+                    }).start();
                 }
             }
         }
     }
 
+    checkBlackFlowers(flowerpot:Node, flowerTag:number){
+        var flowerRootBlack = flowerpot.getChildByName("FlowerRootBlack");
+            if(flowerRootBlack){
+                var blackFlowers = flowerRootBlack.getComponentsInChildren(Flower);
+                if(blackFlowers && blackFlowers.length > 0){
+                    var idx = this.m_FlowerPotTagIndexMap.get(flowerTag) + 1;
+                    this.m_FlowerPotTagIndexMap.set(flowerTag, idx);
+                    var flowerData = this.m_FlowerPotTagDataMap.get(flowerTag);
+                    this.InitFlowers(flowerTag, flowerData, idx, flowerpot);   
+                }
+            }
+    }
+
     public InitPlatForm(raw:number, platFormNum:number, data:any, flowerMoveRoot:Node):void {
         this.m_FlowerPotMap.clear();
+        this.m_FlowerPotTagIndexMap.clear();
+        this.m_FlowerPotTagDataMap.clear();
+
         this.m_FlowerMoveRoot = flowerMoveRoot;
         if(data){
             this.m_PlatFormRoot.active = false;
@@ -122,8 +152,9 @@ export class FlowerPlatform extends Component {
                         }
 
                         this.m_FlowerPotMap.set(collider.tag, flowerPotLayoutClone);
-
-                        this.InitFlowers(collider.tag, data[i], flowerPotLayoutClone);                        
+                        this.m_FlowerPotTagIndexMap.set(collider.tag, 0);
+                        this.m_FlowerPotTagDataMap.set(collider.tag, data[i]);
+                        this.InitFlowers(collider.tag, data[i], 0, flowerPotLayoutClone);                        
                         flowerPotLayoutClone.active = true;
                         flowerPotRoot.addChild(flowerPotLayoutClone);
                     }
@@ -138,20 +169,29 @@ export class FlowerPlatform extends Component {
         }        
     }
 
-    InitFlowers(tag:number, data:any, flowerPotLayoutClone:Node):void{
+    InitFlowers(tag:number, data:any, idx:number, flowerPotLayoutClone:Node):void{
         if(flowerPotLayoutClone){
             var flowerRootBlack = flowerPotLayoutClone.getChildByName("FlowerRootBlack");
-            if(data.length >= 1){
-                this.setFlowerData(flowerRootBlack, tag, data[1]);
+            if(data.length >= (idx + 1)){
+                this.setFlowerData(flowerRootBlack, tag, data[idx + 1], true);
+                flowerRootBlack.active = true;
             }
-            flowerRootBlack.active = false;
+            else{
+                flowerRootBlack.active = false;
+            }
 
             var flowerRootLight = flowerPotLayoutClone.getChildByName("FlowerRootLight");
-            this.setFlowerData(flowerRootLight, tag, data[0]);
+            if(data.length >= idx){
+                this.setFlowerData(flowerRootLight, tag, data[idx], false);
+                flowerRootLight.active = true;
+            }
+            else{
+                flowerRootLight.active = false;
+            }
         }
     }
 
-    setFlowerData(flowerRoot:Node, tag:number, data:any = null):void {
+    setFlowerData(flowerRoot:Node, tag:number, data:any, isBlack:boolean):void {
         if(flowerRoot == null){
             return;
         }
@@ -160,7 +200,7 @@ export class FlowerPlatform extends Component {
         var left = flowerRoot.getChildByName("Left");
         if(data && data.left){
             left.active = true;
-            this.setImg(left, data.left, -1, tag);
+            this.setImg(left, data.left, -1, tag, isBlack);
         }
         else{
             left.active = false;
@@ -169,7 +209,7 @@ export class FlowerPlatform extends Component {
         var mid = flowerRoot.getChildByName("Mid");
         if(data && data.mid){
             mid.active = true;
-            this.setImg(mid, data.mid, 0, tag);
+            this.setImg(mid, data.mid, 0, tag, isBlack);
         }
         else{
             mid.active = false;
@@ -178,7 +218,7 @@ export class FlowerPlatform extends Component {
         var right = flowerRoot.getChildByName("Right");
         if(data && data.right){
             right.active = true;
-            this.setImg(right, data.right, 1, tag);
+            this.setImg(right, data.right, 1, tag, isBlack);
         }
         else{
             right.active = false;
@@ -188,7 +228,7 @@ export class FlowerPlatform extends Component {
     }
 
     //imgPos: 0-中间 1-右边 -1-左边
-    setImg(root:Node, imgId:string, imgPos:number, tag:number){
+    setImg(root:Node, imgId:string, imgPos:number, tag:number, isBlack:boolean){
         var img = null;
         if(root == null || root == undefined){
             return;
@@ -235,8 +275,15 @@ export class FlowerPlatform extends Component {
                         if(flowerScript == null || flowerScript == undefined){
                             flowerScript = imgNode.addComponent(Flower);                
                         }  
-                        flowerScript.init(imgId, root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight, tag);
+                        flowerScript.init(imgId, root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight, tag, isBlack);
 
+                        if(isBlack){
+                            img.color = color(60, 60, 60, 255);
+                        }
+                        else{
+                            img.color = color(255, 255, 255, 255);
+                        }
+                        
                         imgNode.active = true;
                     });
                 }
