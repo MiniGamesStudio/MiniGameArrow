@@ -38,6 +38,10 @@ export class FlowerPlatform extends Component {
     }
 
     protected onDestroy(): void {
+        this.offNodeEvent();
+    }
+
+    public offNodeEvent(): void{
         EventManager.getInstance().off(CustomClientEvent.FlowerDissolve, this.onCheckFlowerDissolve, this);
     }
 
@@ -120,6 +124,7 @@ export class FlowerPlatform extends Component {
 
         var isVictory = this.checkVictory();
         if(isVictory){
+            //console.log("Victory");
             this.m_IsVictory = true;
             EventManager.getInstance().emit(CustomClientEvent.CheckVictory);
         }

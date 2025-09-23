@@ -137,6 +137,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onCheckVictory(args) {
+          //console.log("onCheckVictory 1");
           if (!this.m_CurLevelData) {
             return;
           }
@@ -152,10 +153,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             if (temp) {
               vCount += 1;
             }
-          });
+          }); //console.log("onCheckVictory 2 vCount = " + vCount);
 
           if (vCount == this.m_FlowerPlatformArr.length) {
             //Victory
+            //console.log("onCheckVictory VictoryPanel");
             (_crd && UIManager === void 0 ? (_reportPossibleCrUseOfUIManager({
               error: Error()
             }), UIManager) : UIManager).GetInstance().OpenPanel((_crd && UIID === void 0 ? (_reportPossibleCrUseOfUIID({
@@ -181,12 +183,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         initGameLevel(level) {
+          this.m_CurLv = level;
           resources.load("levelData/level_" + level, JsonAsset, (err, jsonAsset) => {
             if (err) {
               return;
             }
 
             this.m_CurLevelData = jsonAsset.json;
+
+            if (this.m_FlowerPlatformArr && this.m_FlowerPlatformArr.length > 0) {
+              this.m_FlowerPlatformArr.forEach(fPlatform => {
+                fPlatform.offNodeEvent();
+              });
+            }
+
             this.m_LevelRoot.removeAllChildren();
             resources.load("ui/FlowerPlatform", Prefab, (err, prefab) => {
               if (prefab) {

@@ -1,6 +1,6 @@
 {
     "levelID":1,
-    "levelName":"关卡1",
+    "levelName":"关卡2",
     "FlowerRow":4,
     "FlowerPlatform":[2,1,1,1],
     "FlowerPot":[[1,2],4,4,4],
