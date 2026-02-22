@@ -82,7 +82,7 @@
       "time": 1758547635951.8262
     },
     "scripts\\Core\\UIManager.ts": {
-      "time": 1771751272006.098,
+      "time": 1771760391295.8333,
       "uuid": "42236225-285e-4698-aa5c-ca8c6f50a69e"
     },
     "resources\\ui.meta": {
@@ -117,7 +117,7 @@
       "time": 1758547635954.8162
     },
     "scripts\\UIScripts\\UIData.ts": {
-      "time": 1771739036494.7932,
+      "time": 1771761300881.4854,
       "uuid": "39190ce7-9db7-407c-acf6-f67473bfbf69"
     },
     "resources\\ui\\MainPanel.prefab.meta": {

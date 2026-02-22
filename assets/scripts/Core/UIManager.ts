@@ -160,6 +160,8 @@ export class UIManager {
             return temp;
         }
 
+            
+        var pID = this.m_PanelID
         resources.load(uidata.prefabPath, Prefab, (err, prefab)=>{
             var root = this.GetUIRootByUILayer(uidata.layer)
             if(root == null){
@@ -189,12 +191,11 @@ export class UIManager {
                 this.m_PanelDataMap.set(id, arr);
             }
 
-            var pID = this.m_PanelID
             this.m_PanelNodeMap.set(this.m_PanelID, uiNode);
             ++this.m_PanelID;
-
-            return pID;
         });
+            
+        return pID;
     }
 
     //检查UIID面板是否已打开

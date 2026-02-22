@@ -1,86 +1,34 @@
-2026-2-22 16:49:24 - log: Load engine in D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\resources\3d\engine
-2026-2-22 16:49:24 - log: Register native engine in D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\resources\3d\engine\native
-2026-2-22 16:49:24 - log: Request namespace: device-list
-2026-2-22 16:49:29 - info: [PreviewInEditor] 预览环境初始化完毕
-2026-2-22 16:49:29 - log: [Scene] meshopt wasm decoder initialized
-2026-2-22 16:49:29 - log: [Scene] [bullet]:bullet wasm lib loaded.
-2026-2-22 16:49:29 - log: [Scene] [box2d]:box2d wasm lib loaded.
-2026-2-22 16:49:29 - log: [Scene] [PHYSICS]: using builtin.
-2026-2-22 16:49:29 - log: [Scene] Cocos Creator v3.8.8
-2026-2-22 16:49:30 - log: [Scene] Using custom pipeline: Builtin
-2026-2-22 16:49:48 - log: [PreviewInEditor] meshopt wasm decoder initialized
-2026-2-22 16:49:48 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
-2026-2-22 16:49:48 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
-2026-2-22 16:49:49 - log: [PreviewInEditor] [PHYSICS]: using builtin.
-2026-2-22 16:49:49 - log: [PreviewInEditor] Cocos Creator v3.8.8
-2026-2-22 16:49:49 - log: [PreviewInEditor] Using custom pipeline: Builtin
-2026-2-22 16:50:23 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+2026-2-22 19:50:46 - log: Load engine in D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\resources\3d\engine
+2026-2-22 19:50:46 - log: Register native engine in D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\resources\3d\engine\native
+2026-2-22 19:50:46 - log: Request namespace: device-list
+2026-2-22 19:50:51 - info: [PreviewInEditor] 预览环境初始化完毕
+2026-2-22 19:50:51 - log: [Scene] meshopt wasm decoder initialized
+2026-2-22 19:50:51 - log: [Scene] [bullet]:bullet wasm lib loaded.
+2026-2-22 19:50:51 - log: [Scene] [box2d]:box2d wasm lib loaded.
+2026-2-22 19:50:51 - log: [Scene] [PHYSICS]: using builtin.
+2026-2-22 19:50:51 - log: [Scene] Cocos Creator v3.8.8
+2026-2-22 19:50:51 - log: [Scene] Using custom pipeline: Builtin
+2026-2-22 19:50:56 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2026-2-22 19:50:56 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2026-2-22 19:50:56 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2026-2-22 19:50:56 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2026-2-22 19:50:56 - log: [PreviewInEditor] Cocos Creator v3.8.8
+2026-2-22 19:50:56 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2026-2-22 19:52:52 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
     at console.warn (D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
     at IpcRenderer.<anonymous> (D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
     at IpcRenderer.emit (node:events:519:28)
     at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
-2026-2-22 16:50:24 - info: [PreviewInEditor] 预览环境初始化完毕
-2026-2-22 16:50:24 - log: [PreviewInEditor] meshopt wasm decoder initialized
-2026-2-22 16:50:24 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
-2026-2-22 16:50:24 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
-2026-2-22 16:50:24 - log: [PreviewInEditor] [PHYSICS]: using builtin.
-2026-2-22 16:50:24 - log: [PreviewInEditor] Cocos Creator v3.8.8
-2026-2-22 16:50:24 - log: [PreviewInEditor] Using custom pipeline: Builtin
-2026-2-22 16:54:14 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
+2026-2-22 19:52:52 - info: [PreviewInEditor] 预览环境初始化完毕
+2026-2-22 19:55:05 - log: [PreviewInEditor] meshopt wasm decoder initialized
+2026-2-22 19:55:05 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+2026-2-22 19:55:05 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+2026-2-22 19:55:05 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+2026-2-22 19:55:05 - log: [PreviewInEditor] Cocos Creator v3.8.8
+2026-2-22 19:55:05 - log: [PreviewInEditor] Using custom pipeline: Builtin
+2026-2-22 19:55:34 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
     at console.warn (D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
     at IpcRenderer.<anonymous> (D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
     at IpcRenderer.emit (node:events:519:28)
     at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
-2026-2-22 16:54:14 - info: [PreviewInEditor] 预览环境初始化完毕
-2026-2-22 16:54:15 - log: [PreviewInEditor] meshopt wasm decoder initialized
-2026-2-22 16:54:15 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
-2026-2-22 16:54:15 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
-2026-2-22 16:54:15 - log: [PreviewInEditor] [PHYSICS]: using builtin.
-2026-2-22 16:54:15 - log: [PreviewInEditor] Cocos Creator v3.8.8
-2026-2-22 16:54:15 - log: [PreviewInEditor] Using custom pipeline: Builtin
-2026-2-22 16:55:20 - info: [PreviewInEditor] 预览环境初始化完毕
-2026-2-22 16:56:48 - log: [PreviewInEditor] meshopt wasm decoder initialized
-2026-2-22 16:56:48 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
-2026-2-22 16:56:48 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
-2026-2-22 16:56:48 - log: [PreviewInEditor] [PHYSICS]: using builtin.
-2026-2-22 16:56:48 - log: [PreviewInEditor] Cocos Creator v3.8.8
-2026-2-22 16:56:48 - log: [PreviewInEditor] Using custom pipeline: Builtin
-2026-2-22 16:57:54 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
-    at console.warn (D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
-    at IpcRenderer.<anonymous> (D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
-    at IpcRenderer.emit (node:events:519:28)
-    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
-2026-2-22 16:57:54 - info: [PreviewInEditor] 预览环境初始化完毕
-2026-2-22 16:57:54 - log: [PreviewInEditor] meshopt wasm decoder initialized
-2026-2-22 16:57:54 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
-2026-2-22 16:57:54 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
-2026-2-22 16:57:54 - log: [PreviewInEditor] [PHYSICS]: using builtin.
-2026-2-22 16:57:54 - log: [PreviewInEditor] Cocos Creator v3.8.8
-2026-2-22 16:57:54 - log: [PreviewInEditor] Using custom pipeline: Builtin
-2026-2-22 16:58:39 - info: [PreviewInEditor] 预览环境初始化完毕
-2026-2-22 17:03:02 - log: [PreviewInEditor] meshopt wasm decoder initialized
-2026-2-22 17:03:02 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
-2026-2-22 17:03:02 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
-2026-2-22 17:03:02 - log: [PreviewInEditor] [PHYSICS]: using builtin.
-2026-2-22 17:03:02 - log: [PreviewInEditor] Cocos Creator v3.8.8
-2026-2-22 17:03:02 - log: [PreviewInEditor] Using custom pipeline: Builtin
-2026-2-22 17:07:57 - warn: [PreviewInEditor] IPC message has been lost.Error: [PreviewInEditor] IPC message has been lost.
-    at console.warn (D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
-    at IpcRenderer.<anonymous> (D:\ProgramData\cocos_creator_data\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\ipc\web\webview.ccc:1:1464)
-    at IpcRenderer.emit (node:events:519:28)
-    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
-2026-2-22 17:07:57 - info: [PreviewInEditor] 预览环境初始化完毕
-2026-2-22 17:07:57 - log: [PreviewInEditor] meshopt wasm decoder initialized
-2026-2-22 17:07:57 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
-2026-2-22 17:07:57 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
-2026-2-22 17:07:57 - log: [PreviewInEditor] [PHYSICS]: using builtin.
-2026-2-22 17:07:57 - log: [PreviewInEditor] Cocos Creator v3.8.8
-2026-2-22 17:07:57 - log: [PreviewInEditor] Using custom pipeline: Builtin
-2026-2-22 17:19:36 - info: [PreviewInEditor] 预览环境初始化完毕
-2026-2-22 17:19:36 - log: [PreviewInEditor] meshopt wasm decoder initialized
-2026-2-22 17:19:36 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
-2026-2-22 17:19:36 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
-2026-2-22 17:19:36 - log: [PreviewInEditor] [PHYSICS]: using builtin.
-2026-2-22 17:19:36 - log: [PreviewInEditor] Cocos Creator v3.8.8
-2026-2-22 17:19:36 - log: [PreviewInEditor] Using custom pipeline: Builtin
-2026-2-22 17:20:07 - info: [PreviewInEditor] 预览环境初始化完毕
+2026-2-22 19:55:34 - info: [PreviewInEditor] 预览环境初始化完毕

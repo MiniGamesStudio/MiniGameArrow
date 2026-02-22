@@ -57,7 +57,7 @@ export class UIDataSet {
         this.InitUI(UIID.VictoryPanel, UILayer.Normal, "VictoryPanel", "ui/VictoryPanel");
     }
 
-    static InitUI(id:UIID, layer:UILayer, uiName:string, path:string, showMode:UIShowMode = UIShowMode.Single, cacheCount:number = 1){
+    static InitUI(id:UIID, layer:UILayer, uiName:string, path:string, showMode:UIShowMode = UIShowMode.Normal, cacheCount:number = 0){
         var data = new UIData();
         data.id = id;
         data.layer = layer;

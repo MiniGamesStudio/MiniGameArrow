@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 3821.8281,
+      "mTimestamp": 3817.5973,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 1811255.3417,
+      "mTimestamp": 258511.7822,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2743,7 +2743,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1771750164674,
+      "mTimestamp": 1771761046606,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -4071,7 +4071,7 @@
     },
     "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts": {
       "mTimestamp": {
-        "mtime": 1771751272006.098,
+        "mtime": 1771760391295.8333,
         "uuid": "42236225-285e-4698-aa5c-ca8c6f50a69e"
       },
       "chunkId": "ec885f68fedcb631ab903882136a40a2f4d545ae",
@@ -5089,7 +5089,7 @@
     },
     "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts": {
       "mTimestamp": {
-        "mtime": 1771739036494.7932,
+        "mtime": 1771761300881.4854,
         "uuid": "39190ce7-9db7-407c-acf6-f67473bfbf69"
       },
       "chunkId": "08158cafa7cfc7fa45797eb4a7fd9d41908a6eca",
