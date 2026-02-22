@@ -19,6 +19,10 @@ export class VictoryPanel extends UIBase {
     @property(RichText)
     m_ContentRichText:RichText = null;
 
+    onInit(): void {
+        
+    }
+
     onOpen(...args: any[]): void {
         if(args == null){
             this.CloseSelf();
@@ -30,22 +34,22 @@ export class VictoryPanel extends UIBase {
             isVictory = args[0];
         }
 
-        this.m_CloseBtn.node.on('click', ()=>{
+        this.SetBtnEvent(this.m_CloseBtn, ()=>{
             this.CloseSelf();
         });
 
-        this.m_RetryBtn.node.on('click', ()=>{
+        this.SetBtnEvent(this.m_RetryBtn, ()=>{
             this.CloseSelf();
             EventManager.getInstance().emit(CustomClientEvent.RetryLevel);
         });
 
-        this.m_GoBackBtn.node.on('click', ()=>{
+        this.SetBtnEvent(this.m_GoBackBtn, ()=>{
             this.CloseSelf();
             UIManager.GetInstance().OpenPanel(UIID.MainPanel);
             UIManager.GetInstance().ClosePanel(UIID.GamePanel);
         });
 
-        this.m_NextLvBtn.node.on('click', ()=>{
+        this.SetBtnEvent(this.m_NextLvBtn, ()=>{
             this.CloseSelf();
             EventManager.getInstance().emit(CustomClientEvent.NextLevel);
         });

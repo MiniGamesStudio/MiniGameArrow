@@ -31,6 +31,10 @@ export class MainPanel extends UIBase {
 
     private m_PageName:string[] = [];
 
+    onInit(): void {
+        
+    }
+
     onOpen(...args: any[]): void {
         this.m_PageName[0] = PageType.ShopPage;
         this.m_PageName[1] = PageType.AchievePage;
@@ -70,8 +74,8 @@ export class MainPanel extends UIBase {
         this.m_CurPage = this.m_PageOne;
         this.m_OtherPage = this.m_PageTwo;
 
-        this.m_FuncBtns.forEach((button, index) => {
-            button.node.on('click', () => {
+        this.m_FuncBtns.forEach((button, index) => {            
+            this.SetBtnEvent(button, ()=>{
                 if(index == this.m_LastIndex || this.m_IsScrollingPage)
                 {
                     return;

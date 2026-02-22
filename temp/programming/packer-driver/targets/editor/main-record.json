@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 5155.2792,
+      "mTimestamp": 3821.8281,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -997,11 +997,11 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 918843.0328,
+      "mTimestamp": 1811255.3417,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Config/Config.ts",
           "resolved": "__unresolved_0",
           "loc": {
             "start": {
@@ -1010,287 +1010,287 @@
             },
             "end": {
               "line": 5,
-              "column": 174
+              "column": 123
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/EventManager.ts",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 5,
-              "column": 190
+              "column": 139
             },
             "end": {
               "line": 5,
-              "column": 334
+              "column": 231
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/GameManager.ts",
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
               "line": 5,
-              "column": 350
+              "column": 247
             },
             "end": {
               "line": 5,
-              "column": 498
+              "column": 338
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIBase.ts",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
               "line": 5,
-              "column": 514
+              "column": 354
             },
             "end": {
               "line": 5,
-              "column": 659
+              "column": 440
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts",
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
               "line": 5,
-              "column": 675
+              "column": 456
             },
             "end": {
               "line": 5,
-              "column": 814
+              "column": 545
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Launcher.ts",
           "resolved": "__unresolved_5",
           "loc": {
             "start": {
               "line": 5,
-              "column": 830
+              "column": 561
             },
             "end": {
               "line": 5,
-              "column": 962
+              "column": 644
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Config/Config.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/ScreenAdapter.ts",
           "resolved": "__unresolved_6",
           "loc": {
             "start": {
               "line": 5,
-              "column": 978
+              "column": 660
             },
             "end": {
               "line": 5,
-              "column": 1065
+              "column": 748
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Core/EventManager.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/Flower.ts",
           "resolved": "__unresolved_7",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1081
+              "column": 764
             },
             "end": {
               "line": 5,
-              "column": 1172
+              "column": 855
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Core/GameManager.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts",
           "resolved": "__unresolved_8",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1188
+              "column": 871
             },
             "end": {
               "line": 5,
-              "column": 1278
+              "column": 970
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Core/UIBase.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/GamePage.ts",
           "resolved": "__unresolved_9",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1294
+              "column": 986
             },
             "end": {
               "line": 5,
-              "column": 1379
+              "column": 1079
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Core/UIManager.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/GamePanel.ts",
           "resolved": "__unresolved_10",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1395
+              "column": 1095
             },
             "end": {
               "line": 5,
-              "column": 1483
+              "column": 1189
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Launcher.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/LoadingPanel.ts",
           "resolved": "__unresolved_11",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1499
+              "column": 1205
             },
             "end": {
               "line": 5,
-              "column": 1581
+              "column": 1302
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/ScreenAdapter.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/MainPanel.ts",
           "resolved": "__unresolved_12",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1597
+              "column": 1318
             },
             "end": {
               "line": 5,
-              "column": 1684
+              "column": 1412
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/Flower.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts",
           "resolved": "__unresolved_13",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1700
+              "column": 1428
             },
             "end": {
               "line": 5,
-              "column": 1790
+              "column": 1519
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts",
+          "value": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/VictoryPanel.ts",
           "resolved": "__unresolved_14",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1806
+              "column": 1535
             },
             "end": {
               "line": 5,
-              "column": 1904
+              "column": 1632
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/GamePage.ts",
+          "value": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts",
           "resolved": "__unresolved_15",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1920
+              "column": 1648
             },
             "end": {
               "line": 5,
-              "column": 2012
+              "column": 1792
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/GamePanel.ts",
+          "value": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts",
           "resolved": "__unresolved_16",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2028
+              "column": 1808
             },
             "end": {
               "line": 5,
-              "column": 2121
+              "column": 1957
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/LoadingPanel.ts",
+          "value": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts",
           "resolved": "__unresolved_17",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2137
+              "column": 1973
             },
             "end": {
               "line": 5,
-              "column": 2233
+              "column": 2126
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/MainPanel.ts",
+          "value": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts",
           "resolved": "__unresolved_18",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2249
+              "column": 2142
             },
             "end": {
               "line": 5,
-              "column": 2342
+              "column": 2292
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/UIData.ts",
+          "value": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts",
           "resolved": "__unresolved_19",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2358
+              "column": 2308
             },
             "end": {
               "line": 5,
-              "column": 2448
+              "column": 2452
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/VictoryPanel.ts",
+          "value": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
           "resolved": "__unresolved_20",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2464
+              "column": 2468
             },
             "end": {
               "line": 5,
-              "column": 2560
+              "column": 2605
             }
           }
         }
@@ -1300,147 +1300,147 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Config/Config.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/EventManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/GameManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIBase.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.7/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Launcher.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Config/Config.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/ScreenAdapter.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Core/EventManager.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/Flower.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Core/GameManager.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Core/UIBase.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/GamePage.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Core/UIManager.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/GamePanel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Launcher.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/LoadingPanel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/ScreenAdapter.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/MainPanel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/Flower.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts"
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/VictoryPanel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/GamePage.ts"
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/GamePanel.ts"
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/LoadingPanel.ts"
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/MainPanel.ts"
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/UIData.ts"
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/UIScripts/VictoryPanel.ts"
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
           },
           "messages": []
         }
@@ -2743,7 +2743,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1758613235284,
+      "mTimestamp": 1771750164674,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -3750,6 +3750,2120 @@
           "resolved": {
             "type": "module",
             "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Config/Config.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Config/Config.ts": {
+      "mTimestamp": {
+        "mtime": 1758635031229.9043,
+        "uuid": "00a66e36-6ce7-4999-9f5d-382904b450e6"
+      },
+      "chunkId": "bb5da486e77219a9e159fb935745b31bdd121400",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/EventManager.ts": {
+      "mTimestamp": {
+        "mtime": 1758635031229.9043,
+        "uuid": "e4080dc7-3bc3-46a0-bcd9-2dc05c0cf460"
+      },
+      "chunkId": "36714293c3776195af6de34a60fca9256bb74ef7",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/GameManager.ts": {
+      "mTimestamp": {
+        "mtime": 1758547635951.8262,
+        "uuid": "54644bc7-4998-47f7-887d-29c73780ca78"
+      },
+      "chunkId": "f059f7d69153a7cd20eb32b9512b19758010daae",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 33
+            },
+            "end": {
+              "line": 1,
+              "column": 37
+            }
+          }
+        },
+        {
+          "value": "./UIManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 26
+            },
+            "end": {
+              "line": 2,
+              "column": 39
+            }
+          }
+        },
+        {
+          "value": "../UIScripts/UIData",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 21
+            },
+            "end": {
+              "line": 3,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIBase.ts": {
+      "mTimestamp": {
+        "mtime": 1771751655507.8987,
+        "uuid": "f7720628-4c1f-434d-9153-bbb12c81315f"
+      },
+      "chunkId": "340aa975d7d0c32dd434bd990dc40a97cd4511de",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 46
+            },
+            "end": {
+              "line": 1,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "./UIManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 26
+            },
+            "end": {
+              "line": 2,
+              "column": 39
+            }
+          }
+        },
+        {
+          "value": "../UIScripts/UIData",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 21
+            },
+            "end": {
+              "line": 3,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts": {
+      "mTimestamp": {
+        "mtime": 1771751272006.098,
+        "uuid": "42236225-285e-4698-aa5c-ca8c6f50a69e"
+      },
+      "chunkId": "ec885f68fedcb631ab903882136a40a2f4d545ae",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 76
+            },
+            "end": {
+              "line": 1,
+              "column": 80
+            }
+          }
+        },
+        {
+          "value": "../UIScripts/UIData",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 61
+            },
+            "end": {
+              "line": 2,
+              "column": 82
+            }
+          }
+        },
+        {
+          "value": "./UIBase",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 23
+            },
+            "end": {
+              "line": 3,
+              "column": 33
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIBase.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Launcher.ts": {
+      "mTimestamp": {
+        "mtime": 1758635031230.9011,
+        "uuid": "6bd473a9-b885-4cf7-ad19-f480985edc0e"
+      },
+      "chunkId": "af469e98b97bc38dabfe9264e0bbd37404c8591c",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 163
+            },
+            "end": {
+              "line": 1,
+              "column": 167
+            }
+          }
+        },
+        {
+          "value": "./ScreenAdapter",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 30
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "./Core/GameManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 28
+            },
+            "end": {
+              "line": 3,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/ScreenAdapter.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/GameManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/ScreenAdapter.ts": {
+      "mTimestamp": {
+        "mtime": 1758547635952.8228,
+        "uuid": "43b48910-34b5-4562-a46d-bc38d8f58eed"
+      },
+      "chunkId": "5a55a5a742bb10d99c59453942d9f3870a17b050",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 66
+            },
+            "end": {
+              "line": 1,
+              "column": 70
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/Flower.ts": {
+      "mTimestamp": {
+        "mtime": 1758635031230.9011,
+        "uuid": "c50538aa-7778-4ac9-9299-be20c356b8ad"
+      },
+      "chunkId": "f9a756c89c848c0531b7b2b6475958c1fa124cba",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 200
+            },
+            "end": {
+              "line": 1,
+              "column": 204
+            }
+          }
+        },
+        {
+          "value": "../Config/Config",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 34
+            },
+            "end": {
+              "line": 2,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../Core/EventManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Config/Config.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/EventManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts": {
+      "mTimestamp": {
+        "mtime": 1758635031230.9011,
+        "uuid": "1d917e78-c927-49ad-8418-7a1e1e5ee711"
+      },
+      "chunkId": "551e4dcfb1b6262503b16ac45cc3230e36860e67",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 210
+            },
+            "end": {
+              "line": 1,
+              "column": 214
+            }
+          }
+        },
+        {
+          "value": "./Flower",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 33
+            }
+          }
+        },
+        {
+          "value": "../Config/Config",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 34
+            },
+            "end": {
+              "line": 3,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../Core/EventManager",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/Flower.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Config/Config.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/EventManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/GamePage.ts": {
+      "mTimestamp": {
+        "mtime": 1771751723026.5283,
+        "uuid": "109f4b17-e33b-4060-96f6-ad14ddac03c3"
+      },
+      "chunkId": "3661563615415207d982411e5cbd60ef9429432d",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 73
+            },
+            "end": {
+              "line": 1,
+              "column": 77
+            }
+          }
+        },
+        {
+          "value": "../Core/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 39
+            }
+          }
+        },
+        {
+          "value": "../Core/UIManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 26
+            },
+            "end": {
+              "line": 3,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "./UIData",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 21
+            },
+            "end": {
+              "line": 4,
+              "column": 31
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIBase.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/GamePanel.ts": {
+      "mTimestamp": {
+        "mtime": 1771751742253.986,
+        "uuid": "ea5e5989-57b5-4e56-bec1-1988a2f4a889"
+      },
+      "chunkId": "1a8e8f30304f2a5c27fba99a570c04514dd2ad01",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 209
+            },
+            "end": {
+              "line": 1,
+              "column": 213
+            }
+          }
+        },
+        {
+          "value": "../Core/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 39
+            }
+          }
+        },
+        {
+          "value": "../Core/UIManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 26
+            },
+            "end": {
+              "line": 3,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "./UIData",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 21
+            },
+            "end": {
+              "line": 4,
+              "column": 31
+            }
+          }
+        },
+        {
+          "value": "./FlowerPlatform",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 31
+            },
+            "end": {
+              "line": 5,
+              "column": 49
+            }
+          }
+        },
+        {
+          "value": "../Core/EventManager",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 29
+            },
+            "end": {
+              "line": 6,
+              "column": 51
+            }
+          }
+        },
+        {
+          "value": "../Config/Config",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 34
+            },
+            "end": {
+              "line": 7,
+              "column": 52
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIBase.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/FlowerPlatform.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/EventManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Config/Config.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/LoadingPanel.ts": {
+      "mTimestamp": {
+        "mtime": 1771748246921.125,
+        "uuid": "48640665-0c64-4ac9-97d0-74b2f544a0d5"
+      },
+      "chunkId": "277b3a510f8fb3632dd98c141bd12da09f44409e",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 65
+            },
+            "end": {
+              "line": 1,
+              "column": 69
+            }
+          }
+        },
+        {
+          "value": "../Core/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 39
+            }
+          }
+        },
+        {
+          "value": "../Core/UIManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 26
+            },
+            "end": {
+              "line": 3,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "./UIData",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 21
+            },
+            "end": {
+              "line": 4,
+              "column": 31
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIBase.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/MainPanel.ts": {
+      "mTimestamp": {
+        "mtime": 1771751778180.0552,
+        "uuid": "3fdc0d3b-7ffd-4f9b-b5af-1cbf88075fb3"
+      },
+      "chunkId": "90a090aeada5aa670f77e1b1e969c8751963a4e6",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 192
+            },
+            "end": {
+              "line": 1,
+              "column": 196
+            }
+          }
+        },
+        {
+          "value": "../Core/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 39
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIBase.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts": {
+      "mTimestamp": {
+        "mtime": 1771739036494.7932,
+        "uuid": "39190ce7-9db7-407c-acf6-f67473bfbf69"
+      },
+      "chunkId": "08158cafa7cfc7fa45797eb4a7fd9d41908a6eca",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/VictoryPanel.ts": {
+      "mTimestamp": {
+        "mtime": 1771751925406.9429,
+        "uuid": "bebe4ada-b043-4aa6-8c74-933a4773746c"
+      },
+      "chunkId": "c01e1f520e66b60077d478ff93852f1b0081a4b7",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 62
+            },
+            "end": {
+              "line": 1,
+              "column": 66
+            }
+          }
+        },
+        {
+          "value": "../Core/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 39
+            }
+          }
+        },
+        {
+          "value": "../Core/UIManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 26
+            },
+            "end": {
+              "line": 3,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "./UIData",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 21
+            },
+            "end": {
+              "line": 4,
+              "column": 31
+            }
+          }
+        },
+        {
+          "value": "../Core/EventManager",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 29
+            },
+            "end": {
+              "line": 5,
+              "column": 51
+            }
+          }
+        },
+        {
+          "value": "../Config/Config",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 34
+            },
+            "end": {
+              "line": 6,
+              "column": 52
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIBase.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/UIData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/EventManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Config/Config.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts": {
+      "mTimestamp": {
+        "mtime": 1771739330350.3335,
+        "uuid": "11f3130e-c08c-47bb-a209-71d114594e6d"
+      },
+      "chunkId": "f3acef7fcb6f29a445fe65eaa7d4f4139df1cbd7",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 28,
+              "column": 7
+            },
+            "end": {
+              "line": 28,
+              "column": 11
+            }
+          }
+        },
+        {
+          "value": "cc/env",
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 23
+            },
+            "end": {
+              "line": 30,
+              "column": 31
+            }
+          }
+        },
+        {
+          "value": "./builtin-pipeline-settings",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 34,
+              "column": 7
+            },
+            "end": {
+              "line": 34,
+              "column": 36
+            }
+          }
+        },
+        {
+          "value": "./builtin-pipeline-pass",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 38,
+              "column": 7
+            },
+            "end": {
+              "line": 38,
+              "column": 32
+            }
+          }
+        },
+        {
+          "value": "./builtin-pipeline",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 45,
+              "column": 7
+            },
+            "end": {
+              "line": 45,
+              "column": 27
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cc/env"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts": {
+      "mTimestamp": {
+        "mtime": 1771739330354.3335,
+        "uuid": "6f94083c-fc92-438b-a15b-a20ec61666c7"
+      },
+      "chunkId": "c56683ce8f9ab19837252e8173620d9caed5990c",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 7
+            },
+            "end": {
+              "line": 30,
+              "column": 11
+            }
+          }
+        },
+        {
+          "value": "./builtin-pipeline-settings",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 32,
+              "column": 40
+            },
+            "end": {
+              "line": 32,
+              "column": 69
+            }
+          }
+        },
+        {
+          "value": "cc/env",
+          "loc": {
+            "start": {
+              "line": 34,
+              "column": 23
+            },
+            "end": {
+              "line": 34,
+              "column": 31
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cc/env"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts": {
+      "mTimestamp": {
+        "mtime": 1771739330355.3335,
+        "uuid": "de1c2107-70c8-4021-8459-6399f24d01c6"
+      },
+      "chunkId": "dcf67f6fa3cda8fbe4450c4c871a470c101b3384",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 28,
+              "column": 7
+            },
+            "end": {
+              "line": 28,
+              "column": 11
+            }
+          }
+        },
+        {
+          "value": "cc/env",
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 23
+            },
+            "end": {
+              "line": 30,
+              "column": 31
+            }
+          }
+        },
+        {
+          "value": "./builtin-pipeline-types",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 35,
+              "column": 7
+            },
+            "end": {
+              "line": 35,
+              "column": 33
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cc/env"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts": {
+      "mTimestamp": {
+        "mtime": 1771739330356.3335,
+        "uuid": "cbf30902-517f-40dc-af90-a550bac27cf1"
+      },
+      "chunkId": "fa2742f515b545f0827de5a0223da94886fd41f8",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 31,
+              "column": 49
+            },
+            "end": {
+              "line": 31,
+              "column": 53
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts": {
+      "mTimestamp": {
+        "mtime": 1771739330357.3333,
+        "uuid": "ff9b0199-ce04-4cfe-86cc-6c719f08d6e4"
+      },
+      "chunkId": "63e0b8fe5ccba66513bf7595df8991b848838001",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 29,
+              "column": 7
+            },
+            "end": {
+              "line": 29,
+              "column": 11
+            }
+          }
+        },
+        {
+          "value": "cc/env",
+          "loc": {
+            "start": {
+              "line": 31,
+              "column": 30
+            },
+            "end": {
+              "line": 31,
+              "column": 38
+            }
+          }
+        },
+        {
+          "value": "./builtin-pipeline-types",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 37,
+              "column": 7
+            },
+            "end": {
+              "line": 37,
+              "column": 33
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cc/env"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/ProgramData/cocos_creator_data/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts": {
+      "mTimestamp": {
+        "mtime": 1771739330469.7925,
+        "uuid": "b2bd1fa7-8d7c-49c5-a158-df29a6d3a594"
+      },
+      "chunkId": "ecca2f703af41117c2904806a087303fd8dda30b",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 220
+            },
+            "end": {
+              "line": 1,
+              "column": 224
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
           },
           "messages": []
         }

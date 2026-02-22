@@ -1,5 +1,5 @@
 import { _decorator, Component, instantiate, Node, Prefab, resources } from 'cc';
-import { UIDataSet, UIID, UIData, UILayer } from '../UIScripts/UIData';
+import { UIDataSet, UIID, UIData, UIShowMode, UILayer } from '../UIScripts/UIData';
 import { UIBase } from './UIBase';
 
 const { ccclass, property } = _decorator;
@@ -16,16 +16,26 @@ export class UIManager {
         return this.m_Instance;
     }
     
+    //面板唯一ID
     private m_PanelID = 1;
+    //UI面板根节点
     private m_UIRoot : Node = null
+    //UIID为key 面板唯一ID数组为值的Map
     private m_PanelDataMap:Map<UIID, Array<number>> = new Map();
+    //面板唯一ID为key UI节点为值的Map
     private m_PanelNodeMap:Map<number, Node> = new Map();
 
+    //背景层UI根节点
     private m_UIBackgroundRoot : Node = null
+    //普通层UI根节点
     private m_UINormalRoot : Node = null
+    //弹出层UI根节点
     private m_UIPopupRoot : Node = null
+    //提示层UI根节点
     private m_UITipsRoot : Node = null
+    //系统层UI根节点
     private m_UISystemRoot : Node = null
+    //最高层UI根节点
     private m_UITopRoot : Node = null
 
     public Init(uiRoot : Node): void {
@@ -79,6 +89,7 @@ export class UIManager {
         return uiRoot
     }
 
+    //通过面板唯一ID关闭界面
     public ClosePanelByID(panelID: number):Boolean {
         var node = this.m_PanelNodeMap.get(panelID);
         if(node){
@@ -95,19 +106,49 @@ export class UIManager {
         return false;
     }
 
-    public ClosePanel(id: UIID): Boolean {
-        var datas = this.m_PanelDataMap.get(id);
-        if(datas){
-            datas.forEach(pID =>{
-                this.ClosePanelByID(pID);
-            });
-            this.m_PanelDataMap.delete(id);
+    //通过面板唯一ID隐藏界面
+    public HidePanelByID(panelID: number):Boolean {
+        var node = this.m_PanelNodeMap.get(panelID);
+        if(node){
+            var nodeScript = node.getComponent(UIBase);
+            if(nodeScript){
+                nodeScript.onClose();
+            }
+            node.active = false
             return true;
         }
 
         return false;
     }
 
+    //通过UIID关闭界面组
+    //根据界面缓存个数关闭多余的界面
+    public ClosePanel(id: UIID): Boolean {
+        var uidata = UIDataSet.FindUIData(id);
+        var datas = this.m_PanelDataMap.get(id);
+        if(datas && uidata){
+            var closeCount = datas.length - uidata.cacheCount
+            if(closeCount > 0){
+                //关闭多于缓存数量设置的界面
+                for(var i:number = 0; i < closeCount; ++i){
+                    var pID = datas.pop()
+                    this.ClosePanelByID(pID);
+                }
+
+                this.m_PanelDataMap.set(id, datas);
+            }
+            
+            datas.forEach(pID =>{
+                //隐藏界面
+                this.HidePanelByID(pID);
+            });
+            return true;
+        }
+
+        return false;
+    }
+
+    //通过UIID打开界面，可传参数
     public OpenPanel(id: UIID, ...args: any[]):number {
         var uidata = UIDataSet.FindUIData(id);
         if(uidata == null || uidata == undefined){
@@ -128,10 +169,12 @@ export class UIManager {
             var uiNode = instantiate(prefab);
             uiNode.parent = root;
             uiNode.setPosition(0, 0);
+            uiNode.active = true
             var uiScript = uiNode.getComponent(UIBase);
             if(uiScript){
                 uiScript.m_PanelID = this.m_PanelID;
                 uiScript.m_UIID = id;
+                uiScript.onInit();
                 uiScript.onOpen(...args);
             }
 
@@ -146,19 +189,22 @@ export class UIManager {
                 this.m_PanelDataMap.set(id, arr);
             }
 
+            var pID = this.m_PanelID
             this.m_PanelNodeMap.set(this.m_PanelID, uiNode);
             ++this.m_PanelID;
-        });
 
-        return 0;
+            return pID;
+        });
     }
 
+    //检查UIID面板是否已打开
     private CheckPanel(id: UIID):number{
         var uiDatas = this.m_PanelDataMap.get(id);
         if(uiDatas == null || uiDatas == undefined){
             return 0;
         }
 
+        var rID = 0;
         var temp = new Array<number>();
         uiDatas.forEach(panelID => {
             var panelNode = this.m_PanelNodeMap.get(panelID);
@@ -171,7 +217,13 @@ export class UIManager {
                         uiScript.m_UIID = id;
                         uiScript.onOpen();
                     }
-                    return panelID;
+                    rID = panelID;
+                }
+                else{
+                    var uidata = UIDataSet.FindUIData(id);
+                    if(uidata && uidata.showMode == UIShowMode.Single){
+                        rID = panelID;
+                    }
                 }
             }
             else{
@@ -183,7 +235,7 @@ export class UIManager {
             uiDatas.filter(v => v !== pID);
         });
 
-        return 0;
+        return rID;
     }
 }
 

@@ -34,7 +34,7 @@
         "6bd473a9-b885-4cf7-ad19-f480985edc0e"
       ]
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "319640fa-293f-4197-855c-d1d2f7adc4e6": {
     "url": "db://assets/resources",
@@ -74,15 +74,13 @@
   "832cd028-fca2-4694-bfcf-606b1fd6a211": {
     "url": "db://assets/scene/main.scene",
     "value": {
-      "depends": [
-        "832cd028-fca2-4694-bfcf-606b1fd6a211"
-      ],
+      "depends": [],
       "dependScripts": [
         "43b48910-34b5-4562-a46d-bc38d8f58eed",
         "6bd473a9-b885-4cf7-ad19-f480985edc0e"
       ]
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "43b48910-34b5-4562-a46d-bc38d8f58eed": {
     "url": "db://assets/scripts/ScreenAdapter.ts",
@@ -132,7 +130,7 @@
         "48640665-0c64-4ac9-97d0-74b2f544a0d5"
       ]
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "14048abf-3868-4dc9-a414-6a4ee6394b12": {
     "url": "db://assets/resources/ui/Node.prefab",
@@ -176,7 +174,7 @@
         "3fdc0d3b-7ffd-4f9b-b5af-1cbf88075fb3"
       ]
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "3fdc0d3b-7ffd-4f9b-b5af-1cbf88075fb3": {
     "url": "db://assets/scripts/UIScripts/MainPanel.ts",
@@ -867,7 +865,7 @@
       ],
       "dependScripts": []
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "4d5a5a59-0685-4761-b9b7-74276645eaf1": {
     "url": "db://assets/resources/ui/ShopPage.prefab",
@@ -878,7 +876,7 @@
       ],
       "dependScripts": []
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "be16711d-9d55-4f51-bd1c-b5b7d7fd3cbb": {
     "url": "db://assets/resources/ui/AchievePage.prefab",
@@ -889,7 +887,7 @@
       ],
       "dependScripts": []
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "4e538f5a-b238-4708-984c-3c6a804faf65": {
     "url": "db://assets/resources/ui/GamePage.prefab",
@@ -906,7 +904,7 @@
         "109f4b17-e33b-4060-96f6-ad14ddac03c3"
       ]
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "c0cd19b3-7a1a-4e8e-b82a-532a25da8a6d": {
     "url": "db://assets/resources/ui/RankingPage.prefab",
@@ -917,7 +915,7 @@
       ],
       "dependScripts": []
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "8f73bdfc-d7bb-48e3-9b00-8db3412b8dd2": {
     "url": "db://assets/resources/texture/Button01_145_Sky.Png",
@@ -965,7 +963,7 @@
         "ea5e5989-57b5-4e56-bec1-1988a2f4a889"
       ]
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "ea5e5989-57b5-4e56-bec1-1988a2f4a889": {
     "url": "db://assets/scripts/UIScripts/GamePanel.ts",
@@ -1780,7 +1778,7 @@
         "1d917e78-c927-49ad-8418-7a1e1e5ee711"
       ]
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "1d917e78-c927-49ad-8418-7a1e1e5ee711": {
     "url": "db://assets/scripts/UIScripts/FlowerPlatform.ts",
@@ -2866,7 +2864,7 @@
         "bebe4ada-b043-4aa6-8c74-933a4773746c"
       ]
     },
-    "versionCode": 1
+    "versionCode": 2
   },
   "bebe4ada-b043-4aa6-8c74-933a4773746c": {
     "url": "db://assets/scripts/UIScripts/VictoryPanel.ts",

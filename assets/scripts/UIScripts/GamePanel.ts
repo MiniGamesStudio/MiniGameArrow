@@ -22,6 +22,10 @@ export class GamePanel extends UIBase {
     m_CurLevelData: Record<string, any> | null = null;
     m_CurLv:number = 1;
 
+    onInit(): void {
+        
+    }
+
     onOpen(...args: any[]): void {
         EventManager.getInstance().on(CustomClientEvent.FlowerDissolve, this.onCheckFlowerDissolve, this);
         EventManager.getInstance().on(CustomClientEvent.CheckVictory, this.onCheckVictory, this);
@@ -81,7 +85,7 @@ export class GamePanel extends UIBase {
     }
 
     initUI(): void {
-        this.m_CloseBtn.node.on('click', ()=>{
+        this.SetBtnEvent(this.m_CloseBtn, ()=>{
             UIManager.GetInstance().ClosePanel(UIID.VictoryPanel);
             UIManager.GetInstance().OpenPanel(UIID.VictoryPanel);
         });
