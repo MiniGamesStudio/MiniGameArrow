@@ -22,11 +22,11 @@ export class GamePanel extends UIBase {
     m_CurLevelData: Record<string, any> | null = null;
     m_CurLv:number = 1;
 
-    onInit(): void {
+    OnInit(): void {
         
     }
 
-    onOpen(...args: any[]): void {
+    OnOpen(...args: any[]): void {
         EventManager.getInstance().on(CustomClientEvent.FlowerDissolve, this.onCheckFlowerDissolve, this);
         EventManager.getInstance().on(CustomClientEvent.CheckVictory, this.onCheckVictory, this);
         EventManager.getInstance().on(CustomClientEvent.RetryLevel, this.onRetryLevel, this);
@@ -34,7 +34,7 @@ export class GamePanel extends UIBase {
         this.initUI();
     }
 
-    onClose(): void {
+    OnClose(): void {
         EventManager.getInstance().off(CustomClientEvent.FlowerDissolve, this.onCheckFlowerDissolve, this);
         EventManager.getInstance().off(CustomClientEvent.CheckVictory, this.onCheckVictory, this);
         EventManager.getInstance().off(CustomClientEvent.RetryLevel, this.onRetryLevel, this);

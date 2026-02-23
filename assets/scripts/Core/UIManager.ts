@@ -95,7 +95,7 @@ export class UIManager {
         if(node){
             var nodeScript = node.getComponent(UIBase);
             if(nodeScript){
-                nodeScript.onClose();
+                nodeScript.OnClose();
             }
             node.removeFromParent();
             node.destroy();
@@ -112,7 +112,7 @@ export class UIManager {
         if(node){
             var nodeScript = node.getComponent(UIBase);
             if(nodeScript){
-                nodeScript.onClose();
+                nodeScript.OnClose();
             }
             node.active = false
             return true;
@@ -176,8 +176,8 @@ export class UIManager {
             if(uiScript){
                 uiScript.m_PanelID = this.m_PanelID;
                 uiScript.m_UIID = id;
-                uiScript.onInit();
-                uiScript.onOpen(...args);
+                uiScript.OnInit();
+                uiScript.OnOpen(...args);
             }
 
             var uiDatas = this.m_PanelDataMap.get(id);
@@ -216,7 +216,7 @@ export class UIManager {
                     if(uiScript){
                         uiScript.m_PanelID = panelID;
                         uiScript.m_UIID = id;
-                        uiScript.onOpen();
+                        uiScript.OnOpen();
                     }
                     rID = panelID;
                 }

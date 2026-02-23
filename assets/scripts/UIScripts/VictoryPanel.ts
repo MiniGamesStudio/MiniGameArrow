@@ -19,11 +19,11 @@ export class VictoryPanel extends UIBase {
     @property(RichText)
     m_ContentRichText:RichText = null;
 
-    onInit(): void {
+    OnInit(): void {
         
     }
 
-    onOpen(...args: any[]): void {
+    OnOpen(...args: any[]): void {
         if(args == null){
             this.CloseSelf();
             return;
@@ -59,7 +59,7 @@ export class VictoryPanel extends UIBase {
         this.m_NextLvBtn.node.active = isVictory;
     }
 
-    onClose(): void {
+    OnClose(): void {
 
     }
 }

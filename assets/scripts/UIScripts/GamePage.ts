@@ -9,18 +9,18 @@ export class GamePage extends UIBase {
     @property(Button)
     m_StartBtn:Button = null;
 
-    onInit(): void {
+    OnInit(): void {
         
     }
 
-    onOpen(...args: any[]): void { 
+    OnOpen(...args: any[]): void { 
         this.SetBtnEvent(this.m_StartBtn, ()=>{
             UIManager.GetInstance().ClosePanel(UIID.MainPanel);
             UIManager.GetInstance().OpenPanel(UIID.GamePanel);
         });
     }
 
-    onClose(): void {
+    OnClose(): void {
         
     }
 }

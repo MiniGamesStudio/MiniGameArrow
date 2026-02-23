@@ -31,11 +31,11 @@ export class MainPanel extends UIBase {
 
     private m_PageName:string[] = [];
 
-    onInit(): void {
+    OnInit(): void {
         
     }
 
-    onOpen(...args: any[]): void {
+    OnOpen(...args: any[]): void {
         this.m_PageName[0] = PageType.ShopPage;
         this.m_PageName[1] = PageType.AchievePage;
         this.m_PageName[2] = PageType.GamePage;
@@ -45,7 +45,7 @@ export class MainPanel extends UIBase {
         this.initUI();
     }
 
-    onClose(): void {
+    OnClose(): void {
 
     }
 
@@ -121,7 +121,7 @@ export class MainPanel extends UIBase {
                 if(node){
                     var pageScript = node.getComponent(UIBase);
                     if(pageScript){
-                        pageScript.onClose();
+                        pageScript.OnClose();
                     }
                     node.removeFromParent();
                     node.destroy();
@@ -130,7 +130,7 @@ export class MainPanel extends UIBase {
 
             var pScript = uiNode.getComponent(UIBase);
             if(pScript){
-                pScript.onOpen();
+                pScript.OnOpen();
             }
             root.addChild(uiNode);
         }

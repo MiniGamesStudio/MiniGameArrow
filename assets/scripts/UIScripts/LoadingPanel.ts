@@ -11,16 +11,16 @@ export class LoadingPanel extends UIBase {
 
     private m_TimeDelta:number = 0;
 
-    onInit(): void {
+    OnInit(): void {
         
     }
 
-    onOpen(...args: any[]): void {   
+    OnOpen(...args: any[]): void {   
         this.m_TimeDelta = 0;
         this.m_Progress.progress = 0;     
     }
 
-    onClose(): void {
+    OnClose(): void {
         
     }
 

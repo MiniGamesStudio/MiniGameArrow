@@ -10,9 +10,9 @@ export abstract class UIBase extends Component {
     public m_UIID:UIID = UIID.None;
     
     // 可供子类重写的方法
-    abstract onInit(): void
-    abstract onOpen(...args: any[]): void
-    abstract onClose(): void
+    abstract OnInit(): void
+    abstract OnOpen(...args: any[]): void
+    abstract OnClose(): void
 
     CloseSelf():void{
         if(this.m_UIID){
@@ -25,5 +25,13 @@ export abstract class UIBase extends Component {
             btn.node.off(eventName);
             btn.node.on(eventName, callback);
         }
+    }
+
+    AttachUIPage(root:Node, name:string, ...args: any[]):void {
+
+    }
+
+    DettachUIPage():void {
+
     }
 }

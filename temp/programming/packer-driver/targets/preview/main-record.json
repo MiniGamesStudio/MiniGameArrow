@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 3846.0154,
+      "mTimestamp": 4097.771,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -514,7 +514,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 258599.837,
+      "mTimestamp": 41065059.5259,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2260,7 +2260,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1771761046606,
+      "mTimestamp": 1771811829545,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -3483,7 +3483,7 @@
     },
     "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIBase.ts": {
       "mTimestamp": {
-        "mtime": 1771751655507.8987,
+        "mtime": 1771852888569.1343,
         "uuid": "f7720628-4c1f-434d-9153-bbb12c81315f"
       },
       "chunkId": "340aa975d7d0c32dd434bd990dc40a97cd4511de",
@@ -3588,7 +3588,7 @@
     },
     "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/Core/UIManager.ts": {
       "mTimestamp": {
-        "mtime": 1771760391295.8333,
+        "mtime": 1771852887321.896,
         "uuid": "42236225-285e-4698-aa5c-ca8c6f50a69e"
       },
       "chunkId": "ec885f68fedcb631ab903882136a40a2f4d545ae",
@@ -4081,7 +4081,7 @@
     },
     "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/GamePage.ts": {
       "mTimestamp": {
-        "mtime": 1771751723026.5283,
+        "mtime": 1771852887321.896,
         "uuid": "109f4b17-e33b-4060-96f6-ad14ddac03c3"
       },
       "chunkId": "3661563615415207d982411e5cbd60ef9429432d",
@@ -4207,7 +4207,7 @@
     },
     "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/GamePanel.ts": {
       "mTimestamp": {
-        "mtime": 1771751742253.986,
+        "mtime": 1771852887318.8967,
         "uuid": "ea5e5989-57b5-4e56-bec1-1988a2f4a889"
       },
       "chunkId": "1a8e8f30304f2a5c27fba99a570c04514dd2ad01",
@@ -4396,7 +4396,7 @@
     },
     "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/LoadingPanel.ts": {
       "mTimestamp": {
-        "mtime": 1771748246921.125,
+        "mtime": 1771852887318.8967,
         "uuid": "48640665-0c64-4ac9-97d0-74b2f544a0d5"
       },
       "chunkId": "277b3a510f8fb3632dd98c141bd12da09f44409e",
@@ -4522,7 +4522,7 @@
     },
     "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/MainPanel.ts": {
       "mTimestamp": {
-        "mtime": 1771751778180.0552,
+        "mtime": 1771852887321.896,
         "uuid": "3fdc0d3b-7ffd-4f9b-b5af-1cbf88075fb3"
       },
       "chunkId": "90a090aeada5aa670f77e1b1e969c8751963a4e6",
@@ -4658,7 +4658,7 @@
     },
     "file:///D:/MyProjects/CocosProjects/FlowersArrangement/assets/scripts/UIScripts/VictoryPanel.ts": {
       "mTimestamp": {
-        "mtime": 1771751925406.9429,
+        "mtime": 1771852887318.8967,
         "uuid": "bebe4ada-b043-4aa6-8c74-933a4773746c"
       },
       "chunkId": "c01e1f520e66b60077d478ff93852f1b0081a4b7",
