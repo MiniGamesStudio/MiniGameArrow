@@ -12,10 +12,10 @@
     ],
     "paths": {
       "db://internal/*": [
-        "D:\\ProgramData\\cocos_creator_data\\Creator\\3.8.8\\resources\\resources\\3d\\engine\\editor\\assets\\*"
+        "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\resources\\3d\\engine\\editor\\assets\\*"
       ],
       "db://assets/*": [
-        "D:\\MyProjects\\CocosProjects\\FlowersArrangement\\assets\\*"
+        "D:\\Works\\Cocos\\WxMiniGames\\FlowersArrangement\\assets\\*"
       ]
     },
     "experimentalDecorators": true,

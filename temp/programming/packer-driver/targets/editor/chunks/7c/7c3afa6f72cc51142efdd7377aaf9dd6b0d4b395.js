@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Button, instantiate, JsonAsset, Node, Prefab, resources, UIBase, UIManager, UIID, FlowerPlatform, EventManager, CustomClientEvent, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, GamePanel;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Button, instantiate, JsonAsset, Node, Prefab, resources, UIBase, UIManager, UIID, FlowerPlatform, EventManager, CustomClientEvent, GameConst, GameState, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, GamePanel;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -33,6 +33,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("CustomClientEvent", "../Config/Config", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfGameConst(extras) {
+    _reporterNs.report("GameConst", "../Config/GameConst", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGameState(extras) {
+    _reporterNs.report("GameState", "../Model/GameState", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLevelData(extras) {
+    _reporterNs.report("LevelData", "../Model/LevelModel", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -59,20 +71,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       EventManager = _unresolved_6.EventManager;
     }, function (_unresolved_7) {
       CustomClientEvent = _unresolved_7.CustomClientEvent;
+    }, function (_unresolved_8) {
+      GameConst = _unresolved_8.GameConst;
+    }, function (_unresolved_9) {
+      GameState = _unresolved_9.GameState;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "ea5e5mJV7VOVr7BGYii9KiJ", "GamePanel", undefined);
 
-      __checkObsolete__(['__private', '_decorator', 'Button', 'Component', 'instantiate', 'JsonAsset', 'Layout', 'Node', 'PageView', 'Prefab', 'ProgressBar', 'resources', 'Slider', 'SpriteFrame', 'UITransform']);
+      __checkObsolete__(['_decorator', 'Button', 'instantiate', 'JsonAsset', 'Node', 'Prefab', 'resources']);
 
       ({
         ccclass,
         property
       } = _decorator);
 
-      _export("GamePanel", GamePanel = (_dec = ccclass('GamePanel'), _dec2 = property(Button), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property([]), _dec(_class = (_class2 = class GamePanel extends (_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
+      _export("GamePanel", GamePanel = (_dec = ccclass('GamePanel'), _dec2 = property(Button), _dec3 = property(Node), _dec4 = property(Node), _dec(_class = (_class2 = class GamePanel extends (_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
         error: Error()
       }), UIBase) : UIBase) {
         constructor(...args) {
@@ -84,98 +100,63 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "m_FlowerImgMoveRoot", _descriptor3, this);
 
-          _initializerDefineProperty(this, "m_LevelData", _descriptor4, this);
-
-          this.m_FlowerPlatformArr = null;
+          this.m_FlowerPlatformArr = [];
           this.m_CurLevelData = null;
-          this.m_CurLv = 1;
         }
 
-        onOpen(...args) {
-          (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
+        OnInit() {}
+
+        OnOpen(...args) {
+          const em = (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
             error: Error()
-          }), EventManager) : EventManager).getInstance().on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+          }), EventManager) : EventManager).getInstance();
+          em.on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
             error: Error()
           }), CustomClientEvent) : CustomClientEvent).FlowerDissolve, this.onCheckFlowerDissolve, this);
-          (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
-            error: Error()
-          }), EventManager) : EventManager).getInstance().on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+          em.on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
             error: Error()
           }), CustomClientEvent) : CustomClientEvent).CheckVictory, this.onCheckVictory, this);
-          (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
-            error: Error()
-          }), EventManager) : EventManager).getInstance().on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+          em.on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
             error: Error()
           }), CustomClientEvent) : CustomClientEvent).RetryLevel, this.onRetryLevel, this);
-          (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
-            error: Error()
-          }), EventManager) : EventManager).getInstance().on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+          em.on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
             error: Error()
           }), CustomClientEvent) : CustomClientEvent).NextLevel, this.onNextLevel, this);
           this.initUI();
         }
 
-        onClose() {
+        OnClose() {
+          super.OnClose();
           (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
             error: Error()
-          }), EventManager) : EventManager).getInstance().off((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
-            error: Error()
-          }), CustomClientEvent) : CustomClientEvent).FlowerDissolve, this.onCheckFlowerDissolve, this);
-          (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
-            error: Error()
-          }), EventManager) : EventManager).getInstance().off((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
-            error: Error()
-          }), CustomClientEvent) : CustomClientEvent).CheckVictory, this.onCheckVictory, this);
-          (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
-            error: Error()
-          }), EventManager) : EventManager).getInstance().off((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
-            error: Error()
-          }), CustomClientEvent) : CustomClientEvent).RetryLevel, this.onRetryLevel, this);
-          (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
-            error: Error()
-          }), EventManager) : EventManager).getInstance().off((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
-            error: Error()
-          }), CustomClientEvent) : CustomClientEvent).NextLevel, this.onNextLevel, this);
+          }), EventManager) : EventManager).getInstance().offAllByTarget(this);
         }
 
         onNextLevel() {
-          this.initGameLevel(this.m_CurLv + 1);
+          const state = (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
+            error: Error()
+          }), GameState) : GameState).getInstance();
+          this.initGameLevel(state.currentLevel + 1);
         }
 
         onRetryLevel() {
-          this.initGameLevel(this.m_CurLv);
+          this.initGameLevel((_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
+            error: Error()
+          }), GameState) : GameState).getInstance().currentLevel);
         }
 
-        onCheckFlowerDissolve(args) {
-          if (this.m_FlowerPlatformArr && this.m_FlowerPlatformArr.length > 0) {
-            this.m_FlowerPlatformArr.forEach(fPlatform => {
-              fPlatform.checkFlowerDissolve(args);
-            });
-          }
+        onCheckFlowerDissolve(flowerTag) {
+          this.m_FlowerPlatformArr.forEach(fp => fp.checkFlowerDissolve(flowerTag));
         }
 
-        onCheckVictory(args) {
-          //console.log("onCheckVictory 1");
-          if (!this.m_CurLevelData) {
-            return;
-          }
+        onCheckVictory() {
+          if (!this.m_CurLevelData) return;
+          const allVictory = this.m_FlowerPlatformArr.every(fp => fp.checkVictory());
 
-          var vCount = 0;
-          this.m_FlowerPlatformArr.forEach(fPlatform => {
-            if (!fPlatform) {
-              return;
-            }
-
-            var temp = fPlatform.isVictory();
-
-            if (temp) {
-              vCount += 1;
-            }
-          }); //console.log("onCheckVictory 2 vCount = " + vCount);
-
-          if (vCount == this.m_FlowerPlatformArr.length) {
-            //Victory
-            //console.log("onCheckVictory VictoryPanel");
+          if (allVictory) {
+            (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
+              error: Error()
+            }), GameState) : GameState).getInstance().completeLevel();
             (_crd && UIManager === void 0 ? (_reportPossibleCrUseOfUIManager({
               error: Error()
             }), UIManager) : UIManager).GetInstance().OpenPanel((_crd && UIID === void 0 ? (_reportPossibleCrUseOfUIID({
@@ -185,7 +166,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         initUI() {
-          this.m_CloseBtn.node.on('click', () => {
+          this.SetBtnEvent(this.m_CloseBtn, () => {
             (_crd && UIManager === void 0 ? (_reportPossibleCrUseOfUIManager({
               error: Error()
             }), UIManager) : UIManager).GetInstance().ClosePanel((_crd && UIID === void 0 ? (_reportPossibleCrUseOfUIID({
@@ -197,41 +178,54 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), UIID) : UIID).VictoryPanel);
           });
-          this.initGameLevel(this.m_CurLv);
+          this.initGameLevel((_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
+            error: Error()
+          }), GameState) : GameState).getInstance().currentLevel);
         }
 
         initGameLevel(level) {
-          this.m_CurLv = level;
-          resources.load("levelData/level_" + level, JsonAsset, (err, jsonAsset) => {
+          const state = (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
+            error: Error()
+          }), GameState) : GameState).getInstance();
+          state.currentLevel = level;
+          state.resetRuntimeState();
+          resources.load((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            error: Error()
+          }), GameConst) : GameConst).RES_PATH.LEVEL_DATA + level, JsonAsset, (err, jsonAsset) => {
             if (err) {
+              console.warn(`GamePanel: 加载关卡 ${level} 失败`, err);
               return;
             }
 
             this.m_CurLevelData = jsonAsset.json;
             this.m_LevelRoot.removeAllChildren();
-            resources.load("ui/FlowerPlatform", Prefab, (err, prefab) => {
-              if (prefab) {
-                (_crd && FlowerPlatform === void 0 ? (_reportPossibleCrUseOfFlowerPlatform({
+            resources.load((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+              error: Error()
+            }), GameConst) : GameConst).RES_PATH.FLOWER_PLATFORM, Prefab, (err, prefab) => {
+              if (err || !prefab) return;
+              (_crd && FlowerPlatform === void 0 ? (_reportPossibleCrUseOfFlowerPlatform({
+                error: Error()
+              }), FlowerPlatform) : FlowerPlatform).s_FlowerPotTag = 0;
+              this.m_FlowerPlatformArr = [];
+
+              for (let i = 0; i < this.m_CurLevelData.FlowerRow; i++) {
+                const node = instantiate(prefab);
+                this.m_LevelRoot.addChild(node);
+                const script = node.getComponent(_crd && FlowerPlatform === void 0 ? (_reportPossibleCrUseOfFlowerPlatform({
                   error: Error()
-                }), FlowerPlatform) : FlowerPlatform).s_FlowerPotTag = 0;
-                this.m_FlowerPlatformArr = [];
+                }), FlowerPlatform) : FlowerPlatform);
 
-                for (var i = 0; i < this.m_CurLevelData.FlowerRow; ++i) {
-                  var temp = instantiate(prefab);
-
-                  if (temp) {
-                    this.m_LevelRoot.addChild(temp);
-                    var tScript = temp.getComponent(_crd && FlowerPlatform === void 0 ? (_reportPossibleCrUseOfFlowerPlatform({
-                      error: Error()
-                    }), FlowerPlatform) : FlowerPlatform);
-
-                    if (tScript) {
-                      tScript.InitPlatForm(i, this.m_CurLevelData.FlowerPlatform[i], this.m_CurLevelData, this.m_FlowerImgMoveRoot);
-                      this.m_FlowerPlatformArr.push(tScript);
-                    }
-                  }
+                if (script) {
+                  script.InitPlatForm(i, this.m_CurLevelData.FlowerPlatform[i], this.m_CurLevelData, this.m_FlowerImgMoveRoot);
+                  this.m_FlowerPlatformArr.push(script);
                 }
               }
+
+              (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
+                error: Error()
+              }), EventManager) : EventManager).getInstance().emit((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+                error: Error()
+              }), CustomClientEvent) : CustomClientEvent).LevelLoaded, level);
             });
           });
         }
@@ -256,13 +250,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: function () {
           return null;
-        }
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "m_LevelData", [_dec5], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: function () {
-          return [];
         }
       })), _class2)) || _class));
 

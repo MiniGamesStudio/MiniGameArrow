@@ -21,12 +21,17 @@ System.register(["cc"], function (_export, _context) {
         ccclass,
         property
       } = _decorator);
+      /** 客户端事件枚举 */
 
       _export("CustomClientEvent", CustomClientEvent = /*#__PURE__*/function (CustomClientEvent) {
         CustomClientEvent["FlowerDissolve"] = "FlowerDissolve";
         CustomClientEvent["CheckVictory"] = "CheckVictory";
         CustomClientEvent["RetryLevel"] = "RetryLevel";
         CustomClientEvent["NextLevel"] = "NextLevel";
+        CustomClientEvent["LevelLoaded"] = "LevelLoaded";
+        CustomClientEvent["GamePaused"] = "GamePaused";
+        CustomClientEvent["GameResumed"] = "GameResumed";
+        CustomClientEvent["ScoreChanged"] = "ScoreChanged";
         return CustomClientEvent;
       }({}));
 

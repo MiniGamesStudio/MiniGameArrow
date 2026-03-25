@@ -2906,5 +2906,25 @@
     "url": "db://assets/scripts/UIScripts/MainTopPage.ts",
     "value": {},
     "versionCode": 1
+  },
+  "1b09cbb0-87a6-4098-998c-1c3698b224f7": {
+    "url": "db://assets/scripts/Model",
+    "value": {},
+    "versionCode": 1
+  },
+  "96af4eaa-95ea-43f3-b372-42c4528806b9": {
+    "url": "db://assets/scripts/Config/GameConst.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "86539a39-eadd-4ca1-beec-31c3f64329ef": {
+    "url": "db://assets/scripts/Model/GameState.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "11d668ff-aa35-4ce0-a8b5-edf6b5780349": {
+    "url": "db://assets/scripts/Model/LevelModel.ts",
+    "value": {},
+    "versionCode": 1
   }
 }

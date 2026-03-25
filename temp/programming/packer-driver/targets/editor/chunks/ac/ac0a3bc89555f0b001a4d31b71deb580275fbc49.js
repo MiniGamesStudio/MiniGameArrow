@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, instantiate, Prefab, resources, UIDataSet, UIBase, _dec, _class, _class2, _crd, ccclass, property, UIManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, instantiate, Node, Prefab, resources, UIDataSet, UIShowMode, UILayer, UIBase, _dec, _class, _class2, _crd, ccclass, UIManager;
 
   function _reportPossibleCrUseOfUIDataSet(extras) {
     _reporterNs.report("UIDataSet", "../UIScripts/UIData", _context.meta, extras);
@@ -9,6 +9,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
   function _reportPossibleCrUseOfUIID(extras) {
     _reporterNs.report("UIID", "../UIScripts/UIData", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfUIShowMode(extras) {
+    _reporterNs.report("UIShowMode", "../UIScripts/UIData", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfUILayer(extras) {
+    _reporterNs.report("UILayer", "../UIScripts/UIData", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfUIBase(extras) {
@@ -24,10 +32,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       __checkObsoleteInNamespace__ = _cc.__checkObsoleteInNamespace__;
       _decorator = _cc._decorator;
       instantiate = _cc.instantiate;
+      Node = _cc.Node;
       Prefab = _cc.Prefab;
       resources = _cc.resources;
     }, function (_unresolved_2) {
       UIDataSet = _unresolved_2.UIDataSet;
+      UIShowMode = _unresolved_2.UIShowMode;
+      UILayer = _unresolved_2.UILayer;
     }, function (_unresolved_3) {
       UIBase = _unresolved_3.UIBase;
     }],
@@ -36,19 +47,28 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
       _cclegacy._RF.push({}, "42236IlKF5GmKpcyoxvUKae", "UIManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'instantiate', 'Node', 'Prefab', 'resources']);
+      __checkObsolete__(['_decorator', 'instantiate', 'Node', 'Prefab', 'resources']);
 
       ({
-        ccclass,
-        property
+        ccclass
       } = _decorator);
+      /**
+       * UI 管理器 — 管理面板的打开、关闭、缓存和分层
+       */
 
       _export("UIManager", UIManager = (_dec = ccclass('UIManager'), _dec(_class = (_class2 = class UIManager {
         constructor() {
           this.m_PanelID = 1;
           this.m_UIRoot = null;
+
+          /** UIID -> 面板唯一ID数组 */
           this.m_PanelDataMap = new Map();
+
+          /** 面板唯一ID -> UI节点 */
           this.m_PanelNodeMap = new Map();
+
+          /** 各层级根节点 */
+          this.m_LayerRoots = new Map();
         }
 
         static GetInstance() {
@@ -66,126 +86,183 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           (_crd && UIDataSet === void 0 ? (_reportPossibleCrUseOfUIDataSet({
             error: Error()
           }), UIDataSet) : UIDataSet).InitUIDatas();
+          const layers = [[(_crd && UILayer === void 0 ? (_reportPossibleCrUseOfUILayer({
+            error: Error()
+          }), UILayer) : UILayer).Background, "UI_Background"], [(_crd && UILayer === void 0 ? (_reportPossibleCrUseOfUILayer({
+            error: Error()
+          }), UILayer) : UILayer).Normal, "UI_Normal"], [(_crd && UILayer === void 0 ? (_reportPossibleCrUseOfUILayer({
+            error: Error()
+          }), UILayer) : UILayer).PopUp, "UI_Popup"], [(_crd && UILayer === void 0 ? (_reportPossibleCrUseOfUILayer({
+            error: Error()
+          }), UILayer) : UILayer).Tips, "UI_Tips"], [(_crd && UILayer === void 0 ? (_reportPossibleCrUseOfUILayer({
+            error: Error()
+          }), UILayer) : UILayer).System, "UI_System"], [(_crd && UILayer === void 0 ? (_reportPossibleCrUseOfUILayer({
+            error: Error()
+          }), UILayer) : UILayer).TopMost, "UI_Top"]];
+          layers.forEach(([layer, name]) => {
+            const node = new Node(name);
+            node.parent = this.m_UIRoot;
+            this.m_LayerRoots.set(layer, node);
+          });
         }
+
+        GetUIRootByUILayer(layer) {
+          var _this$m_LayerRoots$ge;
+
+          return (_this$m_LayerRoots$ge = this.m_LayerRoots.get(layer)) != null ? _this$m_LayerRoots$ge : null;
+        }
+        /** 通过面板唯一ID关闭并销毁界面 */
+
 
         ClosePanelByID(panelID) {
-          var node = this.m_PanelNodeMap.get(panelID);
-
-          if (node) {
-            var nodeScript = node.getComponent(_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
-              error: Error()
-            }), UIBase) : UIBase);
-
-            if (nodeScript) {
-              nodeScript.onClose();
-            }
-
-            node.removeFromParent();
-            node.destroy();
-            this.m_PanelNodeMap.delete(panelID);
-            return true;
-          }
-
-          return false;
+          const node = this.m_PanelNodeMap.get(panelID);
+          if (!node) return false;
+          const script = node.getComponent(_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
+            error: Error()
+          }), UIBase) : UIBase);
+          if (script) script.OnClose();
+          node.removeFromParent();
+          node.destroy();
+          this.m_PanelNodeMap.delete(panelID);
+          return true;
         }
+        /** 通过面板唯一ID隐藏界面 */
+
+
+        HidePanelByID(panelID) {
+          const node = this.m_PanelNodeMap.get(panelID);
+          if (!node) return false;
+          const script = node.getComponent(_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
+            error: Error()
+          }), UIBase) : UIBase);
+          if (script) script.OnClose();
+          node.active = false;
+          return true;
+        }
+        /** 通过UIID关闭界面组 */
+
 
         ClosePanel(id) {
-          var datas = this.m_PanelDataMap.get(id);
-
-          if (datas) {
-            datas.forEach(pID => {
-              this.ClosePanelByID(pID);
-            });
-            this.m_PanelDataMap.delete(id);
-            return true;
-          }
-
-          return false;
-        }
-
-        OpenPanel(id, ...args) {
-          var uidata = (_crd && UIDataSet === void 0 ? (_reportPossibleCrUseOfUIDataSet({
+          const uidata = (_crd && UIDataSet === void 0 ? (_reportPossibleCrUseOfUIDataSet({
             error: Error()
           }), UIDataSet) : UIDataSet).FindUIData(id);
+          const datas = this.m_PanelDataMap.get(id);
+          if (!datas || !uidata) return false; // 关闭超出缓存数量的面板
 
-          if (uidata == null || uidata == undefined) {
-            return 0;
-          }
+          const closeCount = datas.length - uidata.cacheCount;
 
-          var temp = this.CheckPanel(id);
+          for (let i = 0; i < closeCount; i++) {
+            const pID = datas.pop();
 
-          if (temp > 0) {
-            return temp;
-          }
+            if (pID !== undefined) {
+              this.ClosePanelByID(pID);
+            }
+          } // 隐藏剩余面板
 
+
+          datas.forEach(pID => this.HidePanelByID(pID));
+          this.m_PanelDataMap.set(id, datas);
+          return true;
+        }
+        /** 通过UIID打开界面 */
+
+
+        OpenPanel(id, ...args) {
+          const uidata = (_crd && UIDataSet === void 0 ? (_reportPossibleCrUseOfUIDataSet({
+            error: Error()
+          }), UIDataSet) : UIDataSet).FindUIData(id);
+          if (!uidata) return 0; // 检查是否已有可复用的面板
+
+          const existingID = this.CheckPanel(id, args);
+          if (existingID > 0) return existingID;
+          const pID = this.m_PanelID;
           resources.load(uidata.prefabPath, Prefab, (err, prefab) => {
-            if (this.m_UIRoot == null) {
-              return 0;
+            if (err) {
+              console.warn(`UIManager: 加载面板失败 [${uidata.name}]`, err);
+              return;
             }
 
-            var uiNode = instantiate(prefab);
-            uiNode.parent = this.m_UIRoot;
-            var uiScript = uiNode.getComponent(_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
+            const root = this.GetUIRootByUILayer(uidata.layer);
+            if (!root) return;
+            const uiNode = instantiate(prefab);
+            uiNode.parent = root;
+            uiNode.setPosition(0, 0);
+            uiNode.active = true;
+            const uiScript = uiNode.getComponent(_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
               error: Error()
             }), UIBase) : UIBase);
 
             if (uiScript) {
               uiScript.m_PanelID = this.m_PanelID;
               uiScript.m_UIID = id;
-              uiScript.onOpen(...args);
-            }
+              uiScript.OnInit();
+              uiScript.OnOpen(...args);
+            } // 记录面板数据
 
-            var uiDatas = this.m_PanelDataMap.get(id);
 
-            if (uiDatas) {
-              uiDatas.push(this.m_PanelID);
+            let uiDatas = this.m_PanelDataMap.get(id);
+
+            if (!uiDatas) {
+              uiDatas = [];
               this.m_PanelDataMap.set(id, uiDatas);
-            } else {
-              var arr = new Array();
-              arr.push(this.m_PanelID);
-              this.m_PanelDataMap.set(id, arr);
             }
 
+            uiDatas.push(this.m_PanelID);
             this.m_PanelNodeMap.set(this.m_PanelID, uiNode);
-            ++this.m_PanelID;
+            this.m_PanelID++;
           });
-          return 0;
+          return pID;
         }
+        /** 检查是否有可复用的面板 */
 
-        CheckPanel(id) {
-          var uiDatas = this.m_PanelDataMap.get(id);
 
-          if (uiDatas == null || uiDatas == undefined) {
-            return 0;
+        CheckPanel(id, args) {
+          const uiDatas = this.m_PanelDataMap.get(id);
+          if (!uiDatas || uiDatas.length === 0) return 0;
+          let rID = 0;
+          const invalidIDs = [];
+
+          for (const panelID of uiDatas) {
+            const panelNode = this.m_PanelNodeMap.get(panelID);
+
+            if (!panelNode) {
+              invalidIDs.push(panelID);
+              continue;
+            }
+
+            if (!panelNode.active) {
+              panelNode.active = true;
+              const uiScript = panelNode.getComponent(_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
+                error: Error()
+              }), UIBase) : UIBase);
+
+              if (uiScript) {
+                uiScript.OnOpen(...args);
+              }
+
+              rID = panelID;
+              break;
+            } else {
+              const uidata = (_crd && UIDataSet === void 0 ? (_reportPossibleCrUseOfUIDataSet({
+                error: Error()
+              }), UIDataSet) : UIDataSet).FindUIData(id);
+
+              if (uidata && uidata.showMode === (_crd && UIShowMode === void 0 ? (_reportPossibleCrUseOfUIShowMode({
+                error: Error()
+              }), UIShowMode) : UIShowMode).Single) {
+                rID = panelID;
+                break;
+              }
+            }
+          } // 清理无效ID
+
+
+          if (invalidIDs.length > 0) {
+            const filtered = uiDatas.filter(id => !invalidIDs.includes(id));
+            this.m_PanelDataMap.set(id, filtered);
           }
 
-          var temp = new Array();
-          uiDatas.forEach(panelID => {
-            var panelNode = this.m_PanelNodeMap.get(panelID);
-
-            if (panelNode) {
-              if (panelNode.active == false) {
-                panelNode.active = true;
-                var uiScript = panelNode.getComponent(_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
-                  error: Error()
-                }), UIBase) : UIBase);
-
-                if (uiScript) {
-                  uiScript.m_PanelID = panelID;
-                  uiScript.m_UIID = id;
-                  uiScript.onOpen();
-                }
-
-                return panelID;
-              }
-            } else {
-              temp.push(panelID);
-            }
-          });
-          temp.forEach(pID => {
-            uiDatas.filter(v => v !== pID);
-          });
-          return 0;
+          return rID;
         }
 
       }, _class2.m_Instance = null, _class2)) || _class));

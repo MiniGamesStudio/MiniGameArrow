@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Button, instantiate, Node, Prefab, resources, tween, Vec3, view, UIBase, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, PageType, MainPanel;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Button, instantiate, Node, Prefab, resources, tween, Vec3, view, UIBase, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, PageType, MainPanel;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -53,7 +53,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         return PageType;
       }({}));
 
-      _export("MainPanel", MainPanel = (_dec = ccclass('MainPanel'), _dec2 = property([Button]), _dec3 = property(Node), _dec4 = property(Node), _dec(_class = (_class2 = class MainPanel extends (_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
+      _export("MainPanel", MainPanel = (_dec = ccclass('MainPanel'), _dec2 = property([Button]), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec(_class = (_class2 = class MainPanel extends (_crd && UIBase === void 0 ? (_reportPossibleCrUseOfUIBase({
         error: Error()
       }), UIBase) : UIBase) {
         constructor() {
@@ -65,6 +65,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _initializerDefineProperty(this, "m_PageTwo", _descriptor3, this);
 
+          _initializerDefineProperty(this, "m_TopPageRoot", _descriptor4, this);
+
           this.m_CurPage = null;
           this.m_OtherPage = null;
           this.m_LastIndex = 2;
@@ -75,16 +77,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           this.m_PageName = [];
         }
 
-        onOpen() {
+        OnInit() {}
+
+        OnOpen() {
           this.m_PageName[0] = PageType.ShopPage;
           this.m_PageName[1] = PageType.AchievePage;
           this.m_PageName[2] = PageType.GamePage;
           this.m_PageName[3] = PageType.ChanllengePage;
           this.m_PageName[4] = PageType.RankingPage;
+          this.AttachUIPage(this.m_TopPageRoot, 'TopPage', "ui/MainTopPage");
           this.initUI();
         }
 
-        onClose() {}
+        OnClose() {
+          super.OnClose();
+        }
 
         onDestroy() {
           if (this.m_CurTween) {
@@ -109,7 +116,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           this.m_CurPage = this.m_PageOne;
           this.m_OtherPage = this.m_PageTwo;
           this.m_FuncBtns.forEach((button, index) => {
-            button.node.on('click', () => {
+            this.SetBtnEvent(button, () => {
               if (index == this.m_LastIndex || this.m_IsScrollingPage) {
                 return;
               }
@@ -157,7 +164,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 }), UIBase) : UIBase);
 
                 if (pageScript) {
-                  pageScript.onClose();
+                  pageScript.OnClose();
                 }
 
                 node.removeFromParent();
@@ -169,7 +176,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             }), UIBase) : UIBase);
 
             if (pScript) {
-              pScript.onOpen();
+              pScript.OnOpen();
             }
 
             root.addChild(uiNode);
@@ -191,6 +198,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           return null;
         }
       }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "m_PageTwo", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "m_TopPageRoot", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,

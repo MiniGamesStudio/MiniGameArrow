@@ -2,6 +2,7 @@ import { _decorator, Component, Node, ProgressBar, Slider } from 'cc';
 import { UIBase } from '../Core/UIBase';
 import { UIManager } from '../Core/UIManager';
 import { UIID } from './UIData';
+import { GameConst } from '../Config/GameConst';
 const { ccclass, property } = _decorator;
 
 @ccclass('LoadingPanel')
@@ -30,7 +31,7 @@ export class LoadingPanel extends UIBase {
         }
         
         this.m_TimeDelta += dt;
-        this.m_Progress.progress = this.m_TimeDelta/1
+        this.m_Progress.progress = this.m_TimeDelta / GameConst.LOADING_DURATION
         if(this.m_Progress.progress >= 1){
             this.m_TimeDelta = 0;
             UIManager.GetInstance().ClosePanel(UIID.LoadingPanel);

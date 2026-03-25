@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, BoxCollider2D, color, Component, instantiate, Node, resources, Sprite, SpriteFrame, tween, UITransform, Vec3, Flower, CustomClientEvent, EventManager, _dec, _dec2, _class, _class2, _descriptor, _class3, _crd, ccclass, property, FlowerName, FlowerPlatform;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, BoxCollider2D, color, Component, instantiate, Node, resources, Sprite, SpriteFrame, tween, UITransform, Flower, CustomClientEvent, EventManager, GameConst, FlowerPosition, _dec, _dec2, _class, _class2, _descriptor, _class3, _crd, ccclass, property, FlowerPlatform;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,6 +19,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfEventManager(extras) {
     _reporterNs.report("EventManager", "../Core/EventManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGameConst(extras) {
+    _reporterNs.report("GameConst", "../Config/GameConst", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfFlowerPosition(extras) {
+    _reporterNs.report("FlowerPosition", "../Model/LevelModel", _context.meta, extras);
   }
 
   return {
@@ -39,32 +47,31 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       SpriteFrame = _cc.SpriteFrame;
       tween = _cc.tween;
       UITransform = _cc.UITransform;
-      Vec3 = _cc.Vec3;
     }, function (_unresolved_2) {
       Flower = _unresolved_2.Flower;
     }, function (_unresolved_3) {
       CustomClientEvent = _unresolved_3.CustomClientEvent;
     }, function (_unresolved_4) {
       EventManager = _unresolved_4.EventManager;
+    }, function (_unresolved_5) {
+      GameConst = _unresolved_5.GameConst;
+    }, function (_unresolved_6) {
+      FlowerPosition = _unresolved_6.FlowerPosition;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "1d91754ySdJrYQYeh4eXucR", "FlowerPlatform", undefined);
 
-      __checkObsolete__(['_decorator', 'BoxCollider2D', 'Camera', 'color', 'Component', 'director', 'EventTouch', 'Input', 'input', 'instantiate', 'Node', 'resources', 'Scene', 'Sprite', 'SpriteFrame', 'sys', 'tween', 'UIOpacity', 'UITransform', 'Vec2', 'Vec3']);
+      __checkObsolete__(['_decorator', 'BoxCollider2D', 'color', 'Component', 'instantiate', 'Node', 'resources', 'Sprite', 'SpriteFrame', 'tween', 'UITransform', 'Vec3']);
 
       ({
         ccclass,
         property
       } = _decorator);
-
-      _export("FlowerName", FlowerName = /*#__PURE__*/function (FlowerName) {
-        FlowerName["FlowerLeft"] = "FlowerLeft";
-        FlowerName["FlowerRight"] = "FlowerRight";
-        FlowerName["FlowerMid"] = "FlowerMid";
-        return FlowerName;
-      }({}));
+      /**
+       * 花盆平台组件 — 管理花盆布局、花朵初始化和消除判定
+       */
 
       _export("FlowerPlatform", FlowerPlatform = (_dec = ccclass('FlowerPlatform'), _dec2 = property(Node), _dec(_class = (_class2 = (_class3 = class FlowerPlatform extends Component {
         constructor(...args) {
@@ -72,122 +79,98 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "m_PlatFormRoot", _descriptor, this);
 
-          this.m_RotationLeft = new Vec3(0, 0, 30);
-          this.m_RotationRight = new Vec3(0, 0, -30);
           this.m_FlowerMoveRoot = null;
           this.m_FlowerPotMap = new Map();
           this.m_FlowerPotTagIndexMap = new Map();
           this.m_FlowerPotTagDataMap = new Map();
-          this.m_IsVictory = false;
         }
 
-        isVictory() {
-          return this.m_IsVictory;
-        }
-
-        start() {}
-
-        onDestroy() {}
-
-        checkFlowerDissolve(args) {
-          //console.log("onCheckFlowerDissolve");
-          if (!args) {
-            return;
-          }
-
-          var flowerTag = args;
-          var flowerpot = this.m_FlowerPotMap.get(flowerTag);
-
-          if (!flowerpot) {
-            return;
-          }
-
-          var flowerRoot = flowerpot.getChildByName("FlowerRootLight");
+        // ==================== 消除逻辑 ====================
+        checkFlowerDissolve(flowerTag) {
+          if (!flowerTag) return;
+          const flowerpot = this.m_FlowerPotMap.get(flowerTag);
+          if (!flowerpot) return;
+          const flowerRoot = flowerpot.getChildByName("FlowerRootLight");
 
           if (!flowerRoot) {
+            this.onLayerCleared(flowerpot, flowerTag);
             return;
           }
 
-          var flowers = flowerRoot.getComponentsInChildren(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
+          const flowers = flowerRoot.getComponentsInChildren(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
             error: Error()
           }), Flower) : Flower);
 
-          if (!flowers) {
-            this.checkBlackFlowers(flowerpot, flowerTag);
+          if (!flowers || flowers.length <= 0) {
+            this.onLayerCleared(flowerpot, flowerTag);
             return;
           }
 
-          if (flowers.length < 3) {
-            if (flowers.length <= 0) {
-              this.checkBlackFlowers(flowerpot, flowerTag);
-            }
+          if (flowers.length < (_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            error: Error()
+          }), GameConst) : GameConst).FLOWER_MATCH_COUNT) return; // 检查是否全部相同
 
-            return;
-          }
+          const firstID = flowers[0].getFlowerID();
+          const allSame = flowers.every(f => f.getFlowerID() === firstID);
 
-          var isSame = true;
-          var tempFlowerTag = "";
-
-          for (var i = 0; i < flowers.length; ++i) {
-            var flower = flowers[i];
-
-            if (flower) {
-              var temp = flower.getFlowerID();
-
-              if (tempFlowerTag == "") {
-                tempFlowerTag = temp;
-              } else if (tempFlowerTag != temp) {
-                isSame = false;
-                break;
-              }
-            }
-          }
-
-          if (isSame) {
-            for (var i = 0; i < flowers.length; ++i) {
-              var flowerNode = flowers[i].node;
-
-              if (flowerNode) {
-                tween(flowerNode).to(0.5, {
-                  angle: 0
-                }, {
-                  onComplete: target => {
-                    if (target) {
-                      target.removeFromParent();
-                      target.destroy();
-                    }
-                  }
-                }).call(() => {
-                  if (i == flowers.length) {
-                    this.checkBlackFlowers(flowerpot, flowerTag);
-                  }
-                }).start();
-              }
-            }
+          if (allSame) {
+            this.dissolveFlowers(flowers, flowerpot, flowerTag);
           }
         }
+        /** 播放消除动画并销毁花朵 */
 
-        checkBlackFlowers(flowerpot, flowerTag) {
-          var flowerRootBlack = flowerpot.getChildByName("FlowerRootBlack");
+
+        dissolveFlowers(flowers, flowerpot, flowerTag) {
+          let completed = 0;
+          const total = flowers.length;
+          flowers.forEach(flower => {
+            const flowerNode = flower.node;
+            if (!flowerNode) return;
+            tween(flowerNode).to((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+              error: Error()
+            }), GameConst) : GameConst).FLOWER_DISSOLVE_DURATION, {
+              angle: 0
+            }, {
+              onComplete: target => {
+                if (target) {
+                  target.removeFromParent();
+                  target.destroy();
+                }
+              }
+            }).call(() => {
+              completed++;
+
+              if (completed >= total) {
+                this.onLayerCleared(flowerpot, flowerTag);
+              }
+            }).start();
+          });
+        }
+        /** 当前层清空后，检查是否有下一层黑色花朵需要显示 */
+
+
+        onLayerCleared(flowerpot, flowerTag) {
+          const flowerRootBlack = flowerpot.getChildByName("FlowerRootBlack");
 
           if (flowerRootBlack) {
-            var blackFlowers = flowerRootBlack.getComponentsInChildren(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
+            const blackFlowers = flowerRootBlack.getComponentsInChildren(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
               error: Error()
             }), Flower) : Flower);
 
             if (blackFlowers && blackFlowers.length > 0) {
-              var idx = this.m_FlowerPotTagIndexMap.get(flowerTag) + 1;
+              var _this$m_FlowerPotTagI;
+
+              const idx = ((_this$m_FlowerPotTagI = this.m_FlowerPotTagIndexMap.get(flowerTag)) != null ? _this$m_FlowerPotTagI : 0) + 1;
               this.m_FlowerPotTagIndexMap.set(flowerTag, idx);
-              var flowerData = this.m_FlowerPotTagDataMap.get(flowerTag);
-              this.InitFlowers(flowerTag, flowerData, idx, flowerpot);
+              const flowerData = this.m_FlowerPotTagDataMap.get(flowerTag);
+
+              if (flowerData && idx < flowerData.length) {
+                this.initFlowers(flowerTag, flowerData, idx, flowerpot);
+              }
             }
           }
 
-          var isVictory = this.checkVictory();
-
-          if (isVictory) {
-            //console.log("Victory");
-            this.m_IsVictory = true;
+          if (this.checkVictory()) {
             (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
               error: Error()
             }), EventManager) : EventManager).getInstance().emit((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
@@ -195,233 +178,175 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), CustomClientEvent) : CustomClientEvent).CheckVictory);
           }
         }
+        /** 检查本平台是否所有花盆都已清空 */
+
 
         checkVictory() {
-          var victory = true;
-          this.m_FlowerPotMap.forEach((value, key) => {
-            if (!value) {
-              return;
-            }
-
-            var flowerRoot = value.getChildByName("FlowerRootLight");
-
-            if (!flowerRoot) {
-              return;
-            }
-
-            var flowers = flowerRoot.getComponentsInChildren(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
+          for (const [, pot] of this.m_FlowerPotMap) {
+            if (!pot) continue;
+            const flowerRoot = pot.getChildByName("FlowerRootLight");
+            if (!flowerRoot) continue;
+            const flowers = flowerRoot.getComponentsInChildren(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
               error: Error()
             }), Flower) : Flower);
+            if (flowers && flowers.length > 0) return false;
+          }
 
-            if (!flowers) {
-              return;
-            }
+          return true;
+        } // ==================== 初始化 ====================
 
-            if (flowers.length <= 0) {
-              return;
-            }
-
-            victory = false;
-          });
-          return victory;
-        }
 
         InitPlatForm(raw, platFormNum, data, flowerMoveRoot) {
-          this.m_IsVictory = false;
           this.m_FlowerPotMap.clear();
           this.m_FlowerPotTagIndexMap.clear();
           this.m_FlowerPotTagDataMap.clear();
           this.m_FlowerMoveRoot = flowerMoveRoot;
+          if (!data) return;
+          this.m_PlatFormRoot.active = false;
 
-          if (data) {
-            this.m_PlatFormRoot.active = false;
-
-            for (var i = 0; i < platFormNum; ++i) {
-              var platFormRootClone = instantiate(this.m_PlatFormRoot);
-
-              if (platFormRootClone) {
-                var fpNum = data.FlowerPot[raw];
-
-                if (platFormNum > 1) {
-                  fpNum = data.FlowerPot[raw][i];
-                }
-
-                this.InitFlowerPot(fpNum, data.FlowerArr[raw][i], platFormRootClone);
-                platFormRootClone.active = true;
-                this.node.addChild(platFormRootClone);
-              }
-            }
+          for (let i = 0; i < platFormNum; i++) {
+            const clone = instantiate(this.m_PlatFormRoot);
+            if (!clone) continue;
+            const fpNum = platFormNum > 1 ? data.FlowerPot[raw][i] : data.FlowerPot[raw];
+            this.initFlowerPot(fpNum, data.FlowerArr[raw][i], clone);
+            clone.active = true;
+            this.node.addChild(clone);
           }
         }
 
-        InitFlowerPot(flowerPotNum, data, platFormRootClone) {
-          if (data) {
-            var flowerPotRoot = platFormRootClone.getChildByName("FlowerPotRoot");
-            var flowerPotLayout = flowerPotRoot.getChildByName("FlowerPotLayout");
+        initFlowerPot(flowerPotNum, data, platFormClone) {
+          var _platFormClone$getChi;
 
-            if (flowerPotLayout) {
-              flowerPotLayout.active = false;
+          if (!data) return;
+          const flowerPotRoot = platFormClone.getChildByName("FlowerPotRoot");
+          const flowerPotLayout = flowerPotRoot == null ? void 0 : flowerPotRoot.getChildByName("FlowerPotLayout");
+          if (!flowerPotLayout) return;
+          flowerPotLayout.active = false;
 
-              for (var i = 0; i < flowerPotNum; ++i) {
-                var flowerPotLayoutClone = instantiate(flowerPotLayout);
+          for (let i = 0; i < flowerPotNum; i++) {
+            var _collider$tag;
 
-                if (flowerPotLayoutClone) {
-                  var collider = flowerPotLayoutClone.getComponent(BoxCollider2D);
+            const layoutClone = instantiate(flowerPotLayout);
+            if (!layoutClone) continue;
+            const collider = layoutClone.getComponent(BoxCollider2D);
 
-                  if (collider) {
-                    FlowerPlatform.s_FlowerPotTag += 1;
-                    collider.tag = FlowerPlatform.s_FlowerPotTag;
-                  }
-
-                  this.m_FlowerPotMap.set(collider.tag, flowerPotLayoutClone);
-                  this.m_FlowerPotTagIndexMap.set(collider.tag, 0);
-                  this.m_FlowerPotTagDataMap.set(collider.tag, data[i]);
-                  this.InitFlowers(collider.tag, data[i], 0, flowerPotLayoutClone);
-                  flowerPotLayoutClone.active = true;
-                  flowerPotRoot.addChild(flowerPotLayoutClone);
-                }
-              }
+            if (collider) {
+              FlowerPlatform.s_FlowerPotTag++;
+              collider.tag = FlowerPlatform.s_FlowerPotTag;
             }
 
-            var platFormUITrans = platFormRootClone.getChildByName("Platform").getComponent(UITransform);
+            const tag = (_collider$tag = collider == null ? void 0 : collider.tag) != null ? _collider$tag : 0;
+            this.m_FlowerPotMap.set(tag, layoutClone);
+            this.m_FlowerPotTagIndexMap.set(tag, 0);
+            this.m_FlowerPotTagDataMap.set(tag, data[i]);
+            this.initFlowers(tag, data[i], 0, layoutClone);
+            layoutClone.active = true;
+            flowerPotRoot.addChild(layoutClone);
+          } // 调整平台宽度
 
-            if (platFormUITrans) {
-              var cSize = platFormUITrans.contentSize;
-              platFormUITrans.setContentSize(cSize.width * flowerPotNum, cSize.height);
-            }
+
+          const platUITrans = (_platFormClone$getChi = platFormClone.getChildByName("Platform")) == null ? void 0 : _platFormClone$getChi.getComponent(UITransform);
+
+          if (platUITrans) {
+            const size = platUITrans.contentSize;
+            platUITrans.setContentSize(size.width * flowerPotNum, size.height);
           }
         }
 
-        InitFlowers(tag, data, idx, flowerPotLayoutClone) {
-          if (flowerPotLayoutClone) {
-            var flowerRootBlack = flowerPotLayoutClone.getChildByName("FlowerRootBlack");
+        initFlowers(tag, data, idx, potLayout) {
+          if (!potLayout) return;
+          const blackRoot = potLayout.getChildByName("FlowerRootBlack");
 
-            if (data.length >= idx + 1) {
-              this.setFlowerData(flowerRootBlack, tag, data[idx + 1], true);
-              flowerRootBlack.active = true;
-            } else {
-              flowerRootBlack.active = false;
-            }
+          if (data.length >= idx + 1) {
+            this.setFlowerData(blackRoot, tag, data[idx + 1], true);
+            if (blackRoot) blackRoot.active = true;
+          } else if (blackRoot) {
+            blackRoot.active = false;
+          }
 
-            var flowerRootLight = flowerPotLayoutClone.getChildByName("FlowerRootLight");
+          const lightRoot = potLayout.getChildByName("FlowerRootLight");
 
-            if (data.length >= idx) {
-              this.setFlowerData(flowerRootLight, tag, data[idx], false);
-              flowerRootLight.active = true;
-            } else {
-              flowerRootLight.active = false;
-            }
+          if (data.length >= idx) {
+            this.setFlowerData(lightRoot, tag, data[idx], false);
+            if (lightRoot) lightRoot.active = true;
+          } else if (lightRoot) {
+            lightRoot.active = false;
           }
         }
 
         setFlowerData(flowerRoot, tag, data, isBlack) {
-          if (flowerRoot == null) {
-            return;
-          }
-
+          if (!flowerRoot) return;
           flowerRoot.active = false;
-          var left = flowerRoot.getChildByName("Left");
+          const slots = [["Left", data == null ? void 0 : data.left, (_crd && FlowerPosition === void 0 ? (_reportPossibleCrUseOfFlowerPosition({
+            error: Error()
+          }), FlowerPosition) : FlowerPosition).Left], ["Mid", data == null ? void 0 : data.mid, (_crd && FlowerPosition === void 0 ? (_reportPossibleCrUseOfFlowerPosition({
+            error: Error()
+          }), FlowerPosition) : FlowerPosition).Mid], ["Right", data == null ? void 0 : data.right, (_crd && FlowerPosition === void 0 ? (_reportPossibleCrUseOfFlowerPosition({
+            error: Error()
+          }), FlowerPosition) : FlowerPosition).Right]];
 
-          if (data && data.left) {
-            left.active = true;
-            this.setImg(left, data.left, -1, tag, isBlack);
-          } else {
-            left.active = false;
-          }
+          for (const [name, imgId, pos] of slots) {
+            const slot = flowerRoot.getChildByName(name);
+            if (!slot) continue;
 
-          var mid = flowerRoot.getChildByName("Mid");
-
-          if (data && data.mid) {
-            mid.active = true;
-            this.setImg(mid, data.mid, 0, tag, isBlack);
-          } else {
-            mid.active = false;
-          }
-
-          var right = flowerRoot.getChildByName("Right");
-
-          if (data && data.right) {
-            right.active = true;
-            this.setImg(right, data.right, 1, tag, isBlack);
-          } else {
-            right.active = false;
+            if (imgId) {
+              slot.active = true;
+              this.createFlowerNode(slot, imgId, pos, tag, isBlack);
+            } else {
+              slot.active = false;
+            }
           }
 
           flowerRoot.active = true;
-        } //imgPos: 0-中间 1-右边 -1-左边
+        }
 
-
-        setImg(root, imgId, imgPos, tag, isBlack) {
-          var img = null;
-
-          if (root == null || root == undefined) {
-            return;
-          }
-
-          if (imgId == null || imgId == undefined) {
-            root.active = false;
-            return;
-          }
-
+        createFlowerNode(root, imgId, imgPos, tag, isBlack) {
+          if (!root || !imgId) return;
           root.removeAllChildren();
-          var imgNode = new Node();
+          const imgNode = new Node(); // 设置名称和旋转
 
-          if (imgNode) {
+          if (imgPos === (_crd && FlowerPosition === void 0 ? (_reportPossibleCrUseOfFlowerPosition({
+            error: Error()
+          }), FlowerPosition) : FlowerPosition).Left) {
+            imgNode.name = "FlowerImgLeft";
+            imgNode.setRotationFromEuler((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+              error: Error()
+            }), GameConst) : GameConst).FLOWER_ROTATION_LEFT);
+          } else if (imgPos === (_crd && FlowerPosition === void 0 ? (_reportPossibleCrUseOfFlowerPosition({
+            error: Error()
+          }), FlowerPosition) : FlowerPosition).Right) {
+            imgNode.name = "FlowerImgRight";
+            imgNode.setRotationFromEuler((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+              error: Error()
+            }), GameConst) : GameConst).FLOWER_ROTATION_RIGHT);
+          } else {
             imgNode.name = "FlowerImgMid";
-
-            if (imgPos == -1) {
-              imgNode.name = "FlowerImgLeft";
-              imgNode.setRotationFromEuler(this.m_RotationLeft);
-            } else if (imgPos == 1) {
-              imgNode.name = "FlowerImgRight";
-              imgNode.setRotationFromEuler(this.m_RotationRight);
-            }
-
-            imgNode.active = false;
-            var uiTrans = imgNode.getComponent(UITransform);
-
-            if (uiTrans == null || uiTrans == undefined) {
-              uiTrans = imgNode.addComponent(UITransform);
-            }
-
-            if (uiTrans) {
-              uiTrans.setAnchorPoint(0.5, 0);
-            }
-
-            img = imgNode.addComponent(Sprite);
-
-            if (img) {
-              if (imgId != "") {
-                resources.load("flowers/" + imgId + "/spriteFrame", SpriteFrame, (err, sp) => {
-                  if (sp) {
-                    img.spriteFrame = sp;
-                  }
-
-                  var flowerScript = imgNode.getComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
-                    error: Error()
-                  }), Flower) : Flower);
-
-                  if (flowerScript == null || flowerScript == undefined) {
-                    flowerScript = imgNode.addComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
-                      error: Error()
-                    }), Flower) : Flower);
-                  }
-
-                  flowerScript.init(imgId, root, this.m_FlowerMoveRoot, imgPos, this.m_RotationLeft, this.m_RotationRight, tag, isBlack);
-
-                  if (isBlack) {
-                    img.color = color(60, 60, 60, 255);
-                  } else {
-                    img.color = color(255, 255, 255, 255);
-                  }
-
-                  imgNode.active = true;
-                });
-              }
-            }
-
-            root.addChild(imgNode);
           }
+
+          imgNode.active = false;
+          let uiTrans = imgNode.getComponent(UITransform);
+          if (!uiTrans) uiTrans = imgNode.addComponent(UITransform);
+          uiTrans.setAnchorPoint(0.5, 0);
+          const sprite = imgNode.addComponent(Sprite);
+          resources.load((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            error: Error()
+          }), GameConst) : GameConst).RES_PATH.FLOWERS + imgId + "/spriteFrame", SpriteFrame, (err, sp) => {
+            if (sp) sprite.spriteFrame = sp;
+            let flowerScript = imgNode.getComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
+              error: Error()
+            }), Flower) : Flower);
+            if (!flowerScript) flowerScript = imgNode.addComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
+              error: Error()
+            }), Flower) : Flower);
+            flowerScript.init(imgId, root, this.m_FlowerMoveRoot, imgPos, (_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+              error: Error()
+            }), GameConst) : GameConst).FLOWER_ROTATION_LEFT, (_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+              error: Error()
+            }), GameConst) : GameConst).FLOWER_ROTATION_RIGHT, tag, isBlack);
+            sprite.color = isBlack ? color(60, 60, 60, 255) : color(255, 255, 255, 255);
+            imgNode.active = true;
+          });
+          root.addChild(imgNode);
         }
 
       }, _class3.s_FlowerPotTag = 0, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "m_PlatFormRoot", [_dec2], {

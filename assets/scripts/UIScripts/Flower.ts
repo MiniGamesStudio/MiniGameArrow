@@ -1,361 +1,259 @@
-import { _decorator, BoxCollider2D, Collider2D, Component, Contact2DType, EPhysics2DDrawFlags, EventTouch, IPhysics2DContact, Node, PhysicsSystem2D, RigidBody2D, tween, UITransform, Vec2, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Collider2D, Component, Contact2DType, EventTouch, Node, tween, UITransform, Vec2, Vec3 } from 'cc';
 import { CustomClientEvent } from '../Config/Config';
 import { EventManager } from '../Core/EventManager';
+import { GameConst } from '../Config/GameConst';
+import { FlowerPosition, SLOT_NAMES, SLOT_PRIORITY } from '../Model/LevelModel';
 const { ccclass, property } = _decorator;
 
+/**
+ * 花朵组件 — 处理拖拽、碰撞检测和花盆匹配
+ */
 @ccclass('Flower')
 export class Flower extends Component {
-    m_FlowerFlySpeed:number = 1000;
-    m_FlowerStartPos:Vec3 = Vec3.ZERO;
-    m_RotationLeft:Vec3 = Vec3.ZERO;
-    m_RotationRight:Vec3 = Vec3.ZERO;
+    private m_FlowerStartPos: Vec3 = Vec3.ZERO;
+    private m_FlowerUITransform: UITransform = null;
+    private m_FlowerRoot: Node = null;
+    private m_FlowerMoveRoot: Node = null;
+    private m_FlowerMoveRootUIT: UITransform = null;
+    private m_FlowerMoveOffsetY: number = 0;
+    private m_IsDragging: boolean = false;
+    private m_IsAnimating: boolean = false;
+    private m_ImgPos: FlowerPosition = FlowerPosition.Mid;
 
-    m_FlowerUITransform:UITransform = null;
-    m_FlowerRoot:Node = null;
-    m_FlowerMoveRoot:Node = null;
-    m_FlowerMoveRootUIT:UITransform = null;
-    m_FlowerMoveOffsetY:number = 0;
-    m_IsDragingFlower:Boolean = false;
-    m_ImgPos:number = 0;
-    m_IsFlowerDoAni:Boolean = false;
+    private m_BoxCollider2D: BoxCollider2D = null;
+    private m_FlowerTag: number = 0;
+    private m_FlowerId: string = "";
+    private m_IsBlack: boolean = false;
 
-    m_BoxCollider2D:BoxCollider2D = null;
-    m_RigidBody2D:RigidBody2D = null;
-    m_FlowerTag:number = 0;
+    // 碰撞目标信息
+    private m_IsChangePot: boolean = false;
+    private m_TargetImgPos: FlowerPosition = FlowerPosition.Mid;
+    private m_TargetStartPos: Vec3 = Vec3.ZERO;
+    private m_TargetFlowerRoot: Node = null;
+    private m_TargetFlowerTag: number = 0;
+    private m_SelfCollider: Collider2D = null;
+    private m_OtherCollider: Collider2D = null;
+    private m_ContactTags: number[] = [];
 
-    m_IsChangePot = false;
-    m_TempImgPos:number = 1;
-    m_TempFlowerStartPos:Vec3 = Vec3.ZERO;
-    m_TempFlowerRoot:Node = null;
-    m_TempFlowerTag:number = 0;
-    m_SelfCollider: Collider2D = null;
-    m_OtherCollider: Collider2D = null;
-
-    m_FlowerId:string = "";
-    m_IsBlack:boolean = false;
-
-    m_ContactArr:number[] = [];
-
-    public getFlowerID():string{
+    getFlowerID(): string {
         return this.m_FlowerId;
     }
 
-    //imgPos: 0-中间 1-右边 -1-左边
-    init(imgId:string, flowerRoot : Node, flowerMoveRoot : Node, imgPos:number, rLeft:Vec3, rRight:Vec3, tag:number, isBlack:boolean){
+    init(imgId: string, flowerRoot: Node, flowerMoveRoot: Node, imgPos: number, rLeft: Vec3, rRight: Vec3, tag: number, isBlack: boolean): void {
         this.m_IsBlack = isBlack;
         this.m_FlowerId = imgId;
         this.m_FlowerTag = tag;
-        this.m_IsDragingFlower = false;
+        this.m_IsDragging = false;
         this.m_FlowerRoot = flowerRoot;
         this.m_FlowerMoveRoot = flowerMoveRoot;
-        if(this.m_FlowerMoveRoot){
-            this.m_FlowerMoveRootUIT = this.m_FlowerMoveRoot.getComponent(UITransform);
-        }
-        this.m_ImgPos = imgPos;
-        this.m_RotationLeft = rLeft;
-        this.m_RotationRight = rRight;
-        this.m_ContactArr = [];
+        this.m_FlowerMoveRootUIT = flowerMoveRoot?.getComponent(UITransform);
+        this.m_ImgPos = imgPos as FlowerPosition;
+        this.m_ContactTags = [];
     }
 
-    start() {
+    start(): void {
         this.m_FlowerUITransform = this.node.getComponent(UITransform);
-
-        if(!this.m_IsBlack){   
-            this.offNodeEvent();
-            this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this, true);
-            this.node.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this, true);
-            this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this, true);
-            this.node.on(Node.EventType.TOUCH_CANCEL, this.onTouchCancel, this, true);
+        if (!this.m_IsBlack) {
+            this.registerTouchEvents();
         }
     }
 
-    protected onDestroy(): void {        
-        this.offNodeEvent();
+    protected onDestroy(): void {
+        this.unregisterTouchEvents();
     }
 
-    offNodeEvent():void{
+    private registerTouchEvents(): void {
+        this.unregisterTouchEvents();
+        this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this, true);
+        this.node.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this, true);
+        this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this, true);
+        this.node.on(Node.EventType.TOUCH_CANCEL, this.onTouchEnd, this, true);
+    }
+
+    private unregisterTouchEvents(): void {
         this.node.off(Node.EventType.TOUCH_START, this.onTouchStart, this);
         this.node.off(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
         this.node.off(Node.EventType.TOUCH_END, this.onTouchEnd, this);
-        this.node.off(Node.EventType.TOUCH_CANCEL, this.onTouchCancel, this);
+        this.node.off(Node.EventType.TOUCH_CANCEL, this.onTouchEnd, this);
     }
 
-    onBeginContact (selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null) {
-        // 只在两个碰撞体开始接触时被调用一次
-        //console.log('onBeginContact: otherCollider.tag = ' + otherCollider.tag);
+    // ==================== 碰撞检测 ====================
 
-        this.m_ContactArr.push(otherCollider.tag);
+    private onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D): void {
+        this.m_ContactTags.push(otherCollider.tag);
         this.m_SelfCollider = selfCollider;
         this.m_OtherCollider = otherCollider;
-        this.chckCollision(selfCollider, otherCollider);
+        this.tryFindEmptySlot(selfCollider, otherCollider);
     }
 
-    chckCollision(selfCollider: Collider2D, otherCollider: Collider2D):void {
-        if(otherCollider){ 
-            var light = otherCollider.node.getChildByName("FlowerRootLight");
-            if(light){
-                var imgPos = this.checkImgPos(selfCollider, otherCollider);
-
-                if(imgPos == -1){
-                    var left = light.getChildByName("Left");
-                    if(left.children.length <= 0){      
-                        this.m_IsChangePot = true;
-                        this.m_TempImgPos = -1;
-                        this.m_TempFlowerStartPos = left.getWorldPosition();
-                        this.m_TempFlowerRoot = left;
-                        this.m_TempFlowerTag = otherCollider.tag;
-                        return;
-                    }
-
-                    var right = light.getChildByName("Right");
-                    if(right.children.length <= 0){    
-                        this.m_IsChangePot = true;
-                        this.m_TempImgPos = 1;
-                        this.m_TempFlowerStartPos = right.getWorldPosition();
-                        this.m_TempFlowerRoot = right;
-                        this.m_TempFlowerTag = otherCollider.tag;
-                        return;
-                    }
-
-                    var mid = light.getChildByName("Mid");
-                    if(mid.children.length <= 0){
-                        this.m_IsChangePot = true;
-                        this.m_TempImgPos = 0;
-                        this.m_TempFlowerStartPos = mid.getWorldPosition();
-                        this.m_TempFlowerRoot = mid;
-                        this.m_TempFlowerTag = otherCollider.tag;
-                        return;
-                    }
-                }
-                else if(imgPos == 1){
-                    var right = light.getChildByName("Right");
-                    if(right.children.length <= 0){     
-                        this.m_IsChangePot = true;
-                        this.m_TempImgPos = 1;
-                        this.m_TempFlowerStartPos = right.getWorldPosition();
-                        this.m_TempFlowerRoot = right;
-                        this.m_TempFlowerTag = otherCollider.tag;
-                        return;
-                    }
-
-                    var mid = light.getChildByName("Mid");
-                    if(mid.children.length <= 0){   
-                        this.m_IsChangePot = true;
-                        this.m_TempImgPos = 0;
-                        this.m_TempFlowerStartPos = mid.getWorldPosition();
-                        this.m_TempFlowerRoot = mid;
-                        this.m_TempFlowerTag = otherCollider.tag;
-                        return;
-                    }
-                    
-                    var left = light.getChildByName("Left");
-                    if(left.children.length <= 0){       
-                        this.m_IsChangePot = true;
-                        this.m_TempImgPos = -1;
-                        this.m_TempFlowerStartPos = left.getWorldPosition();
-                        this.m_TempFlowerRoot = left;
-                        this.m_TempFlowerTag = otherCollider.tag;
-                        return;
-                    }
-                }
-                else{   
-                    var mid = light.getChildByName("Mid");
-                    if(mid.children.length <= 0){   
-                        this.m_IsChangePot = true;
-                        this.m_TempImgPos = 0;
-                        this.m_TempFlowerStartPos = mid.getWorldPosition();
-                        this.m_TempFlowerRoot = mid;
-                        this.m_TempFlowerTag = otherCollider.tag;
-                        return;
-                    }
-                    
-                    var left = light.getChildByName("Left");
-                    if(left.children.length <= 0){         
-                        this.m_IsChangePot = true;
-                        this.m_TempImgPos = -1;
-                        this.m_TempFlowerStartPos = left.getWorldPosition();
-                        this.m_TempFlowerRoot = left;
-                        this.m_TempFlowerTag = otherCollider.tag;
-                        return;
-                    }
-                    
-                    var right = light.getChildByName("Right");
-                    if(right.children.length <= 0){        
-                        this.m_IsChangePot = true;
-                        this.m_TempImgPos = 1;
-                        this.m_TempFlowerStartPos = right.getWorldPosition();
-                        this.m_TempFlowerRoot = right;
-                        this.m_TempFlowerTag = otherCollider.tag;
-                        return;
-                    }                    
-                }
+    private onEndContact(selfCollider: Collider2D, otherCollider: Collider2D): void {
+        let allCleared = true;
+        for (let i = 0; i < this.m_ContactTags.length; i++) {
+            if (this.m_ContactTags[i] === otherCollider.tag) {
+                this.m_ContactTags[i] = -1;
+            } else if (this.m_ContactTags[i] > 0) {
+                allCleared = false;
             }
         }
-    }
 
-    checkImgPos(selfCollider: Collider2D, otherCollider: Collider2D):number {
-        if(selfCollider && otherCollider){
-            var imgPos = 0;
-            var w = otherCollider.worldAABB.size.width / 6;
-            var selfPos = selfCollider.node.getWorldPosition();
-            var otherPos = otherCollider.node.getWorldPosition();
-            var subX = selfPos.x - otherPos.x;
-            if(subX > 0){
-                if(subX > w){
-                    //花在花盆右边
-                    imgPos = 1;
-                }
-                else{
-                    //花在花盆中间
-                    imgPos = 0;
-                }
-            }
-            else if(subX < 0)
-            {
-                if(Math.abs(subX) > w){
-                    //花在花盆左边
-                    imgPos = -1;
-                }
-                else{
-                    //花在花盆中间
-                    imgPos = 0;
-                }
-            }
-            else{
-                //花在花盆中间
-                imgPos = 0;
-            }
-
-            return imgPos;
-        }
-    }
-
-    onEndContact (selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null) {
-        // 只在两个碰撞体结束接触时被调用一次
-        //console.log('onEndContact otherCollider.tag = ' + otherCollider.tag);
-        var temp = true;
-        this.m_ContactArr.forEach((value, idx)=>{
-            if(value == otherCollider.tag){
-                this.m_ContactArr[idx] = -1;
-            }
-            else{
-                if(value > 0){
-                    temp = false;
-                }
-            }
-        });
-
-        if(temp){
-            this.m_ContactArr = [];
+        if (allCleared) {
+            this.m_ContactTags = [];
             this.m_SelfCollider = null;
             this.m_OtherCollider = null;
-            this.m_IsChangePot = false; 
+            this.m_IsChangePot = false;
         }
     }
 
-    onTouchStart(event: EventTouch){
-        if(this.m_IsDragingFlower || this.m_IsFlowerDoAni){
-            return;
-        }
+    /**
+     * 核心优化：用优先级表替代三段重复的 if-else
+     * 根据花朵落点位置，按优先级查找空槽
+     */
+    private tryFindEmptySlot(selfCollider: Collider2D, otherCollider: Collider2D): void {
+        if (!otherCollider) return;
 
-        if(event.target){
-            
-        }
-    }
+        const light = otherCollider.node.getChildByName("FlowerRootLight");
+        if (!light) return;
 
-    onTouchMove(event: EventTouch){
-        if(this.m_IsDragingFlower == false && event.target){
-            this.m_IsDragingFlower = true;                    
-            this.m_FlowerMoveOffsetY = event.target.getComponent(UITransform).contentSize.height * 0.6;
-            event.target.parent = this.m_FlowerMoveRoot;     
-            this.m_FlowerStartPos = this.m_FlowerRoot.getWorldPosition(); 
-            var touchPos = event.touch.getUILocation();             
-            var flowerStartPos = this.m_FlowerMoveRootUIT.convertToNodeSpaceAR(new Vec3(touchPos.x, touchPos.y, 0));
-            event.target.setPosition(flowerStartPos.x, flowerStartPos.y - this.m_FlowerMoveOffsetY);
-            event.target.setRotationFromEuler(new Vec3(0, 0, 0));
+        const detectedPos = this.detectImgPosition(selfCollider, otherCollider);
+        const priority = SLOT_PRIORITY[detectedPos];
 
-            this.m_BoxCollider2D = this.node.getComponent(BoxCollider2D);
-            if(this.m_BoxCollider2D == null || this.m_BoxCollider2D == undefined){
-                this.m_BoxCollider2D = this.node.addComponent(BoxCollider2D);
-                this.m_BoxCollider2D.sensor = true;
-                this.m_BoxCollider2D.size.x = this.m_FlowerUITransform.contentSize.x*0.5;
-                this.m_BoxCollider2D.size.y = this.m_FlowerUITransform.contentSize.y;
-                this.m_BoxCollider2D.offset = new Vec2(0, this.m_FlowerUITransform.contentSize.y / 2);
-                this.m_BoxCollider2D.on(Contact2DType.BEGIN_CONTACT, this.onBeginContact, this);
-                this.m_BoxCollider2D.on(Contact2DType.END_CONTACT, this.onEndContact, this);
-            }
-        }
-
-        if(!this.m_IsDragingFlower || this.m_IsFlowerDoAni){
-            return;
-        }
-
-        if(event.target){
-            const delta = event.getUIDelta();
-            
-            // 移动花朵节点
-            const pos = event.target.position;
-            event.target.setPosition(pos.x + delta.x, pos.y + delta.y);
-            
-            if(this.m_SelfCollider && this.m_OtherCollider){
-                this.chckCollision(this.m_SelfCollider, this.m_OtherCollider);
+        for (const pos of priority) {
+            const slotName = SLOT_NAMES[pos];
+            const slot = light.getChildByName(slotName);
+            if (slot && slot.children.length <= 0) {
+                this.m_IsChangePot = true;
+                this.m_TargetImgPos = pos;
+                this.m_TargetStartPos = slot.getWorldPosition();
+                this.m_TargetFlowerRoot = slot;
+                this.m_TargetFlowerTag = otherCollider.tag;
+                return;
             }
         }
     }
 
-    onTouchEnd(event: EventTouch){
-        if(!this.m_IsDragingFlower || this.m_IsFlowerDoAni){
-            return;
+    /** 根据碰撞体位置判断花朵在花盆的左/中/右 */
+    private detectImgPosition(selfCollider: Collider2D, otherCollider: Collider2D): FlowerPosition {
+        if (!selfCollider || !otherCollider) return FlowerPosition.Mid;
+
+        const threshold = otherCollider.worldAABB.size.width / 6;
+        const deltaX = selfCollider.node.getWorldPosition().x - otherCollider.node.getWorldPosition().x;
+
+        if (deltaX > threshold) return FlowerPosition.Right;
+        if (deltaX < -threshold) return FlowerPosition.Left;
+        return FlowerPosition.Mid;
+    }
+
+    // ==================== 触摸事件 ====================
+
+    private onTouchStart(event: EventTouch): void {
+        // 预留，目前不需要额外处理
+    }
+
+    private onTouchMove(event: EventTouch): void {
+        if (!event.target) return;
+
+        // 首次移动时开始拖拽
+        if (!this.m_IsDragging) {
+            if (this.m_IsAnimating) return;
+            this.startDrag(event);
         }
-        
-        if(event.target){  
-            var flowerTagTemp = this.m_FlowerTag;
-            if(this.m_IsChangePot){
+
+        if (!this.m_IsDragging || this.m_IsAnimating) return;
+
+        const delta = event.getUIDelta();
+        const pos = event.target.position;
+        event.target.setPosition(pos.x + delta.x, pos.y + delta.y);
+
+        if (this.m_SelfCollider && this.m_OtherCollider) {
+            this.tryFindEmptySlot(this.m_SelfCollider, this.m_OtherCollider);
+        }
+    }
+
+    private startDrag(event: EventTouch): void {
+        this.m_IsDragging = true;
+        this.m_FlowerMoveOffsetY = this.m_FlowerUITransform.contentSize.height * GameConst.FLOWER_DRAG_OFFSET_RATIO;
+        event.target.parent = this.m_FlowerMoveRoot;
+        this.m_FlowerStartPos = this.m_FlowerRoot.getWorldPosition();
+
+        const touchPos = event.touch.getUILocation();
+        const localPos = this.m_FlowerMoveRootUIT.convertToNodeSpaceAR(new Vec3(touchPos.x, touchPos.y, 0));
+        event.target.setPosition(localPos.x, localPos.y - this.m_FlowerMoveOffsetY);
+        event.target.setRotationFromEuler(Vec3.ZERO);
+
+        this.setupDragCollider();
+    }
+
+    private setupDragCollider(): void {
+        this.m_BoxCollider2D = this.node.getComponent(BoxCollider2D);
+        if (!this.m_BoxCollider2D) {
+            this.m_BoxCollider2D = this.node.addComponent(BoxCollider2D);
+            this.m_BoxCollider2D.sensor = true;
+            this.m_BoxCollider2D.size.x = this.m_FlowerUITransform.contentSize.x * 0.5;
+            this.m_BoxCollider2D.size.y = this.m_FlowerUITransform.contentSize.y;
+            this.m_BoxCollider2D.offset = new Vec2(0, this.m_FlowerUITransform.contentSize.y / 2);
+            this.m_BoxCollider2D.on(Contact2DType.BEGIN_CONTACT, this.onBeginContact, this);
+            this.m_BoxCollider2D.on(Contact2DType.END_CONTACT, this.onEndContact, this);
+        }
+    }
+
+    private onTouchEnd(event: EventTouch): void {
+        if (!this.m_IsDragging || this.m_IsAnimating) return;
+
+        if (event.target) {
+            const prevTag = this.m_FlowerTag;
+
+            if (this.m_IsChangePot) {
                 this.m_IsChangePot = false;
-                this.m_ImgPos = this.m_TempImgPos;
-                this.m_FlowerStartPos = this.m_TempFlowerStartPos;
-                this.m_FlowerRoot = this.m_TempFlowerRoot;
-                this.m_FlowerTag = this.m_TempFlowerTag;
+                this.m_ImgPos = this.m_TargetImgPos;
+                this.m_FlowerStartPos = this.m_TargetStartPos;
+                this.m_FlowerRoot = this.m_TargetFlowerRoot;
+                this.m_FlowerTag = this.m_TargetFlowerTag;
             }
-            
-            var flowerEndPos = event.target.getWorldPosition();
 
-            this.m_IsFlowerDoAni = true;
-            var temp = Math.abs(this.m_FlowerStartPos.x - flowerEndPos.x) + Math.abs(this.m_FlowerStartPos.y - flowerEndPos.y);
-            this.m_FlowerStartPos.subtract(flowerEndPos);
-            tween(event.target).by(temp/this.m_FlowerFlySpeed, {position : this.m_FlowerStartPos}).call(()=>{                
-                this.m_IsFlowerDoAni = false;
-                this.m_IsDragingFlower = false;
+            this.animateFlowerBack(event.target, prevTag);
+        } else {
+            this.m_IsDragging = false;
+        }
 
-                this.node.setRotationFromEuler(Vec3.ZERO);
-                if(this.m_ImgPos == -1){
-                    this.node.setRotationFromEuler(this.m_RotationLeft);
-                }
-                else if(this.m_ImgPos == 1){
-                    this.node.setRotationFromEuler(this.m_RotationRight);
-                }
+        this.cleanupDragCollider();
+    }
 
+    private animateFlowerBack(target: Node, prevTag: number): void {
+        const endPos = target.getWorldPosition();
+        const dist = Math.abs(this.m_FlowerStartPos.x - endPos.x) + Math.abs(this.m_FlowerStartPos.y - endPos.y);
+        const delta = this.m_FlowerStartPos.subtract(endPos);
+
+        this.m_IsAnimating = true;
+        tween(target)
+            .by(dist / GameConst.FLOWER_FLY_SPEED, { position: delta })
+            .call(() => {
+                this.m_IsAnimating = false;
+                this.m_IsDragging = false;
+                this.applyRotation();
                 this.node.parent = this.m_FlowerRoot;
                 this.node.setPosition(Vec3.ZERO);
                 this.m_FlowerRoot.active = true;
 
-                EventManager.getInstance().emit(CustomClientEvent.FlowerDissolve, flowerTagTemp);
+                EventManager.getInstance().emit(CustomClientEvent.FlowerDissolve, prevTag);
                 EventManager.getInstance().emit(CustomClientEvent.FlowerDissolve, this.m_FlowerTag);
-            }).start();
-        }
-        else{
-            this.m_IsDragingFlower = false;
-        }
+            })
+            .start();
+    }
 
-        if(this.m_BoxCollider2D){
+    private applyRotation(): void {
+        if (this.m_ImgPos === FlowerPosition.Left) {
+            this.node.setRotationFromEuler(GameConst.FLOWER_ROTATION_LEFT);
+        } else if (this.m_ImgPos === FlowerPosition.Right) {
+            this.node.setRotationFromEuler(GameConst.FLOWER_ROTATION_RIGHT);
+        } else {
+            this.node.setRotationFromEuler(Vec3.ZERO);
+        }
+    }
+
+    private cleanupDragCollider(): void {
+        if (this.m_BoxCollider2D) {
             this.m_BoxCollider2D.destroy();
             this.m_BoxCollider2D = null;
         }
     }
-
-    onTouchCancel(event: EventTouch){
-        this.onTouchEnd(event);
-    }
 }
-
-

@@ -1,10 +1,9 @@
-import { _decorator, Component, Node } from 'cc';
-const { ccclass, property } = _decorator;
-
-@ccclass('EventManager')
-export class EventManager extends Component {
+/**
+ * 事件管理器 — 全局事件总线，不再继承 Component
+ */
+export class EventManager {
     private static _instance: EventManager;
-    private _events: Map<string, Array<{callback: Function, target: any}>> = new Map();
+    private _events: Map<string, Array<{ callback: Function; target: any }>> = new Map();
 
     static getInstance(): EventManager {
         if (!this._instance) {
@@ -13,14 +12,14 @@ export class EventManager extends Component {
         return this._instance;
     }
 
-    on(eventName: string, callback: Function, target?: any) {
+    on(eventName: string, callback: Function, target?: any): void {
         if (!this._events.has(eventName)) {
             this._events.set(eventName, []);
         }
-        this._events.get(eventName).push({callback, target});
+        this._events.get(eventName)!.push({ callback, target });
     }
 
-    off(eventName: string, callback: Function, target?: any) {
+    off(eventName: string, callback: Function, target?: any): void {
         const handlers = this._events.get(eventName);
         if (handlers) {
             for (let i = handlers.length - 1; i >= 0; i--) {
@@ -31,14 +30,30 @@ export class EventManager extends Component {
         }
     }
 
-    emit(eventName: string, data?: any) {
+    emit(eventName: string, ...args: any[]): void {
         const handlers = this._events.get(eventName);
         if (handlers) {
-            handlers.forEach(handler => {
-                handler.callback.call(handler.target, data);
+            // 复制一份避免遍历中修改
+            const snapshot = handlers.slice();
+            snapshot.forEach(handler => {
+                handler.callback.call(handler.target, ...args);
             });
         }
     }
+
+    /** 移除某个 target 的所有监听 */
+    offAllByTarget(target: any): void {
+        this._events.forEach((handlers, eventName) => {
+            for (let i = handlers.length - 1; i >= 0; i--) {
+                if (handlers[i].target === target) {
+                    handlers.splice(i, 1);
+                }
+            }
+        });
+    }
+
+    /** 清除所有事件 */
+    clear(): void {
+        this._events.clear();
+    }
 }
-
-

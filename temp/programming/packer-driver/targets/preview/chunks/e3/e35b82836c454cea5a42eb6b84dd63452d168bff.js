@@ -64,14 +64,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         onLoad() {
-          /* 
-          PhysicsSystem2D.instance.enable = true;
-          PhysicsSystem2D.instance.debugDrawFlags = EPhysics2DDrawFlags.Aabb |
-          EPhysics2DDrawFlags.Pair |
-          EPhysics2DDrawFlags.CenterOfMass |
-          EPhysics2DDrawFlags.Joint |
-          EPhysics2DDrawFlags.Shape;
-          */
           director.addPersistRootNode(this.node); // 监听游戏进入后台事件
 
           game.on(Game.EVENT_HIDE, this.onGameHide, this); // 监听游戏回到前台事件

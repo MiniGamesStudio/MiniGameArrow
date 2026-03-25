@@ -58,8 +58,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "m_StartBtn", _descriptor, this);
         }
 
-        onOpen() {
-          this.m_StartBtn.node.on('click', () => {
+        OnInit() {}
+
+        OnOpen() {
+          this.SetBtnEvent(this.m_StartBtn, () => {
             (_crd && UIManager === void 0 ? (_reportPossibleCrUseOfUIManager({
               error: Error()
             }), UIManager) : UIManager).GetInstance().ClosePanel((_crd && UIID === void 0 ? (_reportPossibleCrUseOfUIID({
@@ -73,7 +75,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           });
         }
 
-        onClose() {}
+        OnClose() {
+          super.OnClose();
+        }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "m_StartBtn", [_dec2], {
         configurable: true,

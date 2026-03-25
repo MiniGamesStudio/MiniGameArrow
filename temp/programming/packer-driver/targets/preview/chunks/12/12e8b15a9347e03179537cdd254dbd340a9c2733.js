@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, _dec, _class, _dec2, _class3, _class4, _crd, ccclass, property, UIID, UIData, UIDataSet;
+  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, _dec, _class, _dec2, _class3, _class4, _crd, ccclass, property, UILayer, UIShowMode, UIID, UIData, UIDataSet;
 
   return {
     setters: [function (_cc) {
@@ -22,6 +22,25 @@ System.register(["cc"], function (_export, _context) {
         property
       } = _decorator);
 
+      _export("UILayer", UILayer = /*#__PURE__*/function (UILayer) {
+        UILayer[UILayer["Background"] = 0] = "Background";
+        UILayer[UILayer["Normal"] = 1000] = "Normal";
+        UILayer[UILayer["PopUp"] = 2000] = "PopUp";
+        UILayer[UILayer["Tips"] = 3000] = "Tips";
+        UILayer[UILayer["System"] = 4000] = "System";
+        UILayer[UILayer["TopMost"] = 9999] = "TopMost";
+        return UILayer;
+      }({})); // UI打开模式
+
+
+      _export("UIShowMode", UIShowMode = /*#__PURE__*/function (UIShowMode) {
+        UIShowMode[UIShowMode["Normal"] = 0] = "Normal";
+        UIShowMode[UIShowMode["HideOther"] = 1] = "HideOther";
+        UIShowMode[UIShowMode["Single"] = 2] = "Single";
+        UIShowMode[UIShowMode["Overlay"] = 3] = "Overlay";
+        return UIShowMode;
+      }({}));
+
       _export("UIID", UIID = /*#__PURE__*/function (UIID) {
         UIID[UIID["None"] = 0] = "None";
         UIID[UIID["LoadingPanel"] = 1] = "LoadingPanel";
@@ -34,8 +53,10 @@ System.register(["cc"], function (_export, _context) {
       _export("UIData", UIData = (_dec = ccclass('UIData'), _dec(_class = class UIData {
         constructor() {
           this.id = void 0;
+          this.layer = void 0;
           this.name = void 0;
           this.prefabPath = void 0;
+          this.showMode = void 0;
           this.cacheCount = void 0;
         }
 
@@ -51,22 +72,34 @@ System.register(["cc"], function (_export, _context) {
         }
 
         static InitUIDatas() {
-          this.InitUI(UIID.LoadingPanel, "LoadingPanel", "ui/LoadingPanel");
-          this.InitUI(UIID.MainPanel, "MainPanel", "ui/MainPanel");
-          this.InitUI(UIID.GamePanel, "GamePanel", "ui/GamePanel");
-          this.InitUI(UIID.VictoryPanel, "VictoryPanel", "ui/VictoryPanel");
+          this.InitUI(UIID.LoadingPanel, UILayer.System, "LoadingPanel", "ui/LoadingPanel");
+          this.InitUI(UIID.MainPanel, UILayer.Normal, "MainPanel", "ui/MainPanel", UIShowMode.Normal, 1);
+          this.InitUI(UIID.GamePanel, UILayer.Normal, "GamePanel", "ui/GamePanel");
+          this.InitUI(UIID.VictoryPanel, UILayer.Normal, "VictoryPanel", "ui/VictoryPanel");
         }
 
-        static InitUI(id, uiName, path, cacheCount) {
+        static InitUI(id, layer, uiName, path, showMode, cacheCount) {
+          if (showMode === void 0) {
+            showMode = UIShowMode.Normal;
+          }
+
           if (cacheCount === void 0) {
-            cacheCount = 1;
+            cacheCount = 0;
           }
 
           var data = new UIData();
           data.id = id;
+          data.layer = layer;
           data.name = uiName;
           data.prefabPath = path;
-          data.cacheCount = cacheCount;
+          data.showMode = showMode;
+
+          if (showMode == UIShowMode.Single) {
+            data.cacheCount = 1;
+          } else {
+            data.cacheCount = cacheCount;
+          }
+
           this.m_DataMap.set(data.id, data);
         }
 
