@@ -1,4 +1,4 @@
-import { Asset, Prefab, SpriteFrame, resources, instantiate, Node } from 'cc';
+import { Asset, Prefab, resources, instantiate, Node } from 'cc';
 
 /**
  * 资源管理器 — 统一管理 resources 目录下资源的加载、缓存和释放

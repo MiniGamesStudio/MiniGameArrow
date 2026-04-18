@@ -43,7 +43,7 @@ export class EventManager {
 
     /** 移除某个 target 的所有监听 */
     offAllByTarget(target: any): void {
-        this._events.forEach((handlers, eventName) => {
+        this._events.forEach((handlers) => {
             for (let i = handlers.length - 1; i >= 0; i--) {
                 if (handlers[i].target === target) {
                     handlers.splice(i, 1);
