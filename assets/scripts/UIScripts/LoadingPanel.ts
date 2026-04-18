@@ -1,8 +1,8 @@
 import { _decorator, ProgressBar } from 'cc';
 import { UIBase } from '../Core/UIBase';
 import { UIManager } from '../Core/UIManager';
-import { UIID } from './UIData';
-import { FrameworkConst } from '../Config/GameConst';
+import { FrameworkConst } from '../Core/FrameworkConst';
+import { FlowerUIID } from '../Game/FlowerGame/FlowerUIConfig';
 const { ccclass, property } = _decorator;
 
 @ccclass('LoadingPanel')
@@ -30,8 +30,8 @@ export class LoadingPanel extends UIBase {
         this.m_Progress.progress = this.m_TimeDelta / FrameworkConst.LOADING_DURATION;
         if (this.m_Progress.progress >= 1) {
             this.m_TimeDelta = 0;
-            UIManager.GetInstance().ClosePanel(UIID.LoadingPanel);
-            UIManager.GetInstance().OpenPanel(UIID.MainPanel);
+            UIManager.GetInstance().ClosePanel(FlowerUIID.LoadingPanel);
+            UIManager.GetInstance().OpenPanel(FlowerUIID.MainPanel);
         }
     }
 }

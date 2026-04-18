@@ -1,14 +1,10 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, resources, Prefab, instantiate, UIManager, UIID, _dec, _class, _crd, ccclass, property, UIBase;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, resources, Prefab, instantiate, UIManager, _dec, _class, _crd, ccclass, UIBase;
 
   function _reportPossibleCrUseOfUIManager(extras) {
     _reporterNs.report("UIManager", "./UIManager", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfUIID(extras) {
-    _reporterNs.report("UIID", "../UIScripts/UIData", _context.meta, extras);
   }
 
   return {
@@ -25,8 +21,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       instantiate = _cc.instantiate;
     }, function (_unresolved_2) {
       UIManager = _unresolved_2.UIManager;
-    }, function (_unresolved_3) {
-      UIID = _unresolved_3.UIID;
     }],
     execute: function () {
       _crd = true;
@@ -36,20 +30,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       __checkObsolete__(['_decorator', 'Button', 'Component', 'resources', 'Prefab', 'instantiate', 'Node']);
 
       ({
-        ccclass,
-        property
+        ccclass
       } = _decorator);
       /**
        * UI 基类 — 所有面板的父类，提供生命周期钩子和子页面管理
+       * 纯框架级，不依赖任何业务代码
        */
 
       _export("UIBase", UIBase = (_dec = ccclass('UIBase'), _dec(_class = class UIBase extends Component {
         constructor(...args) {
           super(...args);
+
+          /** 面板运行时唯一 ID */
           this.m_PanelID = 0;
-          this.m_UIID = (_crd && UIID === void 0 ? (_reportPossibleCrUseOfUIID({
-            error: Error()
-          }), UIID) : UIID).None;
+
+          /** 面板注册 ID（对应 UIDataRegistry 中的 id） */
+          this.m_UIID = 0;
           this.m_SubPageMap = new Map();
         }
 

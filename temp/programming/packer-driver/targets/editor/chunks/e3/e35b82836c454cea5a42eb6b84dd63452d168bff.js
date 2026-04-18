@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Camera, Component, director, Node, game, Game, ScreenAdapter, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, Launcher;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Camera, Component, director, Node, game, Game, ScreenAdapter, GameManager, initFlowerGame, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, Launcher;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -15,6 +15,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "./Core/GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfinitFlowerGame(extras) {
+    _reporterNs.report("initFlowerGame", "./Game/FlowerGame/FlowerGameEntry", _context.meta, extras);
   }
 
   return {
@@ -35,6 +39,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       ScreenAdapter = _unresolved_2.ScreenAdapter;
     }, function (_unresolved_3) {
       GameManager = _unresolved_3.GameManager;
+    }, function (_unresolved_4) {
+      initFlowerGame = _unresolved_4.initFlowerGame;
     }],
     execute: function () {
       _crd = true;
@@ -49,6 +55,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       } = _decorator);
       /**
        * 游戏入口 — 常驻节点，驱动 GameManager 生命周期
+       * 唯一与业务耦合的地方：onGameReady 回调指向具体游戏的入口函数
+       * 切换玩法时只需替换 initFlowerGame 为其他游戏的入口函数
        */
 
       _export("Launcher", Launcher = (_dec = ccclass('Launcher'), _dec2 = property(_crd && ScreenAdapter === void 0 ? (_reportPossibleCrUseOfScreenAdapter({
@@ -69,11 +77,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         onLoad() {
           director.addPersistRootNode(this.node);
           game.on(Game.EVENT_HIDE, this.onGameHide, this);
-          game.on(Game.EVENT_SHOW, this.onGameShow, this); // 传入 this.node 作为常驻节点，供 AudioManager 等挂载组件
+          game.on(Game.EVENT_SHOW, this.onGameShow, this); // 初始化框架，传入业务侧入口函数
 
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).GetInstance().Init(this.m_GameWorld, this.m_UIRoot, this.node);
+          }), GameManager) : GameManager).GetInstance().Init(this.m_GameWorld, this.m_UIRoot, this.node, _crd && initFlowerGame === void 0 ? (_reportPossibleCrUseOfinitFlowerGame({
+            error: Error()
+          }), initFlowerGame) : initFlowerGame // ← 切换玩法时替换这里
+          );
         }
 
         update(dt) {

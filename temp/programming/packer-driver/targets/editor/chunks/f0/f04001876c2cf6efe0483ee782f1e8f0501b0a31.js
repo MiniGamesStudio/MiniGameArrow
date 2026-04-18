@@ -14,7 +14,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
   }
 
   function _reportPossibleCrUseOfFrameworkConst(extras) {
-    _reporterNs.report("FrameworkConst", "../Config/GameConst", _context.meta, extras);
+    _reporterNs.report("FrameworkConst", "../Core/FrameworkConst", _context.meta, extras);
   }
 
   return {

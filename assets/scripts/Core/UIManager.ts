@@ -1,11 +1,12 @@
 import { _decorator, instantiate, Node, Prefab, resources } from 'cc';
-import { UIDataSet, UIID, UIShowMode, UILayer } from '../UIScripts/UIData';
+import { UIDataRegistry, UIShowMode, UILayer } from './UIData';
 import { UIBase } from './UIBase';
 
 const { ccclass } = _decorator;
 
 /**
  * UI 管理器 — 管理面板的打开、关闭、缓存和分层
+ * 纯框架级，不依赖任何业务代码
  */
 @ccclass('UIManager')
 export class UIManager {
@@ -21,11 +22,10 @@ export class UIManager {
     private m_PanelID = 1;
     private m_UIRoot: Node = null;
 
-    /** UIID -> 面板唯一ID数组 */
-    private m_PanelDataMap: Map<UIID, number[]> = new Map();
+    /** uiID -> 面板唯一ID数组 */
+    private m_PanelDataMap: Map<number, number[]> = new Map();
     /** 面板唯一ID -> UI节点 */
     private m_PanelNodeMap: Map<number, Node> = new Map();
-
     /** 各层级根节点 */
     private m_LayerRoots: Map<UILayer, Node> = new Map();
 
@@ -33,7 +33,6 @@ export class UIManager {
         this.m_UIRoot = uiRoot;
         this.m_PanelDataMap.clear();
         this.m_PanelNodeMap.clear();
-        UIDataSet.InitUIDatas();
 
         const layers: [UILayer, string][] = [
             [UILayer.Background, "UI_Background"],
@@ -81,13 +80,12 @@ export class UIManager {
         return true;
     }
 
-    /** 通过UIID关闭界面组 */
-    ClosePanel(id: UIID): boolean {
-        const uidata = UIDataSet.FindUIData(id);
+    /** 通过 uiID 关闭界面组 */
+    ClosePanel(id: number): boolean {
+        const uidata = UIDataRegistry.FindUIData(id);
         const datas = this.m_PanelDataMap.get(id);
         if (!datas || !uidata) return false;
 
-        // 关闭超出缓存数量的面板
         const closeCount = datas.length - uidata.cacheCount;
         for (let i = 0; i < closeCount; i++) {
             const pID = datas.pop();
@@ -96,18 +94,16 @@ export class UIManager {
             }
         }
 
-        // 隐藏剩余面板
         datas.forEach(pID => this.HidePanelByID(pID));
         this.m_PanelDataMap.set(id, datas);
         return true;
     }
 
-    /** 通过UIID打开界面 */
-    OpenPanel(id: UIID, ...args: any[]): number {
-        const uidata = UIDataSet.FindUIData(id);
+    /** 通过 uiID 打开界面 */
+    OpenPanel(id: number, ...args: any[]): number {
+        const uidata = UIDataRegistry.FindUIData(id);
         if (!uidata) return 0;
 
-        // 检查是否已有可复用的面板
         const existingID = this.CheckPanel(id, args);
         if (existingID > 0) return existingID;
 
@@ -134,7 +130,6 @@ export class UIManager {
                 uiScript.OnOpen(...args);
             }
 
-            // 记录面板数据
             let uiDatas = this.m_PanelDataMap.get(id);
             if (!uiDatas) {
                 uiDatas = [];
@@ -149,8 +144,7 @@ export class UIManager {
         return pID;
     }
 
-    /** 检查是否有可复用的面板 */
-    private CheckPanel(id: UIID, args: any[]): number {
+    private CheckPanel(id: number, args: any[]): number {
         const uiDatas = this.m_PanelDataMap.get(id);
         if (!uiDatas || uiDatas.length === 0) return 0;
 
@@ -173,7 +167,7 @@ export class UIManager {
                 rID = panelID;
                 break;
             } else {
-                const uidata = UIDataSet.FindUIData(id);
+                const uidata = UIDataRegistry.FindUIData(id);
                 if (uidata && uidata.showMode === UIShowMode.Single) {
                     rID = panelID;
                     break;
@@ -181,9 +175,9 @@ export class UIManager {
             }
         }
 
-        // 清理无效ID
         if (invalidIDs.length > 0) {
-            const filtered = uiDatas.filter(id => !invalidIDs.includes(id));
+            const invalidSet = new Set(invalidIDs);
+            const filtered = uiDatas.filter(v => !invalidSet.has(v));
             this.m_PanelDataMap.set(id, filtered);
         }
 

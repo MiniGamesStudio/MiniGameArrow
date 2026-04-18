@@ -1,11 +1,14 @@
 import { _decorator, Camera, Component, director, Node, game, Game } from 'cc';
 import { ScreenAdapter } from "./ScreenAdapter";
 import { GameManager } from "./Core/GameManager";
+import { initFlowerGame } from "./Game/FlowerGame/FlowerGameEntry";
 
 const { ccclass, property } = _decorator;
 
 /**
  * 游戏入口 — 常驻节点，驱动 GameManager 生命周期
+ * 唯一与业务耦合的地方：onGameReady 回调指向具体游戏的入口函数
+ * 切换玩法时只需替换 initFlowerGame 为其他游戏的入口函数
  */
 @ccclass('Launcher')
 export class Launcher extends Component {
@@ -24,8 +27,13 @@ export class Launcher extends Component {
         game.on(Game.EVENT_HIDE, this.onGameHide, this);
         game.on(Game.EVENT_SHOW, this.onGameShow, this);
 
-        // 传入 this.node 作为常驻节点，供 AudioManager 等挂载组件
-        GameManager.GetInstance().Init(this.m_GameWorld, this.m_UIRoot, this.node);
+        // 初始化框架，传入业务侧入口函数
+        GameManager.GetInstance().Init(
+            this.m_GameWorld,
+            this.m_UIRoot,
+            this.node,
+            initFlowerGame   // ← 切换玩法时替换这里
+        );
     }
 
     protected update(dt: number): void {

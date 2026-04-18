@@ -1,15 +1,17 @@
 import { _decorator, Button, Component, resources, Prefab, instantiate, Node } from 'cc';
 import { UIManager } from './UIManager';
-import { UIID } from '../UIScripts/UIData';
-const { ccclass, property } = _decorator;
+const { ccclass } = _decorator;
 
 /**
  * UI 基类 — 所有面板的父类，提供生命周期钩子和子页面管理
+ * 纯框架级，不依赖任何业务代码
  */
 @ccclass('UIBase')
 export abstract class UIBase extends Component {
+    /** 面板运行时唯一 ID */
     public m_PanelID: number = 0;
-    public m_UIID: UIID = UIID.None;
+    /** 面板注册 ID（对应 UIDataRegistry 中的 id） */
+    public m_UIID: number = 0;
 
     protected m_SubPageMap: Map<string, Node> = new Map();
 

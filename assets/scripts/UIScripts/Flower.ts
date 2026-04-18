@@ -1,9 +1,9 @@
 import { _decorator, BoxCollider2D, Collider2D, Component, Contact2DType, EventTouch, Node, tween, UITransform, Vec2, Vec3 } from 'cc';
-import { CustomClientEvent } from '../Config/Config';
 import { EventManager } from '../Core/EventManager';
-import { GameConst } from '../Config/GameConst';
-import { FlowerPosition, SLOT_NAMES, SLOT_PRIORITY } from '../Model/LevelModel';
-const { ccclass, property } = _decorator;
+import { FlowerEvent } from '../Game/FlowerGame/FlowerEvent';
+import { FlowerConst } from '../Game/FlowerGame/FlowerConst';
+import { FlowerPosition, SLOT_NAMES, SLOT_PRIORITY } from '../Game/FlowerGame/FlowerLevelModel';
+const { ccclass } = _decorator;
 
 /**
  * 花朵组件 — 处理拖拽、碰撞检测和花盆匹配
@@ -86,7 +86,7 @@ export class Flower extends Component {
         this.tryFindEmptySlot(selfCollider, otherCollider);
     }
 
-    private onEndContact(selfCollider: Collider2D, otherCollider: Collider2D): void {
+    private onEndContact(_selfCollider: Collider2D, otherCollider: Collider2D): void {
         let allCleared = true;
         for (let i = 0; i < this.m_ContactTags.length; i++) {
             if (this.m_ContactTags[i] === otherCollider.tag) {
@@ -104,10 +104,6 @@ export class Flower extends Component {
         }
     }
 
-    /**
-     * 核心优化：用优先级表替代三段重复的 if-else
-     * 根据花朵落点位置，按优先级查找空槽
-     */
     private tryFindEmptySlot(selfCollider: Collider2D, otherCollider: Collider2D): void {
         if (!otherCollider) return;
 
@@ -131,7 +127,6 @@ export class Flower extends Component {
         }
     }
 
-    /** 根据碰撞体位置判断花朵在花盆的左/中/右 */
     private detectImgPosition(selfCollider: Collider2D, otherCollider: Collider2D): FlowerPosition {
         if (!selfCollider || !otherCollider) return FlowerPosition.Mid;
 
@@ -145,14 +140,11 @@ export class Flower extends Component {
 
     // ==================== 触摸事件 ====================
 
-    private onTouchStart(event: EventTouch): void {
-        // 预留，目前不需要额外处理
-    }
+    private onTouchStart(_event: EventTouch): void {}
 
     private onTouchMove(event: EventTouch): void {
         if (!event.target) return;
 
-        // 首次移动时开始拖拽
         if (!this.m_IsDragging) {
             if (this.m_IsAnimating) return;
             this.startDrag(event);
@@ -171,7 +163,7 @@ export class Flower extends Component {
 
     private startDrag(event: EventTouch): void {
         this.m_IsDragging = true;
-        this.m_FlowerMoveOffsetY = this.m_FlowerUITransform.contentSize.height * GameConst.FLOWER_DRAG_OFFSET_RATIO;
+        this.m_FlowerMoveOffsetY = this.m_FlowerUITransform.contentSize.height * FlowerConst.FLOWER_DRAG_OFFSET_RATIO;
         event.target.parent = this.m_FlowerMoveRoot;
         this.m_FlowerStartPos = this.m_FlowerRoot.getWorldPosition();
 
@@ -225,7 +217,7 @@ export class Flower extends Component {
 
         this.m_IsAnimating = true;
         tween(target)
-            .by(dist / GameConst.FLOWER_FLY_SPEED, { position: delta })
+            .by(dist / FlowerConst.FLOWER_FLY_SPEED, { position: delta })
             .call(() => {
                 this.m_IsAnimating = false;
                 this.m_IsDragging = false;
@@ -234,17 +226,17 @@ export class Flower extends Component {
                 this.node.setPosition(Vec3.ZERO);
                 this.m_FlowerRoot.active = true;
 
-                EventManager.getInstance().emit(CustomClientEvent.FlowerDissolve, prevTag);
-                EventManager.getInstance().emit(CustomClientEvent.FlowerDissolve, this.m_FlowerTag);
+                EventManager.getInstance().emit(FlowerEvent.FlowerDissolve, prevTag);
+                EventManager.getInstance().emit(FlowerEvent.FlowerDissolve, this.m_FlowerTag);
             })
             .start();
     }
 
     private applyRotation(): void {
         if (this.m_ImgPos === FlowerPosition.Left) {
-            this.node.setRotationFromEuler(GameConst.FLOWER_ROTATION_LEFT);
+            this.node.setRotationFromEuler(FlowerConst.FLOWER_ROTATION_LEFT);
         } else if (this.m_ImgPos === FlowerPosition.Right) {
-            this.node.setRotationFromEuler(GameConst.FLOWER_ROTATION_RIGHT);
+            this.node.setRotationFromEuler(FlowerConst.FLOWER_ROTATION_RIGHT);
         } else {
             this.node.setRotationFromEuler(Vec3.ZERO);
         }

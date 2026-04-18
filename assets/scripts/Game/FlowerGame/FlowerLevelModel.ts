@@ -1,5 +1,5 @@
 /**
- * 关卡数据模型 — 为 JSON 关卡数据提供类型定义
+ * 插花游戏关卡数据模型
  */
 
 /** 单个花槽的花朵配置 */
@@ -10,7 +10,7 @@ export interface FlowerSlotData {
 }
 
 /** 关卡 JSON 数据结构 */
-export interface LevelData {
+export interface FlowerLevelData {
     levelID: number;
     levelName: string;
     FlowerRow: number;
@@ -33,7 +33,7 @@ export const SLOT_NAMES: Record<FlowerPosition, string> = {
     [FlowerPosition.Right]: 'Right',
 };
 
-/** 每个位置的优先查找顺序（放花时优先放哪个槽） */
+/** 每个位置的优先查找顺序 */
 export const SLOT_PRIORITY: Record<FlowerPosition, FlowerPosition[]> = {
     [FlowerPosition.Left]:  [FlowerPosition.Left, FlowerPosition.Right, FlowerPosition.Mid],
     [FlowerPosition.Mid]:   [FlowerPosition.Mid, FlowerPosition.Left, FlowerPosition.Right],

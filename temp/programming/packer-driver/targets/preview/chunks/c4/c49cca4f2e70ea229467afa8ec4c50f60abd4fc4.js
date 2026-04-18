@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, BoxCollider2D, color, Component, instantiate, Node, resources, Sprite, SpriteFrame, tween, UITransform, Flower, CustomClientEvent, EventManager, GameConst, FlowerPosition, _dec, _dec2, _class, _class2, _descriptor, _class3, _crd, ccclass, property, FlowerPlatform;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, BoxCollider2D, color, Component, instantiate, Node, resources, Sprite, SpriteFrame, tween, UITransform, Flower, EventManager, FlowerEvent, FlowerConst, FlowerPosition, _dec, _dec2, _class, _class2, _descriptor, _class3, _crd, ccclass, property, FlowerPlatform;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -13,20 +13,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("Flower", "./Flower", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfCustomClientEvent(extras) {
-    _reporterNs.report("CustomClientEvent", "../Config/Config", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfEventManager(extras) {
     _reporterNs.report("EventManager", "../Core/EventManager", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGameConst(extras) {
-    _reporterNs.report("GameConst", "../Config/GameConst", _context.meta, extras);
+  function _reportPossibleCrUseOfFlowerEvent(extras) {
+    _reporterNs.report("FlowerEvent", "../Game/FlowerGame/FlowerEvent", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfFlowerConst(extras) {
+    _reporterNs.report("FlowerConst", "../Game/FlowerGame/FlowerConst", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfFlowerPosition(extras) {
-    _reporterNs.report("FlowerPosition", "../Model/LevelModel", _context.meta, extras);
+    _reporterNs.report("FlowerPosition", "../Game/FlowerGame/FlowerLevelModel", _context.meta, extras);
   }
 
   return {
@@ -50,11 +50,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       Flower = _unresolved_2.Flower;
     }, function (_unresolved_3) {
-      CustomClientEvent = _unresolved_3.CustomClientEvent;
+      EventManager = _unresolved_3.EventManager;
     }, function (_unresolved_4) {
-      EventManager = _unresolved_4.EventManager;
+      FlowerEvent = _unresolved_4.FlowerEvent;
     }, function (_unresolved_5) {
-      GameConst = _unresolved_5.GameConst;
+      FlowerConst = _unresolved_5.FlowerConst;
     }, function (_unresolved_6) {
       FlowerPosition = _unresolved_6.FlowerPosition;
     }],
@@ -63,7 +63,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _cclegacy._RF.push({}, "1d91754ySdJrYQYeh4eXucR", "FlowerPlatform", undefined);
 
-      __checkObsolete__(['_decorator', 'BoxCollider2D', 'color', 'Component', 'instantiate', 'Node', 'resources', 'Sprite', 'SpriteFrame', 'tween', 'UITransform', 'Vec3']);
+      __checkObsolete__(['_decorator', 'BoxCollider2D', 'color', 'Component', 'instantiate', 'Node', 'resources', 'Sprite', 'SpriteFrame', 'tween', 'UITransform']);
 
       ({
         ccclass,
@@ -106,10 +106,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             return;
           }
 
-          if (flowers.length < (_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+          if (flowers.length < (_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
             error: Error()
-          }), GameConst) : GameConst).FLOWER_MATCH_COUNT) return; // 检查是否全部相同
-
+          }), FlowerConst) : FlowerConst).FLOWER_MATCH_COUNT) return;
           var firstID = flowers[0].getFlowerID();
           var allSame = flowers.every(f => f.getFlowerID() === firstID);
 
@@ -117,8 +116,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.dissolveFlowers(flowers, flowerpot, flowerTag);
           }
         }
-        /** 播放消除动画并销毁花朵 */
-
 
         dissolveFlowers(flowers, flowerpot, flowerTag) {
           var completed = 0;
@@ -126,9 +123,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           flowers.forEach(flower => {
             var flowerNode = flower.node;
             if (!flowerNode) return;
-            tween(flowerNode).to((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            tween(flowerNode).to((_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
               error: Error()
-            }), GameConst) : GameConst).FLOWER_DISSOLVE_DURATION, {
+            }), FlowerConst) : FlowerConst).FLOWER_DISSOLVE_DURATION, {
               angle: 0
             }, {
               onComplete: target => {
@@ -146,8 +143,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }).start();
           });
         }
-        /** 当前层清空后，检查是否有下一层黑色花朵需要显示 */
-
 
         onLayerCleared(flowerpot, flowerTag) {
           var flowerRootBlack = flowerpot.getChildByName("FlowerRootBlack");
@@ -173,13 +168,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.checkVictory()) {
             (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
               error: Error()
-            }), EventManager) : EventManager).getInstance().emit((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+            }), EventManager) : EventManager).getInstance().emit((_crd && FlowerEvent === void 0 ? (_reportPossibleCrUseOfFlowerEvent({
               error: Error()
-            }), CustomClientEvent) : CustomClientEvent).CheckVictory);
+            }), FlowerEvent) : FlowerEvent).CheckVictory);
           }
         }
-        /** 检查本平台是否所有花盆都已清空 */
-
 
         checkVictory() {
           for (var [, pot] of this.m_FlowerPotMap) {
@@ -242,8 +235,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.initFlowers(tag, data[i], 0, layoutClone);
             layoutClone.active = true;
             flowerPotRoot.addChild(layoutClone);
-          } // 调整平台宽度
-
+          }
 
           var platUITrans = (_platFormClone$getChi = platFormClone.getChildByName("Platform")) == null ? void 0 : _platFormClone$getChi.getComponent(UITransform);
 
@@ -303,22 +295,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         createFlowerNode(root, imgId, imgPos, tag, isBlack) {
           if (!root || !imgId) return;
           root.removeAllChildren();
-          var imgNode = new Node(); // 设置名称和旋转
+          var imgNode = new Node();
 
           if (imgPos === (_crd && FlowerPosition === void 0 ? (_reportPossibleCrUseOfFlowerPosition({
             error: Error()
           }), FlowerPosition) : FlowerPosition).Left) {
             imgNode.name = "FlowerImgLeft";
-            imgNode.setRotationFromEuler((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            imgNode.setRotationFromEuler((_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
               error: Error()
-            }), GameConst) : GameConst).FLOWER_ROTATION_LEFT);
+            }), FlowerConst) : FlowerConst).FLOWER_ROTATION_LEFT);
           } else if (imgPos === (_crd && FlowerPosition === void 0 ? (_reportPossibleCrUseOfFlowerPosition({
             error: Error()
           }), FlowerPosition) : FlowerPosition).Right) {
             imgNode.name = "FlowerImgRight";
-            imgNode.setRotationFromEuler((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            imgNode.setRotationFromEuler((_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
               error: Error()
-            }), GameConst) : GameConst).FLOWER_ROTATION_RIGHT);
+            }), FlowerConst) : FlowerConst).FLOWER_ROTATION_RIGHT);
           } else {
             imgNode.name = "FlowerImgMid";
           }
@@ -328,9 +320,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (!uiTrans) uiTrans = imgNode.addComponent(UITransform);
           uiTrans.setAnchorPoint(0.5, 0);
           var sprite = imgNode.addComponent(Sprite);
-          resources.load((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+          resources.load((_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
             error: Error()
-          }), GameConst) : GameConst).RES_PATH.FLOWERS + imgId + "/spriteFrame", SpriteFrame, (err, sp) => {
+          }), FlowerConst) : FlowerConst).RES_PATH.FLOWERS + imgId + "/spriteFrame", SpriteFrame, (err, sp) => {
             if (sp) sprite.spriteFrame = sp;
             var flowerScript = imgNode.getComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
               error: Error()
@@ -338,11 +330,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             if (!flowerScript) flowerScript = imgNode.addComponent(_crd && Flower === void 0 ? (_reportPossibleCrUseOfFlower({
               error: Error()
             }), Flower) : Flower);
-            flowerScript.init(imgId, root, this.m_FlowerMoveRoot, imgPos, (_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            flowerScript.init(imgId, root, this.m_FlowerMoveRoot, imgPos, (_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
               error: Error()
-            }), GameConst) : GameConst).FLOWER_ROTATION_LEFT, (_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            }), FlowerConst) : FlowerConst).FLOWER_ROTATION_LEFT, (_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
               error: Error()
-            }), GameConst) : GameConst).FLOWER_ROTATION_RIGHT, tag, isBlack);
+            }), FlowerConst) : FlowerConst).FLOWER_ROTATION_RIGHT, tag, isBlack);
             sprite.color = isBlack ? color(60, 60, 60, 255) : color(255, 255, 255, 255);
             imgNode.active = true;
           });

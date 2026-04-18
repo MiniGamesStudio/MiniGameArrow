@@ -1,22 +1,18 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, instantiate, Node, Prefab, resources, UIDataSet, UIShowMode, UILayer, UIBase, _dec, _class, _class2, _crd, ccclass, UIManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, instantiate, Node, Prefab, resources, UIDataRegistry, UIShowMode, UILayer, UIBase, _dec, _class, _class2, _crd, ccclass, UIManager;
 
-  function _reportPossibleCrUseOfUIDataSet(extras) {
-    _reporterNs.report("UIDataSet", "../UIScripts/UIData", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfUIID(extras) {
-    _reporterNs.report("UIID", "../UIScripts/UIData", _context.meta, extras);
+  function _reportPossibleCrUseOfUIDataRegistry(extras) {
+    _reporterNs.report("UIDataRegistry", "./UIData", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfUIShowMode(extras) {
-    _reporterNs.report("UIShowMode", "../UIScripts/UIData", _context.meta, extras);
+    _reporterNs.report("UIShowMode", "./UIData", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfUILayer(extras) {
-    _reporterNs.report("UILayer", "../UIScripts/UIData", _context.meta, extras);
+    _reporterNs.report("UILayer", "./UIData", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfUIBase(extras) {
@@ -36,7 +32,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       Prefab = _cc.Prefab;
       resources = _cc.resources;
     }, function (_unresolved_2) {
-      UIDataSet = _unresolved_2.UIDataSet;
+      UIDataRegistry = _unresolved_2.UIDataRegistry;
       UIShowMode = _unresolved_2.UIShowMode;
       UILayer = _unresolved_2.UILayer;
     }, function (_unresolved_3) {
@@ -54,6 +50,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       } = _decorator);
       /**
        * UI 管理器 — 管理面板的打开、关闭、缓存和分层
+       * 纯框架级，不依赖任何业务代码
        */
 
       _export("UIManager", UIManager = (_dec = ccclass('UIManager'), _dec(_class = (_class2 = class UIManager {
@@ -61,7 +58,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.m_PanelID = 1;
           this.m_UIRoot = null;
 
-          /** UIID -> 面板唯一ID数组 */
+          /** uiID -> 面板唯一ID数组 */
           this.m_PanelDataMap = new Map();
 
           /** 面板唯一ID -> UI节点 */
@@ -83,9 +80,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.m_UIRoot = uiRoot;
           this.m_PanelDataMap.clear();
           this.m_PanelNodeMap.clear();
-          (_crd && UIDataSet === void 0 ? (_reportPossibleCrUseOfUIDataSet({
-            error: Error()
-          }), UIDataSet) : UIDataSet).InitUIDatas();
           var layers = [[(_crd && UILayer === void 0 ? (_reportPossibleCrUseOfUILayer({
             error: Error()
           }), UILayer) : UILayer).Background, "UI_Background"], [(_crd && UILayer === void 0 ? (_reportPossibleCrUseOfUILayer({
@@ -140,16 +134,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           node.active = false;
           return true;
         }
-        /** 通过UIID关闭界面组 */
+        /** 通过 uiID 关闭界面组 */
 
 
         ClosePanel(id) {
-          var uidata = (_crd && UIDataSet === void 0 ? (_reportPossibleCrUseOfUIDataSet({
+          var uidata = (_crd && UIDataRegistry === void 0 ? (_reportPossibleCrUseOfUIDataRegistry({
             error: Error()
-          }), UIDataSet) : UIDataSet).FindUIData(id);
+          }), UIDataRegistry) : UIDataRegistry).FindUIData(id);
           var datas = this.m_PanelDataMap.get(id);
-          if (!datas || !uidata) return false; // 关闭超出缓存数量的面板
-
+          if (!datas || !uidata) return false;
           var closeCount = datas.length - uidata.cacheCount;
 
           for (var i = 0; i < closeCount; i++) {
@@ -158,14 +151,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             if (pID !== undefined) {
               this.ClosePanelByID(pID);
             }
-          } // 隐藏剩余面板
-
+          }
 
           datas.forEach(pID => this.HidePanelByID(pID));
           this.m_PanelDataMap.set(id, datas);
           return true;
         }
-        /** 通过UIID打开界面 */
+        /** 通过 uiID 打开界面 */
 
 
         OpenPanel(id) {
@@ -173,11 +165,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             args[_key - 1] = arguments[_key];
           }
 
-          var uidata = (_crd && UIDataSet === void 0 ? (_reportPossibleCrUseOfUIDataSet({
+          var uidata = (_crd && UIDataRegistry === void 0 ? (_reportPossibleCrUseOfUIDataRegistry({
             error: Error()
-          }), UIDataSet) : UIDataSet).FindUIData(id);
-          if (!uidata) return 0; // 检查是否已有可复用的面板
-
+          }), UIDataRegistry) : UIDataRegistry).FindUIData(id);
+          if (!uidata) return 0;
           var existingID = this.CheckPanel(id, args);
           if (existingID > 0) return existingID;
           var pID = this.m_PanelID;
@@ -202,8 +193,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
               uiScript.m_UIID = id;
               uiScript.OnInit();
               uiScript.OnOpen(...args);
-            } // 记录面板数据
-
+            }
 
             var uiDatas = this.m_PanelDataMap.get(id);
 
@@ -218,8 +208,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           });
           return pID;
         }
-        /** 检查是否有可复用的面板 */
-
 
         CheckPanel(id, args) {
           var uiDatas = this.m_PanelDataMap.get(id);
@@ -248,9 +236,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
               rID = panelID;
               break;
             } else {
-              var uidata = (_crd && UIDataSet === void 0 ? (_reportPossibleCrUseOfUIDataSet({
+              var uidata = (_crd && UIDataRegistry === void 0 ? (_reportPossibleCrUseOfUIDataRegistry({
                 error: Error()
-              }), UIDataSet) : UIDataSet).FindUIData(id);
+              }), UIDataRegistry) : UIDataRegistry).FindUIData(id);
 
               if (uidata && uidata.showMode === (_crd && UIShowMode === void 0 ? (_reportPossibleCrUseOfUIShowMode({
                 error: Error()
@@ -259,11 +247,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
                 break;
               }
             }
-          } // 清理无效ID
-
+          }
 
           if (invalidIDs.length > 0) {
-            var filtered = uiDatas.filter(id => !invalidIDs.includes(id));
+            var invalidSet = new Set(invalidIDs);
+            var filtered = uiDatas.filter(v => !invalidSet.has(v));
             this.m_PanelDataMap.set(id, filtered);
           }
 

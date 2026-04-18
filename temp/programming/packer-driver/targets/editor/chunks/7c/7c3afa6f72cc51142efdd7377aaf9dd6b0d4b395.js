@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Button, instantiate, JsonAsset, Node, Prefab, resources, UIBase, UIManager, UIID, FlowerPlatform, EventManager, CustomClientEvent, GameConst, GameState, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, GamePanel;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Button, instantiate, JsonAsset, Node, Prefab, resources, UIBase, UIManager, EventManager, FlowerPlatform, FlowerUIID, FlowerEvent, FlowerConst, FlowerGameState, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, GamePanel;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -17,32 +17,32 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("UIManager", "../Core/UIManager", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfUIID(extras) {
-    _reporterNs.report("UIID", "./UIData", _context.meta, extras);
+  function _reportPossibleCrUseOfEventManager(extras) {
+    _reporterNs.report("EventManager", "../Core/EventManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfFlowerPlatform(extras) {
     _reporterNs.report("FlowerPlatform", "./FlowerPlatform", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfEventManager(extras) {
-    _reporterNs.report("EventManager", "../Core/EventManager", _context.meta, extras);
+  function _reportPossibleCrUseOfFlowerUIID(extras) {
+    _reporterNs.report("FlowerUIID", "../Game/FlowerGame/FlowerUIConfig", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfCustomClientEvent(extras) {
-    _reporterNs.report("CustomClientEvent", "../Config/Config", _context.meta, extras);
+  function _reportPossibleCrUseOfFlowerEvent(extras) {
+    _reporterNs.report("FlowerEvent", "../Game/FlowerGame/FlowerEvent", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGameConst(extras) {
-    _reporterNs.report("GameConst", "../Config/GameConst", _context.meta, extras);
+  function _reportPossibleCrUseOfFlowerConst(extras) {
+    _reporterNs.report("FlowerConst", "../Game/FlowerGame/FlowerConst", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGameState(extras) {
-    _reporterNs.report("GameState", "../Model/GameState", _context.meta, extras);
+  function _reportPossibleCrUseOfFlowerGameState(extras) {
+    _reporterNs.report("FlowerGameState", "../Game/FlowerGame/FlowerGameState", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfLevelData(extras) {
-    _reporterNs.report("LevelData", "../Model/LevelModel", _context.meta, extras);
+  function _reportPossibleCrUseOfFlowerLevelData(extras) {
+    _reporterNs.report("FlowerLevelData", "../Game/FlowerGame/FlowerLevelModel", _context.meta, extras);
   }
 
   return {
@@ -64,17 +64,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       UIManager = _unresolved_3.UIManager;
     }, function (_unresolved_4) {
-      UIID = _unresolved_4.UIID;
+      EventManager = _unresolved_4.EventManager;
     }, function (_unresolved_5) {
       FlowerPlatform = _unresolved_5.FlowerPlatform;
     }, function (_unresolved_6) {
-      EventManager = _unresolved_6.EventManager;
+      FlowerUIID = _unresolved_6.FlowerUIID;
     }, function (_unresolved_7) {
-      CustomClientEvent = _unresolved_7.CustomClientEvent;
+      FlowerEvent = _unresolved_7.FlowerEvent;
     }, function (_unresolved_8) {
-      GameConst = _unresolved_8.GameConst;
+      FlowerConst = _unresolved_8.FlowerConst;
     }, function (_unresolved_9) {
-      GameState = _unresolved_9.GameState;
+      FlowerGameState = _unresolved_9.FlowerGameState;
     }],
     execute: function () {
       _crd = true;
@@ -110,18 +110,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           const em = (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
             error: Error()
           }), EventManager) : EventManager).getInstance();
-          em.on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+          em.on((_crd && FlowerEvent === void 0 ? (_reportPossibleCrUseOfFlowerEvent({
             error: Error()
-          }), CustomClientEvent) : CustomClientEvent).FlowerDissolve, this.onCheckFlowerDissolve, this);
-          em.on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+          }), FlowerEvent) : FlowerEvent).FlowerDissolve, this.onCheckFlowerDissolve, this);
+          em.on((_crd && FlowerEvent === void 0 ? (_reportPossibleCrUseOfFlowerEvent({
             error: Error()
-          }), CustomClientEvent) : CustomClientEvent).CheckVictory, this.onCheckVictory, this);
-          em.on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+          }), FlowerEvent) : FlowerEvent).CheckVictory, this.onCheckVictory, this);
+          em.on((_crd && FlowerEvent === void 0 ? (_reportPossibleCrUseOfFlowerEvent({
             error: Error()
-          }), CustomClientEvent) : CustomClientEvent).RetryLevel, this.onRetryLevel, this);
-          em.on((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+          }), FlowerEvent) : FlowerEvent).RetryLevel, this.onRetryLevel, this);
+          em.on((_crd && FlowerEvent === void 0 ? (_reportPossibleCrUseOfFlowerEvent({
             error: Error()
-          }), CustomClientEvent) : CustomClientEvent).NextLevel, this.onNextLevel, this);
+          }), FlowerEvent) : FlowerEvent).NextLevel, this.onNextLevel, this);
           this.initUI();
         }
 
@@ -133,16 +133,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onNextLevel() {
-          const state = (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
+          this.initGameLevel((_crd && FlowerGameState === void 0 ? (_reportPossibleCrUseOfFlowerGameState({
             error: Error()
-          }), GameState) : GameState).getInstance();
-          this.initGameLevel(state.currentLevel + 1);
+          }), FlowerGameState) : FlowerGameState).getInstance().currentLevel + 1);
         }
 
         onRetryLevel() {
-          this.initGameLevel((_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
+          this.initGameLevel((_crd && FlowerGameState === void 0 ? (_reportPossibleCrUseOfFlowerGameState({
             error: Error()
-          }), GameState) : GameState).getInstance().currentLevel);
+          }), FlowerGameState) : FlowerGameState).getInstance().currentLevel);
         }
 
         onCheckFlowerDissolve(flowerTag) {
@@ -154,14 +153,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           const allVictory = this.m_FlowerPlatformArr.every(fp => fp.checkVictory());
 
           if (allVictory) {
-            (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
+            (_crd && FlowerGameState === void 0 ? (_reportPossibleCrUseOfFlowerGameState({
               error: Error()
-            }), GameState) : GameState).getInstance().completeLevel();
+            }), FlowerGameState) : FlowerGameState).getInstance().completeLevel();
             (_crd && UIManager === void 0 ? (_reportPossibleCrUseOfUIManager({
               error: Error()
-            }), UIManager) : UIManager).GetInstance().OpenPanel((_crd && UIID === void 0 ? (_reportPossibleCrUseOfUIID({
+            }), UIManager) : UIManager).GetInstance().OpenPanel((_crd && FlowerUIID === void 0 ? (_reportPossibleCrUseOfFlowerUIID({
               error: Error()
-            }), UIID) : UIID).VictoryPanel, true);
+            }), FlowerUIID) : FlowerUIID).VictoryPanel, true);
           }
         }
 
@@ -169,29 +168,29 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.SetBtnEvent(this.m_CloseBtn, () => {
             (_crd && UIManager === void 0 ? (_reportPossibleCrUseOfUIManager({
               error: Error()
-            }), UIManager) : UIManager).GetInstance().ClosePanel((_crd && UIID === void 0 ? (_reportPossibleCrUseOfUIID({
+            }), UIManager) : UIManager).GetInstance().ClosePanel((_crd && FlowerUIID === void 0 ? (_reportPossibleCrUseOfFlowerUIID({
               error: Error()
-            }), UIID) : UIID).VictoryPanel);
+            }), FlowerUIID) : FlowerUIID).VictoryPanel);
             (_crd && UIManager === void 0 ? (_reportPossibleCrUseOfUIManager({
               error: Error()
-            }), UIManager) : UIManager).GetInstance().OpenPanel((_crd && UIID === void 0 ? (_reportPossibleCrUseOfUIID({
+            }), UIManager) : UIManager).GetInstance().OpenPanel((_crd && FlowerUIID === void 0 ? (_reportPossibleCrUseOfFlowerUIID({
               error: Error()
-            }), UIID) : UIID).VictoryPanel);
+            }), FlowerUIID) : FlowerUIID).VictoryPanel);
           });
-          this.initGameLevel((_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
+          this.initGameLevel((_crd && FlowerGameState === void 0 ? (_reportPossibleCrUseOfFlowerGameState({
             error: Error()
-          }), GameState) : GameState).getInstance().currentLevel);
+          }), FlowerGameState) : FlowerGameState).getInstance().currentLevel);
         }
 
         initGameLevel(level) {
-          const state = (_crd && GameState === void 0 ? (_reportPossibleCrUseOfGameState({
+          const state = (_crd && FlowerGameState === void 0 ? (_reportPossibleCrUseOfFlowerGameState({
             error: Error()
-          }), GameState) : GameState).getInstance();
+          }), FlowerGameState) : FlowerGameState).getInstance();
           state.currentLevel = level;
           state.resetRuntimeState();
-          resources.load((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+          resources.load((_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
             error: Error()
-          }), GameConst) : GameConst).RES_PATH.LEVEL_DATA + level, JsonAsset, (err, jsonAsset) => {
+          }), FlowerConst) : FlowerConst).RES_PATH.LEVEL_DATA + level, JsonAsset, (err, jsonAsset) => {
             if (err) {
               console.warn(`GamePanel: 加载关卡 ${level} 失败`, err);
               return;
@@ -199,9 +198,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             this.m_CurLevelData = jsonAsset.json;
             this.m_LevelRoot.removeAllChildren();
-            resources.load((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            resources.load((_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
               error: Error()
-            }), GameConst) : GameConst).RES_PATH.FLOWER_PLATFORM, Prefab, (err, prefab) => {
+            }), FlowerConst) : FlowerConst).RES_PATH.FLOWER_PLATFORM, Prefab, (err, prefab) => {
               if (err || !prefab) return;
               (_crd && FlowerPlatform === void 0 ? (_reportPossibleCrUseOfFlowerPlatform({
                 error: Error()
@@ -223,9 +222,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
               (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
                 error: Error()
-              }), EventManager) : EventManager).getInstance().emit((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+              }), EventManager) : EventManager).getInstance().emit((_crd && FlowerEvent === void 0 ? (_reportPossibleCrUseOfFlowerEvent({
                 error: Error()
-              }), CustomClientEvent) : CustomClientEvent).LevelLoaded, level);
+              }), FlowerEvent) : FlowerEvent).LevelLoaded, level);
             });
           });
         }

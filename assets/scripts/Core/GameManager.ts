@@ -6,19 +6,12 @@ import { StorageManager } from "./StorageManager";
 import { ResManager } from "./ResManager";
 import { PoolManager } from "./ObjectPool";
 import { EventManager } from "./EventManager";
-import { GameState } from "../Model/GameState";
-import { UIID } from "../UIScripts/UIData";
-import { CustomClientEvent } from "../Config/Config";
+import { FrameworkEvent } from "./FrameworkEvent";
 const { ccclass } = _decorator;
 
 /**
- * 游戏管理器 — 全局生命周期管理，统一初始化和驱动所有子系统
- *
- * 子系统初始化顺序:
- *   StorageManager → AudioManager → UIManager → GameState
- *
- * 每帧驱动:
- *   TimerManager.update(dt)
+ * 游戏管理器 — 纯框架级，统一初始化和驱动所有子系统
+ * 不依赖任何业务代码，业务初始化通过 onGameReady 回调注入
  */
 @ccclass('GameManager')
 export class GameManager {
@@ -35,19 +28,25 @@ export class GameManager {
     private m_Initialized: boolean = false;
 
     /**
-     * 初始化所有子系统
+     * 初始化所有框架子系统
      * @param gameWorldRoot 游戏世界根节点
      * @param uiRoot UI 根节点
      * @param persistNode 常驻节点（用于挂载 AudioSource 等）
+     * @param onGameReady 业务侧初始化回调（注册 UI、加载首屏等）
      */
-    Init(gameWorldRoot: Node, uiRoot: Node, persistNode: Node): void {
+    Init(
+        gameWorldRoot: Node,
+        uiRoot: Node,
+        persistNode: Node,
+        onGameReady?: () => void
+    ): void {
         if (this.m_Initialized) return;
         this.m_Initialized = true;
 
         this.m_GameWorldRoot = gameWorldRoot;
 
-        // 1. 存储（最先，其他模块可能需要读取配置）
-        StorageManager.getInstance().setPrefix('flower_');
+        // 1. 存储
+        StorageManager.getInstance();
 
         // 2. 音频
         AudioManager.getInstance().init(persistNode);
@@ -55,11 +54,10 @@ export class GameManager {
         // 3. UI
         UIManager.GetInstance().Init(uiRoot);
 
-        // 4. 游戏状态（会从 StorageManager 读取存档）
-        GameState.getInstance();
-
-        // 5. 打开首屏
-        UIManager.GetInstance().OpenPanel(UIID.LoadingPanel);
+        // 4. 业务侧初始化（注册 UI 面板、设置存储前缀、打开首屏等）
+        if (onGameReady) {
+            onGameReady();
+        }
     }
 
     /** 每帧更新，由 Launcher 调用 */
@@ -68,7 +66,7 @@ export class GameManager {
     }
 
     /** 每帧 LateUpdate，由 Launcher 调用 */
-    LateUpdate(dt: number): void {
+    LateUpdate(_dt: number): void {
         // 预留
     }
 
@@ -84,20 +82,16 @@ export class GameManager {
 
     /** 游戏进入后台 */
     PauseGame(): void {
-        const state = GameState.getInstance();
-        state.isPaused = true;
         AudioManager.getInstance().pauseBGM();
         TimerManager.getInstance().pauseAll();
-        EventManager.getInstance().emit(CustomClientEvent.GamePaused);
+        EventManager.getInstance().emit(FrameworkEvent.GamePaused);
     }
 
     /** 游戏回到前台 */
     ResumeGame(): void {
-        const state = GameState.getInstance();
-        state.isPaused = false;
         AudioManager.getInstance().resumeBGM();
         TimerManager.getInstance().resumeAll();
-        EventManager.getInstance().emit(CustomClientEvent.GameResumed);
+        EventManager.getInstance().emit(FrameworkEvent.GameResumed);
     }
 
     /** 获取游戏世界根节点 */

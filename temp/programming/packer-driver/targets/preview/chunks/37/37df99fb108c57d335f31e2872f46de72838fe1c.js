@@ -1,30 +1,30 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, BoxCollider2D, Component, Contact2DType, Node, tween, UITransform, Vec2, Vec3, CustomClientEvent, EventManager, GameConst, FlowerPosition, SLOT_NAMES, SLOT_PRIORITY, _dec, _class, _crd, ccclass, property, Flower;
-
-  function _reportPossibleCrUseOfCustomClientEvent(extras) {
-    _reporterNs.report("CustomClientEvent", "../Config/Config", _context.meta, extras);
-  }
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, BoxCollider2D, Component, Contact2DType, Node, tween, UITransform, Vec2, Vec3, EventManager, FlowerEvent, FlowerConst, FlowerPosition, SLOT_NAMES, SLOT_PRIORITY, _dec, _class, _crd, ccclass, Flower;
 
   function _reportPossibleCrUseOfEventManager(extras) {
     _reporterNs.report("EventManager", "../Core/EventManager", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGameConst(extras) {
-    _reporterNs.report("GameConst", "../Config/GameConst", _context.meta, extras);
+  function _reportPossibleCrUseOfFlowerEvent(extras) {
+    _reporterNs.report("FlowerEvent", "../Game/FlowerGame/FlowerEvent", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfFlowerConst(extras) {
+    _reporterNs.report("FlowerConst", "../Game/FlowerGame/FlowerConst", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfFlowerPosition(extras) {
-    _reporterNs.report("FlowerPosition", "../Model/LevelModel", _context.meta, extras);
+    _reporterNs.report("FlowerPosition", "../Game/FlowerGame/FlowerLevelModel", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfSLOT_NAMES(extras) {
-    _reporterNs.report("SLOT_NAMES", "../Model/LevelModel", _context.meta, extras);
+    _reporterNs.report("SLOT_NAMES", "../Game/FlowerGame/FlowerLevelModel", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfSLOT_PRIORITY(extras) {
-    _reporterNs.report("SLOT_PRIORITY", "../Model/LevelModel", _context.meta, extras);
+    _reporterNs.report("SLOT_PRIORITY", "../Game/FlowerGame/FlowerLevelModel", _context.meta, extras);
   }
 
   return {
@@ -44,11 +44,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Vec2 = _cc.Vec2;
       Vec3 = _cc.Vec3;
     }, function (_unresolved_2) {
-      CustomClientEvent = _unresolved_2.CustomClientEvent;
+      EventManager = _unresolved_2.EventManager;
     }, function (_unresolved_3) {
-      EventManager = _unresolved_3.EventManager;
+      FlowerEvent = _unresolved_3.FlowerEvent;
     }, function (_unresolved_4) {
-      GameConst = _unresolved_4.GameConst;
+      FlowerConst = _unresolved_4.FlowerConst;
     }, function (_unresolved_5) {
       FlowerPosition = _unresolved_5.FlowerPosition;
       SLOT_NAMES = _unresolved_5.SLOT_NAMES;
@@ -62,8 +62,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       __checkObsolete__(['_decorator', 'BoxCollider2D', 'Collider2D', 'Component', 'Contact2DType', 'EventTouch', 'Node', 'tween', 'UITransform', 'Vec2', 'Vec3']);
 
       ({
-        ccclass,
-        property
+        ccclass
       } = _decorator);
       /**
        * 花朵组件 — 处理拖拽、碰撞检测和花盆匹配
@@ -151,7 +150,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.tryFindEmptySlot(selfCollider, otherCollider);
         }
 
-        onEndContact(selfCollider, otherCollider) {
+        onEndContact(_selfCollider, otherCollider) {
           var allCleared = true;
 
           for (var i = 0; i < this.m_ContactTags.length; i++) {
@@ -169,11 +168,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.m_IsChangePot = false;
           }
         }
-        /**
-         * 核心优化：用优先级表替代三段重复的 if-else
-         * 根据花朵落点位置，按优先级查找空槽
-         */
-
 
         tryFindEmptySlot(selfCollider, otherCollider) {
           if (!otherCollider) return;
@@ -200,8 +194,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }
           }
         }
-        /** 根据碰撞体位置判断花朵在花盆的左/中/右 */
-
 
         detectImgPosition(selfCollider, otherCollider) {
           if (!selfCollider || !otherCollider) return (_crd && FlowerPosition === void 0 ? (_reportPossibleCrUseOfFlowerPosition({
@@ -221,11 +213,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         } // ==================== 触摸事件 ====================
 
 
-        onTouchStart(event) {// 预留，目前不需要额外处理
-        }
+        onTouchStart(_event) {}
 
         onTouchMove(event) {
-          if (!event.target) return; // 首次移动时开始拖拽
+          if (!event.target) return;
 
           if (!this.m_IsDragging) {
             if (this.m_IsAnimating) return;
@@ -244,9 +235,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         startDrag(event) {
           this.m_IsDragging = true;
-          this.m_FlowerMoveOffsetY = this.m_FlowerUITransform.contentSize.height * (_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+          this.m_FlowerMoveOffsetY = this.m_FlowerUITransform.contentSize.height * (_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
             error: Error()
-          }), GameConst) : GameConst).FLOWER_DRAG_OFFSET_RATIO;
+          }), FlowerConst) : FlowerConst).FLOWER_DRAG_OFFSET_RATIO;
           event.target.parent = this.m_FlowerMoveRoot;
           this.m_FlowerStartPos = this.m_FlowerRoot.getWorldPosition();
           var touchPos = event.touch.getUILocation();
@@ -297,9 +288,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var dist = Math.abs(this.m_FlowerStartPos.x - endPos.x) + Math.abs(this.m_FlowerStartPos.y - endPos.y);
           var delta = this.m_FlowerStartPos.subtract(endPos);
           this.m_IsAnimating = true;
-          tween(target).by(dist / (_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+          tween(target).by(dist / (_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
             error: Error()
-          }), GameConst) : GameConst).FLOWER_FLY_SPEED, {
+          }), FlowerConst) : FlowerConst).FLOWER_FLY_SPEED, {
             position: delta
           }).call(() => {
             this.m_IsAnimating = false;
@@ -310,14 +301,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.m_FlowerRoot.active = true;
             (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
               error: Error()
-            }), EventManager) : EventManager).getInstance().emit((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+            }), EventManager) : EventManager).getInstance().emit((_crd && FlowerEvent === void 0 ? (_reportPossibleCrUseOfFlowerEvent({
               error: Error()
-            }), CustomClientEvent) : CustomClientEvent).FlowerDissolve, prevTag);
+            }), FlowerEvent) : FlowerEvent).FlowerDissolve, prevTag);
             (_crd && EventManager === void 0 ? (_reportPossibleCrUseOfEventManager({
               error: Error()
-            }), EventManager) : EventManager).getInstance().emit((_crd && CustomClientEvent === void 0 ? (_reportPossibleCrUseOfCustomClientEvent({
+            }), EventManager) : EventManager).getInstance().emit((_crd && FlowerEvent === void 0 ? (_reportPossibleCrUseOfFlowerEvent({
               error: Error()
-            }), CustomClientEvent) : CustomClientEvent).FlowerDissolve, this.m_FlowerTag);
+            }), FlowerEvent) : FlowerEvent).FlowerDissolve, this.m_FlowerTag);
           }).start();
         }
 
@@ -325,15 +316,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.m_ImgPos === (_crd && FlowerPosition === void 0 ? (_reportPossibleCrUseOfFlowerPosition({
             error: Error()
           }), FlowerPosition) : FlowerPosition).Left) {
-            this.node.setRotationFromEuler((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            this.node.setRotationFromEuler((_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
               error: Error()
-            }), GameConst) : GameConst).FLOWER_ROTATION_LEFT);
+            }), FlowerConst) : FlowerConst).FLOWER_ROTATION_LEFT);
           } else if (this.m_ImgPos === (_crd && FlowerPosition === void 0 ? (_reportPossibleCrUseOfFlowerPosition({
             error: Error()
           }), FlowerPosition) : FlowerPosition).Right) {
-            this.node.setRotationFromEuler((_crd && GameConst === void 0 ? (_reportPossibleCrUseOfGameConst({
+            this.node.setRotationFromEuler((_crd && FlowerConst === void 0 ? (_reportPossibleCrUseOfFlowerConst({
               error: Error()
-            }), GameConst) : GameConst).FLOWER_ROTATION_RIGHT);
+            }), FlowerConst) : FlowerConst).FLOWER_ROTATION_RIGHT);
           } else {
             this.node.setRotationFromEuler(Vec3.ZERO);
           }

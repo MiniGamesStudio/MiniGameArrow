@@ -1,13 +1,13 @@
 import { _decorator, Button, instantiate, JsonAsset, Node, Prefab, resources } from 'cc';
 import { UIBase } from '../Core/UIBase';
 import { UIManager } from '../Core/UIManager';
-import { UIID } from './UIData';
-import { FlowerPlatform } from './FlowerPlatform';
 import { EventManager } from '../Core/EventManager';
-import { CustomClientEvent } from '../Config/Config';
-import { GameConst } from '../Config/GameConst';
-import { GameState } from '../Model/GameState';
-import { LevelData } from '../Model/LevelModel';
+import { FlowerPlatform } from './FlowerPlatform';
+import { FlowerUIID } from '../Game/FlowerGame/FlowerUIConfig';
+import { FlowerEvent } from '../Game/FlowerGame/FlowerEvent';
+import { FlowerConst } from '../Game/FlowerGame/FlowerConst';
+import { FlowerGameState } from '../Game/FlowerGame/FlowerGameState';
+import { FlowerLevelData } from '../Game/FlowerGame/FlowerLevelModel';
 const { ccclass, property } = _decorator;
 
 @ccclass('GamePanel')
@@ -20,16 +20,16 @@ export class GamePanel extends UIBase {
     m_FlowerImgMoveRoot: Node = null;
 
     private m_FlowerPlatformArr: FlowerPlatform[] = [];
-    private m_CurLevelData: LevelData | null = null;
+    private m_CurLevelData: FlowerLevelData | null = null;
 
     OnInit(): void {}
 
     OnOpen(...args: any[]): void {
         const em = EventManager.getInstance();
-        em.on(CustomClientEvent.FlowerDissolve, this.onCheckFlowerDissolve, this);
-        em.on(CustomClientEvent.CheckVictory, this.onCheckVictory, this);
-        em.on(CustomClientEvent.RetryLevel, this.onRetryLevel, this);
-        em.on(CustomClientEvent.NextLevel, this.onNextLevel, this);
+        em.on(FlowerEvent.FlowerDissolve, this.onCheckFlowerDissolve, this);
+        em.on(FlowerEvent.CheckVictory, this.onCheckVictory, this);
+        em.on(FlowerEvent.RetryLevel, this.onRetryLevel, this);
+        em.on(FlowerEvent.NextLevel, this.onNextLevel, this);
         this.initUI();
     }
 
@@ -39,12 +39,11 @@ export class GamePanel extends UIBase {
     }
 
     private onNextLevel(): void {
-        const state = GameState.getInstance();
-        this.initGameLevel(state.currentLevel + 1);
+        this.initGameLevel(FlowerGameState.getInstance().currentLevel + 1);
     }
 
     private onRetryLevel(): void {
-        this.initGameLevel(GameState.getInstance().currentLevel);
+        this.initGameLevel(FlowerGameState.getInstance().currentLevel);
     }
 
     private onCheckFlowerDissolve(flowerTag: number): void {
@@ -56,35 +55,35 @@ export class GamePanel extends UIBase {
 
         const allVictory = this.m_FlowerPlatformArr.every(fp => fp.checkVictory());
         if (allVictory) {
-            GameState.getInstance().completeLevel();
-            UIManager.GetInstance().OpenPanel(UIID.VictoryPanel, true);
+            FlowerGameState.getInstance().completeLevel();
+            UIManager.GetInstance().OpenPanel(FlowerUIID.VictoryPanel, true);
         }
     }
 
     private initUI(): void {
         this.SetBtnEvent(this.m_CloseBtn, () => {
-            UIManager.GetInstance().ClosePanel(UIID.VictoryPanel);
-            UIManager.GetInstance().OpenPanel(UIID.VictoryPanel);
+            UIManager.GetInstance().ClosePanel(FlowerUIID.VictoryPanel);
+            UIManager.GetInstance().OpenPanel(FlowerUIID.VictoryPanel);
         });
 
-        this.initGameLevel(GameState.getInstance().currentLevel);
+        this.initGameLevel(FlowerGameState.getInstance().currentLevel);
     }
 
     private initGameLevel(level: number): void {
-        const state = GameState.getInstance();
+        const state = FlowerGameState.getInstance();
         state.currentLevel = level;
         state.resetRuntimeState();
 
-        resources.load(GameConst.RES_PATH.LEVEL_DATA + level, JsonAsset, (err, jsonAsset) => {
+        resources.load(FlowerConst.RES_PATH.LEVEL_DATA + level, JsonAsset, (err, jsonAsset) => {
             if (err) {
                 console.warn(`GamePanel: 加载关卡 ${level} 失败`, err);
                 return;
             }
 
-            this.m_CurLevelData = jsonAsset.json as LevelData;
+            this.m_CurLevelData = jsonAsset.json as FlowerLevelData;
             this.m_LevelRoot.removeAllChildren();
 
-            resources.load(GameConst.RES_PATH.FLOWER_PLATFORM, Prefab, (err, prefab) => {
+            resources.load(FlowerConst.RES_PATH.FLOWER_PLATFORM, Prefab, (err, prefab) => {
                 if (err || !prefab) return;
 
                 FlowerPlatform.s_FlowerPotTag = 0;
@@ -101,7 +100,7 @@ export class GamePanel extends UIBase {
                     }
                 }
 
-                EventManager.getInstance().emit(CustomClientEvent.LevelLoaded, level);
+                EventManager.getInstance().emit(FlowerEvent.LevelLoaded, level);
             });
         });
     }

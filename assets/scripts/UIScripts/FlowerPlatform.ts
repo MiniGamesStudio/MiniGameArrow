@@ -1,9 +1,9 @@
-import { _decorator, BoxCollider2D, color, Component, instantiate, Node, resources, Sprite, SpriteFrame, tween, UITransform, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, color, Component, instantiate, Node, resources, Sprite, SpriteFrame, tween, UITransform } from 'cc';
 import { Flower } from './Flower';
-import { CustomClientEvent } from '../Config/Config';
 import { EventManager } from '../Core/EventManager';
-import { GameConst } from '../Config/GameConst';
-import { FlowerPosition } from '../Model/LevelModel';
+import { FlowerEvent } from '../Game/FlowerGame/FlowerEvent';
+import { FlowerConst } from '../Game/FlowerGame/FlowerConst';
+import { FlowerPosition } from '../Game/FlowerGame/FlowerLevelModel';
 const { ccclass, property } = _decorator;
 
 /**
@@ -41,9 +41,8 @@ export class FlowerPlatform extends Component {
             return;
         }
 
-        if (flowers.length < GameConst.FLOWER_MATCH_COUNT) return;
+        if (flowers.length < FlowerConst.FLOWER_MATCH_COUNT) return;
 
-        // 检查是否全部相同
         const firstID = flowers[0].getFlowerID();
         const allSame = flowers.every(f => f.getFlowerID() === firstID);
 
@@ -52,7 +51,6 @@ export class FlowerPlatform extends Component {
         }
     }
 
-    /** 播放消除动画并销毁花朵 */
     private dissolveFlowers(flowers: Flower[], flowerpot: Node, flowerTag: number): void {
         let completed = 0;
         const total = flowers.length;
@@ -62,7 +60,7 @@ export class FlowerPlatform extends Component {
             if (!flowerNode) return;
 
             tween(flowerNode)
-                .to(GameConst.FLOWER_DISSOLVE_DURATION, { angle: 0 }, {
+                .to(FlowerConst.FLOWER_DISSOLVE_DURATION, { angle: 0 }, {
                     onComplete: (target: Node) => {
                         if (target) {
                             target.removeFromParent();
@@ -80,7 +78,6 @@ export class FlowerPlatform extends Component {
         });
     }
 
-    /** 当前层清空后，检查是否有下一层黑色花朵需要显示 */
     private onLayerCleared(flowerpot: Node, flowerTag: number): void {
         const flowerRootBlack = flowerpot.getChildByName("FlowerRootBlack");
         if (flowerRootBlack) {
@@ -96,11 +93,10 @@ export class FlowerPlatform extends Component {
         }
 
         if (this.checkVictory()) {
-            EventManager.getInstance().emit(CustomClientEvent.CheckVictory);
+            EventManager.getInstance().emit(FlowerEvent.CheckVictory);
         }
     }
 
-    /** 检查本平台是否所有花盆都已清空 */
     checkVictory(): boolean {
         for (const [, pot] of this.m_FlowerPotMap) {
             if (!pot) continue;
@@ -163,7 +159,6 @@ export class FlowerPlatform extends Component {
             flowerPotRoot!.addChild(layoutClone);
         }
 
-        // 调整平台宽度
         const platUITrans = platFormClone.getChildByName("Platform")?.getComponent(UITransform);
         if (platUITrans) {
             const size = platUITrans.contentSize;
@@ -223,13 +218,12 @@ export class FlowerPlatform extends Component {
         root.removeAllChildren();
         const imgNode = new Node();
 
-        // 设置名称和旋转
         if (imgPos === FlowerPosition.Left) {
             imgNode.name = "FlowerImgLeft";
-            imgNode.setRotationFromEuler(GameConst.FLOWER_ROTATION_LEFT);
+            imgNode.setRotationFromEuler(FlowerConst.FLOWER_ROTATION_LEFT);
         } else if (imgPos === FlowerPosition.Right) {
             imgNode.name = "FlowerImgRight";
-            imgNode.setRotationFromEuler(GameConst.FLOWER_ROTATION_RIGHT);
+            imgNode.setRotationFromEuler(FlowerConst.FLOWER_ROTATION_RIGHT);
         } else {
             imgNode.name = "FlowerImgMid";
         }
@@ -241,13 +235,13 @@ export class FlowerPlatform extends Component {
         uiTrans.setAnchorPoint(0.5, 0);
 
         const sprite = imgNode.addComponent(Sprite);
-        resources.load(GameConst.RES_PATH.FLOWERS + imgId + "/spriteFrame", SpriteFrame, (err, sp) => {
+        resources.load(FlowerConst.RES_PATH.FLOWERS + imgId + "/spriteFrame", SpriteFrame, (err, sp) => {
             if (sp) sprite.spriteFrame = sp;
 
             let flowerScript = imgNode.getComponent(Flower);
             if (!flowerScript) flowerScript = imgNode.addComponent(Flower);
             flowerScript.init(imgId, root, this.m_FlowerMoveRoot, imgPos,
-                GameConst.FLOWER_ROTATION_LEFT, GameConst.FLOWER_ROTATION_RIGHT, tag, isBlack);
+                FlowerConst.FLOWER_ROTATION_LEFT, FlowerConst.FLOWER_ROTATION_RIGHT, tag, isBlack);
 
             sprite.color = isBlack ? color(60, 60, 60, 255) : color(255, 255, 255, 255);
             imgNode.active = true;

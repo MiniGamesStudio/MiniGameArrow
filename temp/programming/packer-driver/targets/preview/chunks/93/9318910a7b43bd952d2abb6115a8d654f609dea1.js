@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, ProgressBar, UIBase, UIManager, UIID, FrameworkConst, _dec, _dec2, _class, _class2, _descriptor, _crd, ccclass, property, LoadingPanel;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, ProgressBar, UIBase, UIManager, FrameworkConst, FlowerUIID, _dec, _dec2, _class, _class2, _descriptor, _crd, ccclass, property, LoadingPanel;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -17,12 +17,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("UIManager", "../Core/UIManager", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfUIID(extras) {
-    _reporterNs.report("UIID", "./UIData", _context.meta, extras);
+  function _reportPossibleCrUseOfFrameworkConst(extras) {
+    _reporterNs.report("FrameworkConst", "../Core/FrameworkConst", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfFrameworkConst(extras) {
-    _reporterNs.report("FrameworkConst", "../Config/GameConst", _context.meta, extras);
+  function _reportPossibleCrUseOfFlowerUIID(extras) {
+    _reporterNs.report("FlowerUIID", "../Game/FlowerGame/FlowerUIConfig", _context.meta, extras);
   }
 
   return {
@@ -39,9 +39,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       UIManager = _unresolved_3.UIManager;
     }, function (_unresolved_4) {
-      UIID = _unresolved_4.UIID;
+      FrameworkConst = _unresolved_4.FrameworkConst;
     }, function (_unresolved_5) {
-      FrameworkConst = _unresolved_5.FrameworkConst;
+      FlowerUIID = _unresolved_5.FlowerUIID;
     }],
     execute: function () {
       _crd = true;
@@ -88,14 +88,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.m_TimeDelta = 0;
             (_crd && UIManager === void 0 ? (_reportPossibleCrUseOfUIManager({
               error: Error()
-            }), UIManager) : UIManager).GetInstance().ClosePanel((_crd && UIID === void 0 ? (_reportPossibleCrUseOfUIID({
+            }), UIManager) : UIManager).GetInstance().ClosePanel((_crd && FlowerUIID === void 0 ? (_reportPossibleCrUseOfFlowerUIID({
               error: Error()
-            }), UIID) : UIID).LoadingPanel);
+            }), FlowerUIID) : FlowerUIID).LoadingPanel);
             (_crd && UIManager === void 0 ? (_reportPossibleCrUseOfUIManager({
               error: Error()
-            }), UIManager) : UIManager).GetInstance().OpenPanel((_crd && UIID === void 0 ? (_reportPossibleCrUseOfUIID({
+            }), UIManager) : UIManager).GetInstance().OpenPanel((_crd && FlowerUIID === void 0 ? (_reportPossibleCrUseOfFlowerUIID({
               error: Error()
-            }), UIID) : UIID).MainPanel);
+            }), FlowerUIID) : FlowerUIID).MainPanel);
           }
         }
 

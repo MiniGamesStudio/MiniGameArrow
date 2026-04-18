@@ -2951,5 +2951,60 @@
     "url": "db://assets/scripts/Core/TimerManager.ts",
     "value": {},
     "versionCode": 1
+  },
+  "d5e3597f-6ef9-4639-a01a-60f4b397df1b": {
+    "url": "db://assets/scripts/Game",
+    "value": {},
+    "versionCode": 1
+  },
+  "9895311f-4fcf-4ad3-990b-df3a157b28ce": {
+    "url": "db://assets/scripts/Game/FlowerGame",
+    "value": {},
+    "versionCode": 1
+  },
+  "e29c5dd2-f560-4627-8dba-f28287382c58": {
+    "url": "db://assets/scripts/Core/FrameworkConst.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "ad5dba1a-da0f-4c87-96e3-a4478d16cf78": {
+    "url": "db://assets/scripts/Core/FrameworkEvent.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "6d2f782b-35e7-4453-a35c-43af2becd128": {
+    "url": "db://assets/scripts/Core/UIData.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "6ff183cb-0717-48b1-a167-23385ec099c6": {
+    "url": "db://assets/scripts/Game/FlowerGame/FlowerConst.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "97bb5dbf-2487-4e0a-816c-2a760f22d713": {
+    "url": "db://assets/scripts/Game/FlowerGame/FlowerEvent.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "c63a2908-67d7-4c12-a0ce-6c9030278f78": {
+    "url": "db://assets/scripts/Game/FlowerGame/FlowerGameEntry.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1e2d0efb-b034-4407-8731-d512e42f82f5": {
+    "url": "db://assets/scripts/Game/FlowerGame/FlowerGameState.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1082f51f-8877-4796-92cd-59418011d710": {
+    "url": "db://assets/scripts/Game/FlowerGame/FlowerLevelModel.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1ddebbfb-1c31-4d1a-8cc1-b8ee53713dfb": {
+    "url": "db://assets/scripts/Game/FlowerGame/FlowerUIConfig.ts",
+    "value": {},
+    "versionCode": 1
   }
 }
