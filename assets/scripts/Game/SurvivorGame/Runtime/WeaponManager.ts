@@ -47,7 +47,7 @@ export class WeaponManager {
             config,
             level: 1,
             cooldownTimer: 0,
-            ready: true,
+            ready: true, // 首次装备立即可用
         };
 
         this._activeWeapons.set(weaponId, instance);

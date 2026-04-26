@@ -102,12 +102,25 @@ export class StorageManager {
         }
     }
 
-    /** 清除所有本游戏存储（仅清除带前缀的） */
+    /** 清除所有本游戏存储（仅清除带当前前缀的 key） */
     clear(): void {
         try {
-            // sys.localStorage 没有遍历接口，直接 clear 会清除所有
-            // 这里只能 clear 全部，使用时注意
-            sys.localStorage.clear();
+            // sys.localStorage 没有遍历接口
+            // 使用 Web 标准 API 遍历并删除带前缀的 key
+            const storage = typeof localStorage !== 'undefined' ? localStorage : null;
+            if (storage) {
+                const keysToRemove: string[] = [];
+                for (let i = 0; i < storage.length; i++) {
+                    const key = storage.key(i);
+                    if (key && key.startsWith(this._prefix)) {
+                        keysToRemove.push(key);
+                    }
+                }
+                keysToRemove.forEach(key => storage.removeItem(key));
+            } else {
+                // 非浏览器环境回退到全部清除
+                sys.localStorage.clear();
+            }
         } catch (e) {
             console.warn('StorageManager: 清除失败', e);
         }

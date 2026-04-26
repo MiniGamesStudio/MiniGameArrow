@@ -87,12 +87,20 @@ export class Flower extends Component {
     }
 
     private onEndContact(_selfCollider: Collider2D, otherCollider: Collider2D): void {
+        const otherTag = otherCollider.tag;
         let allCleared = true;
+
         for (let i = 0; i < this.m_ContactTags.length; i++) {
-            if (this.m_ContactTags[i] === otherCollider.tag) {
+            if (this.m_ContactTags[i] === otherTag) {
                 this.m_ContactTags[i] = -1;
-            } else if (this.m_ContactTags[i] > 0) {
+            }
+        }
+
+        // 检查是否还有有效的碰撞
+        for (let i = 0; i < this.m_ContactTags.length; i++) {
+            if (this.m_ContactTags[i] >= 0) {
                 allCleared = false;
+                break;
             }
         }
 
@@ -244,8 +252,13 @@ export class Flower extends Component {
 
     private cleanupDragCollider(): void {
         if (this.m_BoxCollider2D) {
+            this.m_BoxCollider2D.off(Contact2DType.BEGIN_CONTACT, this.onBeginContact, this);
+            this.m_BoxCollider2D.off(Contact2DType.END_CONTACT, this.onEndContact, this);
             this.m_BoxCollider2D.destroy();
             this.m_BoxCollider2D = null;
         }
+        this.m_ContactTags = [];
+        this.m_SelfCollider = null;
+        this.m_OtherCollider = null;
     }
 }

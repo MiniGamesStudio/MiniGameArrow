@@ -57,18 +57,21 @@ export class FlowerPlatform extends Component {
 
         flowers.forEach(flower => {
             const flowerNode = flower.node;
-            if (!flowerNode) return;
+            if (!flowerNode) {
+                completed++;
+                if (completed >= total) {
+                    this.onLayerCleared(flowerpot, flowerTag);
+                }
+                return;
+            }
 
             tween(flowerNode)
-                .to(FlowerConst.FLOWER_DISSOLVE_DURATION, { angle: 0 }, {
-                    onComplete: (target: Node) => {
-                        if (target) {
-                            target.removeFromParent();
-                            target.destroy();
-                        }
-                    }
-                })
+                .to(FlowerConst.FLOWER_DISSOLVE_DURATION, { angle: 0 })
                 .call(() => {
+                    if (flowerNode && flowerNode.isValid) {
+                        flowerNode.removeFromParent();
+                        flowerNode.destroy();
+                    }
                     completed++;
                     if (completed >= total) {
                         this.onLayerCleared(flowerpot, flowerTag);

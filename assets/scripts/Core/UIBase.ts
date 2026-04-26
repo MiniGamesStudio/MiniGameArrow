@@ -37,11 +37,11 @@ export abstract class UIBase extends Component {
         }
     }
 
-    /** 安全绑定按钮事件（自动移除旧监听） */
-    SetBtnEvent(btn: Button, callback: Function, eventName: string = "click"): void {
-        if (btn) {
+    /** 安全绑定按钮事件（自动移除旧监听，防止重复绑定） */
+    SetBtnEvent(btn: Button, callback: () => void, eventName: string = "click"): void {
+        if (btn && btn.node) {
             btn.node.off(eventName);
-            btn.node.on(eventName, callback);
+            btn.node.on(eventName, callback, this);
         }
     }
 

@@ -48,6 +48,9 @@ export class BattleController {
         this._pendingSpawns = [];
         this._pendingAttacks = [];
 
+        // 将角色基础属性传递给被动管理器作为计算基准
+        this.passiveMgr.setBaseStats(this.session.playerStats);
+
         if (startWeaponId) {
             this.weaponMgr.addWeapon(startWeaponId, this.session);
         }

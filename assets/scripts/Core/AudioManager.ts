@@ -70,7 +70,9 @@ export class AudioManager {
     }
 
     resumeBGM(): void {
-        this._bgmSource?.play();
+        if (this._bgmSource && !this._bgmSource.playing) {
+            this._bgmSource.play();
+        }
     }
 
     setBGMVolume(vol: number): void {

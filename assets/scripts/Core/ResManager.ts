@@ -11,7 +11,7 @@ import { Asset, Prefab, resources, instantiate, Node } from 'cc';
 export class ResManager {
     private static _instance: ResManager;
 
-    /** 已加载资源的引用计数 */
+    /** 已加载资源的引用计数 path -> count */
     private _refMap: Map<string, number> = new Map();
 
     static getInstance(): ResManager {
@@ -54,7 +54,8 @@ export class ResManager {
     loadDir<T extends Asset>(dir: string, type: new (...args: any[]) => T, callback: (err: Error | null, assets: T[]) => void): void {
         resources.loadDir(dir, type, (err, assets) => {
             if (!err && assets) {
-                assets.forEach((_, i) => this.addRef(`${dir}/${i}`));
+                // 使用目录路径作为引用计数 key
+                this.addRef(dir);
             }
             callback(err, assets as T[]);
         });
@@ -75,31 +76,35 @@ export class ResManager {
     }
 
     /**
-     * 释放单个资源
+     * 释放单个资源（引用计数归零时真正释放）
      */
     release(path: string): void {
         const count = this._refMap.get(path);
         if (count !== undefined) {
             if (count <= 1) {
                 this._refMap.delete(path);
+                resources.release(path);
             } else {
                 this._refMap.set(path, count - 1);
             }
         }
-        resources.release(path);
     }
 
     /**
      * 释放目录下所有资源
      */
     releaseDir(dir: string): void {
-        // 清除该目录下的引用计数
+        // 清除该目录下的引用计数并逐个释放
+        const keysToDelete: string[] = [];
         for (const [key] of this._refMap) {
-            if (key.startsWith(dir)) {
-                this._refMap.delete(key);
+            if (key === dir || key.startsWith(dir + '/')) {
+                keysToDelete.push(key);
             }
         }
-        resources.release(dir);
+        for (const key of keysToDelete) {
+            this._refMap.delete(key);
+            resources.release(key);
+        }
     }
 
     /**
@@ -108,6 +113,11 @@ export class ResManager {
     releaseAll(): void {
         this._refMap.clear();
         resources.releaseAll();
+    }
+
+    /** 获取某资源的引用计数 */
+    getRefCount(path: string): number {
+        return this._refMap.get(path) ?? 0;
     }
 
     private addRef(path: string): void {

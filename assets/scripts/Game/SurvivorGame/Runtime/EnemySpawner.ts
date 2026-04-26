@@ -67,6 +67,7 @@ export class EnemySpawner {
                     const bossConfig = this._enemyConfigs.get(newWave.bossId);
                     if (bossConfig) {
                         requests.push({ config: bossConfig, isBoss: true });
+                        this.activeEnemyCount++;
                         EventManager.getInstance().emit(SurvivorEvent.BossSpawn, newWave.bossId);
                     }
                 }
@@ -87,6 +88,7 @@ export class EnemySpawner {
                         const config = this._enemyConfigs.get(enemyId);
                         if (config) {
                             requests.push({ config, isBoss: false });
+                            this.activeEnemyCount++;
                         }
                     }
                 }

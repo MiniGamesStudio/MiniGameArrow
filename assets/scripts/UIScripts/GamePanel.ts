@@ -62,8 +62,7 @@ export class GamePanel extends UIBase {
 
     private initUI(): void {
         this.SetBtnEvent(this.m_CloseBtn, () => {
-            UIManager.GetInstance().ClosePanel(FlowerUIID.VictoryPanel);
-            UIManager.GetInstance().OpenPanel(FlowerUIID.VictoryPanel);
+            UIManager.GetInstance().OpenPanel(FlowerUIID.VictoryPanel, false);
         });
 
         this.initGameLevel(FlowerGameState.getInstance().currentLevel);

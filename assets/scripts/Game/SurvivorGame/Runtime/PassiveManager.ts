@@ -1,5 +1,5 @@
 import { PassiveConfig } from '../Data/WeaponData';
-import { createDefaultStats } from '../Data/CharacterData';
+import { CharacterStats, createDefaultStats } from '../Data/CharacterData';
 import { BattleSession } from './BattleSession';
 
 /**
@@ -8,6 +8,14 @@ import { BattleSession } from './BattleSession';
 export class PassiveManager {
     private _passiveConfigs: Map<string, PassiveConfig> = new Map();
     private _activePassives: Map<string, number> = new Map(); // passiveId -> level
+
+    /** 角色基础属性（由外部设置，用于 recalcStats 的基准） */
+    private _baseStats: CharacterStats = createDefaultStats();
+
+    /** 设置角色基础属性 */
+    setBaseStats(stats: CharacterStats): void {
+        this._baseStats = { ...stats };
+    }
 
     /** 注册被动配置 */
     registerPassiveConfig(config: PassiveConfig): void {
@@ -59,10 +67,11 @@ export class PassiveManager {
     }
 
     /**
-     * 重新计算玩家属性 = 基础属性 + 所有被动加成
+     * 重新计算玩家属性 = 角色基础属性 + 所有被动加成
      */
     recalcStats(session: BattleSession): void {
-        const stats = createDefaultStats();
+        // 从角色基础属性开始，而非默认属性
+        const stats: CharacterStats = { ...this._baseStats };
 
         this._activePassives.forEach((level, passiveId) => {
             const config = this._passiveConfigs.get(passiveId);

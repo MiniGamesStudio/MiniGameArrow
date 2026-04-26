@@ -102,16 +102,41 @@ export class UIManager {
     /** 通过 uiID 打开界面 */
     OpenPanel(id: number, ...args: any[]): number {
         const uidata = UIDataRegistry.FindUIData(id);
-        if (!uidata) return 0;
+        if (!uidata) {
+            console.warn(`UIManager: 未注册的 UI ID [${id}]`);
+            return 0;
+        }
 
         const existingID = this.CheckPanel(id, args);
         if (existingID > 0) return existingID;
 
         const pID = this.m_PanelID;
+        this.m_PanelID++;
+
+        // 记录正在加载的面板 ID，防止加载期间被重复打开
+        let uiDatas = this.m_PanelDataMap.get(id);
+        if (!uiDatas) {
+            uiDatas = [];
+            this.m_PanelDataMap.set(id, uiDatas);
+        }
+        uiDatas.push(pID);
+
         resources.load(uidata.prefabPath, Prefab, (err, prefab) => {
             if (err) {
                 console.warn(`UIManager: 加载面板失败 [${uidata.name}]`, err);
+                // 加载失败，移除占位
+                const datas = this.m_PanelDataMap.get(id);
+                if (datas) {
+                    const idx = datas.indexOf(pID);
+                    if (idx >= 0) datas.splice(idx, 1);
+                }
                 return;
+            }
+
+            // 加载完成后校验面板是否已被关闭
+            const datas = this.m_PanelDataMap.get(id);
+            if (!datas || !datas.includes(pID)) {
+                return; // 面板在加载期间已被关闭
             }
 
             const root = this.GetUIRootByUILayer(uidata.layer);
@@ -124,21 +149,13 @@ export class UIManager {
 
             const uiScript = uiNode.getComponent(UIBase);
             if (uiScript) {
-                uiScript.m_PanelID = this.m_PanelID;
+                uiScript.m_PanelID = pID;
                 uiScript.m_UIID = id;
                 uiScript.OnInit();
                 uiScript.OnOpen(...args);
             }
 
-            let uiDatas = this.m_PanelDataMap.get(id);
-            if (!uiDatas) {
-                uiDatas = [];
-                this.m_PanelDataMap.set(id, uiDatas);
-            }
-            uiDatas.push(this.m_PanelID);
-
-            this.m_PanelNodeMap.set(this.m_PanelID, uiNode);
-            this.m_PanelID++;
+            this.m_PanelNodeMap.set(pID, uiNode);
         });
 
         return pID;
