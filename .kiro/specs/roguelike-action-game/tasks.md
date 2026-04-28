@@ -1,0 +1,409 @@
+# 实现计划：肉鸽动作游戏（Roguelike Action Game）
+
+## 概述
+
+按照依赖关系从底层到上层逐步实现：框架层新增模块 → 引擎层新增模块 → Excel 导出工具 → 游戏模块基础文件 → 数据接口层 → 运行时核心系统 → 可扩展类型实现 → UI 面板 → 战斗流程集成。所有代码使用 TypeScript 编写。
+
+## 任务
+
+- [x] 1. 框架层：实现 TypeRegistry 和 TypeFactory
+  - [x] 1.1 创建 `assets/scripts/framework/TypeRegistry.ts`
+    - 实现泛型类 `TypeRegistry<T>`，包含 `register`、`create`、`getRegisteredTypes`、`has`、`clear` 方法
+    - 实现 `TypeMeta<T>` 接口，包含 `typeId`、`factory`、`configLoader` 字段
+    - 注册时若 typeId 已存在则输出警告并覆盖；创建时若 typeId 未注册则返回 null 并输出警告
+    - _需求: 3.7, 4.7, 5.7, 5.8, 6.7, 11.11, 12.13, 13.13, 15.17, 16.20_
+  - [ ]* 1.2 编写 TypeRegistry 属性测试
+    - **Property 7: 类型注册表唯一性**
+    - **验证: 需求 3.7, 4.7**
+  - [x] 1.3 创建 `assets/scripts/framework/TypeFactory.ts`
+    - 实现通用工厂类，封装 TypeRegistry 的 create 调用，提供批量创建和带配置初始化的便捷方法
+    - _需求: 3.7, 4.7, 5.7_
+
+- [x] 2. 引擎层：实现 FlatBuffers 运行时和 ConfigManager
+  - [x] 2.1 创建 `assets/scripts/engine/FlatBuffersRuntime.ts`
+    - 实现单例类 `FlatBuffersRuntime`，包含 `loadConfig`、`loadAll`、`getBuffer`、`releaseAll` 方法
+    - 通过 ResManager 异步加载 Binary_Config 资源，以零拷贝方式读取数据
+    - 加载失败时记录错误日志并返回明确错误信息
+    - _需求: 10.1, 10.2, 10.3, 10.4, 10.6, 17.14, 17.15, 17.16, 17.17, 17.18, 17.19_
+  - [x] 2.2 创建 `assets/scripts/engine/ConfigManager.ts`
+    - 实现单例类 `ConfigManager`，包含 `registerAccessor`、`getAccessor`、`getById` 方法
+    - 提供类型安全的配置数据访问接口，支持按主键查询和遍历全部记录
+    - _需求: 10.4, 10.7, 17.18_
+  - [ ]* 2.3 编写 FlatBuffers 配置数据往返一致性属性测试
+    - **Property 4: 配置数据往返一致性**
+    - **验证: 需求 10.5, 17.8_
+
+- [x] 3. 检查点 - 基础模块验证
+  - 确保所有测试通过，如有疑问请询问用户。
+
+- [ ] 4. Excel 导出工具
+  - [ ] 4.1 初始化 `tools/excel-exporter/` 项目结构
+    - 创建 `package.json`、`tsconfig.json`、`config.json`
+    - 添加 xlsx、flatbuffers 等依赖
+    - _需求: 17.20, 17.22_
+  - [ ] 4.2 实现 `tools/excel-exporter/src/ExcelReader.ts`
+    - 读取 .xlsx 文件，解析表头行（字段名、字段类型、注释）和数据行
+    - 跳过空行和以 # 开头的注释行
+    - 类型不匹配时记录错误日志并中止该表导出
+    - _需求: 17.1, 17.2, 17.6, 17.7_
+  - [ ] 4.3 实现 `tools/excel-exporter/src/SchemaGenerator.ts`
+    - 根据 Excel 表头自动生成 FBS Schema 文件
+    - 支持 int、float、bool、string、enum、array 类型映射
+    - _需求: 17.2, 17.3_
+  - [ ] 4.4 实现 `tools/excel-exporter/src/SchemaCompiler.ts`
+    - 调用 flatc 编译器将 FBS Schema 编译为 TypeScript 访问代码
+    - _需求: 17.4_
+  - [ ] 4.5 实现 `tools/excel-exporter/src/BinaryExporter.ts`
+    - 将 Excel 数据行序列化为 FlatBuffers 二进制格式并输出 Binary_Config 文件
+    - _需求: 17.5_
+  - [ ] 4.6 实现 `tools/excel-exporter/src/SchemaRegistry.ts`
+    - 记录每个 FBS Schema 的内容哈希值和最后导出时间戳
+    - 检测 Schema 兼容性变更（删除字段、修改字段类型），不兼容时输出详细说明
+    - _需求: 17.10, 17.12, 17.13_
+  - [ ] 4.7 实现 `tools/excel-exporter/src/ExportPipeline.ts` 和 CLI 入口 `src/index.ts`
+    - 串联完整导出流程：扫描 → 增量检测 → 读取 → 生成 Schema → 编译 → 导出二进制 → 更新注册表
+    - 支持批量导出和增量导出模式
+    - 导出完成后输出统计摘要（处理文件数、成功数、失败数、总耗时）
+    - 提供 `npm run export-config` 命令
+    - _需求: 17.9, 17.11, 17.20, 17.21, 17.22_
+  - [ ] 4.8 创建示例 Excel 配置文件
+    - 在 `tools/excel-config/` 目录下创建 enemy.xlsx、weapon.xlsx 等示例配置文件
+    - 按照表头约定（字段名、字段类型、注释、数据行）填充示例数据
+    - _需求: 17.1, 17.2_
+
+- [ ] 5. 检查点 - 导出工具验证
+  - 确保所有测试通过，如有疑问请询问用户。
+
+- [x] 6. 游戏模块基础文件
+  - [x] 6.1 创建 `assets/scripts/Game/RoguelikeGame/RoguelikeConst.ts`
+    - 定义游戏常量：BASE_EXP_TO_LEVEL、EXP_GROWTH_FACTOR、MAX_WEAPON_SLOTS、PLAYER_INVINCIBLE_DURATION 等
+    - 定义配置表名映射 ROGUELIKE_CONFIG_MAP
+    - _需求: 2.5, 5.6, 6.5, 8.2_
+  - [x] 6.2 创建 `assets/scripts/Game/RoguelikeGame/RoguelikeEvent.ts`
+    - 定义 RoguelikeEvent 枚举，包含模块生命周期、战斗流程、玩家、升级、敌人、武器道具、职业、宠物、NPC、商店、事件、换装、永久成长等所有事件
+    - _需求: 1.4, 9.3_
+  - [x] 6.3 创建 `assets/scripts/Game/RoguelikeGame/RoguelikeGameState.ts`
+    - 实现单例类，管理永久成长数据（totalGold、metaUpgrades、unlockedClasses、unlockedCostumes、npcAffinities）和统计数据
+    - 通过 StorageManager 实现 load/save 持久化
+    - 实现 settleRun 方法进行 Run 结算
+    - _需求: 7.1, 7.3, 7.4, 14.2, 15.13, 16.17_
+  - [x] 6.4 创建 `assets/scripts/Game/RoguelikeGame/RoguelikeUIConfig.ts`
+    - 定义 RoguelikeUIID 枚举（LoadingPanel=201 到 MetaUpgradePanel=215）
+    - 实现 registerRoguelikeGameUI 函数，注册所有 UI 面板到 UIManager
+    - 配置面板层级（UILayer）和显示模式（UIShowMode）
+    - _需求: 9.2, 9.5_
+  - [x] 6.5 创建 `assets/scripts/Game/RoguelikeGame/RoguelikeGameEntry.ts`
+    - 实现 initRoguelikeGame 异步入口函数
+    - 按顺序执行：设置存储前缀 → 注册 UI → 加载 FlatBuffers 配置 → 注册可扩展类型 → 初始化持久化状态 → 发送初始化事件 → 打开加载界面
+    - 通过 GameManager 的 onGameReady 回调注入
+    - _需求: 1.1, 1.2, 1.3, 1.4_
+
+- [x] 7. 数据接口层（Data/Interfaces）
+  - [x] 7.1 创建 `Data/Interfaces/IRoomType.ts`
+    - 定义 IRoomType 接口：typeId、onEnter、checkClearCondition、onClear、getDefaultConfig
+    - 定义 RoomContext、RoomNode、RoomConnection、DungeonFloor 等数据结构
+    - _需求: 3.2, 3.7_
+  - [x] 7.2 创建 `Data/Interfaces/IEnemyType.ts`
+    - 定义 IEnemyType 接口：typeId、init、updateAI、onHit、onDeath、getAttributes
+    - 定义 EnemyAttributes、EnemyConfig、BattleContext 等数据结构
+    - _需求: 4.1, 4.3, 4.7_
+  - [x] 7.3 创建 `Data/Interfaces/IWeaponType.ts`
+    - 定义 IWeaponType 接口：typeId、level、attack、upgrade、getAttributes、update
+    - 定义 WeaponAttributes 数据结构
+    - _需求: 5.1, 5.7_
+  - [x] 7.4 创建 `Data/Interfaces/IItemType.ts`
+    - 定义 IItemType 接口：typeId、level、applyEffect、removeEffect、upgrade、getDescription
+    - _需求: 5.4, 5.8_
+  - [x] 7.5 创建 `Data/Interfaces/ILevelUpOption.ts`
+    - 定义 ILevelUpOption 接口：typeId、getDisplayInfo、apply、isAvailable、getWeight
+    - 定义 LevelUpDisplayInfo 数据结构
+    - _需求: 6.4, 6.7_
+  - [x] 7.6 创建 `Data/Interfaces/IEventType.ts`
+    - 定义 IEventType 接口：typeId、getDisplayInfo、getOptions、executeOption、isCompleted
+    - 定义 EventOption、EventResult、EventContext 等数据结构
+    - _需求: 11.2, 11.3, 11.11_
+  - [x] 7.7 创建 `Data/Interfaces/IShopGoods.ts`
+    - 定义 IShopGoods 接口：typeId、generateItem、purchase
+    - 定义 ShopItem 数据结构
+    - _需求: 12.2, 12.3, 12.13_
+  - [x] 7.8 创建 `Data/Interfaces/IPetType.ts`
+    - 定义 IPetType 接口：typeId、level、init、update、getPassiveEffects、upgrade、getDisplayInfo
+    - 定义 PetConfig、PetDisplayInfo 等数据结构
+    - _需求: 13.1, 13.3, 13.4, 13.13_
+  - [x] 7.9 创建 `Data/Interfaces/IClassType.ts` 和 `Data/Interfaces/IClassSkill.ts`
+    - 定义 IClassType 接口：typeId、rarity、getBaseAttributes、getTalentTree、getSkills、getUnlockCondition
+    - 定义 IClassSkill 接口：skillId、level、cooldown、execute、updateCooldown、isReady、upgrade
+    - 定义 ClassRarity 枚举、TalentTreeDef、TalentTierDef、TalentDef 等数据结构
+    - _需求: 15.1, 15.5, 15.8, 15.17_
+  - [x] 7.10 创建 `Data/Interfaces/INpcType.ts`
+    - 定义 INpcType 接口：typeId、getDisplayInfo、getServices、executeService、getDialogue
+    - 定义 NpcService、NpcContext、NpcRelation、NpcNetworkState 等数据结构
+    - _需求: 16.1, 16.3, 16.13, 16.20_
+
+- [x] 8. 检查点 - 数据接口层验证
+  - 确保所有测试通过，如有疑问请询问用户。
+
+- [x] 9. 运行时核心系统：伤害系统与玩家控制
+  - [x] 9.1 创建 `Runtime/DamageSystem.ts`
+    - 实现静态方法 `calculateDamage(baseDamage, attackMultiplier, targetDefense)`，公式为 `max(1, floor(baseDamage * attackMultiplier - targetDefense))`
+    - 实现静态方法 `applyDamage`，计算击退方向和力度，返回 DamageResult
+    - 定义 DamageResult 接口
+    - _需求: 8.1, 8.5_
+  - [ ]* 9.2 编写伤害计算属性测试
+    - **Property 1: 伤害计算正确性**
+    - **验证: 需求 8.1**
+  - [x] 9.3 创建 `Runtime/InputHandler.ts`
+    - 实现虚拟摇杆输入处理，支持八方向移动
+    - 实现攻击按钮和技能按钮状态管理
+    - 提供 bindJoystick、bindAttackButton、bindSkillButton 绑定方法
+    - _需求: 2.1, 2.2_
+  - [x] 9.4 创建 `Runtime/PlayerController.ts`
+    - 管理玩家运行时状态（PlayerRuntimeState）
+    - 实现移动逻辑（基于 InputHandler 方向和 moveSpeed）
+    - 实现攻击状态管理和无敌帧逻辑（PLAYER_INVINCIBLE_DURATION）
+    - 实现经验获取和升级检测
+    - _需求: 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 8.2_
+
+- [x] 10. 运行时核心系统：地牢与房间生成
+  - [x] 10.1 创建 `Runtime/RoomGenerator.ts`
+    - 注入 TypeRegistry<IRoomType>，通过注册表创建房间实例
+    - 实现 generateFloor 方法：根据楼层配置确定房间数量和类型分布
+    - 实现房间连接生成算法，确保所有房间可达（BFS/DFS 验证）
+    - 根据楼层深度调整房间数量和难度参数
+    - _需求: 3.1, 3.2, 3.3, 3.4, 3.7, 3.8_
+  - [ ]* 10.2 编写地牢可达性属性测试
+    - **Property 2: 地牢可达性**
+    - **验证: 需求 3.3**
+  - [x] 10.3 创建 `Runtime/DungeonManager.ts`
+    - 管理当前地牢状态（当前楼层、当前房间、已探索房间）
+    - 实现楼层切换逻辑和房间进入/离开流程
+    - 通过 EventManager 发送 FloorEnter、RoomEnter、RoomClear 事件
+    - _需求: 3.1, 3.5_
+
+- [x] 11. 运行时核心系统：敌人与战利品
+  - [x] 11.1 创建 `Runtime/EnemySpawner.ts`
+    - 注入 TypeRegistry<IEnemyType>，通过注册表创建敌人实例
+    - 根据房间配置生成对应数量和类型的敌人
+    - 使用 ObjectPool 管理敌人实例的创建和回收
+    - 支持 Boss 敌人的多阶段攻击模式生成
+    - _需求: 4.1, 4.2, 4.5, 4.6, 4.7, 4.8_
+  - [ ]* 11.2 编写对象池守恒属性测试
+    - **Property 8: 对象池守恒**
+    - **验证: 需求 4.5**
+  - [x] 11.3 创建 `Runtime/LootSystem.ts`
+    - 实现敌人死亡时按概率表生成武器、道具、经验宝石和金币掉落
+    - 根据当前楼层深度调整掉落物稀有度权重
+    - _需求: 5.2, 5.5, 6.1, 12.10_
+
+- [x] 12. 运行时核心系统：武器与道具管理
+  - [x] 12.1 创建 `Runtime/WeaponManager.ts`
+    - 注入 TypeRegistry<IWeaponType>，管理玩家已装备武器列表
+    - 实现武器装备逻辑，限制最大武器槽数量（MAX_WEAPON_SLOTS）
+    - 实现武器升级逻辑
+    - 每帧调用所有已装备武器的 update 方法
+    - _需求: 5.1, 5.3, 5.6, 5.7, 5.9_
+  - [ ]* 12.2 编写武器槽上限约束属性测试
+    - **Property 10: 武器槽上限约束**
+    - **验证: 需求 5.6**
+  - [x] 12.3 创建 `Runtime/ItemManager.ts`
+    - 注入 TypeRegistry<IItemType>，管理玩家已拾取道具列表
+    - 实现道具拾取时立即应用增益效果
+    - 实现道具升级逻辑
+    - _需求: 5.4, 5.8, 5.9_
+
+- [x] 13. 运行时核心系统：升级系统
+  - [x] 13.1 创建 `Runtime/LevelUpManager.ts`
+    - 注入 TypeRegistry<ILevelUpOption>，管理升级选项生成
+    - 实现 generateChoices 方法：按权重随机选择指定数量的可用选项
+    - 实现 getExpToNextLevel 方法：使用公式 `BASE_EXP * (EXP_GROWTH_FACTOR ^ currentLevel)`
+    - 升级时暂停战斗，展示选项面板，选择后应用效果并恢复战斗
+    - _需求: 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8_
+  - [ ]* 13.2 编写经验公式单调递增属性测试
+    - **Property 3: 经验公式单调递增**
+    - **验证: 需求 6.5**
+
+- [x] 14. 检查点 - 核心运行时系统验证
+  - 确保所有测试通过，如有疑问请询问用户。
+
+- [x] 15. 运行时系统：永久成长与商店
+  - [x] 15.1 创建 `Runtime/MetaProgressionManager.ts`
+    - 实现 purchaseUpgrade 方法：检查金币、扣除金币、提升升级等级、持久化保存
+    - 实现 applyToPlayer 方法：将所有已购买永久升级效果应用到玩家初始属性
+    - _需求: 7.1, 7.2, 7.3, 7.4, 7.5_
+  - [ ]* 15.2 编写金币交易原子性属性测试
+    - **Property 5: 金币交易原子性**
+    - **验证: 需求 7.3, 12.5, 12.7**
+  - [x] 15.3 创建 `Runtime/ShopManager.ts`
+    - 注入 TypeRegistry<IShopGoods>，管理商店库存生成和交易
+    - 实现 generateInventory 方法：根据楼层深度随机生成商品列表
+    - 实现 purchaseItem 方法：检查金币 → 扣除金币 → 应用商品效果 → 标记已购买
+    - _需求: 12.2, 12.3, 12.4, 12.5, 12.6, 12.7, 12.8, 12.13, 12.14_
+
+- [x] 16. 运行时系统：事件房间与宠物
+  - [x] 16.1 创建 `Runtime/EventRoomManager.ts`
+    - 注入 TypeRegistry<IEventType>，管理事件池和事件触发
+    - 实现按权重随机抽取事件逻辑
+    - 实现事件选项执行和效果应用
+    - 支持未完成事件的状态保留
+    - _需求: 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7, 11.8, 11.11, 11.12_
+  - [x] 16.2 创建 `Runtime/PetManager.ts`
+    - 注入 TypeRegistry<IPetType>，管理宠物的激活、替换和 AI 更新
+    - 实现宠物跟随逻辑（保持指定跟随距离）
+    - 实现宠物替换确认流程
+    - 每帧调用宠物的 update 方法和被动增益效果
+    - _需求: 13.1, 13.2, 13.3, 13.4, 13.5, 13.6, 13.7, 13.8, 13.9, 13.10, 13.13, 13.14_
+
+- [x] 17. 运行时系统：职业与 NPC
+  - [x] 17.1 创建 `Runtime/ClassManager.ts`
+    - 注入 TypeRegistry<IClassType>，管理职业解锁、选择和切换
+    - 实现 selectClass 方法：应用职业基础属性加成和初始技能
+    - 实现 allocateTalent 方法：检查层级解锁条件后分配天赋点
+    - 实现 switchClass 方法：移除旧职业效果、重置天赋树、退还天赋点、应用新职业
+    - 实现 checkUnlockConditions 方法：根据稀有度检查解锁条件
+    - _需求: 15.1, 15.2, 15.3, 15.4, 15.5, 15.6, 15.7, 15.8, 15.9, 15.10, 15.11, 15.12, 15.13, 15.17, 15.18_
+  - [ ]* 17.2 编写天赋树层级约束属性测试
+    - **Property 6: 天赋树层级约束**
+    - **验证: 需求 15.7**
+  - [x] 17.3 创建 `Runtime/NpcManager.ts`
+    - 注入 TypeRegistry<INpcType>，管理 NPC 生成、交互和关系网络
+    - 实现 addAffinity 方法：增加好感度并检查合作联动奖励
+    - 实现 checkCooperationRewards 方法：双方好感度达到阈值时触发联动
+    - 实现 getCompetitionPriceModifier 方法：竞争关系价格调整
+    - 未遇到的 NPC 类型在后续楼层提高出现概率
+    - _需求: 16.1, 16.2, 16.3, 16.11, 16.12, 16.13, 16.14, 16.15, 16.16, 16.17, 16.20, 16.21_
+  - [ ]* 17.4 编写 NPC 好感度非负属性测试
+    - **Property 9: NPC 好感度非负**
+    - **验证: 需求 16.11**
+
+- [x] 18. 运行时系统：换装管理
+  - [x] 18.1 创建 `Runtime/CostumeManager.ts`
+    - 管理装扮的解锁状态和装备状态
+    - 实现 getUnlockedCostumes、equipCostume、unlockCostume 方法
+    - 支持三个装扮部位：头部、身体、特效
+    - 装扮为纯装饰性，不影响战斗属性
+    - 通过 StorageManager 持久化保存
+    - _需求: 14.1, 14.2, 14.3, 14.4, 14.5, 14.6, 14.7, 14.8_
+
+- [x] 19. 检查点 - 运行时系统完整验证
+  - 确保所有测试通过，如有疑问请询问用户。
+
+- [x] 20. 可扩展类型实现：房间类型
+  - [x] 20.1 创建 `Types/Rooms/BattleRoom.ts`
+    - 实现 IRoomType 接口，战斗房间：进入时生成敌人，清除条件为所有敌人被击杀
+    - _需求: 3.2, 3.7_
+  - [x] 20.2 创建 `Types/Rooms/EliteRoom.ts`
+    - 实现 IRoomType 接口，精英房间：生成精英敌人，更高难度和奖励
+    - _需求: 3.2, 3.7_
+  - [x] 20.3 创建 `Types/Rooms/BossRoom.ts`
+    - 实现 IRoomType 接口，Boss 房间：生成 Boss 敌人，击败后开放下一楼层入口
+    - _需求: 3.2, 3.5, 3.7_
+  - [x] 20.4 创建 `Types/Rooms/EventRoom.ts`、`Types/Rooms/ShopRoom.ts`、`Types/Rooms/NpcRoom.ts`
+    - 分别实现事件房间、商店房间和 NPC 房间的 IRoomType 接口
+    - _需求: 3.2, 3.7, 11.1, 12.1, 16.2_
+
+- [x] 21. 可扩展类型实现：敌人类型
+  - [x] 21.1 创建 `Types/Enemies/MeleeEnemy.ts`
+    - 实现 IEnemyType 接口，近战型 AI：追踪玩家并近距离攻击
+    - _需求: 4.1, 4.3, 4.7_
+  - [x] 21.2 创建 `Types/Enemies/RangedEnemy.ts`
+    - 实现 IEnemyType 接口，远程型 AI：保持距离并发射投射物
+    - _需求: 4.1, 4.3, 4.7_
+  - [x] 21.3 创建 `Types/Enemies/EliteEnemy.ts` 和 `Types/Enemies/BossEnemy.ts`
+    - 实现精英敌人（增强属性和特殊技能）和 Boss 敌人（多阶段攻击模式）
+    - _需求: 4.1, 4.6, 4.7_
+
+- [x] 22. 可扩展类型实现：武器类型
+  - [x] 22.1 创建 `Types/Weapons/MeleeWeapon.ts`
+    - 实现 IWeaponType 接口，近战斩击：扇形范围伤害
+    - _需求: 5.1, 5.7_
+  - [x] 22.2 创建 `Types/Weapons/ProjectileWeapon.ts`
+    - 实现 IWeaponType 接口，远程投射：发射弹道投射物
+    - _需求: 5.1, 5.7_
+  - [x] 22.3 创建 `Types/Weapons/AoeWeapon.ts` 和 `Types/Weapons/OrbitWeapon.ts`
+    - 实现范围伤害武器（圆形 AOE）和环绕型武器（围绕玩家旋转）
+    - _需求: 5.1, 5.7_
+
+- [x] 23. 可扩展类型实现：宠物、事件和 NPC 类型
+  - [x] 23.1 创建 `Types/Pets/AttackPet.ts`、`Types/Pets/DefensePet.ts`、`Types/Pets/SupportPet.ts`
+    - 分别实现攻击型（自动攻击敌人）、防御型（生成护盾）和辅助型（被动增益）宠物
+    - _需求: 13.1, 13.4, 13.5, 13.6, 13.13_
+  - [x] 23.2 创建 `Types/Events/RewardEvent.ts`、`Types/Events/TrapEvent.ts`、`Types/Events/NpcInteractEvent.ts`、`Types/Events/AltarEvent.ts`
+    - 分别实现奖励选择事件、陷阱事件、NPC 互动事件和祭坛事件
+    - _需求: 11.3, 11.4, 11.5, 11.6, 11.7, 11.11_
+  - [x] 23.3 创建 `Types/Npcs/BlacksmithNpc.ts`、`Types/Npcs/SkillMasterNpc.ts`、`Types/Npcs/ClassMasterNpc.ts`、`Types/Npcs/MerchantNpc.ts`
+    - 分别实现铁匠（武器强化）、技能师（技能学习升级）、职业师（职业转换）和商人（稀有道具交易）
+    - _需求: 16.1, 16.4, 16.5, 16.6, 16.7, 16.8, 16.9, 16.10, 16.20_
+
+- [x] 24. 类型统一注册
+  - [x] 24.1 创建 `Types/TypeRegistration.ts`
+    - 实现 registerAllTypes 函数，统一注册所有房间、敌人、武器、宠物、事件、NPC 和升级选项类型到各自的 TypeRegistry
+    - 在 RoguelikeGameEntry 初始化时调用
+    - _需求: 3.7, 4.7, 5.7, 5.8, 6.7, 11.11, 12.13, 13.13, 15.17, 16.20_
+
+- [x] 25. 检查点 - 可扩展类型验证
+  - 确保所有测试通过，如有疑问请询问用户。
+
+- [ ] 26. UI 面板实现
+  - [ ] 26.1 创建 `UI/RgLoadingPanel.ts` 和 `UI/RgMainPanel.ts`
+    - 加载面板：显示加载进度
+    - 主界面：显示开始游戏、永久升级、换装、职业选择等入口按钮
+    - _需求: 9.2_
+  - [ ] 26.2 创建 `UI/RgBattleHUD.ts`
+    - 战斗 HUD：显示玩家血量条、经验条、当前楼层、已装备武器图标、金币数量、职业图标、技能冷却状态
+    - 监听 PlayerHPChanged、PlayerExpChanged、PlayerGoldChanged 等事件更新显示
+    - _需求: 9.1, 8.4, 12.9, 15.14_
+  - [ ] 26.3 创建 `UI/RgLevelUpPanel.ts`
+    - 升级选择面板：展示 3 个随机升级选项，显示图标、名称、描述和稀有度
+    - 玩家选择后发送 LevelUpChoiceSelected 事件
+    - _需求: 6.3, 6.4, 6.6_
+  - [ ] 26.4 创建 `UI/RgPausePanel.ts`、`UI/RgDeathPanel.ts`、`UI/RgVictoryPanel.ts`
+    - 暂停面板：继续游戏和退出按钮
+    - 死亡结算面板：显示存活时间、击杀数、获得金币等统计数据
+    - 胜利结算面板：显示通关统计和奖励
+    - _需求: 9.3, 9.4_
+  - [ ] 26.5 创建 `UI/RgShopPanel.ts` 和 `UI/RgEventPanel.ts`
+    - 商店面板：展示商品列表、价格、购买按钮，金币不足时显示提示
+    - 事件面板：展示事件描述和可选操作列表
+    - _需求: 12.2, 12.5, 12.6, 11.2_
+  - [ ] 26.6 创建 `UI/RgNpcPanel.ts`
+    - NPC 交互面板：显示 NPC 对话、可用服务列表和好感度信息
+    - _需求: 16.3_
+  - [ ] 26.7 创建 `UI/RgClassSelectPanel.ts` 和 `UI/RgTalentTreePanel.ts`
+    - 职业选择面板：展示已解锁职业列表，显示属性加成和技能预览
+    - 天赋树面板：展示天赋树层级结构，支持天赋点分配
+    - _需求: 15.3, 15.6, 15.14_
+  - [ ] 26.8 创建 `UI/RgCostumePanel.ts`、`UI/RgPetPanel.ts`、`UI/RgMetaUpgradePanel.ts`
+    - 换装面板：部位筛选、装扮预览、一键装备
+    - 宠物面板：宠物信息展示和替换确认
+    - 永久升级面板：升级项目列表、当前等级、升级费用和购买按钮
+    - _需求: 14.3, 14.4, 14.5, 14.9, 13.8, 7.2, 7.3_
+
+- [ ] 27. 战斗流程控制器集成
+  - [ ] 27.1 创建 `Runtime/BattleController.ts`
+    - 整合所有运行时系统：DungeonManager、PlayerController、EnemySpawner、DamageSystem、LevelUpManager、WeaponManager、PetManager、ClassManager
+    - 实现 startRun 方法：初始化玩家（应用永久升级 + 职业属性）→ 生成第一楼层 → 进入起始房间
+    - 实现 update 方法：每帧更新玩家、敌人、武器、宠物，处理碰撞检测和伤害计算
+    - 实现 pause/resume 方法
+    - 实现 onPlayerDeath 方法：暂停战斗 → 结算 Run → 发送 RunEnd 事件
+    - 实现 enterNextFloor 方法：生成下一楼层并进入
+    - _需求: 1.1, 2.6, 3.5, 7.1, 7.5, 9.3_
+  - [ ]* 27.2 编写战斗流程集成测试
+    - 测试完整 Run 流程：开始 → 战斗 → 升级 → 房间切换 → 楼层切换 → 死亡结算
+    - _需求: 1.1, 2.6, 3.5, 7.1_
+
+- [ ] 28. 数据配置文件创建
+  - [ ] 28.1 创建游戏模块的 JSON 配置文件
+    - 创建 `Data/EnemyData.ts`、`Data/WeaponData.ts`、`Data/ItemData.ts` 等数据访问模块
+    - 定义各配置表的 TypeScript 访问接口
+    - _需求: 10.7, 11.9, 12.11, 13.11, 14.10, 15.15, 16.18_
+
+- [ ] 29. 最终检查点 - 全模块集成验证
+  - 确保所有测试通过，如有疑问请询问用户。
+
+## 备注
+
+- 标记 `*` 的任务为可选任务，可跳过以加速 MVP 开发
+- 每个任务引用了具体的需求编号，确保需求可追溯
+- 检查点任务用于阶段性验证，确保增量开发的正确性
+- 属性测试验证设计文档中定义的正确性属性（P1-P10）
+- 单元测试和属性测试互为补充，属性测试覆盖通用不变量，单元测试覆盖具体边界情况
