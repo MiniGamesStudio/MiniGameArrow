@@ -343,43 +343,43 @@
 - [x] 25. 检查点 - 可扩展类型验证
   - 确保所有测试通过，如有疑问请询问用户。
 
-- [ ] 26. UI 面板实现
-  - [ ] 26.1 创建 `UI/RgLoadingPanel.ts` 和 `UI/RgMainPanel.ts`
+- [x] 26. UI 面板实现
+  - [x] 26.1 创建 `UI/RgLoadingPanel.ts` 和 `UI/RgMainPanel.ts`
     - 加载面板：显示加载进度
     - 主界面：显示开始游戏、永久升级、换装、职业选择等入口按钮
     - _需求: 9.2_
-  - [ ] 26.2 创建 `UI/RgBattleHUD.ts`
+  - [x] 26.2 创建 `UI/RgBattleHUD.ts`
     - 战斗 HUD：显示玩家血量条、经验条、当前楼层、已装备武器图标、金币数量、职业图标、技能冷却状态
     - 监听 PlayerHPChanged、PlayerExpChanged、PlayerGoldChanged 等事件更新显示
     - _需求: 9.1, 8.4, 12.9, 15.14_
-  - [ ] 26.3 创建 `UI/RgLevelUpPanel.ts`
+  - [x] 26.3 创建 `UI/RgLevelUpPanel.ts`
     - 升级选择面板：展示 3 个随机升级选项，显示图标、名称、描述和稀有度
     - 玩家选择后发送 LevelUpChoiceSelected 事件
     - _需求: 6.3, 6.4, 6.6_
-  - [ ] 26.4 创建 `UI/RgPausePanel.ts`、`UI/RgDeathPanel.ts`、`UI/RgVictoryPanel.ts`
+  - [x] 26.4 创建 `UI/RgPausePanel.ts`、`UI/RgDeathPanel.ts`、`UI/RgVictoryPanel.ts`
     - 暂停面板：继续游戏和退出按钮
     - 死亡结算面板：显示存活时间、击杀数、获得金币等统计数据
     - 胜利结算面板：显示通关统计和奖励
     - _需求: 9.3, 9.4_
-  - [ ] 26.5 创建 `UI/RgShopPanel.ts` 和 `UI/RgEventPanel.ts`
+  - [x] 26.5 创建 `UI/RgShopPanel.ts` 和 `UI/RgEventPanel.ts`
     - 商店面板：展示商品列表、价格、购买按钮，金币不足时显示提示
     - 事件面板：展示事件描述和可选操作列表
     - _需求: 12.2, 12.5, 12.6, 11.2_
-  - [ ] 26.6 创建 `UI/RgNpcPanel.ts`
+  - [x] 26.6 创建 `UI/RgNpcPanel.ts`
     - NPC 交互面板：显示 NPC 对话、可用服务列表和好感度信息
     - _需求: 16.3_
-  - [ ] 26.7 创建 `UI/RgClassSelectPanel.ts` 和 `UI/RgTalentTreePanel.ts`
+  - [x] 26.7 创建 `UI/RgClassSelectPanel.ts` 和 `UI/RgTalentTreePanel.ts`
     - 职业选择面板：展示已解锁职业列表，显示属性加成和技能预览
     - 天赋树面板：展示天赋树层级结构，支持天赋点分配
     - _需求: 15.3, 15.6, 15.14_
-  - [ ] 26.8 创建 `UI/RgCostumePanel.ts`、`UI/RgPetPanel.ts`、`UI/RgMetaUpgradePanel.ts`
+  - [x] 26.8 创建 `UI/RgCostumePanel.ts`、`UI/RgPetPanel.ts`、`UI/RgMetaUpgradePanel.ts`
     - 换装面板：部位筛选、装扮预览、一键装备
     - 宠物面板：宠物信息展示和替换确认
     - 永久升级面板：升级项目列表、当前等级、升级费用和购买按钮
     - _需求: 14.3, 14.4, 14.5, 14.9, 13.8, 7.2, 7.3_
 
-- [ ] 27. 战斗流程控制器集成
-  - [ ] 27.1 创建 `Runtime/BattleController.ts`
+- [x] 27. 战斗流程控制器集成
+  - [x] 27.1 创建 `Runtime/BattleController.ts`
     - 整合所有运行时系统：DungeonManager、PlayerController、EnemySpawner、DamageSystem、LevelUpManager、WeaponManager、PetManager、ClassManager
     - 实现 startRun 方法：初始化玩家（应用永久升级 + 职业属性）→ 生成第一楼层 → 进入起始房间
     - 实现 update 方法：每帧更新玩家、敌人、武器、宠物，处理碰撞检测和伤害计算
@@ -391,13 +391,13 @@
     - 测试完整 Run 流程：开始 → 战斗 → 升级 → 房间切换 → 楼层切换 → 死亡结算
     - _需求: 1.1, 2.6, 3.5, 7.1_
 
-- [ ] 28. 数据配置文件创建
-  - [ ] 28.1 创建游戏模块的 JSON 配置文件
+- [x] 28. 数据配置文件创建
+  - [x] 28.1 创建游戏模块的 JSON 配置文件
     - 创建 `Data/EnemyData.ts`、`Data/WeaponData.ts`、`Data/ItemData.ts` 等数据访问模块
     - 定义各配置表的 TypeScript 访问接口
     - _需求: 10.7, 11.9, 12.11, 13.11, 14.10, 15.15, 16.18_
 
-- [ ] 29. 最终检查点 - 全模块集成验证
+- [x] 29. 最终检查点 - 全模块集成验证
   - 确保所有测试通过，如有疑问请询问用户。
 
 ## 备注
