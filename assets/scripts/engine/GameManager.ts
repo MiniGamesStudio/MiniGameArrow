@@ -3,6 +3,8 @@ import { UIManager } from "./ui/UIManager";
 import { AudioManager } from "./AudioManager";
 import { ResManager } from "./ResManager";
 import { NodePoolManager } from "./NodePool";
+import { ConfigManager } from "./ConfigManager";
+import { FlatBuffersRuntime } from "./FlatBuffersRuntime";
 import { TimerManager } from "../framework/TimerManager";
 import { StorageManager } from "../framework/StorageManager";
 import { PoolManager } from "../framework/ObjectPool";
@@ -35,13 +37,13 @@ export class GameManager {
      * @param gameWorldRoot 游戏世界根节点
      * @param uiRoot UI 根节点
      * @param persistNode 常驻节点（用于挂载 AudioSource 等）
-     * @param onGameReady 游戏层初始化回调（注册 UI、加载首屏等）
+     * @param onGameReady 游戏层初始化回调（注册 UI、加载首屏等，可异步加载配置）
      */
     Init(
         gameWorldRoot: Node,
         uiRoot: Node,
         persistNode: Node,
-        onGameReady?: () => void
+        onGameReady?: () => void | Promise<void>
     ): void {
         if (this.m_Initialized) return;
         this.m_Initialized = true;
@@ -59,7 +61,13 @@ export class GameManager {
 
         // 4. 游戏层初始化（注册 UI 面板、设置存储前缀、打开首屏等）
         if (onGameReady) {
-            onGameReady();
+            try {
+                Promise.resolve(onGameReady()).catch((err) => {
+                    console.error("GameManager: 游戏层初始化失败", err);
+                });
+            } catch (err) {
+                console.error("GameManager: 游戏层初始化失败", err);
+            }
         }
     }
 
@@ -79,7 +87,10 @@ export class GameManager {
         PoolManager.getInstance().clearAll();
         NodePoolManager.getInstance().clearAll();
         AudioManager.getInstance().destroy();
+        UIManager.GetInstance().Destroy();
         EventManager.getInstance().clear();
+        ConfigManager.getInstance().clear();
+        FlatBuffersRuntime.getInstance().releaseAll();
         ResManager.getInstance().releaseAll();
         this.m_Initialized = false;
     }

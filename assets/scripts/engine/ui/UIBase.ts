@@ -14,6 +14,7 @@ export abstract class UIBase extends Component {
     public m_UIID: number = 0;
 
     protected m_SubPageMap: Map<string, Node> = new Map();
+    protected m_PendingSubPageSet: Set<string> = new Set();
 
     /** 初始化（仅首次创建时调用） */
     OnInit(): void {}
@@ -23,7 +24,8 @@ export abstract class UIBase extends Component {
 
     /** 关闭面板 */
     OnClose(): void {
-        this.m_SubPageMap.forEach((value, key) => {
+        this.m_PendingSubPageSet.clear();
+        Array.from(this.m_SubPageMap.entries()).forEach(([key, value]) => {
             if (value) {
                 this.DetachUIPage(key, value);
             }
@@ -50,7 +52,7 @@ export abstract class UIBase extends Component {
         if (!root) return;
 
         const subPageNode = this.m_SubPageMap.get(pageName);
-        if (subPageNode) {
+        if (subPageNode && subPageNode.isValid) {
             subPageNode.active = true;
             const uiScript = subPageNode.getComponent(UIBase);
             if (uiScript) {
@@ -58,9 +60,18 @@ export abstract class UIBase extends Component {
             }
             return;
         }
+        if (subPageNode && !subPageNode.isValid) {
+            this.m_SubPageMap.delete(pageName);
+        }
+        if (this.m_PendingSubPageSet.has(pageName)) return;
 
+        this.m_PendingSubPageSet.add(pageName);
         resources.load(prefabPath, Prefab, (err, prefab) => {
-            if (err || !root || !root.isValid) return;
+            if (err || !this.isValid || !root || !root.isValid || !this.m_PendingSubPageSet.has(pageName)) {
+                this.m_PendingSubPageSet.delete(pageName);
+                return;
+            }
+            this.m_PendingSubPageSet.delete(pageName);
 
             const pageNode = instantiate(prefab);
             pageNode.parent = root;
@@ -79,7 +90,11 @@ export abstract class UIBase extends Component {
 
     /** 卸载子页面 */
     DetachUIPage(subPageName: string, subPageNode: Node): void {
-        if (!subPageNode) return;
+        this.m_PendingSubPageSet.delete(subPageName);
+        if (!subPageNode || !subPageNode.isValid) {
+            this.m_SubPageMap.delete(subPageName);
+            return;
+        }
 
         const uiScript = subPageNode.getComponent(UIBase);
         if (uiScript) {

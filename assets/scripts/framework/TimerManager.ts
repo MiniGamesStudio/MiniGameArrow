@@ -80,12 +80,15 @@ export class TimerManager {
     update(dt: number): void {
         const toRemove: number[] = [];
 
-        this._timers.forEach((timer, id) => {
+        Array.from(this._timers.entries()).forEach(([id, timer]) => {
+            if (this._timers.get(id) !== timer) return;
             if (timer.paused) return;
 
             timer.elapsed += dt;
             if (timer.elapsed >= timer.delay) {
                 timer.callback();
+                if (this._timers.get(id) !== timer) return;
+
                 if (timer.repeat) {
                     timer.elapsed -= timer.delay;
                 } else {

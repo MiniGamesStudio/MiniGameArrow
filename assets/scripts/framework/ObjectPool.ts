@@ -58,6 +58,8 @@ export class ObjectPool<T> {
     /** 回收对象到池中 */
     put(obj: T): void {
         if (obj == null) return;
+        if (this._pool.includes(obj)) return;
+
         this._onPut?.(obj);
 
         if (this._pool.length < this._maxSize) {

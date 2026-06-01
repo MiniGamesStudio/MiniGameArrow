@@ -1,4 +1,4 @@
-import { EventManager } from '../../../Core/EventManager';
+import { EventManager } from '../../../framework/EventManager';
 import { SurvivorEvent } from '../SurvivorEvent';
 import { SurvivorConst } from '../SurvivorConst';
 import { SurvivorGameState } from '../SurvivorGameState';

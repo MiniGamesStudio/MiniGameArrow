@@ -26,6 +26,8 @@ export class UIManager {
     private m_PanelDataMap: Map<number, number[]> = new Map();
     /** 面板唯一ID -> UI节点 */
     private m_PanelNodeMap: Map<number, Node> = new Map();
+    /** 面板唯一ID -> uiID，用于取消异步加载中的面板 */
+    private m_PanelUIIDMap: Map<number, number> = new Map();
     /** 各层级根节点 */
     private m_LayerRoots: Map<UILayer, Node> = new Map();
 
@@ -33,6 +35,8 @@ export class UIManager {
         this.m_UIRoot = uiRoot;
         this.m_PanelDataMap.clear();
         this.m_PanelNodeMap.clear();
+        this.m_PanelUIIDMap.clear();
+        this.m_LayerRoots.clear();
 
         const layers: [UILayer, string][] = [
             [UILayer.Background, "UI_Background"],
@@ -54,24 +58,44 @@ export class UIManager {
         return this.m_LayerRoots.get(layer) ?? null;
     }
 
+    Destroy(): void {
+        const panelIDs = Array.from(this.m_PanelNodeMap.keys());
+        panelIDs.forEach(panelID => this.ClosePanelByID(panelID));
+
+        this.m_LayerRoots.forEach(root => {
+            if (root && root.isValid) {
+                root.removeFromParent();
+                root.destroy();
+            }
+        });
+
+        this.m_PanelDataMap.clear();
+        this.m_PanelNodeMap.clear();
+        this.m_PanelUIIDMap.clear();
+        this.m_LayerRoots.clear();
+        UIDataRegistry.Clear();
+        this.m_UIRoot = null;
+        this.m_PanelID = 1;
+    }
+
     /** 通过面板唯一ID关闭并销毁界面 */
     ClosePanelByID(panelID: number): boolean {
         const node = this.m_PanelNodeMap.get(panelID);
-        if (!node) return false;
+        if (!node || !node.isValid) return this.RemovePanelRecord(panelID);
 
         const script = node.getComponent(UIBase);
         if (script) script.OnClose();
 
         node.removeFromParent();
         node.destroy();
-        this.m_PanelNodeMap.delete(panelID);
+        this.RemovePanelRecord(panelID);
         return true;
     }
 
     /** 通过面板唯一ID隐藏界面 */
     HidePanelByID(panelID: number): boolean {
         const node = this.m_PanelNodeMap.get(panelID);
-        if (!node) return false;
+        if (!node || !node.isValid) return this.RemovePanelRecord(panelID);
 
         const script = node.getComponent(UIBase);
         if (script) script.OnClose();
@@ -87,15 +111,15 @@ export class UIManager {
         if (!datas || !uidata) return false;
 
         const closeCount = datas.length - uidata.cacheCount;
-        for (let i = 0; i < closeCount; i++) {
-            const pID = datas.pop();
-            if (pID !== undefined) {
-                this.ClosePanelByID(pID);
-            }
+        if (closeCount > 0) {
+            const closeIDs = datas.slice(datas.length - closeCount);
+            closeIDs.forEach(pID => this.ClosePanelByID(pID));
         }
 
-        datas.forEach(pID => this.HidePanelByID(pID));
-        this.m_PanelDataMap.set(id, datas);
+        const cacheIDs = this.m_PanelDataMap.get(id);
+        if (cacheIDs) {
+            [...cacheIDs].forEach(pID => this.HidePanelByID(pID));
+        }
         return true;
     }
 
@@ -119,15 +143,12 @@ export class UIManager {
             this.m_PanelDataMap.set(id, uiDatas);
         }
         uiDatas.push(pID);
+        this.m_PanelUIIDMap.set(pID, id);
 
         resources.load(uidata.prefabPath, Prefab, (err, prefab) => {
             if (err) {
                 console.warn(`UIManager: 加载面板失败 [${uidata.name}]`, err);
-                const datas = this.m_PanelDataMap.get(id);
-                if (datas) {
-                    const idx = datas.indexOf(pID);
-                    if (idx >= 0) datas.splice(idx, 1);
-                }
+                this.RemovePanelRecord(pID);
                 return;
             }
 
@@ -137,7 +158,10 @@ export class UIManager {
             }
 
             const root = this.GetUIRootByUILayer(uidata.layer);
-            if (!root) return;
+            if (!root || !root.isValid) {
+                this.RemovePanelRecord(pID);
+                return;
+            }
 
             const uiNode = instantiate(prefab);
             uiNode.parent = root;
@@ -158,6 +182,33 @@ export class UIManager {
         return pID;
     }
 
+    private RemovePanelRecord(panelID: number): boolean {
+        let removed = false;
+        const uiID = this.m_PanelUIIDMap.get(panelID);
+
+        if (uiID !== undefined) {
+            const datas = this.m_PanelDataMap.get(uiID);
+            if (datas) {
+                const idx = datas.indexOf(panelID);
+                if (idx >= 0) {
+                    datas.splice(idx, 1);
+                    removed = true;
+                }
+                if (datas.length === 0) {
+                    this.m_PanelDataMap.delete(uiID);
+                }
+            }
+            this.m_PanelUIIDMap.delete(panelID);
+            removed = true;
+        }
+
+        if (this.m_PanelNodeMap.delete(panelID)) {
+            removed = true;
+        }
+
+        return removed;
+    }
+
     private CheckPanel(id: number, args: any[]): number {
         const uiDatas = this.m_PanelDataMap.get(id);
         if (!uiDatas || uiDatas.length === 0) return 0;
@@ -167,7 +218,7 @@ export class UIManager {
 
         for (const panelID of uiDatas) {
             const panelNode = this.m_PanelNodeMap.get(panelID);
-            if (!panelNode) {
+            if (!panelNode || !panelNode.isValid) {
                 invalidIDs.push(panelID);
                 continue;
             }
@@ -192,7 +243,12 @@ export class UIManager {
         if (invalidIDs.length > 0) {
             const invalidSet = new Set(invalidIDs);
             const filtered = uiDatas.filter(v => !invalidSet.has(v));
-            this.m_PanelDataMap.set(id, filtered);
+            if (filtered.length > 0) {
+                this.m_PanelDataMap.set(id, filtered);
+            } else {
+                this.m_PanelDataMap.delete(id);
+            }
+            invalidIDs.forEach(panelID => this.m_PanelUIIDMap.delete(panelID));
         }
 
         return rID;

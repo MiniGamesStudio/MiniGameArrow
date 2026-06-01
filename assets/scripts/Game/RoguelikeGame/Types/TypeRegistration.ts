@@ -101,6 +101,15 @@ export const terrainEffectRegistry = new TypeRegistry<ITerrainEffect>();
  * 在模块初始化时由 RoguelikeGameEntry 调用
  */
 export function registerAllTypes(): void {
+    roomRegistry.clear();
+    enemyRegistry.clear();
+    weaponRegistry.clear();
+    petRegistry.clear();
+    eventTypeRegistry.clear();
+    npcRegistry.clear();
+    terrainRegistry.clear();
+    terrainEffectRegistry.clear();
+
     // 房间类型
     roomRegistry.register('battle', () => new BattleRoom());
     roomRegistry.register('elite', () => new EliteRoom());

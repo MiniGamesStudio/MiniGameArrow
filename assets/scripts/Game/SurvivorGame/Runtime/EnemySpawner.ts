@@ -2,7 +2,7 @@ import { Vec3 } from 'cc';
 import { EnemyConfig, WaveConfig } from '../Data/EnemyData';
 import { SurvivorConst } from '../SurvivorConst';
 import { SurvivorEvent } from '../SurvivorEvent';
-import { EventManager } from '../../../Core/EventManager';
+import { EventManager } from '../../../framework/EventManager';
 import { BattleSession } from './BattleSession';
 
 /**

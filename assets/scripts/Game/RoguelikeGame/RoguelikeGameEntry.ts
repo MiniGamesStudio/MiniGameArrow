@@ -6,6 +6,8 @@ import { registerRoguelikeGameUI, RoguelikeUIID } from './RoguelikeUIConfig';
 import { RoguelikeGameState } from './RoguelikeGameState';
 import { RoguelikeEvent } from './RoguelikeEvent';
 import { ROGUELIKE_CONFIG_MAP } from './RoguelikeConst';
+import { registerConfigAccessors } from './Data/ConfigTables';
+import { registerAllTypes } from './Types/TypeRegistration';
 
 /**
  * 肉鸽动作游戏 — 游戏入口
@@ -20,8 +22,9 @@ export async function initRoguelikeGame(): Promise<void> {
     // 3. 加载 FlatBuffers 配置数据
     await FlatBuffersRuntime.getInstance().loadAll(ROGUELIKE_CONFIG_MAP);
 
-    // 4. 注册所有可扩展类型（后续任务实现 registerAllTypes）
-    // registerAllTypes();
+    // 4. 注册配置访问器与所有可扩展类型
+    registerConfigAccessors();
+    registerAllTypes();
 
     // 5. 初始化持久化状态
     RoguelikeGameState.getInstance();

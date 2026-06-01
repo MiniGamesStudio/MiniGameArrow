@@ -3696,5 +3696,125 @@
     "url": "db://assets/scripts/Game/RoguelikeGame/Types/Weapons/ProjectileWeapon.ts",
     "value": {},
     "versionCode": 1
+  },
+  "a86bd6cc-e6ae-4ff4-8100-7887cd85ff05": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain",
+    "value": {},
+    "versionCode": 1
+  },
+  "7d8e123e-ca86-401a-8ec2-1547f2044cae": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/TerrainEffects",
+    "value": {},
+    "versionCode": 1
+  },
+  "e83a1f18-e714-406d-9272-fa8b8f8383fd": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/Terrains",
+    "value": {},
+    "versionCode": 1
+  },
+  "8a7870ec-35bd-43c0-a033-074b0384f188": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Data/Interfaces/IHexTerrainType.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "21684061-e819-40f0-8002-7adb0abda1c3": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Data/Interfaces/ITerrainEffect.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1654ef14-4dd6-46e2-8e94-b523adb0f35d": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/FogOfWar.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "c207acda-2702-46a7-8026-db6545f9fe21": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexCoordinate.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "7e3aa850-e777-4d85-a1c6-d865f3cdeb77": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexGrid.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "7b5bff56-f032-42b6-9dc7-7f02288861ef": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexMapGenerator.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "78466d5e-a514-4e3e-83c1-308c106301aa": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexPathfinder.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1a189518-fb13-4300-89e1-846497fcc549": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexRenderer.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "a4d46b38-f589-426c-a615-0bb3619fee4d": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/SimplexNoise.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "957f8e2b-de6c-48fc-88a8-3c926bf02696": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/TerrainEffectManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "59c6deb7-009c-46e5-9d5e-24646d3d8673": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/CooldownReductionEffect.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "76327dc1-1edf-426f-8ea1-32403e6e7600": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/DefenseBoostEffect.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "eb36ccda-6e2c-415c-b4f0-60d1f2f6500f": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/DotDamageEffect.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "b9608dc7-75a4-4257-8ccb-f3abcda053e1": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/EvasionBoostEffect.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "5b5a2af1-43e4-44cb-af85-fd700eab8e99": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/SpeedModifierEffect.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "c990ad3f-af61-40fb-ae37-b8bdfdc08521": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/Terrains/DesertTerrain.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "217969bd-816f-4bdf-a1f0-a9a0db9dd593": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/Terrains/ForestTerrain.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "307e8997-fe6b-478d-b818-0f3f1b55b099": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/Terrains/MountainTerrain.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "b37949c1-2282-4e65-8ba2-6318e3bb4ac8": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/Terrains/PlainsTerrain.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "ece36d1d-aca4-4fce-b892-3d3a8c9efd02": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/Terrains/SwampTerrain.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "ac797e07-e831-4a17-b9c6-f873c4a8ed74": {
+    "url": "db://assets/scripts/Game/RoguelikeGame/Types/Terrains/WaterTerrain.ts",
+    "value": {},
+    "versionCode": 1
   }
 }

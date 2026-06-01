@@ -384,6 +384,10 @@ class PlaceholderAccessor<T> implements IConfigAccessor<T> {
 export function registerConfigAccessors(): void {
     const cm = ConfigManager.getInstance();
 
+    Object.values(CONFIG_TABLE_NAMES).forEach((tableName) => {
+        cm.removeAccessor(tableName);
+    });
+
     cm.registerAccessor<EnemyConfigTable>(
         CONFIG_TABLE_NAMES.ENEMY,
         new PlaceholderAccessor<EnemyConfigTable>(CONFIG_TABLE_NAMES.ENEMY)

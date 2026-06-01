@@ -29,11 +29,15 @@ export class NodePool {
     /** 从池中获取一个节点，池空则新建 */
     get(): Node {
         let node: Node;
-        if (this._pool.length > 0) {
+        while (this._pool.length > 0) {
             node = this._pool.pop()!;
-        } else {
-            node = instantiate(this._prefab);
+            if (node && node.isValid) {
+                node.active = true;
+                return node;
+            }
         }
+
+        node = instantiate(this._prefab);
         node.active = true;
         return node;
     }
@@ -44,6 +48,8 @@ export class NodePool {
 
         node.removeFromParent();
         node.active = false;
+
+        if (this._pool.includes(node)) return;
 
         if (this._pool.length < this._maxSize) {
             this._pool.push(node);
@@ -108,7 +114,9 @@ export class NodePoolManager {
         const pool = this._pools.get(name);
         if (!pool) {
             console.warn(`NodePoolManager: 池 [${name}] 不存在，节点将被销毁`);
-            node.destroy();
+            if (node && node.isValid) {
+                node.destroy();
+            }
             return;
         }
         pool.put(node);
