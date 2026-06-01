@@ -33,14 +33,11 @@
       "uuid": "b5ad4379-da55-44a2-a5cd-3bbde1c09556"
     },
     "scene\\main.scene": {
-      "time": 1769742757823.9429,
+      "time": 1780285848900.4724,
       "uuid": "832cd028-fca2-4694-bfcf-606b1fd6a211"
     },
     "scripts.meta": {
       "time": 1757907861880.8352
-    },
-    "scripts\\Core.meta": {
-      "time": 1757999262660.0115
     },
     "scripts\\Launcher.ts.meta": {
       "time": 1757907883012.085
@@ -49,12 +46,8 @@
       "time": 1757989567570.62
     },
     "scripts": {
-      "time": 1777514907670.0066,
+      "time": 1780285777867.2693,
       "uuid": "798ca8d1-0b92-46eb-a837-ab4f0c07f759"
-    },
-    "scripts\\Core": {
-      "time": 1777270869550.716,
-      "uuid": "34d9b340-0ce8-45ee-9a90-5de71fd1411d"
     },
     "scripts\\Core\\GameManager.ts.meta": {
       "time": 1758002393124.16
@@ -76,15 +69,8 @@
       "time": 1758010639251.128
     },
     "resources\\ui\\LoadingPanel.prefab": {
-      "time": 1758342328272.4443,
+      "time": 1780286029891.1233,
       "uuid": "55f8e988-f02b-41a3-8681-5a467e621d1b"
-    },
-    "scripts\\UIScripts.meta": {
-      "time": 1758011478640.107
-    },
-    "scripts\\UIScripts": {
-      "time": 1777270882427.5403,
-      "uuid": "eca477c0-8cbc-4a97-8e49-bb7201cd9023"
     },
     "scripts\\UIScripts\\LoadingPanel.ts.meta": {
       "time": 1758010728059.9749
@@ -96,7 +82,7 @@
       "time": 1758023917029.6375
     },
     "resources\\ui\\MainPanel.prefab": {
-      "time": 1772077088098.935,
+      "time": 1780286084753.492,
       "uuid": "e9ac1fc5-9611-4b81-934c-e3adb37b13fb"
     },
     "scripts\\UIScripts\\MainPanel.ts.meta": {
@@ -218,7 +204,7 @@
       "time": 1758087058663.2974
     },
     "resources\\ui\\GamePage.prefab": {
-      "time": 1758540334754.84,
+      "time": 1780285968661.8784,
       "uuid": "4e538f5a-b238-4708-984c-3c6a804faf65"
     },
     "resources\\ui\\ChallengePage.prefab.meta": {
@@ -242,7 +228,7 @@
       "time": 1758167128707.6814
     },
     "resources\\ui\\GamePanel.prefab": {
-      "time": 1758360937404.8467,
+      "time": 1780286018535.768,
       "uuid": "bc3c7e3c-8681-418f-a2db-f8d6cc7ee731"
     },
     "scripts\\UIScripts\\GamePanel.ts.meta": {
@@ -252,18 +238,11 @@
       "time": 1758263406192.796
     },
     "resources\\ui\\FlowerPlatform.prefab": {
-      "time": 1758597732201.9497,
+      "time": 1780285949575.7632,
       "uuid": "a08eb42f-ead3-477e-8bc8-b49773427aed"
     },
     "scripts\\UIScripts\\FlowerPlatform.ts.meta": {
       "time": 1758263557481.9304
-    },
-    "scripts\\Config.meta": {
-      "time": 1758273676469.1177
-    },
-    "scripts\\Config": {
-      "time": 1776483328183.8672,
-      "uuid": "7679864b-6b16-4be3-8ce9-0eb2fe80ab38"
     },
     "scripts\\Config\\Config.ts.meta": {
       "time": 1758273698262.2737
@@ -523,7 +502,7 @@
       "time": 1758606149272.7722
     },
     "resources\\ui\\VictoryPanel.prefab": {
-      "time": 1758609331583.5237,
+      "time": 1780286138605.7878,
       "uuid": "34c81461-0e6d-453c-bb3a-4f55bfe90ec1"
     },
     "scripts\\UIScripts\\VictoryPanel.ts.meta": {
@@ -547,18 +526,11 @@
       "time": 1772077088099.9348
     },
     "resources\\ui\\MainTopPage.prefab": {
-      "time": 1772077088098.935,
+      "time": 1780286098560.8142,
       "uuid": "6705c436-361d-4e6f-a723-9f89adbf48e7"
     },
     "scripts\\UIScripts\\MainTopPage.ts.meta": {
       "time": 1772077088115.8765
-    },
-    "scripts\\Model": {
-      "time": 1776483339015.3054,
-      "uuid": "1b09cbb0-87a6-4098-998c-1c3698b224f7"
-    },
-    "scripts\\Model.meta": {
-      "time": 1774423232274.5176
     },
     "scripts\\Config\\GameConst.ts.meta": {
       "time": 1774423232278.5027
@@ -778,7 +750,7 @@
       "uuid": "f83a0421-5281-4443-b795-b35c7ade3faf"
     },
     "scripts\\framework\\TimerManager.ts": {
-      "time": 1777267696766.2722,
+      "time": 1780284216148.8408,
       "uuid": "dde74a02-05e2-4e8c-93b9-cdf4cb71e61c"
     },
     "scripts\\framework\\TypeFactory.ts": {

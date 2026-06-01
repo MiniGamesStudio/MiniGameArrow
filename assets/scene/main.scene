@@ -485,7 +485,7 @@
     "_id": "cex9VOkwVDOr63sITlWp0z"
   },
   {
-    "__type__": "43b48kQNLVFYqRtvDjY9Y7t",
+    "__type__": "536c53GeIBKypFshaibwCCQ",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -496,10 +496,10 @@
     "__prefab": null,
     "designResolution": {
       "__type__": "cc.Size",
-      "width": 750,
-      "height": 1334
+      "width": 0,
+      "height": 0
     },
-    "_id": "bfCzyXSTNP3Y00Qv3H8sr9"
+    "_id": "54XZPHxa5MsqHBIb8inu66"
   },
   {
     "__type__": "cc.Node",
@@ -547,7 +547,7 @@
     "_id": "40CQZvyzhKppHa9/P631tQ"
   },
   {
-    "__type__": "6bd47OpuIVM960Z9ICYXtwO",
+    "__type__": "a8ace7m/2FNfrnGB9Z8LPdo",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -568,7 +568,7 @@
     "m_GameWorld": {
       "__id__": 8
     },
-    "_id": "cb4oxOdZdAFqVEfeFbsetv"
+    "_id": "18ek5w0AVN0I+vsRW/t4xM"
   },
   {
     "__type__": "cc.PrefabInfo",
