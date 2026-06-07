@@ -1,14 +1,14 @@
 import { _decorator, Camera, Component, director, Node, game, Game } from 'cc';
 import { ScreenAdapter } from "./ScreenAdapter";
 import { GameManager } from "./GameManager";
-import { initFlowerGame } from "../Game/FlowerGame/FlowerGameEntry";
+import { initCommonGame } from "../Game/CommonGame/CommonGameEntry";
 
 const { ccclass, property } = _decorator;
 
 /**
  * 游戏入口 — 常驻节点，驱动 GameManager 生命周期
  * 引擎层：唯一与游戏层耦合的地方是 onGameReady 回调
- * 切换玩法时只需替换 initFlowerGame 为其他游戏的入口函数
+ * 切换玩法时只需替换 initCommonGame 为其他游戏的入口函数
  */
 @ccclass('Launcher')
 export class Launcher extends Component {
@@ -31,7 +31,7 @@ export class Launcher extends Component {
             this.m_GameWorld,
             this.m_UIRoot,
             this.node,
-            initFlowerGame
+            initCommonGame
         );
     }
 

@@ -852,63 +852,27 @@
   },
   "7ee62a35-2d3d-495e-b6e7-9a53eb9eb22d": {
     "url": "db://assets/resources/ui/ChallengePage.prefab",
-    "value": {
-      "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "d8609034-0eb0-4d16-a4d4-f826f52eaee6@f9941"
-      ],
-      "dependScripts": []
-    },
+    "value": {},
     "versionCode": 2
   },
   "4d5a5a59-0685-4761-b9b7-74276645eaf1": {
     "url": "db://assets/resources/ui/ShopPage.prefab",
-    "value": {
-      "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "d8609034-0eb0-4d16-a4d4-f826f52eaee6@f9941"
-      ],
-      "dependScripts": []
-    },
+    "value": {},
     "versionCode": 2
   },
   "be16711d-9d55-4f51-bd1c-b5b7d7fd3cbb": {
     "url": "db://assets/resources/ui/AchievePage.prefab",
-    "value": {
-      "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "d8609034-0eb0-4d16-a4d4-f826f52eaee6@f9941"
-      ],
-      "dependScripts": []
-    },
+    "value": {},
     "versionCode": 2
   },
   "4e538f5a-b238-4708-984c-3c6a804faf65": {
     "url": "db://assets/resources/ui/GamePage.prefab",
-    "value": {
-      "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "d8609034-0eb0-4d16-a4d4-f826f52eaee6@f9941",
-        "ac2c590c-5e3f-4ca5-a253-5c9ea1d35cdc@f9941",
-        "773ec3ce-cc47-496a-bd67-710371d8c490@f9941",
-        "3bc00f09-6efd-412a-9f5c-71536fc96861@f9941",
-        "ee9a4b5e-9cf7-4e80-82f7-1295f0ae2500@f9941"
-      ],
-      "dependScripts": [
-        "2abf6f68-d59c-4808-ba8a-8bb644efb345"
-      ]
-    },
+    "value": {},
     "versionCode": 2
   },
   "c0cd19b3-7a1a-4e8e-b82a-532a25da8a6d": {
     "url": "db://assets/resources/ui/RankingPage.prefab",
-    "value": {
-      "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "d8609034-0eb0-4d16-a4d4-f826f52eaee6@f9941"
-      ],
-      "dependScripts": []
-    },
+    "value": {},
     "versionCode": 2
   },
   "8f73bdfc-d7bb-48e3-9b00-8db3412b8dd2": {
@@ -941,22 +905,7 @@
   },
   "bc3c7e3c-8681-418f-a2db-f8d6cc7ee731": {
     "url": "db://assets/resources/ui/GamePanel.prefab",
-    "value": {
-      "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "9f0061d1-19dd-4e32-8c0b-2dcf7d57772e@f9941",
-        "45f26b7b-2c39-469f-8d8a-7ef51ccf6bd6@f9941",
-        "3bf25aa3-df77-4011-a29d-020e61ca8403@f9941",
-        "5f3c7a34-090a-4dad-b31c-2ea2b1ac4475@f9941",
-        "52792a94-0132-4a9e-99e0-365f1a486ccc@f9941",
-        "1dcf678f-00d7-4fb9-8e1e-bfa9609d814a@f9941",
-        "12802953-430c-4b56-899e-68fd8ebabcb9@f9941",
-        "8f2bf944-ec0d-49ad-9f67-9485e9e0288d@f9941"
-      ],
-      "dependScripts": [
-        "ad6f5a9a-e1f2-4cb2-8de3-e7f57e9e7ba5"
-      ]
-    },
+    "value": {},
     "versionCode": 2
   },
   "ea5e5989-57b5-4e56-bec1-1988a2f4a889": {
@@ -1763,15 +1712,7 @@
   },
   "a08eb42f-ead3-477e-8bc8-b49773427aed": {
     "url": "db://assets/resources/ui/FlowerPlatform.prefab",
-    "value": {
-      "depends": [
-        "2c7b9a37-24cc-439c-bcab-60f3dfe52f4b@f9941",
-        "086ae869-c46a-4be5-87b9-e3ac74ef9c8b@f9941"
-      ],
-      "dependScripts": [
-        "4e3d169b-f7a6-4bdb-8893-b09db3ba391b"
-      ]
-    },
+    "value": {},
     "versionCode": 2
   },
   "1d917e78-c927-49ad-8418-7a1e1e5ee711": {
@@ -2422,9 +2363,7 @@
   },
   "2c7b9a37-24cc-439c-bcab-60f3dfe52f4b": {
     "url": "db://assets/resources/flowerpot/flowerplatform.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "2c7b9a37-24cc-439c-bcab-60f3dfe52f4b@6c48a": {
@@ -2447,9 +2386,7 @@
   },
   "086ae869-c46a-4be5-87b9-e3ac74ef9c8b": {
     "url": "db://assets/resources/flowerpot/flowerpot.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "086ae869-c46a-4be5-87b9-e3ac74ef9c8b@6c48a": {
@@ -2497,9 +2434,7 @@
   },
   "147f7cef-896b-46d5-a248-ab2890213338": {
     "url": "db://assets/resources/flowers/flower01.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "147f7cef-896b-46d5-a248-ab2890213338@6c48a": {
@@ -2522,9 +2457,7 @@
   },
   "74b34073-03b1-40b3-b1e5-cab009cb68a4": {
     "url": "db://assets/resources/flowers/flower02.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "74b34073-03b1-40b3-b1e5-cab009cb68a4@6c48a": {
@@ -2547,9 +2480,7 @@
   },
   "8eaa6ae8-291b-45f6-a73b-4c673b972a2a": {
     "url": "db://assets/resources/flowers/flower03.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "8eaa6ae8-291b-45f6-a73b-4c673b972a2a@6c48a": {
@@ -2572,9 +2503,7 @@
   },
   "b08c3ffe-2d09-4de1-9b4a-2c5d18b5fabe": {
     "url": "db://assets/resources/flowers/flower04.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "b08c3ffe-2d09-4de1-9b4a-2c5d18b5fabe@6c48a": {
@@ -2597,9 +2526,7 @@
   },
   "bbdf4b03-02b3-4c74-a8e8-68770f681768": {
     "url": "db://assets/resources/flowers/flower05.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "bbdf4b03-02b3-4c74-a8e8-68770f681768@6c48a": {
@@ -2622,9 +2549,7 @@
   },
   "f2490b44-1ad3-46ad-95d5-fe040c7869ab": {
     "url": "db://assets/resources/flowers/flower06.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "f2490b44-1ad3-46ad-95d5-fe040c7869ab@6c48a": {
@@ -2647,9 +2572,7 @@
   },
   "d0f11f78-d1a8-4169-92de-78c2dd1764ac": {
     "url": "db://assets/resources/flowers/flower07.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "d0f11f78-d1a8-4169-92de-78c2dd1764ac@6c48a": {
@@ -2672,9 +2595,7 @@
   },
   "46d203c7-cb10-4364-a58f-9d62642fdca4": {
     "url": "db://assets/resources/flowers/flower08.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "46d203c7-cb10-4364-a58f-9d62642fdca4@6c48a": {
@@ -2697,9 +2618,7 @@
   },
   "a63224a2-61d1-49dc-8ecb-a67589965bf2": {
     "url": "db://assets/resources/flowers/flower09.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "a63224a2-61d1-49dc-8ecb-a67589965bf2@6c48a": {
@@ -2812,9 +2731,7 @@
   },
   "fcf0c788-fb5e-4b24-8acc-ea73c39d769c": {
     "url": "db://assets/resources/flowers/flowerAtlas.pac",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "9532aa35-ad91-4f19-b3e7-b58366796daf": {
@@ -2829,9 +2746,7 @@
   },
   "9dc05920-17e8-473c-8697-703e985789f9": {
     "url": "db://assets/resources/levelData/level_1.json",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "e4080dc7-3bc3-46a0-bcd9-2dc05c0cf460": {
@@ -2841,23 +2756,7 @@
   },
   "34c81461-0e6d-453c-bb3a-4f55bfe90ec1": {
     "url": "db://assets/resources/ui/VictoryPanel.prefab",
-    "value": {
-      "depends": [
-        "3bf25aa3-df77-4011-a29d-020e61ca8403@f9941",
-        "a4840e4c-51eb-40b5-ae6f-035d58ec0152@f9941",
-        "45f26b7b-2c39-469f-8d8a-7ef51ccf6bd6@f9941",
-        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
-        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
-        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
-        "ac2c590c-5e3f-4ca5-a253-5c9ea1d35cdc@f9941",
-        "2cfb15e5-2c31-43db-870c-f84dddd475a7@f9941",
-        "78abede0-5663-400f-bdec-8c2042d3c8bd@f9941",
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941"
-      ],
-      "dependScripts": [
-        "d6923da0-cbb8-4cd9-af02-f4ffb48ec076"
-      ]
-    },
+    "value": {},
     "versionCode": 2
   },
   "bebe4ada-b043-4aa6-8c74-933a4773746c": {
@@ -2867,34 +2766,17 @@
   },
   "65f4ab0b-c229-49f9-b5d5-43ccec50f7a5": {
     "url": "db://assets/resources/levelData/level_2.json",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "673d0a65-a9fe-4ec8-aa56-2484f1edb268": {
     "url": "db://assets/resources/levelData/level_3.json",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "6705c436-361d-4e6f-a723-9f89adbf48e7": {
     "url": "db://assets/resources/ui/MainTopPage.prefab",
-    "value": {
-      "depends": [
-        "3451f789-e978-47be-8ca2-efbad9681fd7@f9941",
-        "45f26b7b-2c39-469f-8d8a-7ef51ccf6bd6@f9941",
-        "3bf25aa3-df77-4011-a29d-020e61ca8403@f9941",
-        "c03983d3-1d8c-4408-9909-e9ac585800b3@f9941",
-        "83985e7f-c240-4752-b17d-27c185892c87@f9941",
-        "4f93b14d-6123-41ea-a5d7-52d3ae9c6848@f9941",
-        "4e9cfa13-dac5-4d82-861c-1cc1eaa9920d@f9941"
-      ],
-      "dependScripts": [
-        "6f44112c-eb08-4297-9eca-4949a8af19e6"
-      ]
-    },
+    "value": {},
     "versionCode": 2
   },
   "a2c3d81b-6752-47b5-a7d3-21d730afe846": {
@@ -2988,7 +2870,7 @@
     "versionCode": 1
   },
   "c63a2908-67d7-4c12-a0ce-6c9030278f78": {
-    "url": "db://assets/scripts/Game/FlowerGame/FlowerGameEntry.ts",
+    "url": "db://assets/scripts/Game/CommonGame/CommonGameEntry.ts",
     "value": {},
     "versionCode": 1
   },
@@ -3003,7 +2885,7 @@
     "versionCode": 1
   },
   "1ddebbfb-1c31-4d1a-8cc1-b8ee53713dfb": {
-    "url": "db://assets/scripts/Game/FlowerGame/FlowerUIConfig.ts",
+    "url": "db://assets/scripts/Game/CommonGame/CommonUIConfig.ts",
     "value": {},
     "versionCode": 1
   },
@@ -3023,7 +2905,7 @@
     "versionCode": 1
   },
   "73edaae5-0b7a-425f-afe0-f601833012aa": {
-    "url": "db://assets/scripts/Game/FlowerGame",
+    "url": "db://assets/scripts/Game/CommonGame",
     "value": {},
     "versionCode": 1
   },
@@ -3038,7 +2920,7 @@
     "versionCode": 1
   },
   "191bdeae-9286-465e-a518-a494dbf87eba": {
-    "url": "db://assets/scripts/Game/FlowerGame/ui",
+    "url": "db://assets/scripts/Game/CommonGame/ui",
     "value": {},
     "versionCode": 1
   },
@@ -3273,12 +3155,12 @@
     "versionCode": 1
   },
   "010892b2-c000-4095-8903-97f9f9a4f400": {
-    "url": "db://assets/scripts/Game/FlowerGame/ui/LoadingPanel.ts",
+    "url": "db://assets/scripts/Game/CommonGame/ui/LoadingPanel.ts",
     "value": {},
     "versionCode": 1
   },
   "22de7818-fe8e-470c-bec7-91ab37d108dd": {
-    "url": "db://assets/scripts/Game/FlowerGame/ui/MainPanel.ts",
+    "url": "db://assets/scripts/Game/CommonGame/ui/MainPanel.ts",
     "value": {},
     "versionCode": 1
   },
