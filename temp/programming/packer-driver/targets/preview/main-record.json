@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 9571.019,
+      "mTimestamp": 9494.4717,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -514,7 +514,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 1534855.9496,
+      "mTimestamp": 16952.5174,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -602,7 +602,7 @@
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerConst.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerConst.ts",
           "resolved": "__unresolved_6",
           "loc": {
             "start": {
@@ -611,12 +611,12 @@
             },
             "end": {
               "line": 10,
-              "column": 108
+              "column": 105
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerEvent.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerEvent.ts",
           "resolved": "__unresolved_7",
           "loc": {
             "start": {
@@ -625,12 +625,12 @@
             },
             "end": {
               "line": 11,
-              "column": 108
+              "column": 105
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerGameEntry.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerGameEntry.ts",
           "resolved": "__unresolved_8",
           "loc": {
             "start": {
@@ -639,12 +639,12 @@
             },
             "end": {
               "line": 12,
-              "column": 112
+              "column": 109
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerGameState.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerGameState.ts",
           "resolved": "__unresolved_9",
           "loc": {
             "start": {
@@ -653,12 +653,12 @@
             },
             "end": {
               "line": 13,
-              "column": 112
+              "column": 109
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerLevelModel.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerLevelModel.ts",
           "resolved": "__unresolved_10",
           "loc": {
             "start": {
@@ -667,12 +667,12 @@
             },
             "end": {
               "line": 14,
-              "column": 113
+              "column": 110
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerUIConfig.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerUIConfig.ts",
           "resolved": "__unresolved_11",
           "loc": {
             "start": {
@@ -681,12 +681,12 @@
             },
             "end": {
               "line": 15,
-              "column": 111
+              "column": 108
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/Flower.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/Flower.ts",
           "resolved": "__unresolved_12",
           "loc": {
             "start": {
@@ -695,12 +695,12 @@
             },
             "end": {
               "line": 16,
-              "column": 106
+              "column": 103
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/FlowerPlatform.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/FlowerPlatform.ts",
           "resolved": "__unresolved_13",
           "loc": {
             "start": {
@@ -709,12 +709,12 @@
             },
             "end": {
               "line": 17,
-              "column": 114
+              "column": 111
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/GamePage.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/GamePage.ts",
           "resolved": "__unresolved_14",
           "loc": {
             "start": {
@@ -723,12 +723,12 @@
             },
             "end": {
               "line": 18,
-              "column": 108
+              "column": 105
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/GamePanel.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/GamePanel.ts",
           "resolved": "__unresolved_15",
           "loc": {
             "start": {
@@ -737,12 +737,12 @@
             },
             "end": {
               "line": 19,
-              "column": 109
+              "column": 106
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/LoadingPanel.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/LoadingPanel.ts",
           "resolved": "__unresolved_16",
           "loc": {
             "start": {
@@ -751,12 +751,12 @@
             },
             "end": {
               "line": 20,
-              "column": 112
+              "column": 109
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/MainPanel.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/MainPanel.ts",
           "resolved": "__unresolved_17",
           "loc": {
             "start": {
@@ -765,12 +765,12 @@
             },
             "end": {
               "line": 21,
-              "column": 109
+              "column": 106
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/MainTopPage.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/MainTopPage.ts",
           "resolved": "__unresolved_18",
           "loc": {
             "start": {
@@ -779,12 +779,12 @@
             },
             "end": {
               "line": 22,
-              "column": 111
+              "column": 108
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/VictoryPanel.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/VictoryPanel.ts",
           "resolved": "__unresolved_19",
           "loc": {
             "start": {
@@ -793,12 +793,12 @@
             },
             "end": {
               "line": 23,
-              "column": 112
+              "column": 109
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/ConfigTables.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/AudioManager.ts",
           "resolved": "__unresolved_20",
           "loc": {
             "start": {
@@ -807,12 +807,12 @@
             },
             "end": {
               "line": 24,
-              "column": 117
+              "column": 97
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IClassSkill.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ConfigManager.ts",
           "resolved": "__unresolved_21",
           "loc": {
             "start": {
@@ -821,12 +821,12 @@
             },
             "end": {
               "line": 25,
-              "column": 127
+              "column": 98
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IClassType.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/FlatBuffersRuntime.ts",
           "resolved": "__unresolved_22",
           "loc": {
             "start": {
@@ -835,12 +835,12 @@
             },
             "end": {
               "line": 26,
-              "column": 126
+              "column": 103
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IEnemyType.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/GameManager.ts",
           "resolved": "__unresolved_23",
           "loc": {
             "start": {
@@ -849,12 +849,12 @@
             },
             "end": {
               "line": 27,
-              "column": 126
+              "column": 96
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IEventType.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/Launcher.ts",
           "resolved": "__unresolved_24",
           "loc": {
             "start": {
@@ -863,12 +863,12 @@
             },
             "end": {
               "line": 28,
-              "column": 126
+              "column": 93
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IHexTerrainType.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/NodePool.ts",
           "resolved": "__unresolved_25",
           "loc": {
             "start": {
@@ -877,12 +877,12 @@
             },
             "end": {
               "line": 29,
-              "column": 131
+              "column": 93
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IItemType.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ResManager.ts",
           "resolved": "__unresolved_26",
           "loc": {
             "start": {
@@ -891,12 +891,12 @@
             },
             "end": {
               "line": 30,
-              "column": 125
+              "column": 95
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/ILevelUpOption.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ScreenAdapter.ts",
           "resolved": "__unresolved_27",
           "loc": {
             "start": {
@@ -905,12 +905,12 @@
             },
             "end": {
               "line": 31,
-              "column": 130
+              "column": 98
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/INpcType.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts",
           "resolved": "__unresolved_28",
           "loc": {
             "start": {
@@ -919,12 +919,12 @@
             },
             "end": {
               "line": 32,
-              "column": 124
+              "column": 94
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IPetType.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIData.ts",
           "resolved": "__unresolved_29",
           "loc": {
             "start": {
@@ -933,12 +933,12 @@
             },
             "end": {
               "line": 33,
-              "column": 124
+              "column": 94
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IRoomType.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIManager.ts",
           "resolved": "__unresolved_30",
           "loc": {
             "start": {
@@ -947,12 +947,12 @@
             },
             "end": {
               "line": 34,
-              "column": 125
+              "column": 97
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IShopGoods.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/EventManager.ts",
           "resolved": "__unresolved_31",
           "loc": {
             "start": {
@@ -961,12 +961,12 @@
             },
             "end": {
               "line": 35,
-              "column": 126
+              "column": 100
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/ITerrainEffect.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/FrameworkConst.ts",
           "resolved": "__unresolved_32",
           "loc": {
             "start": {
@@ -975,12 +975,12 @@
             },
             "end": {
               "line": 36,
-              "column": 130
+              "column": 102
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IWeaponType.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/FrameworkEvent.ts",
           "resolved": "__unresolved_33",
           "loc": {
             "start": {
@@ -989,12 +989,12 @@
             },
             "end": {
               "line": 37,
-              "column": 127
+              "column": 102
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/RoguelikeConst.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/ObjectPool.ts",
           "resolved": "__unresolved_34",
           "loc": {
             "start": {
@@ -1003,12 +1003,12 @@
             },
             "end": {
               "line": 38,
-              "column": 114
+              "column": 98
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/RoguelikeEvent.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/StorageManager.ts",
           "resolved": "__unresolved_35",
           "loc": {
             "start": {
@@ -1017,12 +1017,12 @@
             },
             "end": {
               "line": 39,
-              "column": 114
+              "column": 102
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/RoguelikeGameEntry.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/TimerManager.ts",
           "resolved": "__unresolved_36",
           "loc": {
             "start": {
@@ -1031,12 +1031,12 @@
             },
             "end": {
               "line": 40,
-              "column": 118
+              "column": 100
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/RoguelikeGameState.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/TypeFactory.ts",
           "resolved": "__unresolved_37",
           "loc": {
             "start": {
@@ -1045,12 +1045,12 @@
             },
             "end": {
               "line": 41,
-              "column": 118
+              "column": 99
             }
           }
         },
         {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/RoguelikeUIConfig.ts",
+          "value": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/TypeRegistry.ts",
           "resolved": "__unresolved_38",
           "loc": {
             "start": {
@@ -1059,1575 +1059,7 @@
             },
             "end": {
               "line": 42,
-              "column": 117
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/BattleController.ts",
-          "resolved": "__unresolved_39",
-          "loc": {
-            "start": {
-              "line": 43,
-              "column": 7
-            },
-            "end": {
-              "line": 43,
-              "column": 124
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/ClassManager.ts",
-          "resolved": "__unresolved_40",
-          "loc": {
-            "start": {
-              "line": 44,
-              "column": 7
-            },
-            "end": {
-              "line": 44,
-              "column": 120
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/CostumeManager.ts",
-          "resolved": "__unresolved_41",
-          "loc": {
-            "start": {
-              "line": 45,
-              "column": 7
-            },
-            "end": {
-              "line": 45,
-              "column": 122
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/DamageSystem.ts",
-          "resolved": "__unresolved_42",
-          "loc": {
-            "start": {
-              "line": 46,
-              "column": 7
-            },
-            "end": {
-              "line": 46,
-              "column": 120
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/DungeonManager.ts",
-          "resolved": "__unresolved_43",
-          "loc": {
-            "start": {
-              "line": 47,
-              "column": 7
-            },
-            "end": {
-              "line": 47,
-              "column": 122
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/EnemySpawner.ts",
-          "resolved": "__unresolved_44",
-          "loc": {
-            "start": {
-              "line": 48,
-              "column": 7
-            },
-            "end": {
-              "line": 48,
-              "column": 120
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/EventRoomManager.ts",
-          "resolved": "__unresolved_45",
-          "loc": {
-            "start": {
-              "line": 49,
-              "column": 7
-            },
-            "end": {
-              "line": 49,
-              "column": 124
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/FogOfWar.ts",
-          "resolved": "__unresolved_46",
-          "loc": {
-            "start": {
-              "line": 50,
-              "column": 7
-            },
-            "end": {
-              "line": 50,
-              "column": 127
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexCoordinate.ts",
-          "resolved": "__unresolved_47",
-          "loc": {
-            "start": {
-              "line": 51,
-              "column": 7
-            },
-            "end": {
-              "line": 51,
-              "column": 132
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexGrid.ts",
-          "resolved": "__unresolved_48",
-          "loc": {
-            "start": {
-              "line": 52,
-              "column": 7
-            },
-            "end": {
-              "line": 52,
-              "column": 126
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexMapGenerator.ts",
-          "resolved": "__unresolved_49",
-          "loc": {
-            "start": {
-              "line": 53,
-              "column": 7
-            },
-            "end": {
-              "line": 53,
-              "column": 134
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexPathfinder.ts",
-          "resolved": "__unresolved_50",
-          "loc": {
-            "start": {
-              "line": 54,
-              "column": 7
-            },
-            "end": {
-              "line": 54,
-              "column": 132
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexRenderer.ts",
-          "resolved": "__unresolved_51",
-          "loc": {
-            "start": {
-              "line": 55,
-              "column": 7
-            },
-            "end": {
-              "line": 55,
-              "column": 130
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/SimplexNoise.ts",
-          "resolved": "__unresolved_52",
-          "loc": {
-            "start": {
-              "line": 56,
-              "column": 7
-            },
-            "end": {
-              "line": 56,
-              "column": 131
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/TerrainEffectManager.ts",
-          "resolved": "__unresolved_53",
-          "loc": {
-            "start": {
-              "line": 57,
-              "column": 7
-            },
-            "end": {
-              "line": 57,
-              "column": 139
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/InputHandler.ts",
-          "resolved": "__unresolved_54",
-          "loc": {
-            "start": {
-              "line": 58,
-              "column": 7
-            },
-            "end": {
-              "line": 58,
-              "column": 120
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/ItemManager.ts",
-          "resolved": "__unresolved_55",
-          "loc": {
-            "start": {
-              "line": 59,
-              "column": 7
-            },
-            "end": {
-              "line": 59,
-              "column": 119
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/LevelUpManager.ts",
-          "resolved": "__unresolved_56",
-          "loc": {
-            "start": {
-              "line": 60,
-              "column": 7
-            },
-            "end": {
-              "line": 60,
-              "column": 122
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/LootSystem.ts",
-          "resolved": "__unresolved_57",
-          "loc": {
-            "start": {
-              "line": 61,
-              "column": 7
-            },
-            "end": {
-              "line": 61,
-              "column": 118
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/MetaProgressionManager.ts",
-          "resolved": "__unresolved_58",
-          "loc": {
-            "start": {
-              "line": 62,
-              "column": 7
-            },
-            "end": {
-              "line": 62,
-              "column": 130
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/NpcManager.ts",
-          "resolved": "__unresolved_59",
-          "loc": {
-            "start": {
-              "line": 63,
-              "column": 7
-            },
-            "end": {
-              "line": 63,
-              "column": 118
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/PetManager.ts",
-          "resolved": "__unresolved_60",
-          "loc": {
-            "start": {
-              "line": 64,
-              "column": 7
-            },
-            "end": {
-              "line": 64,
-              "column": 118
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/PlayerController.ts",
-          "resolved": "__unresolved_61",
-          "loc": {
-            "start": {
-              "line": 65,
-              "column": 7
-            },
-            "end": {
-              "line": 65,
-              "column": 124
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/RoomGenerator.ts",
-          "resolved": "__unresolved_62",
-          "loc": {
-            "start": {
-              "line": 66,
-              "column": 7
-            },
-            "end": {
-              "line": 66,
-              "column": 121
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/ShopManager.ts",
-          "resolved": "__unresolved_63",
-          "loc": {
-            "start": {
-              "line": 67,
-              "column": 7
-            },
-            "end": {
-              "line": 67,
-              "column": 119
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/WeaponManager.ts",
-          "resolved": "__unresolved_64",
-          "loc": {
-            "start": {
-              "line": 68,
-              "column": 7
-            },
-            "end": {
-              "line": 68,
-              "column": 121
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Enemies/BossEnemy.ts",
-          "resolved": "__unresolved_65",
-          "loc": {
-            "start": {
-              "line": 69,
-              "column": 7
-            },
-            "end": {
-              "line": 69,
-              "column": 123
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Enemies/EliteEnemy.ts",
-          "resolved": "__unresolved_66",
-          "loc": {
-            "start": {
-              "line": 70,
-              "column": 7
-            },
-            "end": {
-              "line": 70,
-              "column": 124
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Enemies/MeleeEnemy.ts",
-          "resolved": "__unresolved_67",
-          "loc": {
-            "start": {
-              "line": 71,
-              "column": 7
-            },
-            "end": {
-              "line": 71,
-              "column": 124
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Enemies/RangedEnemy.ts",
-          "resolved": "__unresolved_68",
-          "loc": {
-            "start": {
-              "line": 72,
-              "column": 7
-            },
-            "end": {
-              "line": 72,
-              "column": 125
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Events/AltarEvent.ts",
-          "resolved": "__unresolved_69",
-          "loc": {
-            "start": {
-              "line": 73,
-              "column": 7
-            },
-            "end": {
-              "line": 73,
-              "column": 123
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Events/NpcInteractEvent.ts",
-          "resolved": "__unresolved_70",
-          "loc": {
-            "start": {
-              "line": 74,
-              "column": 7
-            },
-            "end": {
-              "line": 74,
-              "column": 129
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Events/RewardEvent.ts",
-          "resolved": "__unresolved_71",
-          "loc": {
-            "start": {
-              "line": 75,
-              "column": 7
-            },
-            "end": {
-              "line": 75,
-              "column": 124
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Events/TrapEvent.ts",
-          "resolved": "__unresolved_72",
-          "loc": {
-            "start": {
-              "line": 76,
-              "column": 7
-            },
-            "end": {
-              "line": 76,
-              "column": 122
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Npcs/BlacksmithNpc.ts",
-          "resolved": "__unresolved_73",
-          "loc": {
-            "start": {
-              "line": 77,
-              "column": 7
-            },
-            "end": {
-              "line": 77,
-              "column": 124
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Npcs/ClassMasterNpc.ts",
-          "resolved": "__unresolved_74",
-          "loc": {
-            "start": {
-              "line": 78,
-              "column": 7
-            },
-            "end": {
-              "line": 78,
-              "column": 125
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Npcs/MerchantNpc.ts",
-          "resolved": "__unresolved_75",
-          "loc": {
-            "start": {
-              "line": 79,
-              "column": 7
-            },
-            "end": {
-              "line": 79,
-              "column": 122
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Npcs/SkillMasterNpc.ts",
-          "resolved": "__unresolved_76",
-          "loc": {
-            "start": {
-              "line": 80,
-              "column": 7
-            },
-            "end": {
-              "line": 80,
-              "column": 125
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Pets/AttackPet.ts",
-          "resolved": "__unresolved_77",
-          "loc": {
-            "start": {
-              "line": 81,
-              "column": 7
-            },
-            "end": {
-              "line": 81,
-              "column": 120
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Pets/DefensePet.ts",
-          "resolved": "__unresolved_78",
-          "loc": {
-            "start": {
-              "line": 82,
-              "column": 7
-            },
-            "end": {
-              "line": 82,
-              "column": 121
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Pets/SupportPet.ts",
-          "resolved": "__unresolved_79",
-          "loc": {
-            "start": {
-              "line": 83,
-              "column": 7
-            },
-            "end": {
-              "line": 83,
-              "column": 121
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/BattleRoom.ts",
-          "resolved": "__unresolved_80",
-          "loc": {
-            "start": {
-              "line": 84,
-              "column": 7
-            },
-            "end": {
-              "line": 84,
-              "column": 122
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/BossRoom.ts",
-          "resolved": "__unresolved_81",
-          "loc": {
-            "start": {
-              "line": 85,
-              "column": 7
-            },
-            "end": {
-              "line": 85,
-              "column": 120
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/EliteRoom.ts",
-          "resolved": "__unresolved_82",
-          "loc": {
-            "start": {
-              "line": 86,
-              "column": 7
-            },
-            "end": {
-              "line": 86,
-              "column": 121
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/EventRoom.ts",
-          "resolved": "__unresolved_83",
-          "loc": {
-            "start": {
-              "line": 87,
-              "column": 7
-            },
-            "end": {
-              "line": 87,
-              "column": 121
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/NpcRoom.ts",
-          "resolved": "__unresolved_84",
-          "loc": {
-            "start": {
-              "line": 88,
-              "column": 7
-            },
-            "end": {
-              "line": 88,
-              "column": 119
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/ShopRoom.ts",
-          "resolved": "__unresolved_85",
-          "loc": {
-            "start": {
-              "line": 89,
-              "column": 7
-            },
-            "end": {
-              "line": 89,
-              "column": 120
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/CooldownReductionEffect.ts",
-          "resolved": "__unresolved_86",
-          "loc": {
-            "start": {
-              "line": 90,
-              "column": 7
-            },
-            "end": {
-              "line": 90,
-              "column": 144
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/DefenseBoostEffect.ts",
-          "resolved": "__unresolved_87",
-          "loc": {
-            "start": {
-              "line": 91,
-              "column": 7
-            },
-            "end": {
-              "line": 91,
-              "column": 139
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/DotDamageEffect.ts",
-          "resolved": "__unresolved_88",
-          "loc": {
-            "start": {
-              "line": 92,
-              "column": 7
-            },
-            "end": {
-              "line": 92,
-              "column": 136
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/EvasionBoostEffect.ts",
-          "resolved": "__unresolved_89",
-          "loc": {
-            "start": {
-              "line": 93,
-              "column": 7
-            },
-            "end": {
-              "line": 93,
-              "column": 139
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/SpeedModifierEffect.ts",
-          "resolved": "__unresolved_90",
-          "loc": {
-            "start": {
-              "line": 94,
-              "column": 7
-            },
-            "end": {
-              "line": 94,
-              "column": 140
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/DesertTerrain.ts",
-          "resolved": "__unresolved_91",
-          "loc": {
-            "start": {
-              "line": 95,
-              "column": 7
-            },
-            "end": {
-              "line": 95,
-              "column": 128
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/ForestTerrain.ts",
-          "resolved": "__unresolved_92",
-          "loc": {
-            "start": {
-              "line": 96,
-              "column": 7
-            },
-            "end": {
-              "line": 96,
-              "column": 128
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/MountainTerrain.ts",
-          "resolved": "__unresolved_93",
-          "loc": {
-            "start": {
-              "line": 97,
-              "column": 7
-            },
-            "end": {
-              "line": 97,
-              "column": 130
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/PlainsTerrain.ts",
-          "resolved": "__unresolved_94",
-          "loc": {
-            "start": {
-              "line": 98,
-              "column": 7
-            },
-            "end": {
-              "line": 98,
-              "column": 128
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/SwampTerrain.ts",
-          "resolved": "__unresolved_95",
-          "loc": {
-            "start": {
-              "line": 99,
-              "column": 7
-            },
-            "end": {
-              "line": 99,
-              "column": 127
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/WaterTerrain.ts",
-          "resolved": "__unresolved_96",
-          "loc": {
-            "start": {
-              "line": 100,
-              "column": 7
-            },
-            "end": {
-              "line": 100,
-              "column": 127
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TypeRegistration.ts",
-          "resolved": "__unresolved_97",
-          "loc": {
-            "start": {
-              "line": 101,
-              "column": 7
-            },
-            "end": {
-              "line": 101,
-              "column": 122
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Weapons/AoeWeapon.ts",
-          "resolved": "__unresolved_98",
-          "loc": {
-            "start": {
-              "line": 102,
-              "column": 7
-            },
-            "end": {
-              "line": 102,
-              "column": 123
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Weapons/MeleeWeapon.ts",
-          "resolved": "__unresolved_99",
-          "loc": {
-            "start": {
-              "line": 103,
-              "column": 7
-            },
-            "end": {
-              "line": 103,
-              "column": 125
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Weapons/OrbitWeapon.ts",
-          "resolved": "__unresolved_100",
-          "loc": {
-            "start": {
-              "line": 104,
-              "column": 7
-            },
-            "end": {
-              "line": 104,
-              "column": 125
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Weapons/ProjectileWeapon.ts",
-          "resolved": "__unresolved_101",
-          "loc": {
-            "start": {
-              "line": 105,
-              "column": 7
-            },
-            "end": {
-              "line": 105,
-              "column": 130
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgBattleHUD.ts",
-          "resolved": "__unresolved_102",
-          "loc": {
-            "start": {
-              "line": 106,
-              "column": 7
-            },
-            "end": {
-              "line": 106,
-              "column": 114
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgClassSelectPanel.ts",
-          "resolved": "__unresolved_103",
-          "loc": {
-            "start": {
-              "line": 107,
-              "column": 7
-            },
-            "end": {
-              "line": 107,
-              "column": 121
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgCostumePanel.ts",
-          "resolved": "__unresolved_104",
-          "loc": {
-            "start": {
-              "line": 108,
-              "column": 7
-            },
-            "end": {
-              "line": 108,
-              "column": 117
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgDeathPanel.ts",
-          "resolved": "__unresolved_105",
-          "loc": {
-            "start": {
-              "line": 109,
-              "column": 7
-            },
-            "end": {
-              "line": 109,
-              "column": 115
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgEventPanel.ts",
-          "resolved": "__unresolved_106",
-          "loc": {
-            "start": {
-              "line": 110,
-              "column": 7
-            },
-            "end": {
-              "line": 110,
-              "column": 115
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgLevelUpPanel.ts",
-          "resolved": "__unresolved_107",
-          "loc": {
-            "start": {
-              "line": 111,
-              "column": 7
-            },
-            "end": {
-              "line": 111,
-              "column": 117
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgLoadingPanel.ts",
-          "resolved": "__unresolved_108",
-          "loc": {
-            "start": {
-              "line": 112,
-              "column": 7
-            },
-            "end": {
-              "line": 112,
-              "column": 117
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgMainPanel.ts",
-          "resolved": "__unresolved_109",
-          "loc": {
-            "start": {
-              "line": 113,
-              "column": 7
-            },
-            "end": {
-              "line": 113,
-              "column": 114
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgMetaUpgradePanel.ts",
-          "resolved": "__unresolved_110",
-          "loc": {
-            "start": {
-              "line": 114,
-              "column": 7
-            },
-            "end": {
-              "line": 114,
-              "column": 121
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgNpcPanel.ts",
-          "resolved": "__unresolved_111",
-          "loc": {
-            "start": {
-              "line": 115,
-              "column": 7
-            },
-            "end": {
-              "line": 115,
-              "column": 113
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgPausePanel.ts",
-          "resolved": "__unresolved_112",
-          "loc": {
-            "start": {
-              "line": 116,
-              "column": 7
-            },
-            "end": {
-              "line": 116,
-              "column": 115
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgPetPanel.ts",
-          "resolved": "__unresolved_113",
-          "loc": {
-            "start": {
-              "line": 117,
-              "column": 7
-            },
-            "end": {
-              "line": 117,
-              "column": 113
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgShopPanel.ts",
-          "resolved": "__unresolved_114",
-          "loc": {
-            "start": {
-              "line": 118,
-              "column": 7
-            },
-            "end": {
-              "line": 118,
-              "column": 114
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgTalentTreePanel.ts",
-          "resolved": "__unresolved_115",
-          "loc": {
-            "start": {
-              "line": 119,
-              "column": 7
-            },
-            "end": {
-              "line": 119,
-              "column": 120
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgVictoryPanel.ts",
-          "resolved": "__unresolved_116",
-          "loc": {
-            "start": {
-              "line": 120,
-              "column": 7
-            },
-            "end": {
-              "line": 120,
-              "column": 117
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Data/CharacterData.ts",
-          "resolved": "__unresolved_117",
-          "loc": {
-            "start": {
-              "line": 121,
-              "column": 7
-            },
-            "end": {
-              "line": 121,
-              "column": 117
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Data/EnemyData.ts",
-          "resolved": "__unresolved_118",
-          "loc": {
-            "start": {
-              "line": 122,
-              "column": 7
-            },
-            "end": {
-              "line": 122,
-              "column": 113
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Data/LevelUpData.ts",
-          "resolved": "__unresolved_119",
-          "loc": {
-            "start": {
-              "line": 123,
-              "column": 7
-            },
-            "end": {
-              "line": 123,
-              "column": 115
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Data/WeaponData.ts",
-          "resolved": "__unresolved_120",
-          "loc": {
-            "start": {
-              "line": 124,
-              "column": 7
-            },
-            "end": {
-              "line": 124,
-              "column": 114
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/BattleController.ts",
-          "resolved": "__unresolved_121",
-          "loc": {
-            "start": {
-              "line": 125,
-              "column": 7
-            },
-            "end": {
-              "line": 125,
-              "column": 123
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/BattleSession.ts",
-          "resolved": "__unresolved_122",
-          "loc": {
-            "start": {
-              "line": 126,
-              "column": 7
-            },
-            "end": {
-              "line": 126,
-              "column": 120
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/EnemySpawner.ts",
-          "resolved": "__unresolved_123",
-          "loc": {
-            "start": {
-              "line": 127,
-              "column": 7
-            },
-            "end": {
-              "line": 127,
-              "column": 119
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/LevelUpManager.ts",
-          "resolved": "__unresolved_124",
-          "loc": {
-            "start": {
-              "line": 128,
-              "column": 7
-            },
-            "end": {
-              "line": 128,
-              "column": 121
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/PassiveManager.ts",
-          "resolved": "__unresolved_125",
-          "loc": {
-            "start": {
-              "line": 129,
-              "column": 7
-            },
-            "end": {
-              "line": 129,
-              "column": 121
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/WeaponManager.ts",
-          "resolved": "__unresolved_126",
-          "loc": {
-            "start": {
-              "line": 130,
-              "column": 7
-            },
-            "end": {
-              "line": 130,
-              "column": 120
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/SurvivorConst.ts",
-          "resolved": "__unresolved_127",
-          "loc": {
-            "start": {
-              "line": 131,
-              "column": 7
-            },
-            "end": {
-              "line": 131,
-              "column": 112
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/SurvivorEvent.ts",
-          "resolved": "__unresolved_128",
-          "loc": {
-            "start": {
-              "line": 132,
-              "column": 7
-            },
-            "end": {
-              "line": 132,
-              "column": 112
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/SurvivorGameEntry.ts",
-          "resolved": "__unresolved_129",
-          "loc": {
-            "start": {
-              "line": 133,
-              "column": 7
-            },
-            "end": {
-              "line": 133,
-              "column": 116
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/SurvivorGameState.ts",
-          "resolved": "__unresolved_130",
-          "loc": {
-            "start": {
-              "line": 134,
-              "column": 7
-            },
-            "end": {
-              "line": 134,
-              "column": 116
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/SurvivorUIConfig.ts",
-          "resolved": "__unresolved_131",
-          "loc": {
-            "start": {
-              "line": 135,
-              "column": 7
-            },
-            "end": {
-              "line": 135,
-              "column": 115
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/AudioManager.ts",
-          "resolved": "__unresolved_132",
-          "loc": {
-            "start": {
-              "line": 136,
-              "column": 7
-            },
-            "end": {
-              "line": 136,
               "column": 100
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ConfigManager.ts",
-          "resolved": "__unresolved_133",
-          "loc": {
-            "start": {
-              "line": 137,
-              "column": 7
-            },
-            "end": {
-              "line": 137,
-              "column": 101
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/FlatBuffersRuntime.ts",
-          "resolved": "__unresolved_134",
-          "loc": {
-            "start": {
-              "line": 138,
-              "column": 7
-            },
-            "end": {
-              "line": 138,
-              "column": 106
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/GameManager.ts",
-          "resolved": "__unresolved_135",
-          "loc": {
-            "start": {
-              "line": 139,
-              "column": 7
-            },
-            "end": {
-              "line": 139,
-              "column": 99
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/Launcher.ts",
-          "resolved": "__unresolved_136",
-          "loc": {
-            "start": {
-              "line": 140,
-              "column": 7
-            },
-            "end": {
-              "line": 140,
-              "column": 96
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/NodePool.ts",
-          "resolved": "__unresolved_137",
-          "loc": {
-            "start": {
-              "line": 141,
-              "column": 7
-            },
-            "end": {
-              "line": 141,
-              "column": 96
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ResManager.ts",
-          "resolved": "__unresolved_138",
-          "loc": {
-            "start": {
-              "line": 142,
-              "column": 7
-            },
-            "end": {
-              "line": 142,
-              "column": 98
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ScreenAdapter.ts",
-          "resolved": "__unresolved_139",
-          "loc": {
-            "start": {
-              "line": 143,
-              "column": 7
-            },
-            "end": {
-              "line": 143,
-              "column": 101
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ui/UIBase.ts",
-          "resolved": "__unresolved_140",
-          "loc": {
-            "start": {
-              "line": 144,
-              "column": 7
-            },
-            "end": {
-              "line": 144,
-              "column": 97
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ui/UIData.ts",
-          "resolved": "__unresolved_141",
-          "loc": {
-            "start": {
-              "line": 145,
-              "column": 7
-            },
-            "end": {
-              "line": 145,
-              "column": 97
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ui/UIManager.ts",
-          "resolved": "__unresolved_142",
-          "loc": {
-            "start": {
-              "line": 146,
-              "column": 7
-            },
-            "end": {
-              "line": 146,
-              "column": 100
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/EventManager.ts",
-          "resolved": "__unresolved_143",
-          "loc": {
-            "start": {
-              "line": 147,
-              "column": 7
-            },
-            "end": {
-              "line": 147,
-              "column": 103
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/FrameworkConst.ts",
-          "resolved": "__unresolved_144",
-          "loc": {
-            "start": {
-              "line": 148,
-              "column": 7
-            },
-            "end": {
-              "line": 148,
-              "column": 105
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/FrameworkEvent.ts",
-          "resolved": "__unresolved_145",
-          "loc": {
-            "start": {
-              "line": 149,
-              "column": 7
-            },
-            "end": {
-              "line": 149,
-              "column": 105
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/ObjectPool.ts",
-          "resolved": "__unresolved_146",
-          "loc": {
-            "start": {
-              "line": 150,
-              "column": 7
-            },
-            "end": {
-              "line": 150,
-              "column": 101
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/StorageManager.ts",
-          "resolved": "__unresolved_147",
-          "loc": {
-            "start": {
-              "line": 151,
-              "column": 7
-            },
-            "end": {
-              "line": 151,
-              "column": 105
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/TimerManager.ts",
-          "resolved": "__unresolved_148",
-          "loc": {
-            "start": {
-              "line": 152,
-              "column": 7
-            },
-            "end": {
-              "line": 152,
-              "column": 103
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/TypeFactory.ts",
-          "resolved": "__unresolved_149",
-          "loc": {
-            "start": {
-              "line": 153,
-              "column": 7
-            },
-            "end": {
-              "line": 153,
-              "column": 102
-            }
-          }
-        },
-        {
-          "value": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/TypeRegistry.ts",
-          "resolved": "__unresolved_150",
-          "loc": {
-            "start": {
-              "line": 154,
-              "column": 7
-            },
-            "end": {
-              "line": 154,
-              "column": 103
             }
           }
         }
@@ -2679,1015 +1111,231 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerConst.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerConst.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerEvent.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerEvent.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerGameEntry.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerGameEntry.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerGameState.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerGameState.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerLevelModel.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerLevelModel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/FlowerUIConfig.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerUIConfig.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/Flower.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/Flower.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/FlowerPlatform.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/FlowerPlatform.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/GamePage.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/GamePage.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/GamePanel.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/GamePanel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/LoadingPanel.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/LoadingPanel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/MainPanel.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/MainPanel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/MainTopPage.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/MainTopPage.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/FlowerGame/ui/VictoryPanel.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/VictoryPanel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/ConfigTables.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/AudioManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IClassSkill.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ConfigManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IClassType.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/FlatBuffersRuntime.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IEnemyType.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/GameManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IEventType.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/Launcher.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IHexTerrainType.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/NodePool.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IItemType.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ResManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/ILevelUpOption.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ScreenAdapter.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/INpcType.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IPetType.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIData.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IRoomType.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IShopGoods.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/EventManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/ITerrainEffect.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/FrameworkConst.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Data/Interfaces/IWeaponType.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/FrameworkEvent.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/RoguelikeConst.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/ObjectPool.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/RoguelikeEvent.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/StorageManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/RoguelikeGameEntry.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/TimerManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/RoguelikeGameState.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/TypeFactory.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/RoguelikeUIConfig.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/BattleController.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/ClassManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/CostumeManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/DamageSystem.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/DungeonManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/EnemySpawner.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/EventRoomManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/FogOfWar.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexCoordinate.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexGrid.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexMapGenerator.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexPathfinder.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/HexRenderer.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/SimplexNoise.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/HexTerrain/TerrainEffectManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/InputHandler.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/ItemManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/LevelUpManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/LootSystem.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/MetaProgressionManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/NpcManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/PetManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/PlayerController.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/RoomGenerator.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/ShopManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Runtime/WeaponManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Enemies/BossEnemy.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Enemies/EliteEnemy.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Enemies/MeleeEnemy.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Enemies/RangedEnemy.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Events/AltarEvent.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Events/NpcInteractEvent.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Events/RewardEvent.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Events/TrapEvent.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Npcs/BlacksmithNpc.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Npcs/ClassMasterNpc.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Npcs/MerchantNpc.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Npcs/SkillMasterNpc.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Pets/AttackPet.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Pets/DefensePet.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Pets/SupportPet.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/BattleRoom.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/BossRoom.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/EliteRoom.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/EventRoom.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/NpcRoom.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Rooms/ShopRoom.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/CooldownReductionEffect.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/DefenseBoostEffect.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/DotDamageEffect.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/EvasionBoostEffect.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TerrainEffects/SpeedModifierEffect.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/DesertTerrain.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/ForestTerrain.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/MountainTerrain.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/PlainsTerrain.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/SwampTerrain.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Terrains/WaterTerrain.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/TypeRegistration.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Weapons/AoeWeapon.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Weapons/MeleeWeapon.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Weapons/OrbitWeapon.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/Types/Weapons/ProjectileWeapon.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgBattleHUD.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgClassSelectPanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgCostumePanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgDeathPanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgEventPanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgLevelUpPanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgLoadingPanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgMainPanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgMetaUpgradePanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgNpcPanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgPausePanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgPetPanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgShopPanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgTalentTreePanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/RoguelikeGame/UI/RgVictoryPanel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Data/CharacterData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Data/EnemyData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Data/LevelUpData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Data/WeaponData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/BattleController.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/BattleSession.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/EnemySpawner.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/LevelUpManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/PassiveManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/Runtime/WeaponManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/SurvivorConst.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/SurvivorEvent.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/SurvivorGameEntry.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/SurvivorGameState.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/Game/SurvivorGame/SurvivorUIConfig.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/AudioManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ConfigManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/FlatBuffersRuntime.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/GameManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/Launcher.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/NodePool.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ResManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ScreenAdapter.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ui/UIBase.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ui/UIData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/engine/ui/UIManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/EventManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/FrameworkConst.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/FrameworkEvent.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/ObjectPool.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/StorageManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/TimerManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/TypeFactory.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/Works/Cocos/WxMiniGames/FlowersArrangement/assets/scripts/framework/TypeRegistry.ts"
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/TypeRegistry.ts"
           },
           "messages": []
         }
@@ -5158,7 +2806,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1780284205886,
+      "mTimestamp": 1780812851874,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -20340,6 +17988,2633 @@
           },
           "messages": []
         },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerConst.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498314.4312,
+        "uuid": "6ff183cb-0717-48b1-a167-23385ec099c6"
+      },
+      "chunkId": "a112d8ba8fa91c3b81b38cef67d191309be55e4c",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 21
+            },
+            "end": {
+              "line": 1,
+              "column": 25
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerEvent.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498315.4282,
+        "uuid": "97bb5dbf-2487-4e0a-816c-2a760f22d713"
+      },
+      "chunkId": "db940dc036cb62439313fabed35eac8175e15aef",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerGameEntry.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498315.4282,
+        "uuid": "c63a2908-67d7-4c12-a0ce-6c9030278f78"
+      },
+      "chunkId": "31f8d2b6dded48259c9b602c87e5db075472723e",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../framework/StorageManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 31
+            },
+            "end": {
+              "line": 1,
+              "column": 63
+            }
+          }
+        },
+        {
+          "value": "../../engine/ui/UIManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 26
+            },
+            "end": {
+              "line": 2,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "./FlowerUIConfig",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 49
+            },
+            "end": {
+              "line": 3,
+              "column": 67
+            }
+          }
+        },
+        {
+          "value": "./FlowerGameState",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 32
+            },
+            "end": {
+              "line": 4,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/StorageManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerUIConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerGameState.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerGameState.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498316.4246,
+        "uuid": "1e2d0efb-b034-4407-8731-d512e42f82f5"
+      },
+      "chunkId": "8389c092de5db81ac2090bc5447ed1c762da929e",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../framework/StorageManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 31
+            },
+            "end": {
+              "line": 1,
+              "column": 63
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/StorageManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerLevelModel.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498316.4246,
+        "uuid": "1082f51f-8877-4796-92cd-59418011d710"
+      },
+      "chunkId": "e2cb19163e1f5122b9c4654b7fc931ac66a9a39c",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerUIConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498316.4246,
+        "uuid": "1ddebbfb-1c31-4d1a-8cc1-b8ee53713dfb"
+      },
+      "chunkId": "13905ada469f5cad13b7d201c312ff64cf87f6d8",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../engine/ui/UIData",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 52
+            },
+            "end": {
+              "line": 1,
+              "column": 76
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIData.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/Flower.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498316.4246,
+        "uuid": "12954eab-3904-499a-8710-9b3bf257d54f"
+      },
+      "chunkId": "586003c0c614374266d40d00044e74f8ce0fb104",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 130
+            },
+            "end": {
+              "line": 1,
+              "column": 134
+            }
+          }
+        },
+        {
+          "value": "../../../framework/EventManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 29
+            },
+            "end": {
+              "line": 2,
+              "column": 62
+            }
+          }
+        },
+        {
+          "value": "../FlowerEvent",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 28
+            },
+            "end": {
+              "line": 3,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "../FlowerConst",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 28
+            },
+            "end": {
+              "line": 4,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "../FlowerLevelModel",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 58
+            },
+            "end": {
+              "line": 5,
+              "column": 79
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/EventManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerEvent.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerConst.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerLevelModel.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/FlowerPlatform.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498316.4246,
+        "uuid": "4e3d169b-f7a6-4bdb-8893-b09db3ba391b"
+      },
+      "chunkId": "291c2a943f0a5ff2fbeaf6f8bc2cf8545ba5a3e1",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 131
+            },
+            "end": {
+              "line": 1,
+              "column": 135
+            }
+          }
+        },
+        {
+          "value": "./Flower",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 33
+            }
+          }
+        },
+        {
+          "value": "../../../framework/EventManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 62
+            }
+          }
+        },
+        {
+          "value": "../FlowerEvent",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 28
+            },
+            "end": {
+              "line": 4,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "../FlowerConst",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 28
+            },
+            "end": {
+              "line": 5,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "../FlowerLevelModel",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 31
+            },
+            "end": {
+              "line": 6,
+              "column": 52
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/Flower.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/EventManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerEvent.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerConst.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerLevelModel.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/GamePage.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498317.4211,
+        "uuid": "2abf6f68-d59c-4808-ba8a-8bb644efb345"
+      },
+      "chunkId": "2bf131fff04f0dc17d7965e9a2cc7fc2456b20f9",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 35
+            },
+            "end": {
+              "line": 1,
+              "column": 39
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 26
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../FlowerUIConfig",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 27
+            },
+            "end": {
+              "line": 4,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerUIConfig.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/GamePanel.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498318.4177,
+        "uuid": "ad6f5a9a-e1f2-4cb2-8de3-e7f57e9e7ba5"
+      },
+      "chunkId": "f4d4767ed09fcc60478e0db07bf12e6ce8dccf44",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 84
+            },
+            "end": {
+              "line": 1,
+              "column": 88
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 26
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../../../framework/EventManager",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 62
+            }
+          }
+        },
+        {
+          "value": "./FlowerPlatform",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 31
+            },
+            "end": {
+              "line": 5,
+              "column": 49
+            }
+          }
+        },
+        {
+          "value": "../FlowerUIConfig",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 27
+            },
+            "end": {
+              "line": 6,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "../FlowerEvent",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 28
+            },
+            "end": {
+              "line": 7,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "../FlowerConst",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 28
+            },
+            "end": {
+              "line": 8,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "../FlowerGameState",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 32
+            },
+            "end": {
+              "line": 9,
+              "column": 52
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/EventManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/FlowerPlatform.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerUIConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerEvent.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerConst.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerGameState.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/LoadingPanel.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498318.4177,
+        "uuid": "010892b2-c000-4095-8903-97f9f9a4f400"
+      },
+      "chunkId": "43485a6e6c5fa7d4bf2b11491a69098184e40d89",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 40
+            },
+            "end": {
+              "line": 1,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 26
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../../../framework/FrameworkConst",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 31
+            },
+            "end": {
+              "line": 4,
+              "column": 66
+            }
+          }
+        },
+        {
+          "value": "../FlowerUIConfig",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 27
+            },
+            "end": {
+              "line": 5,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/FrameworkConst.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerUIConfig.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/MainPanel.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498318.4177,
+        "uuid": "22de7818-fe8e-470c-bec7-91ab37d108dd"
+      },
+      "chunkId": "ce35effd44ad7c7a1cf1ad3299747635e098687d",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 99
+            },
+            "end": {
+              "line": 1,
+              "column": 103
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "../../../framework/FrameworkConst",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 31
+            },
+            "end": {
+              "line": 3,
+              "column": 66
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/FrameworkConst.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/MainTopPage.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498318.4177,
+        "uuid": "6f44112c-eb08-4297-9eca-4949a8af19e6"
+      },
+      "chunkId": "d24495bf7ee2cfde82f4a3249ad49a24adbccb3c",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 27
+            },
+            "end": {
+              "line": 1,
+              "column": 31
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 50
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/ui/VictoryPanel.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498319.4143,
+        "uuid": "d6923da0-cbb8-4cd9-af02-f4ffb48ec076"
+      },
+      "chunkId": "04056fbae7f60429407544726de7d2fe4ad601a0",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 45
+            },
+            "end": {
+              "line": 1,
+              "column": 49
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIBase",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 26
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../../../framework/EventManager",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 62
+            }
+          }
+        },
+        {
+          "value": "../FlowerUIConfig",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 27
+            },
+            "end": {
+              "line": 5,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "../FlowerEvent",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 28
+            },
+            "end": {
+              "line": 6,
+              "column": 44
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/EventManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerUIConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerEvent.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/AudioManager.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498405.1282,
+        "uuid": "65d5d2c0-a506-4f38-a37c-2aa3fe8e9c81"
+      },
+      "chunkId": "a675813c4066f9930f672381be4d105846836391",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 56
+            },
+            "end": {
+              "line": 1,
+              "column": 60
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ConfigManager.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498405.1282,
+        "uuid": "a787068c-9747-42af-be56-ace086ba195d"
+      },
+      "chunkId": "97d1556ddd9e265590f61829977db2e150963394",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/FlatBuffersRuntime.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498406.1245,
+        "uuid": "880e566e-df6c-4a54-bc82-c5bef1d4e049"
+      },
+      "chunkId": "c266f97a4e26a7067e21aad0b57f8f32c87b8402",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 39
+            },
+            "end": {
+              "line": 1,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/GameManager.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498406.1245,
+        "uuid": "c6d1d8ee-b920-4aab-b685-1366461740a1"
+      },
+      "chunkId": "c3e05f874a3790e9549bf859f27b60d0e9b240b5",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 33
+            },
+            "end": {
+              "line": 1,
+              "column": 37
+            }
+          }
+        },
+        {
+          "value": "./ui/UIManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 26
+            },
+            "end": {
+              "line": 2,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "./AudioManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "./ResManager",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 27
+            },
+            "end": {
+              "line": 4,
+              "column": 41
+            }
+          }
+        },
+        {
+          "value": "./NodePool",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 32
+            },
+            "end": {
+              "line": 5,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "./ConfigManager",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 30
+            },
+            "end": {
+              "line": 6,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "./FlatBuffersRuntime",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 35
+            },
+            "end": {
+              "line": 7,
+              "column": 57
+            }
+          }
+        },
+        {
+          "value": "../framework/TimerManager",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 29
+            },
+            "end": {
+              "line": 8,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../framework/StorageManager",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 31
+            },
+            "end": {
+              "line": 9,
+              "column": 60
+            }
+          }
+        },
+        {
+          "value": "../framework/ObjectPool",
+          "resolved": "__unresolved_9",
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 28
+            },
+            "end": {
+              "line": 10,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "../framework/EventManager",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 29
+            },
+            "end": {
+              "line": 11,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../framework/FrameworkEvent",
+          "resolved": "__unresolved_11",
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 31
+            },
+            "end": {
+              "line": 12,
+              "column": 60
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/AudioManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ResManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/NodePool.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ConfigManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/FlatBuffersRuntime.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/TimerManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/StorageManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/ObjectPool.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/EventManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/FrameworkEvent.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/Launcher.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498406.1245,
+        "uuid": "a8aceee6-ff61-4d7e-b9c6-07d67c2cf768"
+      },
+      "chunkId": "a5315ead39043da4ddc9a1e2ec38b9f48c9cef29",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 74
+            },
+            "end": {
+              "line": 1,
+              "column": 78
+            }
+          }
+        },
+        {
+          "value": "./ScreenAdapter",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 30
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "./GameManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 28
+            },
+            "end": {
+              "line": 3,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "../Game/FlowerGame/FlowerGameEntry",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 31
+            },
+            "end": {
+              "line": 4,
+              "column": 67
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ScreenAdapter.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/GameManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/FlowerGame/FlowerGameEntry.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/NodePool.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498407.121,
+        "uuid": "3e8d1741-f66b-4f37-b83f-da27d9bf817a"
+      },
+      "chunkId": "f35bace624f65449ec5dc55269d1d5c8ad63d1a3",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 42
+            },
+            "end": {
+              "line": 1,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ResManager.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498407.121,
+        "uuid": "0e04bbbe-77d8-4386-8cdf-86916e843569"
+      },
+      "chunkId": "f02d07939ef4db1eed49fc9b422120ca51077391",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 60
+            },
+            "end": {
+              "line": 1,
+              "column": 64
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ScreenAdapter.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498407.121,
+        "uuid": "536c5dc6-7880-4aca-916c-85a89bc02090"
+      },
+      "chunkId": "4a682f882b5dd39ea7b55c12da8e90a838164760",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 50
+            },
+            "end": {
+              "line": 1,
+              "column": 54
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498408.118,
+        "uuid": "6678fc54-bd49-4733-92a7-08e548ca8181"
+      },
+      "chunkId": "5bc13210f8659bcc885f6322fbc72c2b72dda7d5",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 84
+            },
+            "end": {
+              "line": 1,
+              "column": 88
+            }
+          }
+        },
+        {
+          "value": "./UIManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 26
+            },
+            "end": {
+              "line": 2,
+              "column": 39
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIData.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498408.118,
+        "uuid": "68b8b1d8-1503-4d37-8967-edc49faf7b76"
+      },
+      "chunkId": "a9908886dfa25ee2a6e5f1f784bffac124b7a937",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 27
+            },
+            "end": {
+              "line": 1,
+              "column": 31
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIManager.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498408.118,
+        "uuid": "09655416-66ee-480f-b261-8b2948cd74af"
+      },
+      "chunkId": "612e8ca9d10ecb32d0b6dda205dc967386acbd47",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 65
+            },
+            "end": {
+              "line": 1,
+              "column": 69
+            }
+          }
+        },
+        {
+          "value": "./UIData",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 52
+            },
+            "end": {
+              "line": 2,
+              "column": 62
+            }
+          }
+        },
+        {
+          "value": "./UIBase",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 23
+            },
+            "end": {
+              "line": 3,
+              "column": 33
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/EventManager.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498409.1147,
+        "uuid": "8d9ebb34-2307-4f11-8712-dfa50620aff6"
+      },
+      "chunkId": "3276642c68d601034f413d6c0fecf73b0df0ef14",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/FrameworkConst.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498409.1147,
+        "uuid": "76f48a98-0329-4930-9897-1d133c6f66fa"
+      },
+      "chunkId": "f0e2cfdecf5ae0d4352bda8041b93be3a99bda75",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/FrameworkEvent.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498409.1147,
+        "uuid": "8714e158-e318-467a-8142-de76f29894bb"
+      },
+      "chunkId": "d645098c6f412b60e919b8defb861e035f194f91",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/ObjectPool.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498410.113,
+        "uuid": "902019a8-f0e0-487d-bcc8-14b48e86b33d"
+      },
+      "chunkId": "6423a74a946f7c4640882f7e5df8b8d0df0d0cc4",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/StorageManager.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498410.113,
+        "uuid": "f83a0421-5281-4443-b795-b35c7ade3faf"
+      },
+      "chunkId": "bd96ac98d9d74eb9118d40caf128f266aaddf375",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/TimerManager.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498411.1082,
+        "uuid": "dde74a02-05e2-4e8c-93b9-cdf4cb71e61c"
+      },
+      "chunkId": "ce3ebe4d3138cad1b3403e443cd5c80c65f38c95",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/TypeFactory.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498412.1064,
+        "uuid": "fc314bcc-afac-4b42-befc-9d580d673f0f"
+      },
+      "chunkId": "58c673aac1a0c9d1c73826db38e8c5647b23398a",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/framework/TypeRegistry.ts": {
+      "mTimestamp": {
+        "mtime": 1780812498412.1064,
+        "uuid": "2bfe76bf-68a1-4227-a1bd-b584166c5e39"
+      },
+      "chunkId": "e578f1b345a390dfc2c86c85e9629ac0c1be71c4",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
         {
           "resolved": {
             "type": "module",
