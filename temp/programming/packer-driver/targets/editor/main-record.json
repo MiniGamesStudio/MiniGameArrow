@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 9452.4352,
+      "mTimestamp": 9511.8617,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 1510276.9421,
+      "mTimestamp": 3168092.5434,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -3079,7 +3079,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1780812851874,
+      "mTimestamp": 1781590279849,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -20471,7 +20471,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts": {
       "mTimestamp": {
-        "mtime": 1780812498408.118,
+        "mtime": 1781593411792.719,
         "uuid": "6678fc54-bd49-4733-92a7-08e548ca8181"
       },
       "chunkId": "5bc13210f8659bcc885f6322fbc72c2b72dda7d5",
@@ -20491,11 +20491,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 84
+              "column": 132
             },
             "end": {
               "line": 1,
-              "column": 88
+              "column": 136
             }
           }
         },
@@ -21175,7 +21175,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/CommonGame/ui/MainPanel.ts": {
       "mTimestamp": {
-        "mtime": 1780814293833.758,
+        "mtime": 1781593423327.7476,
         "uuid": "22de7818-fe8e-470c-bec7-91ab37d108dd"
       },
       "chunkId": "7719d03e58ef883afe575989166c9fba04d1c707",

@@ -1,6 +1,17 @@
-import { _decorator, Button, Component, resources, Prefab, instantiate, Node } from 'cc';
+import { _decorator, Button, Color, Component, instantiate, Label, Node, Prefab, resources, Sprite, SpriteFrame, UITransform } from 'cc';
 import { UIManager } from './UIManager';
 const { ccclass } = _decorator;
+
+export type UIButtonClickHandler = () => void;
+
+export interface UIButtonTableItem {
+    buttonName: string;
+    buttonText: string;
+    buttonIcon: SpriteFrame | string | null;
+    uiID?: number;
+    uiArgs?: unknown | unknown[];
+    onClick?: UIButtonClickHandler;
+}
 
 /**
  * UI 基类 — 所有面板的父类，提供生命周期钩子和子页面管理
@@ -45,6 +56,143 @@ export abstract class UIBase extends Component {
             btn.node.off(eventName);
             btn.node.on(eventName, callback, this);
         }
+    }
+
+    /** 创建一个通用按钮，可自定义点击响应 */
+    CreateUIButton(parent: Node, buttonName: string, buttonText: string, buttonIcon: SpriteFrame | string | null, onClick?: UIButtonClickHandler): Button | null {
+        if (!parent || !parent.isValid) return null;
+
+        const buttonNode = new Node(buttonName || 'UIButton');
+        buttonNode.layer = parent.layer;
+        parent.addChild(buttonNode);
+
+        const transform = buttonNode.addComponent(UITransform);
+        transform.setContentSize(145, 100);
+
+        const buttonSprite = buttonNode.addComponent(Sprite);
+        buttonSprite.sizeMode = Sprite.SizeMode.CUSTOM;
+
+        const button = buttonNode.addComponent(Button);
+        if (onClick) this.SetBtnEvent(button, onClick);
+
+        const labelNode = new Node('Name');
+        labelNode.layer = buttonNode.layer;
+        buttonNode.addChild(labelNode);
+        labelNode.setPosition(0, -34, 0);
+
+        const labelTransform = labelNode.addComponent(UITransform);
+        labelTransform.setContentSize(145, 32);
+
+        const label = labelNode.addComponent(Label);
+        label.string = buttonText;
+        label.fontSize = 24;
+        label.lineHeight = 28;
+        label.color = Color.WHITE;
+
+        this.setButtonIcon(buttonSprite, transform, labelTransform, labelNode, buttonIcon);
+
+        return button;
+    }
+
+    /** 创建一个点击后打开指定 UI 的按钮 */
+    CreateOpenUIButton(parent: Node, buttonName: string, buttonText: string, buttonIcon: SpriteFrame | string | null, uiID: number, uiArgs?: unknown | unknown[]): Button | null {
+        const panelArgs = uiArgs === undefined || uiArgs === null
+            ? []
+            : Array.isArray(uiArgs) ? uiArgs : [uiArgs];
+
+        return this.CreateUIButton(parent, buttonName || `OpenUI_${uiID}`, buttonText, buttonIcon, () => {
+            UIManager.GetInstance().OpenPanel(uiID, ...panelArgs);
+        });
+    }
+
+    /** 通过表配置批量创建按钮，支持自定义点击或打开 UI
+     * 示例：
+    this.CreateUIButtonsByTable(rootNode, [
+        {
+            buttonName: "Shop",
+            buttonText: "商店",
+            buttonIcon: "buttons/Icon_Star",
+            uiID: ShopUIID,
+            uiArgs: { tab: 1 },
+        },
+        {
+            buttonName: "Custom",
+            buttonText: "自定义",
+            buttonIcon: "buttons/Icon_Stopwatch",
+            onClick: () => {
+                console.log("点击自定义按钮");
+            },
+        },
+    ]);
+    */
+    CreateUIButtonsByTable(parent: Node, buttonTable: UIButtonTableItem[]): Button[] {
+        if (!parent || !parent.isValid || !buttonTable) return [];
+
+        const buttons: Button[] = [];
+        buttonTable.forEach(config => {
+            if (!config) return;
+
+            const button = this.CreateUIButton(
+                parent,
+                config.buttonName,
+                config.buttonText,
+                config.buttonIcon,
+                this.getButtonClickHandler(config),
+            );
+
+            if (!button) return;
+
+            buttons.push(button);
+        });
+
+        return buttons;
+    }
+
+    private getButtonClickHandler(config: UIButtonTableItem): UIButtonClickHandler | undefined {
+        if (config.onClick) return config.onClick;
+        if (config.uiID === undefined || config.uiID === null) return undefined;
+
+        const panelArgs = config.uiArgs === undefined || config.uiArgs === null
+            ? []
+            : Array.isArray(config.uiArgs) ? config.uiArgs : [config.uiArgs];
+
+        return () => {
+            UIManager.GetInstance().OpenPanel(config.uiID, ...panelArgs);
+        };
+    }
+
+    private setButtonIcon(buttonSprite: Sprite, buttonTransform: UITransform, labelTransform: UITransform, labelNode: Node, buttonIcon: SpriteFrame | string | null): void {
+        if (!buttonIcon) return;
+
+        if (buttonIcon instanceof SpriteFrame) {
+            this.applyButtonIcon(buttonSprite, buttonTransform, labelTransform, labelNode, buttonIcon);
+            return;
+        }
+
+        resources.load(buttonIcon, SpriteFrame, (err, spriteFrame) => {
+            if (!err && spriteFrame && buttonSprite.isValid) {
+                this.applyButtonIcon(buttonSprite, buttonTransform, labelTransform, labelNode, spriteFrame);
+                return;
+            }
+
+            const spriteFramePath = `${buttonIcon}/spriteFrame`;
+            resources.load(spriteFramePath, SpriteFrame, (retryErr, retrySpriteFrame) => {
+                if (!retryErr && retrySpriteFrame && buttonSprite.isValid) {
+                    this.applyButtonIcon(buttonSprite, buttonTransform, labelTransform, labelNode, retrySpriteFrame);
+                }
+            });
+        });
+    }
+
+    private applyButtonIcon(buttonSprite: Sprite, buttonTransform: UITransform, labelTransform: UITransform, labelNode: Node, spriteFrame: SpriteFrame): void {
+        buttonSprite.spriteFrame = spriteFrame;
+
+        const iconSize = spriteFrame.originalSize;
+        if (iconSize.width <= 0 || iconSize.height <= 0) return;
+
+        buttonTransform.setContentSize(iconSize.width, iconSize.height);
+        labelTransform.setContentSize(iconSize.width, 32);
+        labelNode.setPosition(0, -iconSize.height * 0.5 + 20, 0);
     }
 
     /** 加载子页面（pageName 唯一标识） */

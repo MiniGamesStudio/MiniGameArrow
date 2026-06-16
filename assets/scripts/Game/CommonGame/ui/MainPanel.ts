@@ -19,6 +19,10 @@ export class MainPanel extends UIBase {
     m_PageTwo: Node = null;
     @property(Node)
     m_TopPageRoot: Node = null;
+    @property(Node)
+    m_LeftRoot: Node = null;
+    @property(Node)
+    m_RightRoot: Node = null;
 
     private m_CurPage: Node = null;
     private m_OtherPage: Node = null;
@@ -75,6 +79,50 @@ export class MainPanel extends UIBase {
 
         this.loadPage(this.m_LastIndex, this.m_PageOne);
         this.bindPageButtons();
+        this.InitUIButtons();
+    }
+
+    private InitUIButtons(): void {
+        this.CreateUIButtonsByTable(this.m_LeftRoot, [
+            {
+                buttonName: "Shop",
+                buttonText: "商店",
+                buttonIcon: "texture/Icon_MenuIcon02_Shop",
+                onClick: () => {
+                    console.log("点击商店");
+                },
+            },
+            {
+                buttonName: "Ranking",
+                buttonText: "排行榜",
+                buttonIcon: "texture/Icon_ImageIcon_Ranking",
+                onClick: () => {
+                    console.log("点击排行榜");
+                },
+            },
+        ]);
+
+        this.CreateUIButtonsByTable(this.m_RightRoot, [
+            {
+                buttonName: "Setting",
+                buttonText: "设置",
+                buttonIcon: "texture/Pictoicon_Gear",
+                onClick: () => {
+                    console.log("点击设置");
+                },
+            },
+        ]);
+
+        this.CreateUIButtonsByTable(this.m_TopPageRoot, [
+            {
+                buttonName: "Battle",
+                buttonText: "战斗",
+                buttonIcon: "texture/Icon_ImageIcon_Knife_Battle",
+                onClick: () => {
+                    console.log("点击战斗");
+                },
+            },
+        ]);
     }
 
     private bindPageButtons(): void {

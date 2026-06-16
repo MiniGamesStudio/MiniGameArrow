@@ -13,6 +13,8 @@
             "scripts\\framework",
             "scripts\\Game",
             "scripts\\engine\\ui",
+            "scripts\\Game\\CommonGame",
+            "scripts\\Game\\CommonGame\\ui",
             "scripts\\engine\\AudioManager.ts",
             "scripts\\engine\\ConfigManager.ts",
             "scripts\\engine\\FlatBuffersRuntime.ts",
@@ -32,6 +34,10 @@
             "scripts\\engine\\ui\\UIBase.ts",
             "scripts\\engine\\ui\\UIData.ts",
             "scripts\\engine\\ui\\UIManager.ts",
+            "scripts\\Game\\CommonGame\\CommonGameEntry.ts",
+            "scripts\\Game\\CommonGame\\CommonUIConfig.ts",
+            "scripts\\Game\\CommonGame\\ui\\LoadingPanel.ts",
+            "scripts\\Game\\CommonGame\\ui\\MainPanel.ts",
             "custom.animgraph",
             "Layout.prefab",
             "scene\\main.scene",
@@ -66,13 +72,7 @@
             "resources\\texture\\Slider_BasicTrapezoid01_Fill_White.png",
             "resources\\texture\\title.png",
             "resources\\ui\\LoadingPanel.prefab",
-            "resources\\ui\\MainPanel.prefab",
-            "scripts\\Game\\CommonGame",
-            "scripts\\Game\\CommonGame\\CommonGameEntry.ts",
-            "scripts\\Game\\CommonGame\\CommonUIConfig.ts",
-            "scripts\\Game\\CommonGame\\ui",
-            "scripts\\Game\\CommonGame\\ui\\LoadingPanel.ts",
-            "scripts\\Game\\CommonGame\\ui\\MainPanel.ts"
+            "resources\\ui\\MainPanel.prefab"
         ]
     }
 }
