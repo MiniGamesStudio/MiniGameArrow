@@ -3,16 +3,16 @@ import { UIBase } from '../../../engine/ui/UIBase';
 import { FrameworkConst } from '../../../framework/FrameworkConst';
 const { ccclass, property } = _decorator;
 
-export interface MainPanelOptions {
-    pagePrefabPaths?: string[];
-    defaultPageIndex?: number;
-    topPagePrefabPath?: string;
-}
-
 @ccclass('MainPanel')
 export class MainPanel extends UIBase {
     @property([Button])
     m_FuncBtns: Button[] = [];
+    @property([String])
+    m_PagePrefabPaths: string[] = [];
+    @property
+    m_DefaultPageIndex: number = 0;
+    @property
+    m_TopPagePrefabPath: string = "";
     @property(Node)
     m_PageOne: Node = null;
     @property(Node)
@@ -31,13 +31,11 @@ export class MainPanel extends UIBase {
     private m_ScreenWidth: number = 0;
     private m_CurTween: Tween<Node> = null;
     private m_OtherTween: Tween<Node> = null;
-    private m_PagePrefabPaths: string[] = [];
-    private m_TopPagePrefabPath: string = "";
 
     OnInit(): void {}
 
-    OnOpen(options?: MainPanelOptions): void {
-        this.applyOptions(options);
+    OnOpen(): void {
+        this.m_LastIndex = this.clampPageIndex(this.m_DefaultPageIndex);
         this.initUI();
     }
 
@@ -52,12 +50,6 @@ export class MainPanel extends UIBase {
 
     protected onDestroy(): void {
         this.stopTweens();
-    }
-
-    private applyOptions(options?: MainPanelOptions): void {
-        this.m_PagePrefabPaths = options?.pagePrefabPaths ?? [];
-        this.m_TopPagePrefabPath = options?.topPagePrefabPath ?? "";
-        this.m_LastIndex = this.clampPageIndex(options?.defaultPageIndex ?? 0);
     }
 
     private initUI(): void {

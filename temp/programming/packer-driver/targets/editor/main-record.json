@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 9511.8617,
+      "mTimestamp": 5574.1568,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 3168092.5434,
+      "mTimestamp": 7548.9773,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -3079,7 +3079,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1781590279849,
+      "mTimestamp": 1781594989219,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -21175,7 +21175,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/Game/CommonGame/ui/MainPanel.ts": {
       "mTimestamp": {
-        "mtime": 1781593423327.7476,
+        "mtime": 1781594987405.6868,
         "uuid": "22de7818-fe8e-470c-bec7-91ab37d108dd"
       },
       "chunkId": "7719d03e58ef883afe575989166c9fba04d1c707",
