@@ -65,7 +65,8 @@
             "resources\\ui\\LoadingPanel.prefab",
             "resources\\ui\\MainPanel.prefab",
             "resources\\ui\\MainPage.prefab",
-            "scripts\\Game\\CommonGame\\ui\\MainPage.ts"
+            "scripts\\Game\\CommonGame\\ui\\MainPage.ts",
+            "scripts\\engine\\AdManager.ts"
         ]
     }
 }

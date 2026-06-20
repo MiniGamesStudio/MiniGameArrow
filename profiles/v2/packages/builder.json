@@ -10,7 +10,11 @@
     },
     "polyfills": {
       "asyncFunctions": true
-    }
+    },
+    "buildPath": "project://build",
+    "outputName": "wechatgame",
+    "mainBundleCompressionType": "merge_dep",
+    "platform": "wechatgame"
   },
   "BuildTaskManager": {
     "taskMap": {}

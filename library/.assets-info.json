@@ -321,7 +321,7 @@
       "time": 1776483748808.626
     },
     "scripts\\engine": {
-      "time": 1780812498407.121,
+      "time": 1781930250616.8696,
       "uuid": "211cab37-71d6-4ead-affc-1bd22b5825b3"
     },
     "scripts\\framework": {
@@ -345,7 +345,7 @@
       "uuid": "880e566e-df6c-4a54-bc82-c5bef1d4e049"
     },
     "scripts\\engine\\GameManager.ts": {
-      "time": 1780812498406.1245,
+      "time": 1781930255642.3892,
       "uuid": "c6d1d8ee-b920-4aab-b685-1366461740a1"
     },
     "scripts\\engine\\Launcher.ts": {
@@ -919,6 +919,13 @@
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
       "time": 1781928256615.2202,
       "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
+    },
+    "scripts\\engine\\AdManager.ts.meta": {
+      "time": 1781930250616.8696
+    },
+    "scripts\\engine\\AdManager.ts": {
+      "time": 1781931146090.5288,
+      "uuid": "e8910ef2-5c2e-4c28-9de0-5bfe1d889d2e"
     }
   },
   "missing": {}

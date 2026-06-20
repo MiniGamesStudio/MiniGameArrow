@@ -5,6 +5,7 @@ import { ResManager } from "./ResManager";
 import { NodePoolManager } from "./NodePool";
 import { ConfigManager } from "./ConfigManager";
 import { FlatBuffersRuntime } from "./FlatBuffersRuntime";
+import { AdManager } from "./AdManager";
 import { TimerManager } from "../framework/TimerManager";
 import { StorageManager } from "../framework/StorageManager";
 import { PoolManager } from "../framework/ObjectPool";
@@ -56,10 +57,13 @@ export class GameManager {
         // 2. 引擎层 — 音频
         AudioManager.getInstance().init(persistNode);
 
-        // 3. 引擎层 — UI
+        // 3. 引擎层 — 广告
+        AdManager.getInstance().init();
+
+        // 4. 引擎层 — UI
         UIManager.GetInstance().Init(uiRoot);
 
-        // 4. 游戏层初始化（注册 UI 面板、设置存储前缀、打开首屏等）
+        // 5. 游戏层初始化（注册 UI 面板、设置存储前缀、打开首屏等）
         if (onGameReady) {
             try {
                 Promise.resolve(onGameReady()).catch((err) => {
@@ -91,6 +95,7 @@ export class GameManager {
         EventManager.getInstance().clear();
         ConfigManager.getInstance().clear();
         FlatBuffersRuntime.getInstance().releaseAll();
+        AdManager.getInstance().destroy();
         ResManager.getInstance().releaseAll();
         this.m_Initialized = false;
     }

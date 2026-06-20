@@ -5,11 +5,16 @@
       "web-desktop": {
         "configID": "5016ae",
         "services": []
+      },
+      "wechatgame": {
+        "configID": "5016ae",
+        "services": []
       }
     }
   },
   "builder-options": {
     "configID": "5016ae",
-    "services": []
+    "services": [],
+    "__version__": "3.0.9"
   }
 }
