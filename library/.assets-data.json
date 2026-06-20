@@ -3695,5 +3695,20 @@
     "url": "db://assets/scripts/engine/AdManager.ts",
     "value": {},
     "versionCode": 1
+  },
+  "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23": {
+    "url": "db://assets/resources/ui/GamePanel.prefab",
+    "value": {
+      "depends": [
+        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
+        "4e9cfa13-dac5-4d82-861c-1cc1eaa9920d@f9941",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
+        "83985e7f-c240-4752-b17d-27c185892c87@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
   }
 }

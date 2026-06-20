@@ -6,7 +6,7 @@ export type UIButtonClickHandler = () => void;
 
 export interface UIButtonTableItem {
     buttonName: string;
-    buttonText: string;
+    buttonText?: string;
     buttonIcon: SpriteFrame | string | null;
     uiID?: number;
     uiArgs?: unknown | unknown[];
@@ -59,7 +59,7 @@ export abstract class UIBase extends Component {
     }
 
     /** 创建一个通用按钮，可自定义点击响应 */
-    CreateUIButton(parent: Node, buttonName: string, buttonText: string, buttonIcon: SpriteFrame | string | null, onClick?: UIButtonClickHandler): Button | null {
+    CreateUIButton(parent: Node, buttonName: string, buttonText: string = "", buttonIcon: SpriteFrame | string | null, onClick?: UIButtonClickHandler): Button | null {
         if (!parent || !parent.isValid) return null;
 
         const buttonNode = new Node(buttonName || 'UIButton');
@@ -67,7 +67,7 @@ export abstract class UIBase extends Component {
         parent.addChild(buttonNode);
 
         const transform = buttonNode.addComponent(UITransform);
-        transform.setContentSize(145, 100);
+        //transform.setContentSize(145, 100);
 
         const buttonSprite = buttonNode.addComponent(Sprite);
         buttonSprite.sizeMode = Sprite.SizeMode.TRIMMED;
@@ -75,19 +75,23 @@ export abstract class UIBase extends Component {
         const button = buttonNode.addComponent(Button);
         if (onClick) this.SetBtnEvent(button, onClick);
 
-        const labelNode = new Node('Name');
-        labelNode.layer = buttonNode.layer;
-        buttonNode.addChild(labelNode);
-        labelNode.setPosition(0, -34, 0);
+        let labelNode: Node = null;
+        let labelTransform: UITransform = null;
+        if (buttonText) {
+            labelNode = new Node('Name');
+            labelNode.layer = buttonNode.layer;
+            buttonNode.addChild(labelNode);
+            labelNode.setPosition(0, 0, 0);
 
-        const labelTransform = labelNode.addComponent(UITransform);
-        labelTransform.setContentSize(145, 32);
+            labelTransform = labelNode.addComponent(UITransform);
+            labelTransform.setContentSize(145, 32);
 
-        const label = labelNode.addComponent(Label);
-        label.string = buttonText;
-        label.fontSize = 24;
-        label.lineHeight = 28;
-        label.color = Color.WHITE;
+            const label = labelNode.addComponent(Label);
+            label.string = buttonText;
+            label.fontSize = 24;
+            label.lineHeight = 28;
+            label.color = Color.WHITE;
+        }
 
         this.setButtonIcon(buttonSprite, transform, labelTransform, labelNode, buttonIcon);
 
@@ -95,7 +99,7 @@ export abstract class UIBase extends Component {
     }
 
     /** 创建一个点击后打开指定 UI 的按钮 */
-    CreateOpenUIButton(parent: Node, buttonName: string, buttonText: string, buttonIcon: SpriteFrame | string | null, uiID: number, uiArgs?: unknown | unknown[]): Button | null {
+    CreateOpenUIButton(parent: Node, buttonName: string, buttonText: string = "", buttonIcon: SpriteFrame | string | null, uiID: number, uiArgs?: unknown | unknown[]): Button | null {
         const panelArgs = uiArgs === undefined || uiArgs === null
             ? []
             : Array.isArray(uiArgs) ? uiArgs : [uiArgs];
@@ -161,7 +165,7 @@ export abstract class UIBase extends Component {
         };
     }
 
-    private setButtonIcon(buttonSprite: Sprite, buttonTransform: UITransform, labelTransform: UITransform, labelNode: Node, buttonIcon: SpriteFrame | string | null): void {
+    private setButtonIcon(buttonSprite: Sprite, buttonTransform: UITransform, labelTransform: UITransform | null, labelNode: Node | null, buttonIcon: SpriteFrame | string | null): void {
         if (!buttonIcon) return;
 
         if (buttonIcon instanceof SpriteFrame) {
@@ -184,15 +188,18 @@ export abstract class UIBase extends Component {
         });
     }
 
-    private applyButtonIcon(buttonSprite: Sprite, buttonTransform: UITransform, labelTransform: UITransform, labelNode: Node, spriteFrame: SpriteFrame): void {
+    private applyButtonIcon(buttonSprite: Sprite, buttonTransform: UITransform, labelTransform: UITransform | null, labelNode: Node | null, spriteFrame: SpriteFrame): void {
         buttonSprite.spriteFrame = spriteFrame;
+        buttonSprite.sizeMode = Sprite.SizeMode.TRIMMED;
 
-        const iconSize = spriteFrame.originalSize;
+        const iconSize = spriteFrame.rect;
         if (iconSize.width <= 0 || iconSize.height <= 0) return;
 
         buttonTransform.setContentSize(iconSize.width, iconSize.height);
-        labelTransform.setContentSize(iconSize.width, 32);
-        labelNode.setPosition(0, -iconSize.height * 0.5 + 20, 0);
+        if (labelTransform && labelNode) {
+            labelTransform.setContentSize(iconSize.width, 32);
+            labelNode.setPosition(0, -iconSize.height * 0.5 + 20, 0);
+        }
     }
 
     /** 加载子页面（pageName 唯一标识） */

@@ -514,7 +514,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 63693481.4884,
+      "mTimestamp": 65637082.5941,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -20051,7 +20051,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameProtype/assets/scripts/engine/ui/UIBase.ts": {
       "mTimestamp": {
-        "mtime": 1781936160730.3523,
+        "mtime": 1781937640975.4324,
         "uuid": "6678fc54-bd49-4733-92a7-08e548ca8181"
       },
       "chunkId": "5bc13210f8659bcc885f6322fbc72c2b72dda7d5",

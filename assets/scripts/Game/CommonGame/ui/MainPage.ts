@@ -35,28 +35,6 @@ export class MainPage extends UIBase {
     }
 
     private InitUIButtons(): void {
-        this.CreateUIButtonsByTable(this.m_LeftRoot, [
-            {
-                buttonName: "Ranking",
-                buttonText: "排行榜",
-                buttonIcon: "texture/Icon_ImageIcon_Ranking",
-                onClick: () => {
-                    console.log("点击排行榜");
-                },
-            },
-        ]);
-
-        this.CreateUIButtonsByTable(this.m_RightRoot, [
-            {
-                buttonName: "Setting",
-                buttonText: "设置",
-                buttonIcon: "texture/Pictoicon_Gear",
-                onClick: () => {
-                    console.log("点击设置");
-                },
-            },
-        ]);
-
         this.CreateUIButtonsByTable(this.m_MiddleRoot, [
             {
                 buttonName: "StartGame",

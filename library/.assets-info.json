@@ -55,7 +55,7 @@
       "time": 1780812498307.454
     },
     "resources\\ui": {
-      "time": 1781926548789.6257,
+      "time": 1781938132799.9082,
       "uuid": "6c60be67-475a-43dc-a592-251e41add936"
     },
     "resources\\ui\\LoadingPanel.prefab.meta": {
@@ -397,7 +397,7 @@
       "uuid": "2bfe76bf-68a1-4227-a1bd-b584166c5e39"
     },
     "scripts\\engine\\ui\\UIBase.ts": {
-      "time": 1781936160730.3523,
+      "time": 1781937640975.4324,
       "uuid": "6678fc54-bd49-4733-92a7-08e548ca8181"
     },
     "scripts\\engine\\ui\\UIData.ts": {
@@ -910,7 +910,7 @@
       "time": 1781926548796.6262
     },
     "resources\\ui\\MainPage.prefab": {
-      "time": 1781928703586.7168,
+      "time": 1781936961627.8162,
       "uuid": "f7e7fc73-23fc-4f8f-838a-3643ae2e8713"
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts.meta": {
@@ -926,6 +926,13 @@
     "scripts\\engine\\AdManager.ts": {
       "time": 1781931146090.5288,
       "uuid": "e8910ef2-5c2e-4c28-9de0-5bfe1d889d2e"
+    },
+    "resources\\ui\\GamePanel.prefab.meta": {
+      "time": 1781938132804.9094
+    },
+    "resources\\ui\\GamePanel.prefab": {
+      "time": 1781938542355.6416,
+      "uuid": "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23"
     }
   },
   "missing": {}

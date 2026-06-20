@@ -66,7 +66,8 @@
             "resources\\ui\\MainPanel.prefab",
             "resources\\ui\\MainPage.prefab",
             "scripts\\Game\\CommonGame\\ui\\MainPage.ts",
-            "scripts\\engine\\AdManager.ts"
+            "scripts\\engine\\AdManager.ts",
+            "resources\\ui\\GamePanel.prefab"
         ]
     }
 }

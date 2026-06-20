@@ -766,5 +766,15 @@
       "0_0",
       "0_0_2"
     ]
+  },
+  "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23": {
+    "assetUuid": "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23",
+    "animationUuid": "",
+    "expandLevels": [
+      "0",
+      "0_0",
+      "0_0_1",
+      "0_0_1_0"
+    ]
   }
 }
