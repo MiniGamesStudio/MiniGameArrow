@@ -26,14 +26,7 @@
   },
   "167d0735-60aa-41a5-a61f-2fcedbc6b8da": {
     "url": "db://assets/Layout.prefab",
-    "value": {
-      "depends": [
-        "57520716-48c8-4a19-8acf-41c9f8777fb0@f9941"
-      ],
-      "dependScripts": [
-        "6bd473a9-b885-4cf7-ad19-f480985edc0e"
-      ]
-    },
+    "value": {},
     "versionCode": 2
   },
   "319640fa-293f-4197-855c-d1d2f7adc4e6": {
@@ -157,15 +150,10 @@
     "value": {
       "depends": [
         "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "1dcf678f-00d7-4fb9-8e1e-bfa9609d814a@f9941",
-        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
-        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
-        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
         "3bf25aa3-df77-4011-a29d-020e61ca8403@f9941",
+        "8f2bf944-ec0d-49ad-9f67-9485e9e0288d@f9941",
         "12802953-430c-4b56-899e-68fd8ebabcb9@f9941",
-        "68a421d3-6d8b-4781-9492-f0da468b0936@f9941",
-        "23356bcd-801e-47ef-ae43-098e3b36d8c7@f9941",
-        "8f2bf944-ec0d-49ad-9f67-9485e9e0288d@f9941"
+        "68a421d3-6d8b-4781-9492-f0da468b0936@f9941"
       ],
       "dependScripts": [
         "22de7818-fe8e-470c-bec7-91ab37d108dd"
@@ -312,23 +300,17 @@
   },
   "0facc399-0ce1-412e-a645-c43c9e60305f": {
     "url": "db://assets/resources/texture/Icon_ImageIcon_Lock01_l.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "fcb985af-1c86-4749-8195-b7e70420a5da": {
     "url": "db://assets/resources/texture/Icon_ImageIcon_lock_00.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "23356bcd-801e-47ef-ae43-098e3b36d8c7": {
     "url": "db://assets/resources/texture/Icon_ImageIcon_Map_s.Png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "fcb985af-1c86-4749-8195-b7e70420a5da@6c48a": {
@@ -433,9 +415,7 @@
   },
   "1dcf678f-00d7-4fb9-8e1e-bfa9609d814a": {
     "url": "db://assets/resources/texture/Icon_MenuIcon02_Shop.Png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "088f4e4a-25b6-4239-a03c-acb325bf5794@f9941": {
@@ -544,9 +524,7 @@
   },
   "4f93b14d-6123-41ea-a5d7-52d3ae9c6848": {
     "url": "db://assets/resources/texture/Icon_ImageIcon_Badge_Popular.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "83985e7f-c240-4752-b17d-27c185892c87": {
@@ -572,9 +550,7 @@
   },
   "3451f789-e978-47be-8ca2-efbad9681fd7": {
     "url": "db://assets/resources/texture/Play_Skill_2.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "83985e7f-c240-4752-b17d-27c185892c87@6c48a": {
@@ -2230,9 +2206,7 @@
   },
   "d8609034-0eb0-4d16-a4d4-f826f52eaee6": {
     "url": "db://assets/resources/texture/Play_ActionText_Frame_Orange.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "d8609034-0eb0-4d16-a4d4-f826f52eaee6@6c48a": {
@@ -2676,9 +2650,7 @@
   },
   "5f3c7a34-090a-4dad-b31c-2ea2b1ac4475": {
     "url": "db://assets/resources/buttons/Icon_Stopwatch.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "52792a94-0132-4a9e-99e0-365f1a486ccc@6c48a": {
@@ -3699,6 +3671,23 @@
   },
   "ac797e07-e831-4a17-b9c6-f873c4a8ed74": {
     "url": "db://assets/scripts/Game/RoguelikeGame/Types/Terrains/WaterTerrain.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "f7e7fc73-23fc-4f8f-838a-3643ae2e8713": {
+    "url": "db://assets/resources/ui/MainPage.prefab",
+    "value": {
+      "depends": [
+        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941"
+      ],
+      "dependScripts": [
+        "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
+      ]
+    },
+    "versionCode": 2
+  },
+  "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac": {
+    "url": "db://assets/scripts/Game/CommonGame/ui/MainPage.ts",
     "value": {},
     "versionCode": 1
   }

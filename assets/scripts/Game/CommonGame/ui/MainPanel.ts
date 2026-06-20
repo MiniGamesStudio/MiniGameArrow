@@ -8,21 +8,15 @@ export class MainPanel extends UIBase {
     @property([Button])
     m_FuncBtns: Button[] = [];
     @property([String])
-    m_PagePrefabPaths: string[] = [];
+    m_PagePrefabPaths: string[] = ["ui/MainPage"];
     @property
     m_DefaultPageIndex: number = 0;
-    @property
-    m_TopPagePrefabPath: string = "";
     @property(Node)
     m_PageOne: Node = null;
     @property(Node)
     m_PageTwo: Node = null;
     @property(Node)
-    m_TopPageRoot: Node = null;
-    @property(Node)
-    m_LeftRoot: Node = null;
-    @property(Node)
-    m_RightRoot: Node = null;
+    m_BottomRoot: Node = null;
 
     private m_CurPage: Node = null;
     private m_OtherPage: Node = null;
@@ -44,7 +38,6 @@ export class MainPanel extends UIBase {
         this.stopTweens();
         this.clearPage(this.m_PageOne);
         this.clearPage(this.m_PageTwo);
-        this.clearPage(this.m_TopPageRoot);
         this.m_IsScrollingPage = false;
     }
 
@@ -63,58 +56,20 @@ export class MainPanel extends UIBase {
 
         this.clearPage(this.m_PageOne);
         this.clearPage(this.m_PageTwo);
-        this.clearPage(this.m_TopPageRoot);
 
-        if (this.m_TopPagePrefabPath) {
-            this.AttachUIPage(this.m_TopPageRoot, 'TopPage', this.m_TopPagePrefabPath);
-        }
-
-        this.loadPage(this.m_LastIndex, this.m_PageOne);
+        this.loadInitialPage();
+        this.refreshBottomRoot();
         this.bindPageButtons();
-        this.InitUIButtons();
     }
 
-    private InitUIButtons(): void {
-        this.CreateUIButtonsByTable(this.m_LeftRoot, [
-            {
-                buttonName: "Shop",
-                buttonText: "商店",
-                buttonIcon: "texture/Icon_MenuIcon02_Shop",
-                onClick: () => {
-                    console.log("点击商店");
-                },
-            },
-            {
-                buttonName: "Ranking",
-                buttonText: "排行榜",
-                buttonIcon: "texture/Icon_ImageIcon_Ranking",
-                onClick: () => {
-                    console.log("点击排行榜");
-                },
-            },
-        ]);
+    private refreshBottomRoot(): void {
+        if (this.m_BottomRoot) {
+            this.m_BottomRoot.active = this.m_FuncBtns.length > 0;
+        }
+    }
 
-        this.CreateUIButtonsByTable(this.m_RightRoot, [
-            {
-                buttonName: "Setting",
-                buttonText: "设置",
-                buttonIcon: "texture/Pictoicon_Gear",
-                onClick: () => {
-                    console.log("点击设置");
-                },
-            },
-        ]);
-
-        this.CreateUIButtonsByTable(this.m_TopPageRoot, [
-            {
-                buttonName: "Battle",
-                buttonText: "战斗",
-                buttonIcon: "texture/Icon_ImageIcon_Knife_Battle",
-                onClick: () => {
-                    console.log("点击战斗");
-                },
-            },
-        ]);
+    private loadInitialPage(): void {
+        this.loadPage(this.m_LastIndex, this.m_PageOne);
     }
 
     private bindPageButtons(): void {
@@ -159,7 +114,10 @@ export class MainPanel extends UIBase {
     }
 
     private loadPage(index: number, root: Node, onLoaded?: () => void): void {
-        const prefabPath = this.m_PagePrefabPaths[index];
+        this.loadPageByPath(this.m_PagePrefabPaths[index], root, onLoaded);
+    }
+
+    private loadPageByPath(prefabPath: string, root: Node, onLoaded?: () => void): void {
         if (!root || !prefabPath) {
             onLoaded?.();
             return;

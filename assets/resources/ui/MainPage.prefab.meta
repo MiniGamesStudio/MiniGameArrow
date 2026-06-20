@@ -2,12 +2,12 @@
   "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "167d0735-60aa-41a5-a61f-2fcedbc6b8da",
+  "uuid": "f7e7fc73-23fc-4f8f-838a-3643ae2e8713",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "Layout"
+    "syncNodeName": "MainPage"
   }
 }

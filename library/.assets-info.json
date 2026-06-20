@@ -1,13 +1,6 @@
 {
   "version": "1.0.1",
   "map": {
-    "Layout.prefab.meta": {
-      "time": 1780812498290.5115
-    },
-    "Layout.prefab": {
-      "time": 1780812498290.5115,
-      "uuid": "167d0735-60aa-41a5-a61f-2fcedbc6b8da"
-    },
     "custom.animgraph.meta": {
       "time": 1780812498290.5115
     },
@@ -62,7 +55,7 @@
       "time": 1780812498307.454
     },
     "resources\\ui": {
-      "time": 1780813485869.6714,
+      "time": 1781926548789.6257,
       "uuid": "6c60be67-475a-43dc-a592-251e41add936"
     },
     "resources\\ui\\LoadingPanel.prefab.meta": {
@@ -82,7 +75,7 @@
       "time": 1780812498311.442
     },
     "resources\\ui\\MainPanel.prefab": {
-      "time": 1781593533521.4321,
+      "time": 1781929048077.7046,
       "uuid": "e9ac1fc5-9611-4b81-934c-e3adb37b13fb"
     },
     "scripts\\UIScripts\\MainPanel.ts.meta": {
@@ -92,20 +85,11 @@
       "time": 1780812498302.4712
     },
     "resources\\texture": {
-      "time": 1780812498307.454,
+      "time": 1781874473360.9324,
       "uuid": "2d8f91cb-f9c9-4b31-b9da-833ea47f7044"
     },
     "resources\\texture\\Icon_ImageIcon_Knife_Battle.png.meta": {
       "time": 1780812498303.4678
-    },
-    "resources\\texture\\Icon_ImageIcon_Lock01_l.png.meta": {
-      "time": 1780812498303.4678
-    },
-    "resources\\texture\\Icon_ImageIcon_lock_00.png.meta": {
-      "time": 1780812498304.4646
-    },
-    "resources\\texture\\Icon_ImageIcon_Map_s.Png.meta": {
-      "time": 1780812498304.4646
     },
     "resources\\texture\\Icon_ImageIcon_Ranking.png.meta": {
       "time": 1780812498304.4646
@@ -113,24 +97,9 @@
     "resources\\texture\\Icon_ImageIcon_Trophy_m.png.meta": {
       "time": 1780812498304.4646
     },
-    "resources\\texture\\Icon_MenuIcon02_Shop.Png.meta": {
-      "time": 1780812498304.4646
-    },
-    "resources\\texture\\Icon_ImageIcon_lock_00.png": {
-      "time": 1780812498304.4646,
-      "uuid": "fcb985af-1c86-4749-8195-b7e70420a5da"
-    },
     "resources\\texture\\Icon_ImageIcon_Knife_Battle.png": {
       "time": 1780812498303.4678,
       "uuid": "68a421d3-6d8b-4781-9492-f0da468b0936"
-    },
-    "resources\\texture\\Icon_ImageIcon_Map_s.Png": {
-      "time": 1780812498304.4646,
-      "uuid": "23356bcd-801e-47ef-ae43-098e3b36d8c7"
-    },
-    "resources\\texture\\Icon_ImageIcon_Lock01_l.png": {
-      "time": 1780812498303.4678,
-      "uuid": "0facc399-0ce1-412e-a645-c43c9e60305f"
     },
     "resources\\texture\\Icon_ImageIcon_Ranking.png": {
       "time": 1780812498304.4646,
@@ -139,13 +108,6 @@
     "resources\\texture\\Icon_ImageIcon_Trophy_m.png": {
       "time": 1780812498304.4646,
       "uuid": "12802953-430c-4b56-899e-68fd8ebabcb9"
-    },
-    "resources\\texture\\Icon_MenuIcon02_Shop.Png": {
-      "time": 1780812498304.4646,
-      "uuid": "1dcf678f-00d7-4fb9-8e1e-bfa9609d814a"
-    },
-    "resources\\texture\\Icon_ImageIcon_Badge_Popular.png.meta": {
-      "time": 1780812498302.4712
     },
     "resources\\texture\\Icon_ImageIcon_Coin02.png.meta": {
       "time": 1780812498303.4678
@@ -156,9 +118,6 @@
     "resources\\texture\\ItemFrame02_Single_Green.png.meta": {
       "time": 1780812498305.4612
     },
-    "resources\\texture\\Play_Skill_2.png.meta": {
-      "time": 1780812498306.458
-    },
     "resources\\texture\\Icon_ImageIcon_Coin02.png": {
       "time": 1780812498303.4678,
       "uuid": "83985e7f-c240-4752-b17d-27c185892c87"
@@ -166,14 +125,6 @@
     "resources\\texture\\Icon_ImageIcon_Energy.png": {
       "time": 1780812498303.4678,
       "uuid": "c03983d3-1d8c-4408-9909-e9ac585800b3"
-    },
-    "resources\\texture\\Icon_ImageIcon_Badge_Popular.png": {
-      "time": 1780812498302.4712,
-      "uuid": "4f93b14d-6123-41ea-a5d7-52d3ae9c6848"
-    },
-    "resources\\texture\\Play_Skill_2.png": {
-      "time": 1780812498306.458,
-      "uuid": "3451f789-e978-47be-8ca2-efbad9681fd7"
     },
     "resources\\texture\\ItemFrame02_Single_Green.png": {
       "time": 1780812498305.4612,
@@ -212,13 +163,6 @@
       "time": 1780812498306.458,
       "uuid": "44f25ea4-0bae-4c44-b956-c589a7fe0cc7"
     },
-    "resources\\texture\\Play_ActionText_Frame_Orange.png.meta": {
-      "time": 1780812498305.4612
-    },
-    "resources\\texture\\Play_ActionText_Frame_Orange.png": {
-      "time": 1780812498305.4612,
-      "uuid": "d8609034-0eb0-4d16-a4d4-f826f52eaee6"
-    },
     "resources\\texture\\Background_ScreenDimed_Navy.png.meta": {
       "time": 1780812498302.4712
     },
@@ -230,25 +174,25 @@
       "time": 1780812498295.4944
     },
     "resources\\buttons\\Button01_145_BlueGray.Png.meta": {
-      "time": 1780812498295.4944
+      "time": 1781875327628.2754
     },
     "resources\\buttons\\Button01_145_Gray.Png.meta": {
-      "time": 1780812498296.492
+      "time": 1781875327635.275
     },
     "resources\\buttons\\Button01_145_Green.Png.meta": {
-      "time": 1780812498296.492
+      "time": 1781875327641.2742
     },
     "resources\\buttons\\Button01_145_Orange.Png.meta": {
-      "time": 1780812498296.492
+      "time": 1781875327646.2754
     },
     "resources\\buttons\\Button01_145_Purple.Png.meta": {
-      "time": 1780812498296.492
+      "time": 1781875327653.2756
     },
     "resources\\buttons\\Button01_145_Red.Png.meta": {
-      "time": 1780812498297.4878
+      "time": 1781875327659.274
     },
     "resources\\buttons": {
-      "time": 1780812498297.4878,
+      "time": 1781874507797.9639,
       "uuid": "32f388a2-302f-42ca-9b4e-d29b82055982"
     },
     "resources\\buttons\\Button01_145_Orange.Png": {
@@ -320,16 +264,9 @@
     "resources\\buttons\\Icon_Star.png.meta": {
       "time": 1780812498297.4878
     },
-    "resources\\buttons\\Icon_Stopwatch.png.meta": {
-      "time": 1780812498297.4878
-    },
     "resources\\buttons\\Icon_Star.png": {
       "time": 1780812498297.4878,
       "uuid": "52792a94-0132-4a9e-99e0-365f1a486ccc"
-    },
-    "resources\\buttons\\Icon_Stopwatch.png": {
-      "time": 1780812498297.4878,
-      "uuid": "5f3c7a34-090a-4dad-b31c-2ea2b1ac4475"
     },
     "scripts\\UIScripts\\Flower.ts.meta": {
       "time": 1758504843095.9443
@@ -950,7 +887,7 @@
       "uuid": "73edaae5-0b7a-425f-afe0-f601833012aa"
     },
     "scripts\\Game\\CommonGame\\ui": {
-      "time": 1780813438879.3452,
+      "time": 1781926886822.9626,
       "uuid": "191bdeae-9286-465e-a518-a494dbf87eba"
     },
     "scripts\\Game\\CommonGame\\CommonGameEntry.ts": {
@@ -966,8 +903,22 @@
       "uuid": "010892b2-c000-4095-8903-97f9f9a4f400"
     },
     "scripts\\Game\\CommonGame\\ui\\MainPanel.ts": {
-      "time": 1781594987405.6868,
+      "time": 1781929044570.7046,
       "uuid": "22de7818-fe8e-470c-bec7-91ab37d108dd"
+    },
+    "resources\\ui\\MainPage.prefab.meta": {
+      "time": 1781926548796.6262
+    },
+    "resources\\ui\\MainPage.prefab": {
+      "time": 1781928703586.7168,
+      "uuid": "f7e7fc73-23fc-4f8f-838a-3643ae2e8713"
+    },
+    "scripts\\Game\\CommonGame\\ui\\MainPage.ts.meta": {
+      "time": 1781926886822.9626
+    },
+    "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
+      "time": 1781928256615.2202,
+      "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
     }
   },
   "missing": {}
