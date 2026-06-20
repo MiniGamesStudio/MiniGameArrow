@@ -7941,6 +7941,18 @@
       "imports": {},
       "timestamp": 1781948046645
     },
+    "b5201399f842740f1a8e90cda72bda8d59ebab07": {
+      "imports": {
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1781966298596
+    },
     "ef86ebe3233e182dfa62af99ec41911a1234b1da": {
       "imports": {
         "__unresolved_0": {
@@ -7972,7 +7984,7 @@
           "messages": []
         }
       },
-      "timestamp": 1781965468200
+      "timestamp": 1781966298775
     },
     "6d8fd2b0177941b032ddc0733af48a561fb60657": {
       "imports": {
@@ -7993,70 +8005,70 @@
         "__unresolved_10": {
           "resolved": {
             "type": "chunk",
-            "id": "87fdd7c6b013f263c32fb00fdf56be0fb471438a"
+            "id": "09f4e32c74e1bd3b9fdf463e3a532c4bc52507c6"
           },
           "messages": []
         },
         "__unresolved_11": {
           "resolved": {
             "type": "chunk",
-            "id": "a0124b9fb328eebf4306b3faca466e6d5029faf9"
+            "id": "87fdd7c6b013f263c32fb00fdf56be0fb471438a"
           },
           "messages": []
         },
         "__unresolved_12": {
           "resolved": {
             "type": "chunk",
-            "id": "253416d85165668b27f8f22a72f80dc838a89fcd"
+            "id": "a0124b9fb328eebf4306b3faca466e6d5029faf9"
           },
           "messages": []
         },
         "__unresolved_13": {
           "resolved": {
             "type": "chunk",
-            "id": "3411e02c1e6f5120696d4e99d66fe2265bccd345"
+            "id": "253416d85165668b27f8f22a72f80dc838a89fcd"
           },
           "messages": []
         },
         "__unresolved_14": {
           "resolved": {
             "type": "chunk",
-            "id": "1f61ab7ae3c229b3a6401948e645172d0356af39"
+            "id": "3411e02c1e6f5120696d4e99d66fe2265bccd345"
           },
           "messages": []
         },
         "__unresolved_15": {
           "resolved": {
             "type": "chunk",
-            "id": "8d1518450bf2ef7ab50e79adb1b12ad1a9e5c71f"
+            "id": "1f61ab7ae3c229b3a6401948e645172d0356af39"
           },
           "messages": []
         },
         "__unresolved_16": {
           "resolved": {
             "type": "chunk",
-            "id": "68bb436496553da7df3030e52e7547766e87dda5"
+            "id": "8d1518450bf2ef7ab50e79adb1b12ad1a9e5c71f"
           },
           "messages": []
         },
         "__unresolved_17": {
           "resolved": {
             "type": "chunk",
-            "id": "eb218a129795533e82c4de050b0f690f873f22b2"
+            "id": "68bb436496553da7df3030e52e7547766e87dda5"
           },
           "messages": []
         },
         "__unresolved_18": {
           "resolved": {
             "type": "chunk",
-            "id": "1c9bbb9d9e8b86902521da20e56adac751516d8e"
+            "id": "eb218a129795533e82c4de050b0f690f873f22b2"
           },
           "messages": []
         },
         "__unresolved_19": {
           "resolved": {
             "type": "chunk",
-            "id": "4b3ce3687d89e0084be4c945d9cc05bcc71ea811"
+            "id": "1c9bbb9d9e8b86902521da20e56adac751516d8e"
           },
           "messages": []
         },
@@ -8070,70 +8082,70 @@
         "__unresolved_20": {
           "resolved": {
             "type": "chunk",
-            "id": "4ccd0714340ac7a8b6fa409c10caf89276ecf546"
+            "id": "4b3ce3687d89e0084be4c945d9cc05bcc71ea811"
           },
           "messages": []
         },
         "__unresolved_21": {
           "resolved": {
             "type": "chunk",
-            "id": "8de2cbec7f0d996344ff0a001398e74a9db65353"
+            "id": "4ccd0714340ac7a8b6fa409c10caf89276ecf546"
           },
           "messages": []
         },
         "__unresolved_22": {
           "resolved": {
             "type": "chunk",
-            "id": "3aa235eac4584728bacf39fe9d4a1df2288a56a2"
+            "id": "8de2cbec7f0d996344ff0a001398e74a9db65353"
           },
           "messages": []
         },
         "__unresolved_23": {
           "resolved": {
             "type": "chunk",
-            "id": "993141479ac0f0e6170061a403cea220640e8594"
+            "id": "3aa235eac4584728bacf39fe9d4a1df2288a56a2"
           },
           "messages": []
         },
         "__unresolved_24": {
           "resolved": {
             "type": "chunk",
-            "id": "a5d1a1d0a507d226a86fba164d2d2ef24d5b59e0"
+            "id": "993141479ac0f0e6170061a403cea220640e8594"
           },
           "messages": []
         },
         "__unresolved_25": {
           "resolved": {
             "type": "chunk",
-            "id": "246bba2f16b22f759e730d218aa391899a38aec3"
+            "id": "a5d1a1d0a507d226a86fba164d2d2ef24d5b59e0"
           },
           "messages": []
         },
         "__unresolved_26": {
           "resolved": {
             "type": "chunk",
-            "id": "a15e3891684fce1da353385bfa893fe67706460b"
+            "id": "246bba2f16b22f759e730d218aa391899a38aec3"
           },
           "messages": []
         },
         "__unresolved_27": {
           "resolved": {
             "type": "chunk",
-            "id": "251c3c1c0255d9c919625975f8230d80a4ccef35"
+            "id": "a15e3891684fce1da353385bfa893fe67706460b"
           },
           "messages": []
         },
         "__unresolved_28": {
           "resolved": {
             "type": "chunk",
-            "id": "4de2167d254ba3c4e5f26db88904fd156d001697"
+            "id": "251c3c1c0255d9c919625975f8230d80a4ccef35"
           },
           "messages": []
         },
         "__unresolved_29": {
           "resolved": {
             "type": "chunk",
-            "id": "3954e5010167799ccfff139d834c5234382206ce"
+            "id": "4de2167d254ba3c4e5f26db88904fd156d001697"
           },
           "messages": []
         },
@@ -8147,11 +8159,18 @@
         "__unresolved_30": {
           "resolved": {
             "type": "chunk",
-            "id": "ce54ad044aa0dc35407bc7b796371112c400a5dd"
+            "id": "3954e5010167799ccfff139d834c5234382206ce"
           },
           "messages": []
         },
         "__unresolved_31": {
+          "resolved": {
+            "type": "chunk",
+            "id": "ce54ad044aa0dc35407bc7b796371112c400a5dd"
+          },
+          "messages": []
+        },
+        "__unresolved_32": {
           "resolved": {
             "type": "chunk",
             "id": "602b024821a56fe484b97e55df766320af43702a"
@@ -8189,19 +8208,19 @@
         "__unresolved_8": {
           "resolved": {
             "type": "chunk",
-            "id": "ef86ebe3233e182dfa62af99ec41911a1234b1da"
+            "id": "b5201399f842740f1a8e90cda72bda8d59ebab07"
           },
           "messages": []
         },
         "__unresolved_9": {
           "resolved": {
             "type": "chunk",
-            "id": "09f4e32c74e1bd3b9fdf463e3a532c4bc52507c6"
+            "id": "ef86ebe3233e182dfa62af99ec41911a1234b1da"
           },
           "messages": []
         }
       },
-      "timestamp": 1781965496270
+      "timestamp": 1781966520689
     },
     "87fdd7c6b013f263c32fb00fdf56be0fb471438a": {
       "imports": {
@@ -8241,7 +8260,7 @@
           "messages": []
         }
       },
-      "timestamp": 1781965496328
+      "timestamp": 1781966520737
     }
   },
   "entries": {
@@ -8255,6 +8274,7 @@
     "file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts": "621a159ce4a7bac550092546e00c97e12458f12b",
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/CommonGameEntry.ts": "ac047018d02805b5f7324b76887bd91c12801183",
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/CommonUIConfig.ts": "1c6892b460d1d28a3a1cd145d2d356147f1c5a1a",
+    "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/level/SheepLevelGenerator.ts": "b5201399f842740f1a8e90cda72bda8d59ebab07",
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/ui/GamePanel.ts": "ef86ebe3233e182dfa62af99ec41911a1234b1da",
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/ui/LoadingPanel.ts": "09f4e32c74e1bd3b9fdf463e3a532c4bc52507c6",
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/ui/MainPage.ts": "87fdd7c6b013f263c32fb00fdf56be0fb471438a",

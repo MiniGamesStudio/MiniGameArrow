@@ -76,7 +76,9 @@
             "resources\\Icons\\Skill_2.png",
             "resources\\Icons\\Skill_3.png",
             "resources\\config",
-            "resources\\config\\sheep_levels.json"
+            "resources\\config\\sheep_levels.json",
+            "scripts\\Game\\CommonGame\\level",
+            "scripts\\Game\\CommonGame\\level\\SheepLevelGenerator.ts"
         ]
     }
 }
