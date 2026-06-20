@@ -11,6 +11,7 @@ const DEFAULT_SHEEP_FILL_RATE = 0.42;
 const DEFAULT_BOARD_PADDING_X = 40;
 const DEFAULT_BOARD_PADDING_Y = 120;
 const DEFAULT_BOARD_PADDING_BOTTOM = 220;
+const DEFAULT_UNIQUE_GENERATE_ATTEMPTS = 80;
 const MOVE_DURATION_PER_CELL = 0.08;
 const MIN_MOVE_DURATION = 0.12;
 const RUN_OUT_EXTRA_CELL = 2;
@@ -55,6 +56,16 @@ interface SheepMoveResult {
     distanceCell: number;
 }
 
+interface SimSheep {
+    id: number;
+    row: number;
+    col: number;
+    rowSpan: number;
+    colSpan: number;
+    direction: SheepDirection;
+    removed: boolean;
+}
+
 export interface GameLevelConfig {
     rowCount?: number;
     colCount?: number;
@@ -64,6 +75,7 @@ export interface GameLevelConfig {
     paddingY?: number;
     paddingTop?: number;
     paddingBottom?: number;
+    uniqueGenerateAttempts?: number;
 }
 
 const DirectionConfigs: Record<SheepDirection, SheepDirectionConfig> = {
@@ -100,6 +112,8 @@ export class GamePanel extends UIBase {
     m_BoardPaddingY: number = DEFAULT_BOARD_PADDING_Y;
     @property({ tooltip: '棋盘底部内边距，避免小羊区域压到技能按钮' })
     m_BoardPaddingBottom: number = DEFAULT_BOARD_PADDING_BOTTOM;
+    @property({ tooltip: '唯一解关卡生成重试次数' })
+    m_UniqueGenerateAttempts: number = DEFAULT_UNIQUE_GENERATE_ATTEMPTS;
 
     private m_SheepSpriteFrame: SpriteFrame = null;
     private m_SheepList: SheepData[] = [];
@@ -111,13 +125,13 @@ export class GamePanel extends UIBase {
     private m_PaddingX: number = DEFAULT_BOARD_PADDING_X;
     private m_PaddingTop: number = DEFAULT_BOARD_PADDING_Y;
     private m_PaddingBottom: number = DEFAULT_BOARD_PADDING_BOTTOM;
+    private m_UniqueAttempts: number = DEFAULT_UNIQUE_GENERATE_ATTEMPTS;
     private m_CellWidth: number = 0;
     private m_CellHeight: number = 0;
     private m_BoardWidth: number = 0;
     private m_BoardHeight: number = 0;
     private m_BoardLeft: number = 0;
     private m_BoardTop: number = 0;
-    private m_IsMoving: boolean = false;
     private m_SkillMode: SkillMode = 'none';
     private m_SkillRemoveRemain: number = 0;
     private m_LevelEnded: boolean = false;
@@ -143,7 +157,6 @@ export class GamePanel extends UIBase {
         this.clearSheep();
         this.m_SkillMode = 'none';
         this.m_SkillRemoveRemain = 0;
-        this.m_IsMoving = false;
         this.m_LevelEnded = false;
     }
 
@@ -152,7 +165,6 @@ export class GamePanel extends UIBase {
         this.initLevelConfig();
         this.m_SkillMode = 'none';
         this.m_SkillRemoveRemain = 0;
-        this.m_IsMoving = false;
         this.m_LevelEnded = false;
         this.initBoardSize();
     }
@@ -166,6 +178,7 @@ export class GamePanel extends UIBase {
         this.m_PaddingX = Math.max(0, config?.paddingX ?? this.m_BoardPaddingX);
         this.m_PaddingTop = Math.max(0, config?.paddingTop ?? config?.paddingY ?? this.m_BoardPaddingY);
         this.m_PaddingBottom = Math.max(0, config?.paddingBottom ?? config?.paddingY ?? this.m_BoardPaddingBottom);
+        this.m_UniqueAttempts = this.clampInt(config?.uniqueGenerateAttempts ?? this.m_UniqueGenerateAttempts, 1, 1000);
     }
 
     private loadSheepSpriteFrame(onComplete: () => void): void {
@@ -196,7 +209,28 @@ export class GamePanel extends UIBase {
     private startLevel(): void {
         if (!this.m_GameRoot || !this.m_GameRoot.isValid || !this.m_SheepSpriteFrame) return;
 
+        if (this.generateUniqueLevel()) return;
+
+        console.warn('GamePanel: 随机关卡未找到唯一解，使用链式唯一解兜底');
+        this.clearSheep();
         this.initGrid();
+        this.createGuaranteedUniqueLevel();
+    }
+
+    private generateUniqueLevel(): boolean {
+        for (let attempt = 0; attempt < this.m_UniqueAttempts; attempt++) {
+            this.clearSheep();
+            this.initGrid();
+            this.generateCandidateLevel();
+            if (this.m_SheepList.length > 0 && this.hasUniqueSolution()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private generateCandidateLevel(): void {
         if (this.m_SheepCount > 0) {
             this.createSheepByCount(this.m_SheepCount);
         } else {
@@ -267,6 +301,56 @@ export class GamePanel extends UIBase {
         }
     }
 
+    private createGuaranteedUniqueLevel(): void {
+        const targetCount = this.getFallbackSheepCount();
+        const chain = this.getGuaranteedChainLayout();
+        for (let i = 0; i < chain.length && this.m_SheepList.length < targetCount; i++) {
+            const item = chain[i];
+            this.createSheep(item.row, item.col, item.direction);
+        }
+
+        if (!this.hasUniqueSolution()) {
+            this.clearSheep();
+            this.initGrid();
+            this.createFirstAvailableSheep();
+        }
+    }
+
+    private getFallbackSheepCount(): number {
+        if (this.m_SheepCount > 0) return Math.max(1, this.m_SheepCount);
+
+        return Math.max(1, Math.floor(this.m_RowCount * this.m_ColCount * this.m_FillRate * 0.5));
+    }
+
+    private getGuaranteedChainLayout(): { row: number; col: number; direction: SheepDirection }[] {
+        const chain: { row: number; col: number; direction: SheepDirection }[] = [];
+        if (this.m_RowCount < 2 || this.m_ColCount < 1) return chain;
+
+        for (let row = 0; row + 1 < this.m_RowCount; row += 2) {
+            chain.push({ row, col: 0, direction: SheepDirection.Up });
+        }
+
+        const bottomRow = this.m_RowCount - 1;
+        let turnCol = 0;
+        for (let col = 1; col + 1 < this.m_ColCount; col += 2) {
+            chain.push({ row: bottomRow, col, direction: SheepDirection.Left });
+            turnCol = col + 1;
+        }
+
+        if (turnCol > 0) {
+            for (let row = bottomRow - 2; row >= 0; row -= 2) {
+                chain.push({ row, col: turnCol, direction: SheepDirection.Down });
+            }
+
+            const topTurnRow = chain.length > 0 ? chain[chain.length - 1].row : 0;
+            for (let col = turnCol - 2; col >= 0; col -= 2) {
+                chain.push({ row: topTurnRow, col, direction: SheepDirection.Right });
+            }
+        }
+
+        return chain;
+    }
+
     private createSheep(row: number, col: number, direction: SheepDirection): boolean {
         if (!this.canPlaceSheep(row, col, direction)) return false;
 
@@ -330,8 +414,6 @@ export class GamePanel extends UIBase {
     }
 
     private moveSheep(sheep: SheepData): void {
-        if (this.m_IsMoving) return;
-
         const moveResult = this.getMoveResult(sheep);
         const fromRow = sheep.row;
         const fromCol = sheep.col;
@@ -339,9 +421,6 @@ export class GamePanel extends UIBase {
             ? this.getSheepPosition(moveResult.targetRow, moveResult.targetCol, sheep.direction)
             : this.getRunOutPosition(sheep);
 
-        if (moveResult.blocked && moveResult.targetRow === fromRow && moveResult.targetCol === fromCol) return;
-
-        this.m_IsMoving = true;
         sheep.moving = true;
         this.clearSheepGrid(sheep);
         if (moveResult.blocked) {
@@ -355,13 +434,31 @@ export class GamePanel extends UIBase {
         tween(sheep.node)
             .to(Math.max(MIN_MOVE_DURATION, moveResult.distanceCell * MOVE_DURATION_PER_CELL), { position: targetPosition })
             .call(() => {
-                sheep.moving = false;
-                this.m_IsMoving = false;
-                if (!moveResult.blocked) {
+                if (moveResult.blocked) {
+                    this.playSheepHitAnimation(sheep, () => {
+                        sheep.moving = false;
+                    });
+                } else {
+                    sheep.moving = false;
                     this.destroySheep(sheep);
                     this.checkLevelEnd();
                 }
             })
+            .start();
+    }
+
+    private playSheepHitAnimation(sheep: SheepData, onComplete: () => void): void {
+        if (!sheep.node || !sheep.node.isValid) {
+            onComplete();
+            return;
+        }
+
+        const originScale = sheep.node.scale.clone();
+        const hitScale = new Vec3(originScale.x * 1.12, originScale.y * 0.88, originScale.z);
+        tween(sheep.node)
+            .to(0.08, { scale: hitScale })
+            .to(0.08, { scale: originScale })
+            .call(onComplete)
             .start();
     }
 
@@ -394,6 +491,124 @@ export class GamePanel extends UIBase {
             targetCol,
             distanceCell: this.getRunOutDistanceCell(sheep),
         };
+    }
+
+    private hasUniqueSolution(): boolean {
+        const simSheepList = this.m_SheepList.map((sheep, index) => ({
+            id: index,
+            row: sheep.row,
+            col: sheep.col,
+            rowSpan: sheep.rowSpan,
+            colSpan: sheep.colSpan,
+            direction: sheep.direction,
+            removed: false,
+        }));
+        let remainCount = simSheepList.length;
+
+        while (remainCount > 0) {
+            const simGrid = this.buildSimGrid(simSheepList);
+            const removableList: SimSheep[] = [];
+
+            for (let i = 0; i < simSheepList.length; i++) {
+                const sheep = simSheepList[i];
+                if (sheep.removed) continue;
+
+                const moveResult = this.getSimMoveResult(sheep, simGrid);
+                if (!moveResult.blocked) {
+                    removableList.push(sheep);
+                    continue;
+                }
+
+                if (moveResult.targetRow !== sheep.row || moveResult.targetCol !== sheep.col) {
+                    return false;
+                }
+            }
+
+            if (removableList.length !== 1) return false;
+
+            removableList[0].removed = true;
+            remainCount--;
+        }
+
+        return true;
+    }
+
+    private buildSimGrid(simSheepList: SimSheep[]): (SimSheep | null)[][] {
+        const grid: (SimSheep | null)[][] = [];
+        for (let row = 0; row < this.m_RowCount; row++) {
+            const rowData: (SimSheep | null)[] = [];
+            for (let col = 0; col < this.m_ColCount; col++) {
+                rowData.push(null);
+            }
+            grid.push(rowData);
+        }
+
+        simSheepList.forEach(sheep => {
+            if (sheep.removed) return;
+
+            for (let rowOffset = 0; rowOffset < sheep.rowSpan; rowOffset++) {
+                for (let colOffset = 0; colOffset < sheep.colSpan; colOffset++) {
+                    const row = sheep.row + rowOffset;
+                    const col = sheep.col + colOffset;
+                    if (this.isInsideGrid(row, col)) {
+                        grid[row][col] = sheep;
+                    }
+                }
+            }
+        });
+
+        return grid;
+    }
+
+    private getSimMoveResult(sheep: SimSheep, grid: (SimSheep | null)[][]): SheepMoveResult {
+        const config = DirectionConfigs[sheep.direction];
+        let targetRow = sheep.row;
+        let targetCol = sheep.col;
+        let nextRow = sheep.row + config.rowDelta;
+        let nextCol = sheep.col + config.colDelta;
+
+        while (this.isFootprintInside(nextRow, nextCol, sheep.rowSpan, sheep.colSpan)) {
+            if (!this.canPlaceSimFootprint(nextRow, nextCol, sheep.rowSpan, sheep.colSpan, sheep, grid)) {
+                return {
+                    blocked: true,
+                    targetRow,
+                    targetCol,
+                    distanceCell: Math.abs(targetRow - sheep.row) + Math.abs(targetCol - sheep.col),
+                };
+            }
+
+            targetRow = nextRow;
+            targetCol = nextCol;
+            nextRow += config.rowDelta;
+            nextCol += config.colDelta;
+        }
+
+        return {
+            blocked: false,
+            targetRow,
+            targetCol,
+            distanceCell: 0,
+        };
+    }
+
+    private canPlaceSimFootprint(
+        row: number,
+        col: number,
+        rowSpan: number,
+        colSpan: number,
+        ignoreSheep: SimSheep,
+        grid: (SimSheep | null)[][],
+    ): boolean {
+        if (!this.isFootprintInside(row, col, rowSpan, colSpan)) return false;
+
+        for (let rowOffset = 0; rowOffset < rowSpan; rowOffset++) {
+            for (let colOffset = 0; colOffset < colSpan; colOffset++) {
+                const target = grid[row + rowOffset][col + colOffset];
+                if (target && target !== ignoreSheep && !target.removed) return false;
+            }
+        }
+
+        return true;
     }
 
     private async onSkillOneBtnClick(): Promise<void> {
