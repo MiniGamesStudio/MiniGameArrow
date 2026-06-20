@@ -199,7 +199,7 @@ module.exports = Editor.Panel.define({
             }
 
             const typeConfigs = this.getGeneratorTypeConfigs();
-            levelData.sheep.forEach((sheep, index) => {
+            levelData.sheep.forEach((sheep) => {
                 const footprint = this.getFootprint(sheep.direction, sheep.type, typeConfigs);
                 const mark = this.getDirectionChar(sheep.direction);
                 for (let rowOffset = 0; rowOffset < footprint.rowSpan; rowOffset++) {
@@ -207,7 +207,7 @@ module.exports = Editor.Panel.define({
                         const row = sheep.row + rowOffset;
                         const col = sheep.col + colOffset;
                         if (row >= 0 && row < rows && col >= 0 && col < cols) {
-                            grid[row][col] = rowOffset === 0 && colOffset === 0 ? mark : String(index % 10);
+                            grid[row][col] = mark;
                         }
                     }
                 }

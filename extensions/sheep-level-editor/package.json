@@ -16,8 +16,20 @@
     "menu": [
       {
         "path": "工具/小羊关卡工具",
-        "message": "openPanel"
+        "message": "open-panel"
       }
-    ]
+    ],
+    "messages": {
+      "open-panel": {
+        "methods": [
+          "openPanel"
+        ]
+      },
+      "openPanel": {
+        "methods": [
+          "openPanel"
+        ]
+      }
+    }
   }
 }
