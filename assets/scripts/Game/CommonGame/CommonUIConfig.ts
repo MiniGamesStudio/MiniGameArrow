@@ -7,6 +7,7 @@ export enum CommonUIID {
     None = 0,
     LoadingPanel = 1,
     MainPanel = 2,
+    GamePanel = 3,
 }
 
 /**
@@ -15,4 +16,5 @@ export enum CommonUIID {
 export function registerCommonGameUI(): void {
     UIDataRegistry.Register(CommonUIID.LoadingPanel, UILayer.System, "LoadingPanel", "ui/LoadingPanel");
     UIDataRegistry.Register(CommonUIID.MainPanel, UILayer.Normal, "MainPanel", "ui/MainPanel", UIShowMode.Normal, 1);
+    UIDataRegistry.Register(CommonUIID.GamePanel, UILayer.Normal, "GamePanel", "ui/GamePanel", UIShowMode.Normal, 1);
 }

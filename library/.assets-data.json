@@ -3710,5 +3710,10 @@
       "dependScripts": []
     },
     "versionCode": 2
+  },
+  "0f6f935e-dd32-4f8f-870f-858c31678dec": {
+    "url": "db://assets/scripts/Game/CommonGame/ui/GamePanel.ts",
+    "value": {},
+    "versionCode": 1
   }
 }

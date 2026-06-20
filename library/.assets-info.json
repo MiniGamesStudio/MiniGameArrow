@@ -887,7 +887,7 @@
       "uuid": "73edaae5-0b7a-425f-afe0-f601833012aa"
     },
     "scripts\\Game\\CommonGame\\ui": {
-      "time": 1781926886822.9626,
+      "time": 1781939621567.2402,
       "uuid": "191bdeae-9286-465e-a518-a494dbf87eba"
     },
     "scripts\\Game\\CommonGame\\CommonGameEntry.ts": {
@@ -895,7 +895,7 @@
       "uuid": "c63a2908-67d7-4c12-a0ce-6c9030278f78"
     },
     "scripts\\Game\\CommonGame\\CommonUIConfig.ts": {
-      "time": 1780813386728.171,
+      "time": 1781939549987.5374,
       "uuid": "1ddebbfb-1c31-4d1a-8cc1-b8ee53713dfb"
     },
     "scripts\\Game\\CommonGame\\ui\\LoadingPanel.ts": {
@@ -917,7 +917,7 @@
       "time": 1781926886822.9626
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
-      "time": 1781938597550.7446,
+      "time": 1781939553827.5806,
       "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
     },
     "scripts\\engine\\AdManager.ts.meta": {
@@ -933,6 +933,13 @@
     "resources\\ui\\GamePanel.prefab": {
       "time": 1781938542355.6416,
       "uuid": "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23"
+    },
+    "scripts\\Game\\CommonGame\\ui\\GamePanel.ts.meta": {
+      "time": 1781939621567.2402
+    },
+    "scripts\\Game\\CommonGame\\ui\\GamePanel.ts": {
+      "time": 1781939616788.2393,
+      "uuid": "0f6f935e-dd32-4f8f-870f-858c31678dec"
     }
   },
   "missing": {}

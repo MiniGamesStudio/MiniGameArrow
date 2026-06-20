@@ -1,5 +1,7 @@
 import { _decorator, Node } from 'cc';
 import { UIBase } from '../../../engine/ui/UIBase';
+import { UIManager } from '../../../engine/ui/UIManager';
+import { CommonUIID } from '../CommonUIConfig';
 const { ccclass, property } = _decorator;
 
 @ccclass('MainPage')
@@ -41,7 +43,8 @@ export class MainPage extends UIBase {
                 buttonText: "开始游戏",
                 buttonIcon: "buttons/Button01_145_Orange",
                 onClick: () => {
-                    console.log("点击开始游戏");
+                    UIManager.GetInstance().ClosePanel(CommonUIID.MainPanel);
+                    UIManager.GetInstance().OpenPanel(CommonUIID.LoadingPanel, CommonUIID.GamePanel);
                 },
             },
         ]);
