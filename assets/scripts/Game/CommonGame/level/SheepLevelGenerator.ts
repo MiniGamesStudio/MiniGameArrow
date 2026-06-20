@@ -1,5 +1,6 @@
 export const SHEEP_LEVEL_ROW_COUNT = 16;
 export const SHEEP_LEVEL_COL_COUNT = 8;
+export const DEFAULT_SHEEP_LEVEL_TYPE = 'normal';
 
 export enum SheepLevelDirection {
     Up = 'Up',
@@ -12,6 +13,12 @@ export interface SheepLevelItem {
     row: number;
     col: number;
     direction: SheepLevelDirection;
+    type?: string;
+}
+
+export interface SheepLevelTypeConfig {
+    vertical: Footprint;
+    horizontal: Footprint;
 }
 
 export interface SheepLevelData {
@@ -57,11 +64,20 @@ const DirectionConfigs: Record<SheepLevelDirection, DirectionConfig> = {
 };
 
 const DefaultLevelCounts = [5, 7, 9, 10, 13, 16, 19, 23, 27, 32];
+const DefaultTypeConfigs: Record<string, SheepLevelTypeConfig> = {
+    [DEFAULT_SHEEP_LEVEL_TYPE]: {
+        vertical: { rowSpan: 2, colSpan: 1 },
+        horizontal: { rowSpan: 1, colSpan: 2 },
+    },
+};
 
 export class SheepLevelGenerator {
-    static generateLevels(levelCounts: number[] = DefaultLevelCounts): SheepLevelData[] {
+    static generateLevels(
+        levelCounts: number[] = DefaultLevelCounts,
+        typeConfigs: Record<string, SheepLevelTypeConfig> = DefaultTypeConfigs,
+    ): SheepLevelData[] {
         const maxCount = Math.max(...levelCounts);
-        const chain = this.generateSolvableLayout(maxCount);
+        const chain = this.generateSolvableLayout(maxCount, typeConfigs);
         if (chain.length < maxCount) {
             throw new Error(`SheepLevelGenerator: only generated ${chain.length}/${maxCount} sheep`);
         }
@@ -72,7 +88,7 @@ export class SheepLevelGenerator {
             colCount: SHEEP_LEVEL_COL_COUNT,
             sheep: chain.slice(0, count),
         })).map(level => {
-            if (!this.canSolveLevel(level)) {
+            if (!this.canSolveLevel(level, typeConfigs)) {
                 throw new Error(`SheepLevelGenerator: generated level ${level.level} is not solvable`);
             }
 
@@ -80,13 +96,19 @@ export class SheepLevelGenerator {
         });
     }
 
-    static generateLevelJson(levelCounts: number[] = DefaultLevelCounts): string {
-        return JSON.stringify({ levels: this.generateLevels(levelCounts) }, null, 2);
+    static generateLevelJson(
+        levelCounts: number[] = DefaultLevelCounts,
+        typeConfigs: Record<string, SheepLevelTypeConfig> = DefaultTypeConfigs,
+    ): string {
+        return JSON.stringify({ levels: this.generateLevels(levelCounts, typeConfigs) }, null, 2);
     }
 
-    static canSolveLevel(level: SheepLevelData): boolean {
+    static canSolveLevel(
+        level: SheepLevelData,
+        typeConfigs: Record<string, SheepLevelTypeConfig> = DefaultTypeConfigs,
+    ): boolean {
         const sheepList = level.sheep.map(sheep => {
-            const footprint = this.getFootprint(sheep.direction);
+            const footprint = this.getFootprint(sheep.direction, sheep.type, typeConfigs);
             return {
                 ...sheep,
                 rowSpan: footprint.rowSpan,
@@ -97,7 +119,7 @@ export class SheepLevelGenerator {
         let remainCount = sheepList.length;
 
         while (remainCount > 0) {
-            const removable = sheepList.find(sheep => !sheep.removed && !this.isBlocked(sheep, sheepList));
+            const removable = sheepList.find(sheep => !sheep.removed && !this.isBlocked(sheep, sheepList, typeConfigs));
             if (!removable) return false;
 
             removable.removed = true;
@@ -107,7 +129,10 @@ export class SheepLevelGenerator {
         return true;
     }
 
-    private static generateSolvableLayout(maxCount: number): SheepLevelItem[] {
+    private static generateSolvableLayout(
+        maxCount: number,
+        typeConfigs: Record<string, SheepLevelTypeConfig>,
+    ): SheepLevelItem[] {
         const placed: SheepLevelItem[] = [];
         const occupied = this.createOccupiedGrid();
         const centerRow = (SHEEP_LEVEL_ROW_COUNT - 1) * 0.5;
@@ -116,21 +141,22 @@ export class SheepLevelGenerator {
             row: Math.max(0, Math.floor(centerRow) - 1),
             col: Math.floor(centerCol),
             direction: SheepLevelDirection.Up,
+            type: DEFAULT_SHEEP_LEVEL_TYPE,
         };
 
-        if (!this.canPlace(first, occupied)) return placed;
+        if (!this.canPlace(first, occupied, typeConfigs)) return placed;
 
         placed.push(first);
-        this.markOccupied(first, occupied);
+        this.markOccupied(first, occupied, typeConfigs);
 
         while (placed.length < maxCount) {
-            const candidates = this.collectCandidates(placed, occupied, centerRow, centerCol);
+            const candidates = this.collectCandidates(placed, occupied, centerRow, centerCol, typeConfigs);
             if (candidates.length <= 0) break;
 
             candidates.sort((a, b) => a.score - b.score || a.item.row - b.item.row || a.item.col - b.item.col);
             const next = candidates[0].item;
             placed.push(next);
-            this.markOccupied(next, occupied);
+            this.markOccupied(next, occupied, typeConfigs);
         }
 
         return placed;
@@ -141,18 +167,19 @@ export class SheepLevelGenerator {
         occupied: boolean[][],
         centerRow: number,
         centerCol: number,
+        typeConfigs: Record<string, SheepLevelTypeConfig>,
     ): { item: SheepLevelItem; score: number }[] {
         const candidates: { item: SheepLevelItem; score: number }[] = [];
         for (let directionIndex = 0; directionIndex < DirectionCycle.length; directionIndex++) {
             const direction = DirectionCycle[(placed.length + directionIndex) % DirectionCycle.length];
             for (let row = 0; row < SHEEP_LEVEL_ROW_COUNT; row++) {
                 for (let col = 0; col < SHEEP_LEVEL_COL_COUNT; col++) {
-                    const item = { row, col, direction };
-                    if (!this.canPlace(item, occupied)) continue;
-                    if (this.blocksAnyPlacedPath(item, placed)) continue;
+                    const item = { row, col, direction, type: DEFAULT_SHEEP_LEVEL_TYPE };
+                    if (!this.canPlace(item, occupied, typeConfigs)) continue;
+                    if (this.blocksAnyPlacedPath(item, placed, typeConfigs)) continue;
 
                     const centerDistance = Math.abs(row - centerRow) + Math.abs(col - centerCol);
-                    const dependencyScore = this.isPathBlockedByPlaced(item, placed) ? 0 : 30;
+                    const dependencyScore = this.isPathBlockedByPlaced(item, placed, typeConfigs) ? 0 : 30;
                     candidates.push({ item, score: dependencyScore + directionIndex * 100 + centerDistance });
                 }
             }
@@ -174,8 +201,12 @@ export class SheepLevelGenerator {
         return grid;
     }
 
-    private static canPlace(item: SheepLevelItem, occupied: boolean[][]): boolean {
-        const footprint = this.getFootprint(item.direction);
+    private static canPlace(
+        item: SheepLevelItem,
+        occupied: boolean[][],
+        typeConfigs: Record<string, SheepLevelTypeConfig>,
+    ): boolean {
+        const footprint = this.getFootprint(item.direction, item.type, typeConfigs);
         if (!this.isFootprintInside(item.row, item.col, footprint)) return false;
 
         for (let rowOffset = 0; rowOffset < footprint.rowSpan; rowOffset++) {
@@ -187,8 +218,12 @@ export class SheepLevelGenerator {
         return true;
     }
 
-    private static markOccupied(item: SheepLevelItem, occupied: boolean[][]): void {
-        const footprint = this.getFootprint(item.direction);
+    private static markOccupied(
+        item: SheepLevelItem,
+        occupied: boolean[][],
+        typeConfigs: Record<string, SheepLevelTypeConfig>,
+    ): void {
+        const footprint = this.getFootprint(item.direction, item.type, typeConfigs);
         for (let rowOffset = 0; rowOffset < footprint.rowSpan; rowOffset++) {
             for (let colOffset = 0; colOffset < footprint.colSpan; colOffset++) {
                 occupied[item.row + rowOffset][item.col + colOffset] = true;
@@ -196,32 +231,47 @@ export class SheepLevelGenerator {
         }
     }
 
-    private static blocksAnyPlacedPath(item: SheepLevelItem, placed: SheepLevelItem[]): boolean {
-        const itemRect = this.getRect(item);
-        return placed.some(placedItem => this.getPathRects(placedItem).some(pathRect => this.rectsOverlap(itemRect, pathRect)));
+    private static blocksAnyPlacedPath(
+        item: SheepLevelItem,
+        placed: SheepLevelItem[],
+        typeConfigs: Record<string, SheepLevelTypeConfig>,
+    ): boolean {
+        const itemRect = this.getRect(item, typeConfigs);
+        return placed.some(placedItem => this.getPathRects(placedItem, typeConfigs).some(pathRect => this.rectsOverlap(itemRect, pathRect)));
     }
 
-    private static isPathBlockedByPlaced(item: SheepLevelItem, placed: SheepLevelItem[]): boolean {
-        const pathRects = this.getPathRects(item);
+    private static isPathBlockedByPlaced(
+        item: SheepLevelItem,
+        placed: SheepLevelItem[],
+        typeConfigs: Record<string, SheepLevelTypeConfig>,
+    ): boolean {
+        const pathRects = this.getPathRects(item, typeConfigs);
         return placed.some(placedItem => {
-            const placedRect = this.getRect(placedItem);
+            const placedRect = this.getRect(placedItem, typeConfigs);
             return pathRects.some(pathRect => this.rectsOverlap(placedRect, pathRect));
         });
     }
 
-    private static isBlocked(sheep: SolveSheep, sheepList: SolveSheep[]): boolean {
-        const pathRects = this.getPathRects(sheep);
+    private static isBlocked(
+        sheep: SolveSheep,
+        sheepList: SolveSheep[],
+        typeConfigs: Record<string, SheepLevelTypeConfig>,
+    ): boolean {
+        const pathRects = this.getPathRects(sheep, typeConfigs);
         return sheepList.some(other => {
             if (other === sheep || other.removed) return false;
 
-            const otherRect = this.getRect(other);
+            const otherRect = this.getRect(other, typeConfigs);
             return pathRects.some(pathRect => this.rectsOverlap(otherRect, pathRect));
         });
     }
 
-    private static getPathRects(item: SheepLevelItem): FootprintRect[] {
+    private static getPathRects(
+        item: SheepLevelItem,
+        typeConfigs: Record<string, SheepLevelTypeConfig>,
+    ): FootprintRect[] {
         const config = DirectionConfigs[item.direction];
-        const footprint = this.getFootprint(item.direction);
+        const footprint = this.getFootprint(item.direction, item.type, typeConfigs);
         const rects: FootprintRect[] = [];
         let row = item.row + config.rowDelta;
         let col = item.col + config.colDelta;
@@ -235,10 +285,13 @@ export class SheepLevelGenerator {
         return rects;
     }
 
-    private static getRect(item: SheepLevelItem | SolveSheep): FootprintRect {
+    private static getRect(
+        item: SheepLevelItem | SolveSheep,
+        typeConfigs: Record<string, SheepLevelTypeConfig>,
+    ): FootprintRect {
         const footprint = 'rowSpan' in item
             ? { rowSpan: item.rowSpan, colSpan: item.colSpan }
-            : this.getFootprint(item.direction);
+            : this.getFootprint(item.direction, item.type, typeConfigs);
 
         return {
             row: item.row,
@@ -262,11 +315,16 @@ export class SheepLevelGenerator {
             && col + footprint.colSpan <= SHEEP_LEVEL_COL_COUNT;
     }
 
-    private static getFootprint(direction: SheepLevelDirection): Footprint {
+    private static getFootprint(
+        direction: SheepLevelDirection,
+        type: string = DEFAULT_SHEEP_LEVEL_TYPE,
+        typeConfigs: Record<string, SheepLevelTypeConfig> = DefaultTypeConfigs,
+    ): Footprint {
+        const typeConfig = typeConfigs[type] || typeConfigs[DEFAULT_SHEEP_LEVEL_TYPE] || DefaultTypeConfigs[DEFAULT_SHEEP_LEVEL_TYPE];
         if (direction === SheepLevelDirection.Left || direction === SheepLevelDirection.Right) {
-            return { rowSpan: 1, colSpan: 2 };
+            return typeConfig.horizontal;
         }
 
-        return { rowSpan: 2, colSpan: 1 };
+        return typeConfig.vertical;
     }
 }

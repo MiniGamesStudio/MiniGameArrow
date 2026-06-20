@@ -6,8 +6,9 @@ const { ccclass, property } = _decorator;
 const MAX_ROW = 16;
 const MAX_COL = 8;
 const LEVEL_CONFIG_RESOURCE = 'config/sheep_levels';
-const SHEEP_RESOURCE = 'texture/sheep/spriteFrame';
-const SHEEP_FALLBACK_RESOURCE = 'texture/sheep';
+const DEFAULT_SHEEP_TYPE = 'normal';
+const DEFAULT_SHEEP_RESOURCE = 'texture/sheep/spriteFrame';
+const DEFAULT_SHEEP_FALLBACK_RESOURCE = 'texture/sheep';
 const DEFAULT_BOARD_PADDING_X = 40;
 const DEFAULT_BOARD_PADDING_Y = 120;
 const DEFAULT_BOARD_PADDING_BOTTOM = 220;
@@ -40,6 +41,7 @@ interface SheepData {
     rowSpan: number;
     colSpan: number;
     direction: SheepDirection;
+    type: string;
     moving: boolean;
     removed: boolean;
 }
@@ -47,6 +49,12 @@ interface SheepData {
 interface SheepFootprint {
     rowSpan: number;
     colSpan: number;
+}
+
+interface SheepTypeConfig {
+    resource?: string;
+    vertical?: SheepFootprint;
+    horizontal?: SheepFootprint;
 }
 
 interface SheepMoveResult {
@@ -60,6 +68,7 @@ interface GameLevelSheepConfig {
     row: number;
     col: number;
     direction: SheepDirection | string;
+    type?: string;
 }
 
 export interface GameLevelConfig {
@@ -75,6 +84,8 @@ export interface GameLevelConfig {
 
 interface GameLevelTable {
     levels?: GameLevelConfig[];
+    sheepTypes?: Record<string, string>;
+    sheepTypeConfigs?: Record<string, SheepTypeConfig>;
 }
 
 const DirectionConfigs: Record<SheepDirection, SheepDirectionConfig> = {
@@ -114,7 +125,13 @@ export class GamePanel extends UIBase {
     @property({ tooltip: '小羊固定缩放，不随关卡行列和数量变化' })
     m_SheepScale: number = DEFAULT_SHEEP_SCALE;
 
-    private m_SheepSpriteFrame: SpriteFrame = null;
+    private m_SheepSpriteFrameMap: Map<string, SpriteFrame> = new Map();
+    private m_SheepTypeResourceMap: Map<string, string> = new Map([[DEFAULT_SHEEP_TYPE, DEFAULT_SHEEP_RESOURCE]]);
+    private m_SheepTypeConfigMap: Map<string, SheepTypeConfig> = new Map([[DEFAULT_SHEEP_TYPE, {
+        resource: DEFAULT_SHEEP_RESOURCE,
+        vertical: { rowSpan: 2, colSpan: 1 },
+        horizontal: { rowSpan: 1, colSpan: 2 },
+    }]]);
     private m_SheepList: SheepData[] = [];
     private m_Grid: (SheepData | null)[][] = [];
     private m_RowCount: number = MAX_ROW;
@@ -146,7 +163,7 @@ export class GamePanel extends UIBase {
             if (!this.isValid) return;
             this.m_OpenLevelConfig = this.resolveOpenLevelConfig(level);
             this.resetGame();
-            this.loadSheepSpriteFrame(() => {
+            this.loadSheepSpriteFrames(() => {
                 if (!this.isValid) return;
                 this.startLevel();
             });
@@ -176,11 +193,67 @@ export class GamePanel extends UIBase {
 
             const table = asset.json as GameLevelTable;
             this.m_LevelConfigList = Array.isArray(table?.levels) ? table.levels : [];
+            this.initSheepTypeConfigs(table);
             if (this.m_LevelConfigList.length <= 0) {
                 console.warn('GamePanel: 本地关卡配置为空，使用编辑器默认配置');
             }
             onComplete();
         });
+    }
+
+    private initSheepTypeConfigs(table?: GameLevelTable): void {
+        this.m_SheepTypeResourceMap.clear();
+        this.m_SheepTypeConfigMap.clear();
+        this.m_SheepTypeResourceMap.set(DEFAULT_SHEEP_TYPE, DEFAULT_SHEEP_RESOURCE);
+        this.m_SheepTypeConfigMap.set(DEFAULT_SHEEP_TYPE, {
+            resource: DEFAULT_SHEEP_RESOURCE,
+            vertical: { rowSpan: 2, colSpan: 1 },
+            horizontal: { rowSpan: 1, colSpan: 2 },
+        });
+
+        const sheepTypes = table?.sheepTypes;
+        if (sheepTypes) {
+            Object.keys(sheepTypes).forEach(type => {
+                const resourcePath = sheepTypes[type];
+                if (type && resourcePath) {
+                    this.m_SheepTypeResourceMap.set(type, resourcePath);
+                    this.m_SheepTypeConfigMap.set(type, {
+                        ...this.getDefaultSheepTypeConfig(),
+                        resource: resourcePath,
+                    });
+                }
+            });
+        }
+
+        const sheepTypeConfigs = table?.sheepTypeConfigs;
+        if (!sheepTypeConfigs) return;
+
+        Object.keys(sheepTypeConfigs).forEach(type => {
+            if (!type) return;
+
+            const config = this.mergeSheepTypeConfig(sheepTypeConfigs[type]);
+            this.m_SheepTypeConfigMap.set(type, config);
+            if (config.resource) {
+                this.m_SheepTypeResourceMap.set(type, config.resource);
+            }
+        });
+    }
+
+    private getDefaultSheepTypeConfig(): SheepTypeConfig {
+        return {
+            resource: DEFAULT_SHEEP_RESOURCE,
+            vertical: { rowSpan: 2, colSpan: 1 },
+            horizontal: { rowSpan: 1, colSpan: 2 },
+        };
+    }
+
+    private mergeSheepTypeConfig(config?: SheepTypeConfig): SheepTypeConfig {
+        const defaultConfig = this.getDefaultSheepTypeConfig();
+        return {
+            resource: config?.resource || defaultConfig.resource,
+            vertical: config?.vertical || defaultConfig.vertical,
+            horizontal: config?.horizontal || defaultConfig.horizontal,
+        };
     }
 
     private resolveOpenLevelConfig(level: number | GameLevelConfig): GameLevelConfig | null {
@@ -218,33 +291,61 @@ export class GamePanel extends UIBase {
         this.m_PaddingBottom = Math.max(0, config?.paddingBottom ?? config?.paddingY ?? this.m_BoardPaddingBottom);
     }
 
-    private loadSheepSpriteFrame(onComplete: () => void): void {
-        if (this.m_SheepSpriteFrame) {
+    private loadSheepSpriteFrames(onComplete: () => void): void {
+        const sheepTypes = this.getCurrentLevelSheepTypes();
+        const unloadedTypes = sheepTypes.filter(type => !this.m_SheepSpriteFrameMap.has(type));
+        if (unloadedTypes.length <= 0) {
             onComplete();
             return;
         }
 
-        resources.load(SHEEP_RESOURCE, SpriteFrame, (err, spriteFrame) => {
+        let remainCount = unloadedTypes.length;
+        const finishOne = (): void => {
+            remainCount--;
+            if (remainCount <= 0) onComplete();
+        };
+
+        unloadedTypes.forEach(type => {
+            this.loadSheepSpriteFrameByType(type, finishOne);
+        });
+    }
+
+    private loadSheepSpriteFrameByType(type: string, onComplete: () => void): void {
+        const resourcePath = this.m_SheepTypeResourceMap.get(type) || DEFAULT_SHEEP_RESOURCE;
+        resources.load(resourcePath, SpriteFrame, (err, spriteFrame) => {
             if (!err && spriteFrame) {
-                this.m_SheepSpriteFrame = spriteFrame;
+                this.m_SheepSpriteFrameMap.set(type, spriteFrame);
                 onComplete();
                 return;
             }
 
-            resources.load(SHEEP_FALLBACK_RESOURCE, SpriteFrame, (fallbackErr, fallbackSpriteFrame) => {
-                if (fallbackErr || !fallbackSpriteFrame) {
-                    console.warn('GamePanel: 加载小羊资源失败', fallbackErr || err);
-                    return;
+            resources.load(DEFAULT_SHEEP_FALLBACK_RESOURCE, SpriteFrame, (fallbackErr, fallbackSpriteFrame) => {
+                if (!fallbackErr && fallbackSpriteFrame) {
+                    this.m_SheepSpriteFrameMap.set(type, fallbackSpriteFrame);
+                } else {
+                    console.warn(`GamePanel: 加载小羊类型 ${type} 资源失败`, fallbackErr || err);
                 }
-
-                this.m_SheepSpriteFrame = fallbackSpriteFrame;
                 onComplete();
             });
         });
     }
 
+    private getCurrentLevelSheepTypes(): string[] {
+        const typeSet = new Set<string>();
+        const sheepConfigList = this.m_OpenLevelConfig?.sheep || [];
+        sheepConfigList.forEach(config => {
+            typeSet.add(this.resolveSheepType(config.type));
+        });
+
+        if (typeSet.size <= 0) {
+            typeSet.add(DEFAULT_SHEEP_TYPE);
+        }
+
+        return Array.from(typeSet);
+    }
+
     private startLevel(): void {
-        if (!this.m_GameRoot || !this.m_GameRoot.isValid || !this.m_SheepSpriteFrame) return;
+        if (!this.m_GameRoot || !this.m_GameRoot.isValid) return;
 
         this.initGrid();
         this.createSheepByLevelConfig();
@@ -286,10 +387,15 @@ export class GamePanel extends UIBase {
 
         sheepConfigList.forEach((config, index) => {
             const direction = this.resolveSheepDirection(config.direction);
-            if (direction === null || !this.createSheep(config.row, config.col, direction)) {
+            const sheepType = this.resolveSheepType(config.type);
+            if (direction === null || !this.createSheep(config.row, config.col, direction, sheepType)) {
                 console.warn(`GamePanel: 关卡 ${this.m_CurrentLevel} 第 ${index + 1} 只小羊配置无效`, config);
             }
         });
+    }
+
+    private resolveSheepType(type?: string): string {
+        return type || DEFAULT_SHEEP_TYPE;
     }
 
     private resolveSheepDirection(direction: SheepDirection | string): SheepDirection | null {
@@ -308,28 +414,30 @@ export class GamePanel extends UIBase {
         return null;
     }
 
-    private createSheep(row: number, col: number, direction: SheepDirection): boolean {
-        if (!this.canPlaceSheep(row, col, direction)) return false;
+    private createSheep(row: number, col: number, direction: SheepDirection, type: string): boolean {
+        if (!this.canPlaceSheep(row, col, direction, type)) return false;
+        const spriteFrame = this.getSheepSpriteFrame(type);
+        if (!spriteFrame) return false;
 
         const node = new Node(`Sheep_${row}_${col}`);
         node.layer = this.m_GameRoot.layer;
         this.m_GameRoot.addChild(node);
-        node.setPosition(this.getSheepPosition(row, col, direction));
+        node.setPosition(this.getSheepPosition(row, col, direction, type));
 
         const transform = node.addComponent(UITransform);
 
         const sprite = node.addComponent(Sprite);
-        sprite.spriteFrame = this.m_SheepSpriteFrame;
+        sprite.spriteFrame = spriteFrame;
         sprite.sizeMode = Sprite.SizeMode.TRIMMED;
 
-        const spriteRect = this.m_SheepSpriteFrame.rect;
+        const spriteRect = spriteFrame.rect;
         transform.setContentSize(spriteRect.width, spriteRect.height);
         node.setScale(this.m_SheepScale, this.m_SheepScale, 1);
 
         const button = node.addComponent(Button);
         this.SetBtnEvent(button, () => this.onSheepClick(sheep));
 
-        const footprint = this.getSheepFootprint(direction);
+        const footprint = this.getSheepFootprint(direction, type);
 
         const sheep: SheepData = {
             node,
@@ -338,6 +446,7 @@ export class GamePanel extends UIBase {
             rowSpan: footprint.rowSpan,
             colSpan: footprint.colSpan,
             direction,
+            type,
             moving: false,
             removed: false,
         };
@@ -346,6 +455,12 @@ export class GamePanel extends UIBase {
         this.setSheepGrid(sheep, sheep);
         this.m_SheepList.push(sheep);
         return true;
+    }
+
+    private getSheepSpriteFrame(type: string): SpriteFrame | null {
+        return this.m_SheepSpriteFrameMap.get(type)
+            || this.m_SheepSpriteFrameMap.get(DEFAULT_SHEEP_TYPE)
+            || null;
     }
 
     private onSheepClick(sheep: SheepData): void {
@@ -370,7 +485,7 @@ export class GamePanel extends UIBase {
         const fromRow = sheep.row;
         const fromCol = sheep.col;
         const targetPosition = moveResult.blocked
-            ? this.getSheepPosition(moveResult.targetRow, moveResult.targetCol, sheep.direction)
+            ? this.getSheepPosition(moveResult.targetRow, moveResult.targetCol, sheep.direction, sheep.type)
             : this.getRunOutPosition(sheep);
 
         sheep.moving = true;
@@ -533,8 +648,8 @@ export class GamePanel extends UIBase {
         return availableList.slice(0, count);
     }
 
-    private getSheepPosition(row: number, col: number, direction: SheepDirection): Vec3 {
-        const footprint = this.getSheepFootprint(direction);
+    private getSheepPosition(row: number, col: number, direction: SheepDirection, type: string): Vec3 {
+        const footprint = this.getSheepFootprint(direction, type);
         const x = this.m_BoardLeft + this.m_CellWidth * (col + footprint.colSpan * 0.5);
         const y = this.m_BoardTop - this.m_CellHeight * (row + footprint.rowSpan * 0.5);
         return new Vec3(x, y, 0);
@@ -562,20 +677,21 @@ export class GamePanel extends UIBase {
         return row >= 0 && row < this.m_RowCount && col >= 0 && col < this.m_ColCount;
     }
 
-    private getSheepFootprint(direction: SheepDirection): SheepFootprint {
+    private getSheepFootprint(direction: SheepDirection, type: string): SheepFootprint {
+        const typeConfig = this.m_SheepTypeConfigMap.get(type) || this.getDefaultSheepTypeConfig();
         if (this.isHorizontalDirection(direction)) {
-            return { rowSpan: 1, colSpan: 2 };
+            return typeConfig.horizontal || { rowSpan: 1, colSpan: 2 };
         }
 
-        return { rowSpan: 2, colSpan: 1 };
+        return typeConfig.vertical || { rowSpan: 2, colSpan: 1 };
     }
 
     private isHorizontalDirection(direction: SheepDirection): boolean {
         return direction === SheepDirection.Left || direction === SheepDirection.Right;
     }
 
-    private canPlaceSheep(row: number, col: number, direction: SheepDirection): boolean {
-        const footprint = this.getSheepFootprint(direction);
+    private canPlaceSheep(row: number, col: number, direction: SheepDirection, type: string): boolean {
+        const footprint = this.getSheepFootprint(direction, type);
         return this.canPlaceFootprint(row, col, footprint.rowSpan, footprint.colSpan, null);
     }
 
