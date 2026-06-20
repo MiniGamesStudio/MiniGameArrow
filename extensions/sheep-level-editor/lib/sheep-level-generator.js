@@ -1,7 +1,7 @@
 'use strict';
 
-const ROW_COUNT = 16;
-const COL_COUNT = 8;
+const ROW_COUNT = 19;
+const COL_COUNT = 12;
 const DEFAULT_TYPE = 'normal';
 
 const Direction = {

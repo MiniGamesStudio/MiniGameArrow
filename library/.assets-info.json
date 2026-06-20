@@ -938,7 +938,7 @@
       "time": 1781946493798.2878
     },
     "scripts\\Game\\CommonGame\\ui\\GamePanel.ts": {
-      "time": 1781967281995.7068,
+      "time": 1781971373607.0288,
       "uuid": "0f6f935e-dd32-4f8f-870f-858c31678dec"
     },
     "resources\\texture\\sheep.png.meta": {
@@ -994,7 +994,7 @@
       "time": 1781964797303.4226
     },
     "resources\\config\\sheep_levels.json": {
-      "time": 1781966774428.922,
+      "time": 1781971390345.6775,
       "uuid": "4c0814f7-b690-4a5f-a5c8-61b6f9219a96"
     },
     "scripts\\Game\\CommonGame\\level.meta": {

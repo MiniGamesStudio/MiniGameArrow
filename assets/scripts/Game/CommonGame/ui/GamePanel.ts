@@ -3,8 +3,8 @@ import { AdManager, AdPlayResult } from '../../../engine/AdManager';
 import { UIBase } from '../../../engine/ui/UIBase';
 const { ccclass, property } = _decorator;
 
-const MAX_ROW = 16;
-const MAX_COL = 8;
+const MAX_ROW = 19;
+const MAX_COL = 12;
 const LEVEL_CONFIG_RESOURCE = 'config/sheep_levels';
 const DEFAULT_SHEEP_TYPE = 'normal';
 const DEFAULT_SHEEP_RESOURCE = 'texture/sheep/spriteFrame';
@@ -110,9 +110,9 @@ export class GamePanel extends UIBase {
     @property(RichText)
     m_LevelText: RichText = null;
 
-    @property({ tooltip: '固定关卡行数：16' })
+    @property({ tooltip: '固定关卡行数：19' })
     m_LevelRowCount: number = MAX_ROW;
-    @property({ tooltip: '固定关卡列数：8' })
+    @property({ tooltip: '固定关卡列数：12' })
     m_LevelColCount: number = MAX_COL;
     @property({ tooltip: '棋盘横向内边距，避免小羊贴近屏幕边缘' })
     m_BoardPaddingX: number = DEFAULT_BOARD_PADDING_X;
