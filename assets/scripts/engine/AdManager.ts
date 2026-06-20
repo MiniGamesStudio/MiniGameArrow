@@ -57,6 +57,9 @@ export class AdManager {
     private _rewardedAdUnitIds: Map<AdPlatform, string> = new Map();
     private _rewardedAdCache: Map<string, MiniGameRewardedVideoAd> = new Map();
     private _isPlayingRewardedVideo: boolean = false;
+    private _initialized: boolean = false;
+    private _currentPlatform: AdPlatform = AdPlatform.Auto;
+    private _currentRuntime: MiniGameAdRuntime | null = null;
 
     static getInstance(): AdManager {
         if (!this._instance) {
@@ -65,7 +68,17 @@ export class AdManager {
         return this._instance;
     }
 
-    init(): void {}
+    init(): void {
+        if (this._initialized) return;
+
+        this._currentPlatform = this.resolvePlatformBySystem();
+        this._currentRuntime = this.getRuntime(this._currentPlatform);
+        this._initialized = true;
+
+        if (this._currentPlatform === AdPlatform.Auto || !this._currentRuntime?.createRewardedVideoAd) {
+            console.warn('AdManager: 当前平台暂不支持广告');
+        }
+    }
 
     setRewardedVideoAdUnitId(platform: AdPlatform, adUnitId: string): void {
         if (!adUnitId) {
@@ -93,6 +106,10 @@ export class AdManager {
             };
         }
 
+        if (!this._initialized) {
+            this.init();
+        }
+
         const platform = this.resolvePlatform(options.platform);
         if (platform === AdPlatform.Auto) {
             return {
@@ -103,7 +120,7 @@ export class AdManager {
             };
         }
 
-        const runtime = this.getRuntime(platform);
+        const runtime = this.getRuntimeByPlatform(platform);
         if (!runtime?.createRewardedVideoAd) {
             return {
                 result: AdPlayResult.Unsupported,
@@ -145,18 +162,28 @@ export class AdManager {
         this._rewardedAdCache.clear();
         this._rewardedAdUnitIds.clear();
         this._isPlayingRewardedVideo = false;
+        this._initialized = false;
+        this._currentPlatform = AdPlatform.Auto;
+        this._currentRuntime = null;
     }
 
     private resolvePlatform(platform: AdPlatform = AdPlatform.Auto): AdPlatform {
         if (platform !== AdPlatform.Auto) return platform;
+        if (this._currentPlatform !== AdPlatform.Auto) return this._currentPlatform;
 
+        return this.resolvePlatformBySystem();
+    }
+
+    private resolvePlatformBySystem(): AdPlatform {
         if (sys.platform === sys.Platform.WECHAT_GAME) return AdPlatform.WeChat;
         if (sys.platform === sys.Platform.BYTEDANCE_MINI_GAME) return AdPlatform.Douyin;
 
-        const globalObj = globalThis as unknown as { wx?: MiniGameAdRuntime; tt?: MiniGameAdRuntime };
-        if (globalObj.wx?.createRewardedVideoAd) return AdPlatform.WeChat;
-        if (globalObj.tt?.createRewardedVideoAd) return AdPlatform.Douyin;
         return AdPlatform.Auto;
+    }
+
+    private getRuntimeByPlatform(platform: AdPlatform): MiniGameAdRuntime | null {
+        if (platform === this._currentPlatform) return this._currentRuntime;
+        return this.getRuntime(platform);
     }
 
     private getRuntime(platform: AdPlatform): MiniGameAdRuntime | null {

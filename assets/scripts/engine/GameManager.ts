@@ -5,7 +5,7 @@ import { ResManager } from "./ResManager";
 import { NodePoolManager } from "./NodePool";
 import { ConfigManager } from "./ConfigManager";
 import { FlatBuffersRuntime } from "./FlatBuffersRuntime";
-import { AdManager } from "./AdManager";
+import { AdManager, AdPlatform } from "./AdManager";
 import { TimerManager } from "../framework/TimerManager";
 import { StorageManager } from "../framework/StorageManager";
 import { PoolManager } from "../framework/ObjectPool";
@@ -59,6 +59,8 @@ export class GameManager {
 
         // 3. 引擎层 — 广告
         AdManager.getInstance().init();
+        // AdManager.getInstance().setRewardedVideoAdUnitId(AdPlatform.WeChat, "微信广告位ID");
+        // AdManager.getInstance().setRewardedVideoAdUnitId(AdPlatform.Douyin, "抖音广告位ID");
 
         // 4. 引擎层 — UI
         UIManager.GetInstance().Init(uiRoot);
