@@ -70,7 +70,7 @@ export abstract class UIBase extends Component {
         transform.setContentSize(145, 100);
 
         const buttonSprite = buttonNode.addComponent(Sprite);
-        buttonSprite.sizeMode = Sprite.SizeMode.CUSTOM;
+        buttonSprite.sizeMode = Sprite.SizeMode.TRIMMED;
 
         const button = buttonNode.addComponent(Button);
         if (onClick) this.SetBtnEvent(button, onClick);
