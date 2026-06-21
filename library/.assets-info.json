@@ -85,7 +85,7 @@
       "time": 1781946493788.2898
     },
     "resources\\texture": {
-      "time": 1781959499425.428,
+      "time": 1782034580411.3406,
       "uuid": "2d8f91cb-f9c9-4b31-b9da-833ea47f7044"
     },
     "resources\\texture\\Icon_ImageIcon_Knife_Battle.png.meta": {
@@ -229,7 +229,7 @@
       "time": 1781946493785.288
     },
     "resources\\background": {
-      "time": 1781946493784.2898,
+      "time": 1782034580414.3408,
       "uuid": "e0980062-77e2-404d-a33b-b2572af00af1"
     },
     "resources\\background\\bg02.png": {
@@ -931,7 +931,7 @@
       "time": 1781946493794.2876
     },
     "resources\\ui\\GamePanel.prefab": {
-      "time": 1781965405212.5745,
+      "time": 1782034604827.7705,
       "uuid": "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23"
     },
     "scripts\\Game\\CommonGame\\ui\\GamePanel.ts.meta": {
@@ -942,13 +942,13 @@
       "uuid": "0f6f935e-dd32-4f8f-870f-858c31678dec"
     },
     "resources\\texture\\sheep.png.meta": {
-      "time": 1781959499509.4287
+      "time": 1782032495763.9636
     },
     "resources\\texture\\sheeptitle.png.meta": {
       "time": 1781959499574.4316
     },
     "resources\\texture\\sheep.png": {
-      "time": 1781959476543.8584,
+      "time": 1782032644323.206,
       "uuid": "66c41a34-27f9-4521-9581-a81e8714a705"
     },
     "resources\\texture\\sheeptitle.png": {
@@ -1003,6 +1003,13 @@
     "scripts\\Game\\CommonGame\\level": {
       "time": 1781968321208.8625,
       "uuid": "b48b6737-a5b8-4a7f-bf67-b4e6149f4245"
+    },
+    "resources\\background\\bg.png.meta": {
+      "time": 1782034580446.341
+    },
+    "resources\\background\\bg.png": {
+      "time": 1782034552014.2866,
+      "uuid": "216c12ba-2c83-476e-a2bd-16734dc32777"
     }
   },
   "missing": {}

@@ -1,21 +1,21 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "sheep",
+    "name": "bg",
     "atlas": "",
     "rect": {
       "x": 0,
       "y": 0,
-      "width": 50,
-      "height": 100
+      "width": 750,
+      "height": 1376
     },
     "offset": {
       "x": 0,
       "y": 0
     },
     "originalSize": {
-      "width": 50,
-      "height": 100
+      "width": 750,
+      "height": 1376
     },
     "rotated": false,
     "capInsets": [
@@ -26,17 +26,17 @@
     ],
     "vertices": {
       "rawPosition": [
-        -25,
-        -50,
+        -375,
+        -688,
         0,
-        25,
-        -50,
+        375,
+        -688,
         0,
-        -25,
-        50,
+        -375,
+        688,
         0,
-        25,
-        50,
+        375,
+        688,
         0
       ],
       "indexes": [
@@ -49,12 +49,12 @@
       ],
       "uv": [
         0,
-        100,
-        50,
-        100,
+        1376,
+        750,
+        1376,
         0,
         0,
-        50,
+        750,
         0
       ],
       "nuv": [
@@ -68,17 +68,17 @@
         1
       ],
       "minPos": {
-        "x": -25,
-        "y": -50,
+        "x": -375,
+        "y": -688,
         "z": 0
       },
       "maxPos": {
-        "x": 25,
-        "y": 50,
+        "x": 375,
+        "y": 688,
         "z": 0
       }
     },
-    "texture": "66c41a34-27f9-4521-9581-a81e8714a705@6c48a",
+    "texture": "216c12ba-2c83-476e-a2bd-16734dc32777@6c48a",
     "packable": true,
     "pixelsToUnit": 100,
     "pivot": {

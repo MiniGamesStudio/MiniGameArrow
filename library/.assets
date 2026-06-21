@@ -77,7 +77,8 @@
             "resources\\ui\\GamePanel.prefab",
             "resources\\ui\\LoadingPanel.prefab",
             "resources\\ui\\MainPage.prefab",
-            "resources\\ui\\MainPanel.prefab"
+            "resources\\ui\\MainPanel.prefab",
+            "resources\\background\\bg.png"
         ]
     }
 }
