@@ -3922,5 +3922,30 @@
       ]
     },
     "versionCode": 1
+  },
+  "33d215cc-48ee-40b8-bbe8-aa21226b5f4b": {
+    "url": "db://assets/resources/texture/sheepblack.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "33d215cc-48ee-40b8-bbe8-aa21226b5f4b@6c48a": {
+    "url": "db://assets/resources/texture/sheepblack.png@6c48a",
+    "value": {
+      "depends": [
+        "33d215cc-48ee-40b8-bbe8-aa21226b5f4b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "33d215cc-48ee-40b8-bbe8-aa21226b5f4b@f9941": {
+    "url": "db://assets/resources/texture/sheepblack.png@f9941",
+    "value": {
+      "depends": [
+        "33d215cc-48ee-40b8-bbe8-aa21226b5f4b@6c48a"
+      ]
+    },
+    "versionCode": 1
   }
 }

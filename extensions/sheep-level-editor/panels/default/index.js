@@ -13,6 +13,11 @@ const DEFAULT_EDITOR_TYPE_CONFIGS = {
         vertical: { rowSpan: 2, colSpan: 1 },
         horizontal: { rowSpan: 1, colSpan: 2 },
     },
+    black: {
+        resource: 'texture/sheepblack/spriteFrame',
+        vertical: { rowSpan: 2, colSpan: 1 },
+        horizontal: { rowSpan: 1, colSpan: 2 },
+    },
 };
 
 function getProjectPath() {
@@ -59,6 +64,11 @@ module.exports = Editor.Panel.define({
                     sheepTypeConfigs: {
                         normal: {
                             resource: 'texture/sheep/spriteFrame',
+                            vertical: { rowSpan: 2, colSpan: 1 },
+                            horizontal: { rowSpan: 1, colSpan: 2 },
+                        },
+                        black: {
+                            resource: 'texture/sheepblack/spriteFrame',
                             vertical: { rowSpan: 2, colSpan: 1 },
                             horizontal: { rowSpan: 1, colSpan: 2 },
                         },
@@ -183,8 +193,8 @@ module.exports = Editor.Panel.define({
         getGeneratorTypeConfigs() {
             const configs = this.levelFile && this.levelFile.sheepTypeConfigs ? this.levelFile.sheepTypeConfigs : {};
             return {
-                ...DEFAULT_EDITOR_TYPE_CONFIGS,
                 ...generator.DefaultTypeConfigs,
+                ...DEFAULT_EDITOR_TYPE_CONFIGS,
                 ...configs,
             };
         },

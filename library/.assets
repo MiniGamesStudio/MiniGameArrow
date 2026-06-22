@@ -46,6 +46,7 @@
             "scripts\\Game\\CommonGame\\ui\\MainPanel.ts",
             "custom.animgraph",
             "scene\\main.scene",
+            "resources\\background\\bg.png",
             "resources\\background\\bg01.jpg",
             "resources\\background\\bg02.png",
             "resources\\buttons\\Button01_145_BlueGray.Png",
@@ -70,6 +71,7 @@
             "resources\\texture\\ItemFrame02_Single_Green.png",
             "resources\\texture\\Pictoicon_Gear.Png",
             "resources\\texture\\sheep.png",
+            "resources\\texture\\sheepblack.png",
             "resources\\texture\\sheeptitle.png",
             "resources\\texture\\Slider_BasicTrapezoid01_Fill_Blue.png",
             "resources\\texture\\Slider_BasicTrapezoid01_Fill_White.png",
@@ -77,8 +79,7 @@
             "resources\\ui\\GamePanel.prefab",
             "resources\\ui\\LoadingPanel.prefab",
             "resources\\ui\\MainPage.prefab",
-            "resources\\ui\\MainPanel.prefab",
-            "resources\\background\\bg.png"
+            "resources\\ui\\MainPanel.prefab"
         ]
     }
 }
