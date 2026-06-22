@@ -180,10 +180,10 @@ module.exports = Editor.Panel.define({
                 throw new Error('请填写小羊种类及数量');
             }
 
-            return value.split(',').map((segment) => {
+            const typeCounts = value.split(',').map((segment) => {
                 const [typeValue, countValue] = segment.split(':').map((item) => String(item || '').trim());
                 const count = Number(countValue);
-                if (!typeValue || !Number.isFinite(count) || count <= 0) {
+                if (!typeValue || !Number.isFinite(count) || count < 0) {
                     throw new Error(`格式错误：${segment}`);
                 }
 
@@ -191,7 +191,13 @@ module.exports = Editor.Panel.define({
                     type: typeValue,
                     count: Math.floor(count),
                 };
-            });
+            }).filter((item) => item.count > 0);
+
+            if (typeCounts.length <= 0) {
+                throw new Error('小羊总数量必须大于 0');
+            }
+
+            return typeCounts;
         },
 
         isRequireSolvable() {

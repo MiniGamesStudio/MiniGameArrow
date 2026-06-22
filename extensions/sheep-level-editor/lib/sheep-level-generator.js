@@ -134,29 +134,19 @@ function createTypeSequence(typeCounts) {
 function generateSolvableLayout(typeSequence, typeConfigs) {
     const placed = [];
     const occupied = createOccupiedGrid();
+    const remainingTypes = shuffle(typeSequence);
     const centerRow = (ROW_COUNT - 1) * 0.5;
     const centerCol = (COL_COUNT - 1) * 0.5;
-    const first = {
-        row: Math.max(0, Math.floor(centerRow) - 1),
-        col: Math.floor(centerCol),
-        direction: Direction.Up,
-        type: typeSequence[0] || DEFAULT_TYPE,
-    };
 
-    if (!canPlace(first, occupied, typeConfigs)) return placed;
-
-    placed.push(first);
-    markOccupied(first, occupied, typeConfigs);
-
-    while (placed.length < typeSequence.length) {
-        const nextType = typeSequence[placed.length] || DEFAULT_TYPE;
-        const candidates = collectCandidates(placed, occupied, centerRow, centerCol, typeConfigs, nextType);
+    while (remainingTypes.length > 0) {
+        const candidates = collectCandidatesForTypes(placed, occupied, centerRow, centerCol, typeConfigs, remainingTypes);
         if (candidates.length <= 0) break;
 
         candidates.sort((a, b) => a.score - b.score || Math.random() - 0.5);
         const next = candidates[Math.floor(Math.random() * Math.min(5, candidates.length))].item;
         placed.push(next);
         markOccupied(next, occupied, typeConfigs);
+        removeOneType(remainingTypes, next.type);
     }
 
     return placed;
@@ -165,21 +155,41 @@ function generateSolvableLayout(typeSequence, typeConfigs) {
 function generateDenseLayout(typeSequence, typeConfigs) {
     const placed = [];
     const occupied = createOccupiedGrid();
+    const remainingTypes = shuffle(typeSequence);
     const centerRow = (ROW_COUNT - 1) * 0.5;
     const centerCol = (COL_COUNT - 1) * 0.5;
 
-    for (let index = 0; index < typeSequence.length; index++) {
-        const nextType = typeSequence[index] || DEFAULT_TYPE;
-        const candidates = collectDenseCandidates(occupied, centerRow, centerCol, typeConfigs, nextType);
+    while (remainingTypes.length > 0) {
+        const candidates = collectDenseCandidatesForTypes(occupied, centerRow, centerCol, typeConfigs, remainingTypes);
         if (candidates.length <= 0) break;
 
         candidates.sort((a, b) => a.score - b.score || Math.random() - 0.5);
         const next = candidates[Math.floor(Math.random() * Math.min(16, candidates.length))].item;
         placed.push(next);
         markOccupied(next, occupied, typeConfigs);
+        removeOneType(remainingTypes, next.type);
     }
 
     return placed;
+}
+
+function getUniqueTypes(types) {
+    return [...new Set(types.map((type) => type || DEFAULT_TYPE))];
+}
+
+function removeOneType(types, type) {
+    const index = types.indexOf(type || DEFAULT_TYPE);
+    if (index >= 0) {
+        types.splice(index, 1);
+    }
+}
+
+function collectDenseCandidatesForTypes(occupied, centerRow, centerCol, typeConfigs, types) {
+    return getUniqueTypes(types).flatMap((type) => collectDenseCandidates(occupied, centerRow, centerCol, typeConfigs, type));
+}
+
+function collectCandidatesForTypes(placed, occupied, centerRow, centerCol, typeConfigs, types) {
+    return getUniqueTypes(types).flatMap((type) => collectCandidates(placed, occupied, centerRow, centerCol, typeConfigs, type));
 }
 
 function collectDenseCandidates(occupied, centerRow, centerCol, typeConfigs, type) {
