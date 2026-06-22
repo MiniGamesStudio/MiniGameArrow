@@ -1,4 +1,5 @@
 import { _decorator, Node } from 'cc';
+import { PlatformManager, PlatformResult } from '../../../engine/PlatformManager';
 import { UIBase } from '../../../engine/ui/UIBase';
 import { UIManager } from '../../../engine/ui/UIManager';
 import { CommonUIID } from '../CommonUIConfig';
@@ -37,17 +38,47 @@ export class MainPage extends UIBase {
     }
 
     private InitUIButtons(): void {
-        this.CreateUIButtonsByTable(this.m_MiddleRoot, [
+        const buttons = this.CreateUIButtonsByTable(this.m_MiddleRoot, [
             {
                 buttonName: "StartGame",
                 buttonText: "开始游戏",
                 buttonIcon: "buttons/Button01_145_Orange",
                 onClick: () => {
                     UIManager.GetInstance().ClosePanel(CommonUIID.MainPanel);
-                    UIManager.GetInstance().OpenPanel(CommonUIID.LoadingPanel, CommonUIID.GamePanel, 1, 1);
+                    UIManager.GetInstance().OpenPanel(CommonUIID.LoadingPanel, CommonUIID.GamePanel, 1, 7);
+                },
+            },
+            {
+                buttonName: "Login",
+                buttonText: "登录",
+                buttonIcon: "buttons/Button01_145_Orange",
+                onClick: () => {
+                    this.login();
+                },
+            },
+            {
+                buttonName: "Rank",
+                buttonText: "排行榜",
+                buttonIcon: "buttons/Button01_145_Orange",
+                onClick: () => {
+                    UIManager.GetInstance().OpenPanel(CommonUIID.RankPanel);
                 },
             },
         ]);
+
+        buttons.forEach((button, index) => {
+            button.node.setPosition(0, 120 - index * 90, 0);
+        });
+    }
+
+    private async login(): Promise<void> {
+        const result = await PlatformManager.getInstance().login();
+        if (result.result === PlatformResult.Success) {
+            console.log('MainPage: 登录成功', result);
+            return;
+        }
+
+        console.warn('MainPage: 登录失败或不支持', result);
     }
 
     private clearRoot(root: Node): void {

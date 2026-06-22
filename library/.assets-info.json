@@ -12,7 +12,7 @@
       "time": 1781946493780.2888
     },
     "resources": {
-      "time": 1781964724670.4338,
+      "time": 1782112413125.8892,
       "uuid": "319640fa-293f-4197-855c-d1d2f7adc4e6"
     },
     "scene.meta": {
@@ -55,7 +55,7 @@
       "time": 1781946493793.289
     },
     "resources\\ui": {
-      "time": 1781946493795.2876,
+      "time": 1782111159766.3875,
       "uuid": "6c60be67-475a-43dc-a592-251e41add936"
     },
     "resources\\ui\\LoadingPanel.prefab.meta": {
@@ -321,7 +321,7 @@
       "time": 1776483748808.626
     },
     "scripts\\engine": {
-      "time": 1781946493803.2888,
+      "time": 1782110938675.386,
       "uuid": "211cab37-71d6-4ead-affc-1bd22b5825b3"
     },
     "scripts\\framework": {
@@ -887,7 +887,7 @@
       "uuid": "73edaae5-0b7a-425f-afe0-f601833012aa"
     },
     "scripts\\Game\\CommonGame\\ui": {
-      "time": 1781946493799.288,
+      "time": 1782110618406.1548,
       "uuid": "191bdeae-9286-465e-a518-a494dbf87eba"
     },
     "scripts\\Game\\CommonGame\\CommonGameEntry.ts": {
@@ -895,7 +895,7 @@
       "uuid": "c63a2908-67d7-4c12-a0ce-6c9030278f78"
     },
     "scripts\\Game\\CommonGame\\CommonUIConfig.ts": {
-      "time": 1781946493797.2878,
+      "time": 1782120845608.8699,
       "uuid": "1ddebbfb-1c31-4d1a-8cc1-b8ee53713dfb"
     },
     "scripts\\Game\\CommonGame\\ui\\LoadingPanel.ts": {
@@ -917,7 +917,7 @@
       "time": 1781946493799.288
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
-      "time": 1782108420057.6587,
+      "time": 1782120854453.7307,
       "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
     },
     "scripts\\engine\\AdManager.ts.meta": {
@@ -938,7 +938,7 @@
       "time": 1781946493798.2878
     },
     "scripts\\Game\\CommonGame\\ui\\GamePanel.ts": {
-      "time": 1781971373607.0288,
+      "time": 1782110655064.6663,
       "uuid": "0f6f935e-dd32-4f8f-870f-858c31678dec"
     },
     "resources\\texture\\sheep.png.meta": {
@@ -1017,6 +1017,83 @@
     },
     "resources\\texture\\sheepblack.png.meta": {
       "time": 1782107942636.7476
+    },
+    "scripts\\engine\\PlatformManager.ts.meta": {
+      "time": 1782110938682.3855
+    },
+    "scripts\\Game\\CommonGame\\ui\\RankPanel.ts.meta": {
+      "time": 1782110618406.1548
+    },
+    "scripts\\Game\\CommonGame\\ui\\RankPanel.ts": {
+      "time": 1782121282519.09,
+      "uuid": "b45da2d2-3f4c-4b69-a2bb-ea92ed3a7852"
+    },
+    "scripts\\engine\\PlatformManager.ts": {
+      "time": 1782121125690.3767,
+      "uuid": "a609ec9c-c7c4-4c81-b730-8f2bef02d1ab"
+    },
+    "resources\\ui\\LoginPanel.prefab.meta": {
+      "time": 1782111127963.8745
+    },
+    "resources\\ui\\LoginPanel.prefab": {
+      "time": 1782111144164.5762,
+      "uuid": "b6b4c5ef-8ac7-4533-a50a-dadbc41c189e"
+    },
+    "resources\\ui\\RankPanel.prefab.meta": {
+      "time": 1782111159772.4463
+    },
+    "resources\\ui\\RankPanel.prefab": {
+      "time": 1782121391619.4883,
+      "uuid": "8ef6df47-0ec6-430e-accf-e7f7f77a5e07"
+    },
+    "resources\\ranking.meta": {
+      "time": 1782112413126.889
+    },
+    "resources\\ranking": {
+      "time": 1782120674073.4868,
+      "uuid": "2364a1ff-cca8-449b-abc8-70e20f478d52"
+    },
+    "resources\\ranking\\RankingBackground.png.meta": {
+      "time": 1782112437794.1611
+    },
+    "resources\\ranking\\RankingBackground.png": {
+      "time": 1746612144000,
+      "uuid": "db239a29-fd7f-482c-8a49-82b641d5e489"
+    },
+    "resources\\ranking\\Menu_TopBtn.png.meta": {
+      "time": 1782112656432.3357
+    },
+    "resources\\ranking\\Menu_TopBtn.png": {
+      "time": 1746611300000,
+      "uuid": "2f8d7298-a520-4709-b29e-7254a68ec8e4"
+    },
+    "resources\\ranking\\ItemFrame07_n.png.meta": {
+      "time": 1782119618941.4763
+    },
+    "resources\\ranking\\ItemFrame07_n.png": {
+      "time": 1746611681000,
+      "uuid": "419870d2-343b-4884-9ff9-1c5c0934e900"
+    },
+    "resources\\ranking\\Icon_ImageIcon_Medal_Bronze.png.meta": {
+      "time": 1782119867055.2004
+    },
+    "resources\\ranking\\Icon_ImageIcon_Medal_Gold.png.meta": {
+      "time": 1782119867061.1985
+    },
+    "resources\\ranking\\Icon_ImageIcon_Medal_Silver.png.meta": {
+      "time": 1782119867054.2195
+    },
+    "resources\\ranking\\Icon_ImageIcon_Medal_Silver.png": {
+      "time": 1746611642000,
+      "uuid": "799326a9-afdc-4e64-8c0d-c099c20be1f8"
+    },
+    "resources\\ranking\\Icon_ImageIcon_Medal_Bronze.png": {
+      "time": 1746612438000,
+      "uuid": "775389f3-efca-4484-a6c4-362da3c0ef77"
+    },
+    "resources\\ranking\\Icon_ImageIcon_Medal_Gold.png": {
+      "time": 1746612246000,
+      "uuid": "67ab6497-3fdb-4ac4-a0bf-168d4e038daa"
     }
   },
   "missing": {}

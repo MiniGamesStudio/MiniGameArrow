@@ -79,7 +79,18 @@
             "resources\\ui\\GamePanel.prefab",
             "resources\\ui\\LoadingPanel.prefab",
             "resources\\ui\\MainPage.prefab",
-            "resources\\ui\\MainPanel.prefab"
+            "resources\\ui\\MainPanel.prefab",
+            "scripts\\engine\\PlatformManager.ts",
+            "scripts\\Game\\CommonGame\\ui\\RankPanel.ts",
+            "resources\\ui\\LoginPanel.prefab",
+            "resources\\ui\\RankPanel.prefab",
+            "resources\\ranking",
+            "resources\\ranking\\RankingBackground.png",
+            "resources\\ranking\\Menu_TopBtn.png",
+            "resources\\ranking\\ItemFrame07_n.png",
+            "resources\\ranking\\Icon_ImageIcon_Medal_Bronze.png",
+            "resources\\ranking\\Icon_ImageIcon_Medal_Gold.png",
+            "resources\\ranking\\Icon_ImageIcon_Medal_Silver.png"
         ]
     }
 }

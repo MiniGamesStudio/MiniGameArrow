@@ -1,5 +1,6 @@
 import { _decorator, Button, JsonAsset, Node, resources, RichText, Sprite, SpriteFrame, tween, UITransform, Vec3 } from 'cc';
 import { AdManager, AdPlayResult } from '../../../engine/AdManager';
+import { PlatformManager, PlatformResult } from '../../../engine/PlatformManager';
 import { UIBase } from '../../../engine/ui/UIBase';
 const { ccclass, property } = _decorator;
 
@@ -758,6 +759,14 @@ export class GamePanel extends UIBase {
         this.m_SkillMode = 'none';
         this.m_SkillRemoveRemain = 0;
         console.log('GamePanel: 关卡结束');
+        this.submitRankScore();
+    }
+
+    private async submitRankScore(): Promise<void> {
+        const result = await PlatformManager.getInstance().submitRankScore('level', this.m_CurrentLevel);
+        if (result.result !== PlatformResult.Success) {
+            console.warn('GamePanel: 排行榜提交失败或不支持', result);
+        }
     }
 
     private clearSheep(): void {
