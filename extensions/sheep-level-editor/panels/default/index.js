@@ -34,6 +34,7 @@ module.exports = Editor.Panel.define({
     $: {
         level: '#level',
         typeCounts: '#type-counts',
+        requireSolvable: '#require-solvable',
         generate: '#generate',
         view: '#view',
         save: '#save',
@@ -99,10 +100,13 @@ module.exports = Editor.Panel.define({
                 const level = this.getLevelInput();
                 const typeCounts = this.parseTypeCounts();
                 const targetCount = typeCounts.reduce((sum, item) => sum + item.count, 0);
-                this.currentLevel = generator.generateLevel(level, typeCounts, this.getGeneratorTypeConfigs());
+                const requireSolvable = this.isRequireSolvable();
+                const typeConfigs = this.getGeneratorTypeConfigs();
+                this.currentLevel = generator.generateLevel(level, typeCounts, typeConfigs, { requireSolvable });
+                const solveText = generator.canSolveLevel(this.currentLevel, typeConfigs) ? '有解' : '无解';
                 console.log('[sheep-level-editor] 生成结果：', JSON.stringify(this.currentLevel, null, 2));
                 this.renderLevel(this.currentLevel);
-                this.setStatus(`生成成功：第 ${level} 关，数量 ${this.currentLevel.sheep.length}/${targetCount}`);
+                this.setStatus(`生成成功：第 ${level} 关，数量 ${this.currentLevel.sheep.length}/${targetCount}，${solveText}`);
             } catch (error) {
                 console.error('[sheep-level-editor] 生成失败：', error);
                 this.setStatus(`生成失败：${error.message}`);
@@ -134,7 +138,7 @@ module.exports = Editor.Panel.define({
             }
 
             const typeConfigs = this.getGeneratorTypeConfigs();
-            if (!generator.canSolveLevel(this.currentLevel, typeConfigs)) {
+            if (this.isRequireSolvable() && !generator.canSolveLevel(this.currentLevel, typeConfigs)) {
                 this.setStatus(`保存失败：第 ${this.currentLevel.level} 关不可解`);
                 return;
             }
@@ -188,6 +192,10 @@ module.exports = Editor.Panel.define({
                     count: Math.floor(count),
                 };
             });
+        },
+
+        isRequireSolvable() {
+            return !!this.$.requireSolvable.checked;
         },
 
         getGeneratorTypeConfigs() {

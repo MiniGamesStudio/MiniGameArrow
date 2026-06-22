@@ -34,13 +34,16 @@ function normalizeTypeConfigs(typeConfigs) {
     };
 }
 
-function generateLevel(level, typeCounts, typeConfigs) {
+function generateLevel(level, typeCounts, typeConfigs, options = {}) {
     const normalizedTypeConfigs = normalizeTypeConfigs(typeConfigs);
     const typeSequence = createTypeSequence(typeCounts);
+    const requireSolvable = options.requireSolvable !== false;
     let bestLevelData = null;
 
     for (let attempt = 0; attempt < GENERATE_ATTEMPTS; attempt++) {
-        const sheep = generateSolvableLayout(typeSequence, normalizedTypeConfigs);
+        const sheep = requireSolvable
+            ? generateSolvableLayout(typeSequence, normalizedTypeConfigs)
+            : generateDenseLayout(typeSequence, normalizedTypeConfigs);
         if (sheep.length <= 0) continue;
 
         const levelData = {
@@ -49,7 +52,7 @@ function generateLevel(level, typeCounts, typeConfigs) {
             colCount: COL_COUNT,
             sheep,
         };
-        if (!canSolveLevel(levelData, normalizedTypeConfigs)) continue;
+        if (requireSolvable && !canSolveLevel(levelData, normalizedTypeConfigs)) continue;
 
         if (!bestLevelData || levelData.sheep.length > bestLevelData.sheep.length) {
             bestLevelData = levelData;
@@ -60,7 +63,8 @@ function generateLevel(level, typeCounts, typeConfigs) {
     }
 
     if (!bestLevelData) {
-        throw new Error(`第 ${level} 关生成失败，没有找到可解布局`);
+        const reason = requireSolvable ? '可解布局' : '可用布局';
+        throw new Error(`第 ${level} 关生成失败，没有找到${reason}`);
     }
 
     return bestLevelData;
@@ -84,6 +88,30 @@ function canSolveLevel(level, typeConfigs) {
         if (!removable) return false;
 
         removable.removed = true;
+        remainCount--;
+    }
+
+    return true;
+}
+
+function hasUniqueSolution(level, typeConfigs) {
+    const normalizedTypeConfigs = normalizeTypeConfigs(typeConfigs);
+    const sheepList = (level.sheep || []).map((sheep) => {
+        const footprint = getFootprint(sheep.direction, sheep.type, normalizedTypeConfigs);
+        return {
+            ...sheep,
+            rowSpan: footprint.rowSpan,
+            colSpan: footprint.colSpan,
+            removed: false,
+        };
+    });
+    let remainCount = sheepList.length;
+
+    while (remainCount > 0) {
+        const removableList = sheepList.filter((sheep) => !sheep.removed && !isBlocked(sheep, sheepList, normalizedTypeConfigs));
+        if (removableList.length !== 1) return false;
+
+        removableList[0].removed = true;
         remainCount--;
     }
 
@@ -132,6 +160,47 @@ function generateSolvableLayout(typeSequence, typeConfigs) {
     }
 
     return placed;
+}
+
+function generateDenseLayout(typeSequence, typeConfigs) {
+    const placed = [];
+    const occupied = createOccupiedGrid();
+    const centerRow = (ROW_COUNT - 1) * 0.5;
+    const centerCol = (COL_COUNT - 1) * 0.5;
+
+    for (let index = 0; index < typeSequence.length; index++) {
+        const nextType = typeSequence[index] || DEFAULT_TYPE;
+        const candidates = collectDenseCandidates(occupied, centerRow, centerCol, typeConfigs, nextType);
+        if (candidates.length <= 0) break;
+
+        candidates.sort((a, b) => a.score - b.score || Math.random() - 0.5);
+        const next = candidates[Math.floor(Math.random() * Math.min(16, candidates.length))].item;
+        placed.push(next);
+        markOccupied(next, occupied, typeConfigs);
+    }
+
+    return placed;
+}
+
+function collectDenseCandidates(occupied, centerRow, centerCol, typeConfigs, type) {
+    const candidates = [];
+    const directionCycle = shuffle(DirectionCycle);
+    directionCycle.forEach((direction, directionIndex) => {
+        for (let row = 0; row < ROW_COUNT; row++) {
+            for (let col = 0; col < COL_COUNT; col++) {
+                const item = { row, col, direction, type };
+                if (!canPlace(item, occupied, typeConfigs)) continue;
+
+                const centerDistance = Math.abs(row - centerRow) + Math.abs(col - centerCol);
+                candidates.push({
+                    item,
+                    score: centerDistance + directionIndex * 0.2 + Math.random(),
+                });
+            }
+        }
+    });
+
+    return candidates;
 }
 
 function collectCandidates(placed, occupied, centerRow, centerCol, typeConfigs, type) {
@@ -285,4 +354,5 @@ module.exports = {
     DefaultTypeConfigs,
     generateLevel,
     canSolveLevel,
+    hasUniqueSolution,
 };
