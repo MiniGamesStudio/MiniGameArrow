@@ -2,18 +2,19 @@
   "__version__": "1.3.9",
   "splash-setting": {
     "background": {
-      "image": "project://settings/bg01.jpg",
-      "type": "custom",
+      "image": "project://settings/bg02.png",
+      "type": "color",
       "color": {
-        "x": 0.9921568627450981,
-        "y": 0.9921568627450981,
-        "z": 0.9921568627450981,
+        "x": 0,
+        "y": 0,
+        "z": 0,
         "w": 1
       }
     },
     "logo": {
       "type": "none"
-    }
+    },
+    "totalTime": 500
   },
   "bundleConfig": {
     "custom": {

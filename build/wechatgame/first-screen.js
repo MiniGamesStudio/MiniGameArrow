@@ -90,11 +90,11 @@ let afterTick = null;
 let backgroundFilp = 1.0; // set 0 to not flip
 let displayRatio = 1;
 let bgColor = [0,0,0,1];
-let useCustomBg = true;
+let useCustomBg = false;
 let useLogo = false;
 let useDefaultLogo = false;
 let logoName = 'logo.png';
-let bgName = 'background.jpg';
+let bgName = 'background.png';
 let fitWidth = false;
 let fitHeight = true;
 

@@ -113,7 +113,7 @@
     "url": "db://assets/resources/ui/LoadingPanel.prefab",
     "value": {
       "depends": [
-        "0259838e-f879-4758-b6ae-41c84323ca84@f9941",
+        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
         "4dfad19b-187b-40d5-ba83-2e74171fdee1@f9941",
         "44f25ea4-0bae-4c44-b956-c589a7fe0cc7@f9941",
         "dc0e3e75-7237-44c7-ab16-f748c67753bb@f9941"
@@ -287,9 +287,7 @@
   },
   "68a421d3-6d8b-4781-9492-f0da468b0936": {
     "url": "db://assets/resources/texture/Icon_ImageIcon_Knife_Battle.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "088f4e4a-25b6-4239-a03c-acb325bf5794": {
@@ -535,16 +533,12 @@
   },
   "c03983d3-1d8c-4408-9909-e9ac585800b3": {
     "url": "db://assets/resources/texture/Icon_ImageIcon_Energy.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "45f26b7b-2c39-469f-8d8a-7ef51ccf6bd6": {
     "url": "db://assets/resources/texture/ItemFrame02_Single_Green.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "3451f789-e978-47be-8ca2-efbad9681fd7": {
@@ -805,9 +799,7 @@
   },
   "4e9cfa13-dac5-4d82-861c-1cc1eaa9920d": {
     "url": "db://assets/resources/texture/Pictoicon_Gear.Png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "4e9cfa13-dac5-4d82-861c-1cc1eaa9920d@6c48a": {
@@ -1858,9 +1850,7 @@
   },
   "0259838e-f879-4758-b6ae-41c84323ca84": {
     "url": "db://assets/resources/background/bg01.jpg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "0259838e-f879-4758-b6ae-41c84323ca84@6c48a": {
@@ -2055,16 +2045,12 @@
   },
   "3bc00f09-6efd-412a-9f5c-71536fc96861": {
     "url": "db://assets/resources/buttons/Button01_145_Gray.Png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "ac2c590c-5e3f-4ca5-a253-5c9ea1d35cdc": {
     "url": "db://assets/resources/buttons/Button01_145_Green.Png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "ee9a4b5e-9cf7-4e80-82f7-1295f0ae2500": {
@@ -2076,16 +2062,12 @@
   },
   "2cfb15e5-2c31-43db-870c-f84dddd475a7": {
     "url": "db://assets/resources/buttons/Button01_145_Purple.Png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "78abede0-5663-400f-bdec-8c2042d3c8bd": {
     "url": "db://assets/resources/buttons/Button01_145_Red.Png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "78abede0-5663-400f-bdec-8c2042d3c8bd@6c48a": {
@@ -2180,9 +2162,7 @@
   },
   "773ec3ce-cc47-496a-bd67-710371d8c490": {
     "url": "db://assets/resources/buttons/Button01_145_BlueGray.Png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "773ec3ce-cc47-496a-bd67-710371d8c490@6c48a": {
@@ -3700,7 +3680,7 @@
     "url": "db://assets/resources/ui/GamePanel.prefab",
     "value": {
       "depends": [
-        "216c12ba-2c83-476e-a2bd-16734dc32777@f9941",
+        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
         "9f0061d1-19dd-4e32-8c0b-2dcf7d57772e@f9941",
         "483f80bc-31e2-47a5-9fae-d8fb24a81f95@f9941",
         "d0a9d6da-1e4e-46d3-8e0f-5b9c66014d93@f9941",
@@ -3899,9 +3879,7 @@
   },
   "216c12ba-2c83-476e-a2bd-16734dc32777": {
     "url": "db://assets/resources/background/bg.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "216c12ba-2c83-476e-a2bd-16734dc32777@6c48a": {
@@ -3961,7 +3939,7 @@
     "url": "db://assets/resources/ui/LoginPanel.prefab",
     "value": {
       "depends": [
-        "0259838e-f879-4758-b6ae-41c84323ca84@f9941",
+        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
         "4dfad19b-187b-40d5-ba83-2e74171fdee1@f9941"
       ],
       "dependScripts": [
@@ -4188,6 +4166,11 @@
         "67ab6497-3fdb-4ac4-a0bf-168d4e038daa@6c48a"
       ]
     },
+    "versionCode": 1
+  },
+  "32f1f295-916f-4efa-acf9-518ceba1afc2": {
+    "url": "db://assets/resources/background/folder",
+    "value": {},
     "versionCode": 1
   }
 }

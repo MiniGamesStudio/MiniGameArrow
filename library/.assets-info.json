@@ -26,7 +26,7 @@
       "uuid": "b5ad4379-da55-44a2-a5cd-3bbde1c09556"
     },
     "scene\\main.scene": {
-      "time": 1782197093139.016,
+      "time": 1782200150468.7212,
       "uuid": "832cd028-fca2-4694-bfcf-606b1fd6a211"
     },
     "scripts.meta": {
@@ -62,7 +62,7 @@
       "time": 1781946493794.2876
     },
     "resources\\ui\\LoadingPanel.prefab": {
-      "time": 1781946493794.2876,
+      "time": 1782198983309.1836,
       "uuid": "55f8e988-f02b-41a3-8681-5a467e621d1b"
     },
     "scripts\\UIScripts\\LoadingPanel.ts.meta": {
@@ -75,7 +75,7 @@
       "time": 1781946493795.2876
     },
     "resources\\ui\\MainPanel.prefab": {
-      "time": 1781946493795.2876,
+      "time": 1782199506824.2449,
       "uuid": "e9ac1fc5-9611-4b81-934c-e3adb37b13fb"
     },
     "scripts\\UIScripts\\MainPanel.ts.meta": {
@@ -85,21 +85,14 @@
       "time": 1781946493788.2898
     },
     "resources\\texture": {
-      "time": 1782107942580.5156,
+      "time": 1782199258482.782,
       "uuid": "2d8f91cb-f9c9-4b31-b9da-833ea47f7044"
-    },
-    "resources\\texture\\Icon_ImageIcon_Knife_Battle.png.meta": {
-      "time": 1781946493790.288
     },
     "resources\\texture\\Icon_ImageIcon_Ranking.png.meta": {
       "time": 1781946493790.288
     },
     "resources\\texture\\Icon_ImageIcon_Trophy_m.png.meta": {
       "time": 1781946493791.2883
-    },
-    "resources\\texture\\Icon_ImageIcon_Knife_Battle.png": {
-      "time": 1781946493790.288,
-      "uuid": "68a421d3-6d8b-4781-9492-f0da468b0936"
     },
     "resources\\texture\\Icon_ImageIcon_Ranking.png": {
       "time": 1781946493790.288,
@@ -112,30 +105,9 @@
     "resources\\texture\\Icon_ImageIcon_Coin02.png.meta": {
       "time": 1781946493789.289
     },
-    "resources\\texture\\Icon_ImageIcon_Energy.png.meta": {
-      "time": 1781946493789.289
-    },
-    "resources\\texture\\ItemFrame02_Single_Green.png.meta": {
-      "time": 1781946493791.2883
-    },
     "resources\\texture\\Icon_ImageIcon_Coin02.png": {
       "time": 1781946493789.289,
       "uuid": "83985e7f-c240-4752-b17d-27c185892c87"
-    },
-    "resources\\texture\\Icon_ImageIcon_Energy.png": {
-      "time": 1781946493789.289,
-      "uuid": "c03983d3-1d8c-4408-9909-e9ac585800b3"
-    },
-    "resources\\texture\\ItemFrame02_Single_Green.png": {
-      "time": 1781946493791.2883,
-      "uuid": "45f26b7b-2c39-469f-8d8a-7ef51ccf6bd6"
-    },
-    "resources\\texture\\Pictoicon_Gear.Png.meta": {
-      "time": 1781946493791.2883
-    },
-    "resources\\texture\\Pictoicon_Gear.Png": {
-      "time": 1781946493791.2883,
-      "uuid": "4e9cfa13-dac5-4d82-861c-1cc1eaa9920d"
     },
     "scripts\\UIScripts\\GamePage.ts.meta": {
       "time": 1758166749347.6506
@@ -173,72 +145,30 @@
     "resources\\buttons.meta": {
       "time": 1781946493785.288
     },
-    "resources\\buttons\\Button01_145_BlueGray.Png.meta": {
-      "time": 1781946493785.288
-    },
-    "resources\\buttons\\Button01_145_Gray.Png.meta": {
-      "time": 1781946493785.288
-    },
-    "resources\\buttons\\Button01_145_Green.Png.meta": {
-      "time": 1781946493786.289
-    },
     "resources\\buttons\\Button01_145_Orange.Png.meta": {
       "time": 1781946493786.289
     },
-    "resources\\buttons\\Button01_145_Purple.Png.meta": {
-      "time": 1781946493787.288
-    },
-    "resources\\buttons\\Button01_145_Red.Png.meta": {
-      "time": 1781946493787.288
-    },
     "resources\\buttons": {
-      "time": 1781946493788.2898,
+      "time": 1782199225878.0872,
       "uuid": "32f388a2-302f-42ca-9b4e-d29b82055982"
     },
     "resources\\buttons\\Button01_145_Orange.Png": {
       "time": 1781946493786.289,
       "uuid": "ee9a4b5e-9cf7-4e80-82f7-1295f0ae2500"
     },
-    "resources\\buttons\\Button01_145_Purple.Png": {
-      "time": 1781946493786.289,
-      "uuid": "2cfb15e5-2c31-43db-870c-f84dddd475a7"
-    },
-    "resources\\buttons\\Button01_145_Green.Png": {
-      "time": 1781946493786.289,
-      "uuid": "ac2c590c-5e3f-4ca5-a253-5c9ea1d35cdc"
-    },
-    "resources\\buttons\\Button01_145_BlueGray.Png": {
-      "time": 1781946493785.288,
-      "uuid": "773ec3ce-cc47-496a-bd67-710371d8c490"
-    },
-    "resources\\buttons\\Button01_145_Gray.Png": {
-      "time": 1781946493785.288,
-      "uuid": "3bc00f09-6efd-412a-9f5c-71536fc96861"
-    },
-    "resources\\buttons\\Button01_145_Red.Png": {
-      "time": 1781946493787.288,
-      "uuid": "78abede0-5663-400f-bdec-8c2042d3c8bd"
-    },
     "resources\\background.meta": {
       "time": 1781946493780.2888
-    },
-    "resources\\background\\bg01.jpg.meta": {
-      "time": 1781946493784.2898
     },
     "resources\\background\\bg02.png.meta": {
       "time": 1781946493785.288
     },
     "resources\\background": {
-      "time": 1782034580414.3408,
+      "time": 1782199288837.9885,
       "uuid": "e0980062-77e2-404d-a33b-b2572af00af1"
     },
     "resources\\background\\bg02.png": {
       "time": 1781946493784.2898,
       "uuid": "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa"
-    },
-    "resources\\background\\bg01.jpg": {
-      "time": 1781946493783.2898,
-      "uuid": "0259838e-f879-4758-b6ae-41c84323ca84"
     },
     "resources\\buttons\\PictoIcon_Close.Png.meta": {
       "time": 1781946493788.2898
@@ -248,10 +178,10 @@
       "uuid": "a4840e4c-51eb-40b5-ae6f-035d58ec0152"
     },
     "resources\\texture\\title.png.meta": {
-      "time": 1781946493792.288
+      "time": 1782198966624.5676
     },
     "resources\\texture\\title.png": {
-      "time": 1781946493792.288,
+      "time": 1782198947499.2183,
       "uuid": "4dfad19b-187b-40d5-ba83-2e74171fdee1"
     },
     "resources\\buttons\\Icon_PictoIcon_Pause.png.meta": {
@@ -931,7 +861,7 @@
       "time": 1781946493794.2876
     },
     "resources\\ui\\GamePanel.prefab": {
-      "time": 1782196044480.3848,
+      "time": 1782199478204.7725,
       "uuid": "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23"
     },
     "scripts\\Game\\CommonGame\\ui\\GamePanel.ts.meta": {
@@ -945,14 +875,14 @@
       "time": 1782032495763.9636
     },
     "resources\\texture\\sheeptitle.png.meta": {
-      "time": 1781959499574.4316
+      "time": 1782199103343.2808
     },
     "resources\\texture\\sheep.png": {
       "time": 1782032644323.206,
       "uuid": "66c41a34-27f9-4521-9581-a81e8714a705"
     },
     "resources\\texture\\sheeptitle.png": {
-      "time": 1781959492585.3945,
+      "time": 1782199046369.8674,
       "uuid": "a66726f4-f780-4d1d-b776-00cce3b6c51d"
     },
     "resources\\Icons.meta": {
@@ -966,21 +896,21 @@
       "time": 1781960003252.84
     },
     "resources\\Icons\\Skill_1.png": {
-      "time": 1746612140000,
+      "time": 1782199396587.0771,
       "uuid": "483f80bc-31e2-47a5-9fae-d8fb24a81f95"
     },
     "resources\\Icons\\Skill_2.png.meta": {
       "time": 1781960013166.8403
     },
     "resources\\Icons\\Skill_2.png": {
-      "time": 1746611615000,
+      "time": 1782199409476.2046,
       "uuid": "d0a9d6da-1e4e-46d3-8e0f-5b9c66014d93"
     },
     "resources\\Icons\\Skill_3.png.meta": {
       "time": 1781960024435.935
     },
     "resources\\Icons\\Skill_3.png": {
-      "time": 1746611646000,
+      "time": 1782199435376.4202,
       "uuid": "fc8553d7-131b-4691-98e7-6ceeaa07a1c7"
     },
     "resources\\config.meta": {
@@ -1003,13 +933,6 @@
     "scripts\\Game\\CommonGame\\level": {
       "time": 1781968321208.8625,
       "uuid": "b48b6737-a5b8-4a7f-bf67-b4e6149f4245"
-    },
-    "resources\\background\\bg.png.meta": {
-      "time": 1782034580446.341
-    },
-    "resources\\background\\bg.png": {
-      "time": 1782034552014.2866,
-      "uuid": "216c12ba-2c83-476e-a2bd-16734dc32777"
     },
     "resources\\texture\\sheepblack.png": {
       "time": 1782107862577.3835,
@@ -1036,7 +959,7 @@
       "time": 1782111127963.8745
     },
     "resources\\ui\\LoginPanel.prefab": {
-      "time": 1782111144164.5762,
+      "time": 1782198994075.9702,
       "uuid": "b6b4c5ef-8ac7-4533-a50a-dadbc41c189e"
     },
     "resources\\ui\\RankPanel.prefab.meta": {
