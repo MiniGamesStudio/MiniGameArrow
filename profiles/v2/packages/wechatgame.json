@@ -9,7 +9,29 @@
       "buildPath": "project://build",
       "outputName": "wechatgame",
       "mainBundleCompressionType": "merge_dep",
-      "platform": "wechatgame"
-    }
+      "platform": "wechatgame",
+      "name": "SheepRunning"
+    },
+    "options": {
+      "wechatgame": {
+        "orientation": "portrait",
+        "appid": "wxcb2b06804689e020",
+        "buildOpenDataContextTemplate": true,
+        "separateEngine": false,
+        "highPerformanceMode": false,
+        "__version__": "1.0.4"
+      }
+    },
+    "taskOptionsMap": {
+      "1782191692334": {
+        "orientation": "portrait",
+        "appid": "wxcb2b06804689e020",
+        "buildOpenDataContextTemplate": true,
+        "separateEngine": false,
+        "highPerformanceMode": false,
+        "__version__": "1.0.4"
+      }
+    },
+    "__version__": "1.3.9"
   }
 }

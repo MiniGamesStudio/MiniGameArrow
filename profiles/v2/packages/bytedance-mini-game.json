@@ -1,0 +1,16 @@
+{
+  "__version__": "1.0.3",
+  "builder": {
+    "common": {
+      "binGroupConfig": {
+        "threshold": 16,
+        "enable": false
+      },
+      "buildPath": "project://build",
+      "outputName": "bytedance-mini-game",
+      "mainBundleCompressionType": "merge_dep",
+      "platform": "bytedance-mini-game",
+      "name": "MiniGameArrow"
+    }
+  }
+}
