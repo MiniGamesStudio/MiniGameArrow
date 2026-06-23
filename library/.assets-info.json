@@ -847,7 +847,7 @@
       "time": 1781946493799.288
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
-      "time": 1782209808650.2493,
+      "time": 1782218845497.3953,
       "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
     },
     "scripts\\engine\\AdManager.ts.meta": {
@@ -861,7 +861,7 @@
       "time": 1781946493794.2876
     },
     "resources\\ui\\GamePanel.prefab": {
-      "time": 1782199478204.7725,
+      "time": 1782218898799.4084,
       "uuid": "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23"
     },
     "scripts\\Game\\CommonGame\\ui\\GamePanel.ts.meta": {

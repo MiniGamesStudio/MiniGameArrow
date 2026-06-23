@@ -41,12 +41,16 @@
             "scripts\\engine\\ui\\UIData.ts",
             "scripts\\engine\\ui\\UIManager.ts",
             "scripts\\Game\\CommonGame\\CommonGameEntry.ts",
+            "scripts\\Game\\CommonGame\\CommonGameProgress.ts",
             "scripts\\Game\\CommonGame\\CommonUIConfig.ts",
             "scripts\\Game\\CommonGame\\ui\\GamePanel.ts",
             "scripts\\Game\\CommonGame\\ui\\LoadingPanel.ts",
+            "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts",
             "scripts\\Game\\CommonGame\\ui\\MainPage.ts",
             "scripts\\Game\\CommonGame\\ui\\MainPanel.ts",
+            "scripts\\Game\\CommonGame\\ui\\PausePanel.ts",
             "scripts\\Game\\CommonGame\\ui\\RankPanel.ts",
+            "scripts\\Game\\CommonGame\\ui\\TransitionPanel.ts",
             "custom.animgraph",
             "scene\\main.scene",
             "resources\\background\\bg02.png",
@@ -79,13 +83,9 @@
             "resources\\ui\\LoginPanel.prefab",
             "resources\\ui\\MainPage.prefab",
             "resources\\ui\\MainPanel.prefab",
-            "resources\\ui\\RankPanel.prefab",
-            "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts",
             "resources\\ui\\PausePanel.prefab",
-            "scripts\\Game\\CommonGame\\ui\\PausePanel.ts",
-            "resources\\ui\\TransitionPanel.prefab",
-            "scripts\\Game\\CommonGame\\ui\\TransitionPanel.ts",
-            "scripts\\Game\\CommonGame\\CommonGameProgress.ts"
+            "resources\\ui\\RankPanel.prefab",
+            "resources\\ui\\TransitionPanel.prefab"
         ]
     }
 }

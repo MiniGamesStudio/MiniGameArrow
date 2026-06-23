@@ -49,19 +49,22 @@ export class MainPage extends UIBase {
                     UIManager.GetInstance().OpenPanel(CommonUIID.GamePanel, currentLevel);
                 },
             },
-            {
-                buttonName: "Rank",
-                buttonText: "排行榜",
-                buttonIcon: "buttons/Button01_145_Orange",
-                onClick: () => {
-                    UIManager.GetInstance().OpenPanel(CommonUIID.RankPanel);
-                },
-            },
         ]);
 
         buttons.forEach((button, index) => {
             button.node.setPosition(0, 120 - index * 90, 0);
         });
+
+        this.CreateUIButtonsByTable(this.m_RightRoot, [
+            {
+                buttonName: "Rank",
+                buttonText: "排行榜",
+                buttonIcon: "texture/Icon_ImageIcon_Ranking",
+                onClick: () => {
+                    UIManager.GetInstance().OpenPanel(CommonUIID.RankPanel);
+                },
+            },
+        ]);
     }
 
     private clearRoot(root: Node): void {
