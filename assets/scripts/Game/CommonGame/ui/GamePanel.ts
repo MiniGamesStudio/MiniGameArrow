@@ -3,6 +3,7 @@ import { AdManager, AdPlayResult } from '../../../engine/AdManager';
 import { PlatformManager, PlatformResult } from '../../../engine/PlatformManager';
 import { UIBase } from '../../../engine/ui/UIBase';
 import { UIManager } from '../../../engine/ui/UIManager';
+import { CommonGameProgress } from '../CommonGameProgress';
 import { CommonUIID } from '../CommonUIConfig';
 const { ccclass, property } = _decorator;
 
@@ -195,6 +196,7 @@ export class GamePanel extends UIBase {
 
     private loadLevelAfterTransition(level: number | GameLevelConfig): void {
         this.m_OpenLevelConfig = this.resolveOpenLevelConfig(level);
+        CommonGameProgress.setCurrentLevel(this.m_CurrentLevel);
         this.resetGame();
         this.loadSheepSpriteFrames(() => {
             if (!this.isValid) return;

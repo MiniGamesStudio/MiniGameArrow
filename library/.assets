@@ -84,7 +84,8 @@
             "resources\\ui\\PausePanel.prefab",
             "scripts\\Game\\CommonGame\\ui\\PausePanel.ts",
             "resources\\ui\\TransitionPanel.prefab",
-            "scripts\\Game\\CommonGame\\ui\\TransitionPanel.ts"
+            "scripts\\Game\\CommonGame\\ui\\TransitionPanel.ts",
+            "scripts\\Game\\CommonGame\\CommonGameProgress.ts"
         ]
     }
 }

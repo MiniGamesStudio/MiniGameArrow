@@ -1,6 +1,7 @@
 import { _decorator, Node } from 'cc';
 import { UIBase } from '../../../engine/ui/UIBase';
 import { UIManager } from '../../../engine/ui/UIManager';
+import { CommonGameProgress } from '../CommonGameProgress';
 import { CommonUIID } from '../CommonUIConfig';
 const { ccclass, property } = _decorator;
 
@@ -43,8 +44,9 @@ export class MainPage extends UIBase {
                 buttonText: "开始游戏",
                 buttonIcon: "buttons/Button01_145_Orange",
                 onClick: () => {
+                    const currentLevel = CommonGameProgress.getCurrentLevel(1);
                     UIManager.GetInstance().ClosePanel(CommonUIID.MainPanel);
-                    UIManager.GetInstance().OpenPanel(CommonUIID.GamePanel);
+                    UIManager.GetInstance().OpenPanel(CommonUIID.GamePanel, currentLevel);
                 },
             },
             {

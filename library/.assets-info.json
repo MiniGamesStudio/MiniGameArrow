@@ -813,7 +813,7 @@
       "time": 1781946493799.288
     },
     "scripts\\Game\\CommonGame": {
-      "time": 1781968465673.9724,
+      "time": 1782209804479.6523,
       "uuid": "73edaae5-0b7a-425f-afe0-f601833012aa"
     },
     "scripts\\Game\\CommonGame\\ui": {
@@ -847,7 +847,7 @@
       "time": 1781946493799.288
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
-      "time": 1782209695011.2664,
+      "time": 1782209808650.2493,
       "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
     },
     "scripts\\engine\\AdManager.ts.meta": {
@@ -868,7 +868,7 @@
       "time": 1781946493798.2878
     },
     "scripts\\Game\\CommonGame\\ui\\GamePanel.ts": {
-      "time": 1782206667068.729,
+      "time": 1782209813147.3696,
       "uuid": "0f6f935e-dd32-4f8f-870f-858c31678dec"
     },
     "resources\\texture\\sheep.png.meta": {
@@ -1052,6 +1052,13 @@
     "scripts\\Game\\CommonGame\\ui\\TransitionPanel.ts": {
       "time": 1782206619988.5596,
       "uuid": "33333333-3333-4333-8333-333333333333"
+    },
+    "scripts\\Game\\CommonGame\\CommonGameProgress.ts.meta": {
+      "time": 1782209804479.6523
+    },
+    "scripts\\Game\\CommonGame\\CommonGameProgress.ts": {
+      "time": 1782209799806.826,
+      "uuid": "44444444-4444-4444-8444-444444444444"
     }
   },
   "missing": {}

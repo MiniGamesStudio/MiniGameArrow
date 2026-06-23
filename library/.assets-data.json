@@ -4215,5 +4215,10 @@
     "url": "db://assets/scripts/Game/CommonGame/ui/TransitionPanel.ts",
     "value": {},
     "versionCode": 1
+  },
+  "44444444-4444-4444-8444-444444444444": {
+    "url": "db://assets/scripts/Game/CommonGame/CommonGameProgress.ts",
+    "value": {},
+    "versionCode": 1
   }
 }
