@@ -597,12 +597,17 @@ export class GamePanel extends UIBase {
             title: '快来一起玩吧',
             query: `level=${this.m_CurrentLevel}`,
         });
-        if (result.result !== PlatformResult.Success) {
-            console.warn('GamePanel: 分享未完成，技能未生效', result.message);
-            return false;
+        if (result.result === PlatformResult.Success) {
+            return true;
         }
 
-        return true;
+        if (result.result === PlatformResult.Unsupported) {
+            console.warn('GamePanel: 当前环境不支持分享，直接发放技能奖励用于调试', result.message);
+            return true;
+        }
+
+        console.warn('GamePanel: 分享未完成，技能未生效', result.message);
+        return false;
     }
 
     private async playRewardedAd(): Promise<boolean> {

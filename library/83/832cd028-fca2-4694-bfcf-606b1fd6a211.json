@@ -496,8 +496,8 @@
     "__prefab": null,
     "designResolution": {
       "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
+      "width": 750,
+      "height": 1334
     },
     "_id": "54XZPHxa5MsqHBIb8inu66"
   },

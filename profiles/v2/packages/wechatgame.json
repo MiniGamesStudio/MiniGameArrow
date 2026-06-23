@@ -15,7 +15,7 @@
     "options": {
       "wechatgame": {
         "orientation": "portrait",
-        "appid": "wxcb2b06804689e020",
+        "appid": "wx455f9cbcaa679d4a",
         "buildOpenDataContextTemplate": true,
         "separateEngine": false,
         "highPerformanceMode": false,
@@ -25,7 +25,7 @@
     "taskOptionsMap": {
       "1782191692334": {
         "orientation": "portrait",
-        "appid": "wxcb2b06804689e020",
+        "appid": "wx455f9cbcaa679d4a",
         "buildOpenDataContextTemplate": true,
         "separateEngine": false,
         "highPerformanceMode": false,

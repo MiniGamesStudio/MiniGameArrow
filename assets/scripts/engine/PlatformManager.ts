@@ -197,19 +197,26 @@ export class PlatformManager {
         }
 
         return new Promise(resolve => {
+            let finished = false;
+            const finish = (result: PlatformShareResult): void => {
+                if (finished) return;
+                finished = true;
+                resolve(result);
+            };
+
             runtime.shareAppMessage({
                 title: options.title || '一起来玩小羊小游戏',
                 imageUrl: options.imageUrl,
                 query: options.query,
                 success: () => {
-                    resolve({
+                    finish({
                         result: PlatformResult.Success,
                         platform: resolvedPlatform,
                         message: '分享成功',
                     });
                 },
                 fail: (err: unknown) => {
-                    resolve({
+                    finish({
                         result: PlatformResult.Failed,
                         platform: resolvedPlatform,
                         message: '分享失败',
@@ -217,6 +224,13 @@ export class PlatformManager {
                     });
                 },
             });
+            setTimeout(() => {
+                finish({
+                    result: PlatformResult.Success,
+                    platform: resolvedPlatform,
+                    message: '分享已调起',
+                });
+            }, 500);
         });
     }
 

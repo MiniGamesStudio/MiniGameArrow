@@ -89,12 +89,12 @@ let progressBackground = [100 / 255, 111 / 255, 118 / 255, 1];
 let afterTick = null;
 let backgroundFilp = 1.0; // set 0 to not flip
 let displayRatio = 1;
-let bgColor = [0.01568627450980392,0.03529411764705882,0.0392156862745098,0.00392156862745098];
-let useCustomBg = false;
-let useLogo = true;
-let useDefaultLogo = true;
+let bgColor = [0,0,0,1];
+let useCustomBg = true;
+let useLogo = false;
+let useDefaultLogo = false;
 let logoName = 'logo.png';
-let bgName = 'background.png';
+let bgName = 'background.jpg';
 let fitWidth = false;
 let fitHeight = true;
 
