@@ -12,12 +12,12 @@ export class LoadingPanel extends UIBase {
 
     private m_TimeDelta: number = 0;
     private m_Duration: number = FrameworkConst.LOADING_DURATION;
-    private m_NextPanelID: number = CommonUIID.MainPanel;
+    private m_NextPanelID: number = CommonUIID.LoginPanel;
     private m_NextPanelArgs: any[] = [];
 
     OnInit(): void {}
 
-    OnOpen(nextPanelID: number = CommonUIID.MainPanel, duration: number = FrameworkConst.LOADING_DURATION, ...nextPanelArgs: any[]): void {
+    OnOpen(nextPanelID: number = CommonUIID.LoginPanel, duration: number = FrameworkConst.LOADING_DURATION, ...nextPanelArgs: any[]): void {
         this.m_TimeDelta = 0;
         this.m_Duration = duration > 0 ? duration : FrameworkConst.LOADING_DURATION;
         this.m_NextPanelID = nextPanelID;

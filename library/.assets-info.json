@@ -26,7 +26,7 @@
       "uuid": "b5ad4379-da55-44a2-a5cd-3bbde1c09556"
     },
     "scene\\main.scene": {
-      "time": 1782200150468.7212,
+      "time": 1782205066837.9988,
       "uuid": "832cd028-fca2-4694-bfcf-606b1fd6a211"
     },
     "scripts.meta": {
@@ -817,19 +817,19 @@
       "uuid": "73edaae5-0b7a-425f-afe0-f601833012aa"
     },
     "scripts\\Game\\CommonGame\\ui": {
-      "time": 1782197076823.02,
+      "time": 1782204801434.8628,
       "uuid": "191bdeae-9286-465e-a518-a494dbf87eba"
     },
     "scripts\\Game\\CommonGame\\CommonGameEntry.ts": {
-      "time": 1781946493797.2878,
+      "time": 1782204814079.5598,
       "uuid": "c63a2908-67d7-4c12-a0ce-6c9030278f78"
     },
     "scripts\\Game\\CommonGame\\CommonUIConfig.ts": {
-      "time": 1782120845608.8699,
+      "time": 1782204806290.8054,
       "uuid": "1ddebbfb-1c31-4d1a-8cc1-b8ee53713dfb"
     },
     "scripts\\Game\\CommonGame\\ui\\LoadingPanel.ts": {
-      "time": 1781946493798.2878,
+      "time": 1782204810617.6167,
       "uuid": "010892b2-c000-4095-8903-97f9f9a4f400"
     },
     "scripts\\Game\\CommonGame\\ui\\MainPanel.ts": {
@@ -847,7 +847,7 @@
       "time": 1781946493799.288
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
-      "time": 1782191508113.3083,
+      "time": 1782204820816.917,
       "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
     },
     "scripts\\engine\\AdManager.ts.meta": {
@@ -959,7 +959,7 @@
       "time": 1782111127963.8745
     },
     "resources\\ui\\LoginPanel.prefab": {
-      "time": 1782198994075.9702,
+      "time": 1782204826878.0864,
       "uuid": "b6b4c5ef-8ac7-4533-a50a-dadbc41c189e"
     },
     "resources\\ui\\RankPanel.prefab.meta": {
@@ -1017,6 +1017,13 @@
     "resources\\ranking\\Icon_ImageIcon_Medal_Gold.png": {
       "time": 1746612246000,
       "uuid": "67ab6497-3fdb-4ac4-a0bf-168d4e038daa"
+    },
+    "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts.meta": {
+      "time": 1782204801434.8628
+    },
+    "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts": {
+      "time": 1782205017858.7153,
+      "uuid": "11111111-1111-4111-8111-111111111111"
     }
   },
   "missing": {}

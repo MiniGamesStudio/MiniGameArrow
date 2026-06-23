@@ -79,7 +79,8 @@
             "resources\\ui\\LoginPanel.prefab",
             "resources\\ui\\MainPage.prefab",
             "resources\\ui\\MainPanel.prefab",
-            "resources\\ui\\RankPanel.prefab"
+            "resources\\ui\\RankPanel.prefab",
+            "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts"
         ]
     }
 }

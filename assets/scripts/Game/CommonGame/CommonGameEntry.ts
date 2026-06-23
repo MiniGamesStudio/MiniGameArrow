@@ -7,5 +7,5 @@ import { CommonUIID, registerCommonGameUI } from './CommonUIConfig';
  */
 export function initCommonGame(): void {
     registerCommonGameUI();
-    UIManager.GetInstance().OpenPanel(CommonUIID.LoadingPanel);
+    UIManager.GetInstance().OpenPanel(CommonUIID.LoadingPanel, CommonUIID.LoginPanel);
 }
