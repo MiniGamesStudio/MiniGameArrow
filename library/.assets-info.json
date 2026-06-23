@@ -55,7 +55,7 @@
       "time": 1781946493793.289
     },
     "resources\\ui": {
-      "time": 1782205297242.4187,
+      "time": 1782206404588.8196,
       "uuid": "6c60be67-475a-43dc-a592-251e41add936"
     },
     "resources\\ui\\LoadingPanel.prefab.meta": {
@@ -817,7 +817,7 @@
       "uuid": "73edaae5-0b7a-425f-afe0-f601833012aa"
     },
     "scripts\\Game\\CommonGame\\ui": {
-      "time": 1782206117112.4111,
+      "time": 1782206625337.1917,
       "uuid": "191bdeae-9286-465e-a518-a494dbf87eba"
     },
     "scripts\\Game\\CommonGame\\CommonGameEntry.ts": {
@@ -825,7 +825,7 @@
       "uuid": "c63a2908-67d7-4c12-a0ce-6c9030278f78"
     },
     "scripts\\Game\\CommonGame\\CommonUIConfig.ts": {
-      "time": 1782206121551.684,
+      "time": 1782206631254.5337,
       "uuid": "1ddebbfb-1c31-4d1a-8cc1-b8ee53713dfb"
     },
     "scripts\\Game\\CommonGame\\ui\\LoadingPanel.ts": {
@@ -847,7 +847,7 @@
       "time": 1781946493799.288
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
-      "time": 1782204820816.917,
+      "time": 1782209695011.2664,
       "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
     },
     "scripts\\engine\\AdManager.ts.meta": {
@@ -868,7 +868,7 @@
       "time": 1781946493798.2878
     },
     "scripts\\Game\\CommonGame\\ui\\GamePanel.ts": {
-      "time": 1782206150281.6987,
+      "time": 1782206667068.729,
       "uuid": "0f6f935e-dd32-4f8f-870f-858c31678dec"
     },
     "resources\\texture\\sheep.png.meta": {
@@ -1038,6 +1038,20 @@
     "scripts\\Game\\CommonGame\\ui\\PausePanel.ts": {
       "time": 1782206113461.7405,
       "uuid": "22222222-2222-4222-8222-222222222222"
+    },
+    "resources\\ui\\TransitionPanel.prefab.meta": {
+      "time": 1782206404592.8203
+    },
+    "resources\\ui\\TransitionPanel.prefab": {
+      "time": 1782206639187.2402,
+      "uuid": "83902b23-c019-4bc5-8a63-c1703769b66e"
+    },
+    "scripts\\Game\\CommonGame\\ui\\TransitionPanel.ts.meta": {
+      "time": 1782206625337.1917
+    },
+    "scripts\\Game\\CommonGame\\ui\\TransitionPanel.ts": {
+      "time": 1782206619988.5596,
+      "uuid": "33333333-3333-4333-8333-333333333333"
     }
   },
   "missing": {}

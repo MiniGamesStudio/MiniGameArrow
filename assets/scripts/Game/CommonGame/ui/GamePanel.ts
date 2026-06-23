@@ -155,6 +155,7 @@ export class GamePanel extends UIBase {
     private m_CurrentLevel: number = 1;
     private m_OpenLevelConfig: GameLevelConfig = null;
     private m_IsPaused: boolean = false;
+    private m_IsTransitioning: boolean = false;
 
     OnInit(): void {
         this.SetBtnEvent(this.m_PauseBtn, () => this.onPauseBtnClick());
@@ -177,9 +178,22 @@ export class GamePanel extends UIBase {
         this.m_SkillRemoveRemain = 0;
         this.m_LevelEnded = false;
         this.m_IsPaused = false;
+        this.m_IsTransitioning = false;
     }
 
     private loadLevel(level: number | GameLevelConfig): void {
+        this.m_IsPaused = false;
+        this.m_IsTransitioning = true;
+        UIManager.GetInstance().OpenPanel(CommonUIID.TransitionPanel, {
+            onComplete: () => {
+                if (!this.isValid) return;
+                this.m_IsTransitioning = false;
+                this.loadLevelAfterTransition(level);
+            },
+        });
+    }
+
+    private loadLevelAfterTransition(level: number | GameLevelConfig): void {
         this.m_OpenLevelConfig = this.resolveOpenLevelConfig(level);
         this.resetGame();
         this.loadSheepSpriteFrames(() => {
@@ -475,7 +489,7 @@ export class GamePanel extends UIBase {
     }
 
     private onSheepClick(sheep: SheepData): void {
-        if (!sheep || sheep.removed || sheep.moving || this.m_LevelEnded || this.m_IsPaused) return;
+        if (!sheep || sheep.removed || sheep.moving || this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning) return;
 
         if (this.m_SkillMode === 'removeTwo') {
             this.removeSheepBySkill(sheep);
@@ -572,7 +586,7 @@ export class GamePanel extends UIBase {
     }
 
     private onPauseBtnClick(): void {
-        if (this.m_LevelEnded || this.m_IsPaused) return;
+        if (this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning) return;
 
         this.m_IsPaused = true;
         UIManager.GetInstance().OpenPanel(CommonUIID.PausePanel, {
@@ -598,7 +612,7 @@ export class GamePanel extends UIBase {
     }
 
     private async onSkillOneBtnClick(): Promise<void> {
-        if (this.m_LevelEnded || this.m_IsPaused || this.m_SheepList.length <= 0) return;
+        if (this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning || this.m_SheepList.length <= 0) return;
 
         const shared = await this.shareForReward();
         if (!shared || !this.isValid) return;
@@ -608,7 +622,7 @@ export class GamePanel extends UIBase {
     }
 
     private async onSkillTwoBtnClick(): Promise<void> {
-        if (this.m_LevelEnded || this.m_IsPaused || this.m_SheepList.length <= 0) return;
+        if (this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning || this.m_SheepList.length <= 0) return;
 
         const shared = await this.shareForReward();
         if (!shared || !this.isValid) return;
@@ -619,7 +633,7 @@ export class GamePanel extends UIBase {
     }
 
     private async onSkillThreeBtnClick(): Promise<void> {
-        if (this.m_LevelEnded || this.m_IsPaused || this.m_SheepList.length <= 0) return;
+        if (this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning || this.m_SheepList.length <= 0) return;
 
         const shared = await this.shareForReward();
         if (!shared || !this.isValid) return;
