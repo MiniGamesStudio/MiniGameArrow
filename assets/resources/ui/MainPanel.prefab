@@ -1704,15 +1704,15 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "_hoverSprite": {
-      "__uuid__": "68a421d3-6d8b-4781-9492-f0da468b0936@f9941",
+      "__uuid__": "8f2bf944-ec0d-49ad-9f67-9485e9e0288d@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_pressedSprite": {
-      "__uuid__": "68a421d3-6d8b-4781-9492-f0da468b0936@f9941",
+      "__uuid__": "8f2bf944-ec0d-49ad-9f67-9485e9e0288d@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_disabledSprite": {
-      "__uuid__": "68a421d3-6d8b-4781-9492-f0da468b0936@f9941",
+      "__uuid__": "8f2bf944-ec0d-49ad-9f67-9485e9e0288d@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_duration": 0.1,
