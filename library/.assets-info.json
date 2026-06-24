@@ -948,7 +948,7 @@
       "time": 1782110618406.1548
     },
     "scripts\\Game\\CommonGame\\ui\\RankPanel.ts": {
-      "time": 1782270890246.578,
+      "time": 1782287014831.0383,
       "uuid": "b45da2d2-3f4c-4b69-a2bb-ea92ed3a7852"
     },
     "scripts\\engine\\PlatformManager.ts": {
@@ -973,7 +973,7 @@
       "time": 1782112413126.889
     },
     "resources\\ranking": {
-      "time": 1782120674073.4868,
+      "time": 1782287684648.5242,
       "uuid": "2364a1ff-cca8-449b-abc8-70e20f478d52"
     },
     "resources\\ranking\\RankingBackground.png.meta": {
@@ -996,27 +996,6 @@
     "resources\\ranking\\ItemFrame07_n.png": {
       "time": 1746611681000,
       "uuid": "419870d2-343b-4884-9ff9-1c5c0934e900"
-    },
-    "resources\\ranking\\Icon_ImageIcon_Medal_Bronze.png.meta": {
-      "time": 1782119867055.2004
-    },
-    "resources\\ranking\\Icon_ImageIcon_Medal_Gold.png.meta": {
-      "time": 1782119867061.1985
-    },
-    "resources\\ranking\\Icon_ImageIcon_Medal_Silver.png.meta": {
-      "time": 1782119867054.2195
-    },
-    "resources\\ranking\\Icon_ImageIcon_Medal_Silver.png": {
-      "time": 1746611642000,
-      "uuid": "799326a9-afdc-4e64-8c0d-c099c20be1f8"
-    },
-    "resources\\ranking\\Icon_ImageIcon_Medal_Bronze.png": {
-      "time": 1746612438000,
-      "uuid": "775389f3-efca-4484-a6c4-362da3c0ef77"
-    },
-    "resources\\ranking\\Icon_ImageIcon_Medal_Gold.png": {
-      "time": 1746612246000,
-      "uuid": "67ab6497-3fdb-4ac4-a0bf-168d4e038daa"
     },
     "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts.meta": {
       "time": 1782204801434.8628

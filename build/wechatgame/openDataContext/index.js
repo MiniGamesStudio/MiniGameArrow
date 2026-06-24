@@ -176,6 +176,7 @@ function showFriendRank(key, width, height) {
             getSelfCloudStorage(key, (selfData) => {
                 const rankData = res.data ? res.data.slice() : [];
                 if (selfData) rankData.push(selfData);
+                drawRankList(rankData, key);
                 loadMedalImages(() => drawRankList(rankData, key));
             });
         },

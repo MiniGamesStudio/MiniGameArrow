@@ -4088,23 +4088,17 @@
   },
   "775389f3-efca-4484-a6c4-362da3c0ef77": {
     "url": "db://assets/resources/ranking/Icon_ImageIcon_Medal_Bronze.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "67ab6497-3fdb-4ac4-a0bf-168d4e038daa": {
     "url": "db://assets/resources/ranking/Icon_ImageIcon_Medal_Gold.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "799326a9-afdc-4e64-8c0d-c099c20be1f8": {
     "url": "db://assets/resources/ranking/Icon_ImageIcon_Medal_Silver.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "799326a9-afdc-4e64-8c0d-c099c20be1f8@6c48a": {
