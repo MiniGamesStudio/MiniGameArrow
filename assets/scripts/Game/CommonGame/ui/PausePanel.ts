@@ -31,10 +31,13 @@ export class PausePanel extends UIBase {
     }
 
     private bindButtons(): void {
-        this.bindButton('CloseBtn', () => this.continueGame());
-        this.bindButton('ContinueBtn', () => this.continueGame());
-        this.bindButton('RestartBtn', () => this.restartGame());
-        this.bindButton('GoBackBtn', () => this.goBackMainPanel());
+        const background = this.findChildByName(this.node, 'Background');
+        if (!background) return;
+
+        this.bindButton(background, 'CloseBtn', () => this.continueGame());
+        this.bindButton(background, 'ContinueBtn', () => this.continueGame());
+        this.bindButton(background, 'RestartBtn', () => this.restartGame());
+        this.bindButton(background, 'GoBackBtn', () => this.goBackMainPanel());
     }
 
     private continueGame(): void {
@@ -55,8 +58,8 @@ export class PausePanel extends UIBase {
         onGoBack?.();
     }
 
-    private bindButton(name: string, callback: () => void): void {
-        const node = this.findChildByName(this.node, name);
+    private bindButton(root: Node, name: string, callback: () => void): void {
+        const node = this.findChildByName(root, name);
         const button = node?.getComponent(Button) || node?.addComponent(Button);
         if (button) {
             this.SetBtnEvent(button, callback);

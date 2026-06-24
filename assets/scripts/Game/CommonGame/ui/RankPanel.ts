@@ -37,13 +37,14 @@ export class RankPanel extends UIBase {
         const transform = this.node.getComponent(UITransform) || this.node.addComponent(UITransform);
         transform.setContentSize(750, 1334);
 
-        const closeNode = this.findChildByName(this.node, 'CloseBtn');
+        const background = this.getBackgroundNode();
+        const closeNode = this.findChildByName(background, 'CloseBtn');
         const closeButton = closeNode?.getComponent(Button) || closeNode?.addComponent(Button);
         if (closeButton) {
             this.SetBtnEvent(closeButton, () => this.closeRankPanel());
         }
 
-        const titleLabel = this.findChildByName(this.node, 'TitleTxt')?.getComponent(Label);
+        const titleLabel = this.findChildByName(background, 'TitleTxt')?.getComponent(Label);
         if (titleLabel) {
             titleLabel.string = '好友排行榜';
         }
@@ -54,8 +55,8 @@ export class RankPanel extends UIBase {
             this.m_StatusLabel.color = Color.WHITE;
         }
 
-        this.bindRankView();
-        this.bindRankItems();
+        this.bindRankView(background);
+        this.bindRankItems(background);
     }
 
     private async showFriendRank(): Promise<void> {
@@ -71,13 +72,13 @@ export class RankPanel extends UIBase {
         this.setStatus('模拟排行榜数据');
     }
 
-    private bindRankView(): void {
-        const scrollViewNode = this.findChildByName(this.node, 'ScrollView');
+    private bindRankView(background: Node): void {
+        const scrollViewNode = this.findChildByName(background, 'ScrollView');
         if (scrollViewNode) {
             scrollViewNode.active = false;
         }
 
-        const node = this.findChildByName(this.node, 'RankCanvasView') || this.createRankViewNode(scrollViewNode);
+        const node = this.findChildByName(background, 'RankCanvasView') || this.createRankViewNode(scrollViewNode);
         const scrollTransform = scrollViewNode?.getComponent(UITransform);
 
         const transform = node.getComponent(UITransform) || node.addComponent(UITransform);
@@ -87,10 +88,10 @@ export class RankPanel extends UIBase {
         this.m_RankSprite.sizeMode = Sprite.SizeMode.CUSTOM;
     }
 
-    private bindRankItems(): void {
-        this.m_MyRankItem = this.findDirectChildByName(this.node, 'MyRankItem');
-        this.m_RankItemTemplate = this.findChildByName(this.node, 'RankItem');
-        this.m_RankContent = this.findChildByName(this.node, 'content') || this.m_RankItemTemplate?.parent || null;
+    private bindRankItems(background: Node): void {
+        this.m_MyRankItem = this.findDirectChildByName(background, 'MyRankItem');
+        this.m_RankItemTemplate = this.findChildByName(background, 'RankItem');
+        this.m_RankContent = this.findChildByName(background, 'content') || this.m_RankItemTemplate?.parent || null;
         this.setupRankContentLayout();
         if (this.m_MyRankItem) {
             this.m_MyRankItem.active = false;
@@ -102,10 +103,11 @@ export class RankPanel extends UIBase {
 
     private renderRankList(rankList: PlatformRankUserData[], self?: PlatformRankUserData): void {
         this.stopRefreshRankCanvas();
-        const canvasView = this.findChildByName(this.node, 'RankCanvasView');
+        const background = this.getBackgroundNode();
+        const canvasView = this.findChildByName(background, 'RankCanvasView');
         if (canvasView) canvasView.active = false;
 
-        const scrollViewNode = this.findChildByName(this.node, 'ScrollView');
+        const scrollViewNode = this.findChildByName(background, 'ScrollView');
         if (scrollViewNode) scrollViewNode.active = true;
 
         this.clearDynamicRankItems();
@@ -266,8 +268,9 @@ export class RankPanel extends UIBase {
 
     private createRankViewNode(referenceNode?: Node): Node {
         const node = new Node('RankCanvasView');
-        node.layer = this.node.layer;
-        this.node.addChild(node);
+        const parent = referenceNode?.parent || this.node;
+        node.layer = parent.layer;
+        parent.addChild(node);
         if (referenceNode) {
             node.setPosition(referenceNode.position);
         } else {
@@ -346,6 +349,10 @@ export class RankPanel extends UIBase {
         this.OnClose();
         this.node.removeFromParent();
         this.node.destroy();
+    }
+
+    private getBackgroundNode(): Node {
+        return this.findChildByName(this.node, 'Background') || this.node;
     }
 
     private findDirectChildByName(root: Node, name: string): Node | null {
