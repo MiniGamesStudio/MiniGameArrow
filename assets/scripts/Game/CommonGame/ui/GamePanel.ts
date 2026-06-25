@@ -1,4 +1,4 @@
-import { _decorator, Button, JsonAsset, Node, RichText, Sprite, SpriteFrame, tween, UITransform, Vec3 } from 'cc';
+import { _decorator, Button, Color, Graphics, HorizontalTextAlignment, JsonAsset, Label, Node, RichText, Sprite, SpriteFrame, tween, UITransform, Vec3, VerticalTextAlignment } from 'cc';
 import { AdManager, AdPlayResult } from '../../../engine/AdManager';
 import { PlatformManager, PlatformResult } from '../../../engine/PlatformManager';
 import { ResManager } from '../../../engine/ResManager';
@@ -76,11 +76,31 @@ interface GameLevelSheepConfig {
     type?: string;
 }
 
+interface GameLevelFenceConfig {
+    row: number;
+    col: number;
+    rowSpan?: number;
+    colSpan?: number;
+    eliminateCount?: number;
+}
+
+interface FenceData {
+    node: Node;
+    label: Label;
+    row: number;
+    col: number;
+    rowSpan: number;
+    colSpan: number;
+    eliminateCount: number;
+    removed: boolean;
+}
+
 export interface GameLevelConfig {
     level?: number;
     rowCount?: number;
     colCount?: number;
     sheep?: GameLevelSheepConfig[];
+    fences?: GameLevelFenceConfig[];
     paddingX?: number;
     paddingY?: number;
     paddingTop?: number;
@@ -139,6 +159,8 @@ export class GamePanel extends UIBase {
     }]]);
     private m_SheepList: SheepData[] = [];
     private m_Grid: (SheepData | null)[][] = [];
+    private m_FenceList: FenceData[] = [];
+    private m_EliminatedCount: number = 0;
     private m_RowCount: number = MAX_ROW;
     private m_ColCount: number = MAX_COL;
     private m_PaddingX: number = DEFAULT_BOARD_PADDING_X;
@@ -177,11 +199,13 @@ export class GamePanel extends UIBase {
     OnClose(): void {
         super.OnClose();
         this.clearSheep();
+        this.clearFences();
         this.m_SkillMode = 'none';
         this.m_SkillRemoveRemain = 0;
         this.m_LevelEnded = false;
         this.m_IsPaused = false;
         this.m_IsTransitioning = false;
+        this.m_EliminatedCount = 0;
     }
 
     private loadLevel(level: number | GameLevelConfig): void {
@@ -296,6 +320,8 @@ export class GamePanel extends UIBase {
 
     private resetGame(): void {
         this.clearSheep();
+        this.clearFences();
+        this.m_EliminatedCount = 0;
         this.initLevelConfig();
         this.updateLevelText();
         this.m_SkillMode = 'none';
@@ -381,6 +407,7 @@ export class GamePanel extends UIBase {
 
         this.initGrid();
         this.createSheepByLevelConfig();
+        this.createFencesByLevelConfig();
         this.NotifyOpenReady();
     }
 
@@ -425,6 +452,133 @@ export class GamePanel extends UIBase {
                 console.warn(`GamePanel: 关卡 ${this.m_CurrentLevel} 第 ${index + 1} 只小羊配置无效`, config);
             }
         });
+    }
+
+    private createFencesByLevelConfig(): void {
+        const fenceConfigList = this.m_OpenLevelConfig?.fences || [];
+        fenceConfigList.forEach((config, index) => {
+            if (!this.createFence(config)) {
+                console.warn(`GamePanel: 关卡 ${this.m_CurrentLevel} 第 ${index + 1} 个围挡配置无效`, config);
+            }
+        });
+        this.updateFenceLabels();
+        this.checkFenceRemoval();
+    }
+
+    private createFence(config: GameLevelFenceConfig): boolean {
+        const rowSpan = Math.max(1, config.rowSpan || 1);
+        const colSpan = Math.max(1, config.colSpan || 1);
+        if (!this.isFootprintInside(config.row, config.col, rowSpan, colSpan)) return false;
+
+        const eliminateCount = Math.max(0, config.eliminateCount || 0);
+        const node = new Node(`Fence_${config.row}_${config.col}`);
+        node.layer = this.m_GameRoot.layer;
+        this.m_GameRoot.addChild(node);
+
+        const transform = node.addComponent(UITransform);
+        const width = this.m_CellWidth * colSpan;
+        const height = this.m_CellHeight * rowSpan;
+        transform.setContentSize(width, height);
+        node.setPosition(this.getFencePosition(config.row, config.col, rowSpan, colSpan));
+
+        const graphics = node.addComponent(Graphics);
+        graphics.lineWidth = 4;
+        graphics.strokeColor = new Color(255, 120, 60, 235);
+        graphics.fillColor = new Color(255, 120, 60, 45);
+        graphics.rect(-width * 0.5, -height * 0.5, width, height);
+        graphics.fill();
+        graphics.stroke();
+
+        const labelNode = new Node('FenceLabel');
+        labelNode.layer = node.layer;
+        node.addChild(labelNode);
+        const labelTransform = labelNode.addComponent(UITransform);
+        labelTransform.setContentSize(width, height);
+        const label = labelNode.addComponent(Label);
+        label.fontSize = 28;
+        label.lineHeight = 32;
+        label.color = new Color(255, 255, 255, 255);
+        label.horizontalAlign = HorizontalTextAlignment.CENTER;
+        label.verticalAlign = VerticalTextAlignment.CENTER;
+        label.string = `还差 ${eliminateCount}`;
+
+        const fence: FenceData = {
+            node,
+            label,
+            row: config.row,
+            col: config.col,
+            rowSpan,
+            colSpan,
+            eliminateCount,
+            removed: false,
+        };
+        this.m_FenceList.push(fence);
+        return true;
+    }
+
+    private getFencePosition(row: number, col: number, rowSpan: number, colSpan: number): Vec3 {
+        const x = this.m_BoardLeft + this.m_CellWidth * (col + colSpan * 0.5);
+        const y = this.m_BoardTop - this.m_CellHeight * (row + rowSpan * 0.5);
+        return new Vec3(x, y, 0);
+    }
+
+    private isSheepFenced(sheep: SheepData): boolean {
+        if (!sheep || sheep.removed) return false;
+        for (const fence of this.m_FenceList) {
+            if (fence.removed) continue;
+            if (this.isRectOverlap(
+                sheep.row, sheep.col, sheep.rowSpan, sheep.colSpan,
+                fence.row, fence.col, fence.rowSpan, fence.colSpan)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private isRectOverlap(
+        rowA: number, colA: number, rowSpanA: number, colSpanA: number,
+        rowB: number, colB: number, rowSpanB: number, colSpanB: number,
+    ): boolean {
+        return rowA < rowB + rowSpanB && rowA + rowSpanA > rowB
+            && colA < colB + colSpanB && colA + colSpanA > colB;
+    }
+
+    private isFootprintBlockedByFence(row: number, col: number, rowSpan: number, colSpan: number): boolean {
+        for (const fence of this.m_FenceList) {
+            if (fence.removed) continue;
+            if (this.isRectOverlap(row, col, rowSpan, colSpan, fence.row, fence.col, fence.rowSpan, fence.colSpan)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private updateFenceLabels(): void {
+        this.m_FenceList.forEach(fence => {
+            if (fence.removed) return;
+            this.updateFenceLabel(fence);
+        });
+    }
+
+    private updateFenceLabel(fence: FenceData): void {
+        if (!fence.label || !fence.label.isValid) return;
+        const remain = Math.max(0, fence.eliminateCount - this.m_EliminatedCount);
+        fence.label.string = `还差 ${remain}`;
+    }
+
+    private getAvailableSheepCount(): number {
+        return this.m_SheepList.filter(sheep => !sheep.removed && !sheep.moving && !this.isSheepFenced(sheep)).length;
+    }
+
+    private clearFences(): void {
+        this.m_FenceList.forEach(fence => {
+            if (fence.node && fence.node.isValid) {
+                tween(fence.node).stop();
+                fence.node.removeFromParent();
+                fence.node.destroy();
+            }
+        });
+        this.m_FenceList = [];
     }
 
     private resolveSheepType(type?: string): string {
@@ -498,6 +652,7 @@ export class GamePanel extends UIBase {
 
     private onSheepClick(sheep: SheepData): void {
         if (!sheep || sheep.removed || sheep.moving || this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning) return;
+        if (this.isSheepFenced(sheep)) return;
 
         if (this.m_SkillMode === 'removeTwo') {
             this.removeSheepBySkill(sheep);
@@ -541,6 +696,7 @@ export class GamePanel extends UIBase {
                 } else {
                     sheep.moving = false;
                     this.destroySheep(sheep);
+                    this.onSheepEliminated();
                     this.checkLevelEnd();
                 }
             })
@@ -570,7 +726,8 @@ export class GamePanel extends UIBase {
         let nextCol = sheep.col + config.colDelta;
 
         while (this.isFootprintInside(nextRow, nextCol, sheep.rowSpan, sheep.colSpan)) {
-            if (!this.canPlaceFootprint(nextRow, nextCol, sheep.rowSpan, sheep.colSpan, sheep)) {
+            if (!this.canPlaceFootprint(nextRow, nextCol, sheep.rowSpan, sheep.colSpan, sheep)
+                || this.isFootprintBlockedByFence(nextRow, nextCol, sheep.rowSpan, sheep.colSpan)) {
                 return {
                     blocked: true,
                     targetRow,
@@ -627,22 +784,24 @@ export class GamePanel extends UIBase {
         if (!shared || !this.isValid) return;
 
         this.m_SkillMode = 'removeTwo';
-        this.m_SkillRemoveRemain = Math.min(2, this.m_SheepList.length);
+        this.m_SkillRemoveRemain = Math.min(2, this.getAvailableSheepCount());
     }
 
     private async onSkillTwoBtnClick(): Promise<void> {
         if (this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning || this.m_SheepList.length <= 0) return;
+        if (this.getAvailableSheepCount() <= 0) return;
 
         const shared = await this.shareForReward();
         if (!shared || !this.isValid) return;
 
-        this.getRandomSheepList(Math.min(5, this.m_SheepList.length)).forEach(sheep => {
+        this.getRandomSheepList(Math.min(5, this.getAvailableSheepCount())).forEach(sheep => {
             this.flipSheep(sheep);
         });
     }
 
     private async onSkillThreeBtnClick(): Promise<void> {
         if (this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning || this.m_SheepList.length <= 0) return;
+        if (this.getAvailableSheepCount() <= 0) return;
 
         const shared = await this.shareForReward();
         if (!shared || !this.isValid) return;
@@ -693,6 +852,7 @@ export class GamePanel extends UIBase {
             .to(0.18, { scale: new Vec3(0, 0, 1) })
             .call(() => {
                 this.destroySheep(sheep);
+                this.onSheepEliminated();
                 this.checkLevelEnd();
             })
             .start();
@@ -700,6 +860,36 @@ export class GamePanel extends UIBase {
         if (this.m_SkillRemoveRemain <= 0) {
             this.m_SkillMode = 'none';
         }
+    }
+
+    private onSheepEliminated(): void {
+        this.m_EliminatedCount++;
+        this.updateFenceLabels();
+        this.checkFenceRemoval();
+    }
+
+    private checkFenceRemoval(): void {
+        this.m_FenceList.forEach(fence => {
+            if (fence.removed) return;
+            if (this.m_EliminatedCount >= fence.eliminateCount) {
+                this.removeFence(fence);
+            }
+        });
+    }
+
+    private removeFence(fence: FenceData): void {
+        fence.removed = true;
+        if (!fence.node || !fence.node.isValid) return;
+
+        tween(fence.node)
+            .to(0.25, { scale: new Vec3(0, 0, 1) })
+            .call(() => {
+                if (fence.node && fence.node.isValid) {
+                    fence.node.removeFromParent();
+                    fence.node.destroy();
+                }
+            })
+            .start();
     }
 
     private flipSheep(sheep: SheepData): void {
@@ -715,7 +905,7 @@ export class GamePanel extends UIBase {
     }
 
     private getRandomSheepList(count: number): SheepData[] {
-        const availableList = this.m_SheepList.filter(sheep => !sheep.removed && !sheep.moving);
+        const availableList = this.m_SheepList.filter(sheep => !sheep.removed && !sheep.moving && !this.isSheepFenced(sheep));
         for (let i = availableList.length - 1; i > 0; i--) {
             const randomIndex = Math.floor(Math.random() * (i + 1));
             const temp = availableList[i];

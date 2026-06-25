@@ -85,6 +85,7 @@
             "resources\\ui\\LoginPanel.prefab",
             "resources\\ui\\MainPage.prefab",
             "resources\\ui\\MainPanel.prefab",
+            "resources\\ui\\ProgressBar.prefab",
             "subpackages\\game\\config\\sheep_levels.json",
             "subpackages\\game\\Icons\\Skill_1.png",
             "subpackages\\game\\Icons\\Skill_2.png",
@@ -98,8 +99,7 @@
             "subpackages\\rank\\ranking\\ItemFrame07_n.png",
             "subpackages\\rank\\ranking\\Menu_TopBtn.png",
             "subpackages\\rank\\ranking\\RankingBackground.png",
-            "subpackages\\rank\\ui\\RankPanel.prefab",
-            "resources\\ui\\ProgressBar.prefab"
+            "subpackages\\rank\\ui\\RankPanel.prefab"
         ]
     }
 }

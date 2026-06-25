@@ -35,6 +35,8 @@ module.exports = Editor.Panel.define({
         level: '#level',
         typeCounts: '#type-counts',
         requireSolvable: '#require-solvable',
+        fenceCount: '#fence-count',
+        fenceEliminate: '#fence-eliminate',
         generate: '#generate',
         view: '#view',
         save: '#save',
@@ -101,12 +103,21 @@ module.exports = Editor.Panel.define({
                 const typeCounts = this.parseTypeCounts();
                 const targetCount = typeCounts.reduce((sum, item) => sum + item.count, 0);
                 const requireSolvable = this.isRequireSolvable();
+                const fenceCount = this.parseFenceCount();
+                const fenceEliminateCount = this.parseFenceEliminateCount();
                 const typeConfigs = this.getGeneratorTypeConfigs();
-                this.currentLevel = generator.generateLevel(level, typeCounts, typeConfigs, { requireSolvable });
-                const solveText = generator.canSolveLevel(this.currentLevel, typeConfigs) ? '有解' : '无解';
+                const options = { requireSolvable, fenceCount };
+                if (fenceEliminateCount !== null) {
+                    options.fenceEliminateCount = fenceEliminateCount;
+                }
+                this.currentLevel = generator.generateLevel(level, typeCounts, typeConfigs, options);
+                const solveText = this.isLevelSolvable(this.currentLevel, typeConfigs) ? '有解' : '无解';
                 console.log('[sheep-level-editor] 生成结果：', JSON.stringify(this.currentLevel, null, 2));
                 this.renderLevel(this.currentLevel);
-                this.setStatus(`生成成功：第 ${level} 关，数量 ${this.currentLevel.sheep.length}/${targetCount}，${solveText}`);
+                const fenceText = this.currentLevel.fences && this.currentLevel.fences.length
+                    ? `，围挡 ${this.currentLevel.fences.length}`
+                    : '';
+                this.setStatus(`生成成功：第 ${level} 关，数量 ${this.currentLevel.sheep.length}/${targetCount}${fenceText}，${solveText}`);
             } catch (error) {
                 console.error('[sheep-level-editor] 生成失败：', error);
                 this.setStatus(`生成失败：${error.message}`);
@@ -127,7 +138,10 @@ module.exports = Editor.Panel.define({
 
             this.currentLevel = levelData;
             this.renderLevel(levelData);
-            this.setStatus(`正在查看第 ${level} 关，数量 ${levelData.sheep.length}`);
+            const fenceText = levelData.fences && levelData.fences.length
+                ? `，围挡 ${levelData.fences.length}`
+                : '';
+            this.setStatus(`正在查看第 ${level} 关，数量 ${levelData.sheep.length}${fenceText}`);
         },
 
         saveLevel() {
@@ -138,7 +152,7 @@ module.exports = Editor.Panel.define({
             }
 
             const typeConfigs = this.getGeneratorTypeConfigs();
-            if (this.isRequireSolvable() && !generator.canSolveLevel(this.currentLevel, typeConfigs)) {
+            if (this.isRequireSolvable() && !this.isLevelSolvable(this.currentLevel, typeConfigs)) {
                 this.setStatus(`保存失败：第 ${this.currentLevel.level} 关不可解`);
                 return;
             }
@@ -204,6 +218,31 @@ module.exports = Editor.Panel.define({
             return !!this.$.requireSolvable.checked;
         },
 
+        parseFenceCount() {
+            const value = Number(this.$.fenceCount.value);
+            if (!Number.isFinite(value) || value < 0) {
+                throw new Error('围挡数量必须是大于等于 0 的数字');
+            }
+            return Math.floor(value);
+        },
+
+        parseFenceEliminateCount() {
+            const raw = String(this.$.fenceEliminate.value || '').trim();
+            if (!raw) return null;
+            const value = Number(raw);
+            if (!Number.isFinite(value) || value < 1) {
+                throw new Error('围挡消除数必须是大于 0 的数字，留空则自动');
+            }
+            return Math.floor(value);
+        },
+
+        isLevelSolvable(levelData, typeConfigs) {
+            if (levelData.fences && levelData.fences.length) {
+                return generator.canSolveLevelWithFences(levelData, typeConfigs);
+            }
+            return generator.canSolveLevel(levelData, typeConfigs);
+        },
+
         getGeneratorTypeConfigs() {
             const configs = this.levelFile && this.levelFile.sheepTypeConfigs ? this.levelFile.sheepTypeConfigs : {};
             return {
@@ -240,6 +279,20 @@ module.exports = Editor.Panel.define({
             }
 
             this.renderSheepImages(board, levelData, rows, cols);
+            this.renderFences(board, levelData);
+        },
+
+        renderFences(board, levelData) {
+            const fences = levelData.fences || [];
+            fences.forEach((fence, index) => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'fence-preview';
+                wrapper.title = `围挡${index + 1} (${fence.row}, ${fence.col}) 消除${fence.eliminateCount}只后解锁`;
+                wrapper.style.gridRow = `${fence.row + 1} / span ${fence.rowSpan}`;
+                wrapper.style.gridColumn = `${fence.col + 1} / span ${fence.colSpan}`;
+                wrapper.textContent = `围挡${index + 1}：${fence.eliminateCount}`;
+                board.appendChild(wrapper);
+            });
         },
 
         renderSheepImages(board, levelData, rows, cols) {
@@ -290,16 +343,31 @@ module.exports = Editor.Panel.define({
 
         resolveResourceFilePath(resource) {
             const resourcePath = String(resource || '').replace(/\\/g, '/').replace(/\/spriteFrame$/, '');
-            const relativePath = path.join('assets', 'resources', resourcePath);
-            const basePath = path.join(getProjectPath(), relativePath);
+            const baseDirs = [
+                path.join('assets', 'subpackages', 'game'),
+                path.join('assets', 'resources'),
+            ];
+            for (const baseDir of baseDirs) {
+                const found = this.resolveFileInDir(baseDir, resourcePath);
+                if (found) return found;
+            }
+            return path.join(getProjectPath(), baseDirs[0], `${resourcePath}.png`);
+        },
+
+        resolveFileInDir(baseDir, resourcePath) {
+            const basePath = path.join(getProjectPath(), baseDir, resourcePath);
             const ext = path.extname(basePath);
             if (ext && fs.existsSync(basePath)) {
                 return basePath;
             }
-
             const candidates = ['.png', '.jpg', '.jpeg', '.webp', '.Png'];
-            const found = candidates.map((candidateExt) => `${basePath}${candidateExt}`).find((candidatePath) => fs.existsSync(candidatePath));
-            return found || `${basePath}.png`;
+            for (const candidateExt of candidates) {
+                const candidatePath = `${basePath}${candidateExt}`;
+                if (fs.existsSync(candidatePath)) {
+                    return candidatePath;
+                }
+            }
+            return null;
         },
 
         toFileUrl(filePath) {

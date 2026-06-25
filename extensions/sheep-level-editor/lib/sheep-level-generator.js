@@ -38,6 +38,7 @@ function generateLevel(level, typeCounts, typeConfigs, options = {}) {
     const normalizedTypeConfigs = normalizeTypeConfigs(typeConfigs);
     const typeSequence = createTypeSequence(typeCounts);
     const requireSolvable = options.requireSolvable !== false;
+    const fenceCount = Math.max(0, Math.floor(Number(options.fenceCount) || 0));
     let bestLevelData = null;
 
     for (let attempt = 0; attempt < GENERATE_ATTEMPTS; attempt++) {
@@ -54,10 +55,18 @@ function generateLevel(level, typeCounts, typeConfigs, options = {}) {
         };
         if (requireSolvable && !canSolveLevel(levelData, normalizedTypeConfigs)) continue;
 
+        if (fenceCount > 0) {
+            const fences = generateFences(sheep, fenceCount, options, normalizedTypeConfigs);
+            if (fences.length <= 0) continue;
+            levelData.fences = fences;
+            if (requireSolvable && !canSolveLevelWithFences(levelData, normalizedTypeConfigs)) continue;
+        }
+
         if (!bestLevelData || levelData.sheep.length > bestLevelData.sheep.length) {
             bestLevelData = levelData;
         }
-        if (levelData.sheep.length >= typeSequence.length) {
+        const fenceSatisfied = fenceCount <= 0 || (levelData.fences && levelData.fences.length >= fenceCount);
+        if (levelData.sheep.length >= typeSequence.length && fenceSatisfied) {
             return levelData;
         }
     }
@@ -68,6 +77,82 @@ function generateLevel(level, typeCounts, typeConfigs, options = {}) {
     }
 
     return bestLevelData;
+}
+
+function generateFences(placed, fenceCount, options, typeConfigs) {
+    const fences = [];
+    const maxPerFence = Math.max(1, Math.floor(Number(options.fenceMaxAttempts) || 40));
+
+    for (let index = 0; index < fenceCount; index++) {
+        let added = false;
+        for (let attempt = 0; attempt < maxPerFence; attempt++) {
+            const candidate = randomFenceCandidate(placed, typeConfigs, options);
+            if (!candidate) continue;
+            if (fences.some((fence) => rectsOverlap(fence, candidate))) continue;
+
+            const trialLevel = { sheep: placed, fences: fences.concat([candidate]) };
+            if (!canSolveLevelWithFences(trialLevel, typeConfigs)) continue;
+
+            fences.push(candidate);
+            added = true;
+            break;
+        }
+        if (!added) break;
+    }
+
+    return fences;
+}
+
+function randomFenceCandidate(placed, typeConfigs, options) {
+    const minSize = 2;
+    const maxSize = 4;
+    const maxAttempts = 20;
+
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+        const rowSpan = randInt(minSize, maxSize);
+        const colSpan = randInt(minSize, maxSize);
+        const row = randInt(0, ROW_COUNT - rowSpan);
+        const col = randInt(0, COL_COUNT - colSpan);
+        const region = { row, col, rowSpan, colSpan };
+
+        let enclosedCount = 0;
+        let partialOverlap = false;
+        for (const sheep of placed) {
+            const rect = getRect(sheep, typeConfigs);
+            if (rectFullyInside(rect, region)) {
+                enclosedCount++;
+            } else if (rectsOverlap(rect, region)) {
+                partialOverlap = true;
+                break;
+            }
+        }
+        if (partialOverlap) continue;
+        if (enclosedCount < 1 || enclosedCount > 6) continue;
+
+        const nonFencedCount = placed.length - enclosedCount;
+        if (nonFencedCount < 1) continue;
+
+        let eliminateCount = Number(options.fenceEliminateCount);
+        if (!Number.isFinite(eliminateCount)) {
+            eliminateCount = Math.max(1, Math.floor(nonFencedCount * 0.5));
+        }
+        eliminateCount = Math.max(1, Math.min(nonFencedCount, Math.floor(eliminateCount)));
+
+        return { row, col, rowSpan, colSpan, eliminateCount };
+    }
+
+    return null;
+}
+
+function rectFullyInside(inner, outer) {
+    return inner.row >= outer.row
+        && inner.col >= outer.col
+        && inner.row + inner.rowSpan <= outer.row + outer.rowSpan
+        && inner.col + inner.colSpan <= outer.col + outer.colSpan;
+}
+
+function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function canSolveLevel(level, typeConfigs) {
@@ -92,6 +177,64 @@ function canSolveLevel(level, typeConfigs) {
     }
 
     return true;
+}
+
+function canSolveLevelWithFences(level, typeConfigs) {
+    const normalizedTypeConfigs = normalizeTypeConfigs(typeConfigs);
+    const sheepList = (level.sheep || []).map((sheep) => {
+        const footprint = getFootprint(sheep.direction, sheep.type, normalizedTypeConfigs);
+        return {
+            ...sheep,
+            rowSpan: footprint.rowSpan,
+            colSpan: footprint.colSpan,
+            removed: false,
+        };
+    });
+    const fences = (level.fences || []).map((fence) => ({
+        row: fence.row,
+        col: fence.col,
+        rowSpan: fence.rowSpan,
+        colSpan: fence.colSpan,
+        eliminateCount: Math.max(0, Math.floor(Number(fence.eliminateCount) || 0)),
+        removed: false,
+    }));
+
+    let eliminatedCount = 0;
+    let remainCount = sheepList.length;
+    updateFencesState(fences, eliminatedCount);
+
+    while (remainCount > 0) {
+        const removable = sheepList.find((sheep) => !sheep.removed
+            && !isFencedByFences(sheep, fences)
+            && !isBlocked(sheep, sheepList, normalizedTypeConfigs)
+            && !isPathBlockedByFences(sheep, fences, normalizedTypeConfigs));
+        if (!removable) return false;
+
+        removable.removed = true;
+        remainCount--;
+        eliminatedCount++;
+        updateFencesState(fences, eliminatedCount);
+    }
+
+    return true;
+}
+
+function isFencedByFences(sheep, fences) {
+    const rect = { row: sheep.row, col: sheep.col, rowSpan: sheep.rowSpan, colSpan: sheep.colSpan };
+    return fences.some((fence) => !fence.removed && rectsOverlap(rect, fence));
+}
+
+function isPathBlockedByFences(sheep, fences, typeConfigs) {
+    const pathRects = getPathRects(sheep, typeConfigs);
+    return fences.some((fence) => !fence.removed && pathRects.some((rect) => rectsOverlap(rect, fence)));
+}
+
+function updateFencesState(fences, eliminatedCount) {
+    fences.forEach((fence) => {
+        if (!fence.removed && eliminatedCount >= fence.eliminateCount) {
+            fence.removed = true;
+        }
+    });
 }
 
 function hasUniqueSolution(level, typeConfigs) {
@@ -364,5 +507,6 @@ module.exports = {
     DefaultTypeConfigs,
     generateLevel,
     canSolveLevel,
+    canSolveLevelWithFences,
     hasUniqueSolution,
 };

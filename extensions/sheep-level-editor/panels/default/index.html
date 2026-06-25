@@ -12,7 +12,15 @@
         <label>要求有解</label>
         <ui-checkbox id="require-solvable" checked></ui-checkbox>
     </div>
-    <div class="hint">格式：normal:8 或 normal:8,black:4</div>
+    <div class="row">
+        <label>围挡数量</label>
+        <ui-input id="fence-count" value="0"></ui-input>
+    </div>
+    <div class="row">
+        <label>围挡消除数</label>
+        <ui-input id="fence-eliminate" value=""></ui-input>
+    </div>
+    <div class="hint">格式：normal:8 或 normal:8,black:4。围挡数量为 0 时不生成围挡。围挡消除数留空则取非围挡小羊数的一半（自动）。</div>
     <div class="buttons">
         <ui-button id="generate">生成</ui-button>
         <ui-button id="view">查看</ui-button>
