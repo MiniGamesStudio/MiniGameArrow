@@ -3939,7 +3939,9 @@
     "value": {
       "depends": [
         "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "4dfad19b-187b-40d5-ba83-2e74171fdee1@f9941"
+        "4dfad19b-187b-40d5-ba83-2e74171fdee1@f9941",
+        "44f25ea4-0bae-4c44-b956-c589a7fe0cc7@f9941",
+        "dc0e3e75-7237-44c7-ab16-f748c67753bb@f9941"
       ],
       "dependScripts": [
         "11111111-1111-4111-8111-111111111111"
@@ -4333,5 +4335,16 @@
     "url": "db://assets/subpackages/rank/ui",
     "value": {},
     "versionCode": 1
+  },
+  "f4792ee9-76b7-4236-81bc-de8678eadf47": {
+    "url": "db://assets/resources/ui/ProgressBar.prefab",
+    "value": {
+      "depends": [
+        "44f25ea4-0bae-4c44-b956-c589a7fe0cc7@f9941",
+        "dc0e3e75-7237-44c7-ab16-f748c67753bb@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
   }
 }

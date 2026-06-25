@@ -98,7 +98,8 @@
             "subpackages\\rank\\ranking\\ItemFrame07_n.png",
             "subpackages\\rank\\ranking\\Menu_TopBtn.png",
             "subpackages\\rank\\ranking\\RankingBackground.png",
-            "subpackages\\rank\\ui\\RankPanel.prefab"
+            "subpackages\\rank\\ui\\RankPanel.prefab",
+            "resources\\ui\\ProgressBar.prefab"
         ]
     }
 }

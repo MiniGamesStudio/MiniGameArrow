@@ -55,14 +55,14 @@
       "time": 1781946493793.289
     },
     "resources\\ui": {
-      "time": 1782353606215.2354,
+      "time": 1782356569730.8904,
       "uuid": "6c60be67-475a-43dc-a592-251e41add936"
     },
     "resources\\ui\\LoadingPanel.prefab.meta": {
       "time": 1781946493794.2876
     },
     "resources\\ui\\LoadingPanel.prefab": {
-      "time": 1782198983309.1836,
+      "time": 1782356587855.0605,
       "uuid": "55f8e988-f02b-41a3-8681-5a467e621d1b"
     },
     "scripts\\UIScripts\\LoadingPanel.ts.meta": {
@@ -821,7 +821,7 @@
       "uuid": "191bdeae-9286-465e-a518-a494dbf87eba"
     },
     "scripts\\Game\\CommonGame\\CommonGameEntry.ts": {
-      "time": 1782204814079.5598,
+      "time": 1782356494269.3508,
       "uuid": "c63a2908-67d7-4c12-a0ce-6c9030278f78"
     },
     "scripts\\Game\\CommonGame\\CommonUIConfig.ts": {
@@ -896,14 +896,14 @@
       "time": 1782111127963.8745
     },
     "resources\\ui\\LoginPanel.prefab": {
-      "time": 1782204826878.0864,
+      "time": 1782356604899.425,
       "uuid": "b6b4c5ef-8ac7-4533-a50a-dadbc41c189e"
     },
     "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts.meta": {
       "time": 1782204801434.8628
     },
     "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts": {
-      "time": 1782290390795.2515,
+      "time": 1782356696381.9434,
       "uuid": "11111111-1111-4111-8111-111111111111"
     },
     "scripts\\Game\\CommonGame\\ui\\PausePanel.ts.meta": {
@@ -1150,6 +1150,13 @@
     "subpackages\\rank\\ranking\\RankingBackground.png": {
       "time": 1746612144000,
       "uuid": "db239a29-fd7f-482c-8a49-82b641d5e489"
+    },
+    "resources\\ui\\ProgressBar.prefab.meta": {
+      "time": 1782356569743.8909
+    },
+    "resources\\ui\\ProgressBar.prefab": {
+      "time": 1782356569741.8901,
+      "uuid": "f4792ee9-76b7-4236-81bc-de8678eadf47"
     }
   },
   "missing": {}
