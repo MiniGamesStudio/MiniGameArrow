@@ -610,8 +610,9 @@ export class GamePanel extends UIBase {
 
     private goBackMainPanel(): void {
         this.m_IsPaused = false;
-        UIManager.GetInstance().ClosePanel(CommonUIID.GamePanel);
-        UIManager.GetInstance().OpenPanel(CommonUIID.MainPanel);
+        UIManager.GetInstance().OpenPanelWithCallback(CommonUIID.MainPanel, () => {
+            UIManager.GetInstance().ClosePanel(CommonUIID.GamePanel);
+        });
     }
 
     private async onSkillOneBtnClick(): Promise<void> {

@@ -5,6 +5,8 @@ import { UIBase } from './UIBase';
 
 const { ccclass } = _decorator;
 
+type UIOpenedCallback = (panelID: number, panelNode: Node) => void;
+
 /**
  * UI 管理器 — 管理面板的打开、关闭、缓存和分层
  * 引擎层：依赖 Cocos Creator 节点和资源系统
@@ -126,13 +128,22 @@ export class UIManager {
 
     /** 通过 uiID 打开界面 */
     OpenPanel(id: number, ...args: any[]): number {
+        return this.OpenPanelInternal(id, null, args);
+    }
+
+    /** 通过 uiID 打开界面，并在节点创建或缓存节点恢复后回调 */
+    OpenPanelWithCallback(id: number, onOpened: UIOpenedCallback, ...args: any[]): number {
+        return this.OpenPanelInternal(id, onOpened, args);
+    }
+
+    private OpenPanelInternal(id: number, onOpened: UIOpenedCallback | null, args: any[]): number {
         const uidata = UIDataRegistry.FindUIData(id);
         if (!uidata) {
             console.warn(`UIManager: 未注册的 UI ID [${id}]`);
             return 0;
         }
 
-        const existingID = this.CheckPanel(id, args);
+        const existingID = this.CheckPanel(id, args, onOpened);
         if (existingID > 0) return existingID;
 
         const pID = this.m_PanelID;
@@ -183,6 +194,7 @@ export class UIManager {
             }
 
             this.m_PanelNodeMap.set(pID, uiNode);
+            onOpened?.(pID, uiNode);
         });
 
         return pID;
@@ -215,7 +227,7 @@ export class UIManager {
         return removed;
     }
 
-    private CheckPanel(id: number, args: any[]): number {
+    private CheckPanel(id: number, args: any[], onOpened?: UIOpenedCallback | null): number {
         const uiDatas = this.m_PanelDataMap.get(id);
         if (!uiDatas || uiDatas.length === 0) return 0;
 
@@ -235,11 +247,13 @@ export class UIManager {
                 if (uiScript) {
                     uiScript.OnOpen(...args);
                 }
+                onOpened?.(panelID, panelNode);
                 rID = panelID;
                 break;
             } else {
                 const uidata = UIDataRegistry.FindUIData(id);
                 if (uidata && uidata.showMode === UIShowMode.Single) {
+                    onOpened?.(panelID, panelNode);
                     rID = panelID;
                     break;
                 }

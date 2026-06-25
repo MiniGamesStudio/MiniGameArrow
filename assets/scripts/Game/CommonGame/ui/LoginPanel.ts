@@ -137,8 +137,9 @@ export class LoginPanel extends UIBase {
         this.m_IsLoggingIn = false;
         if (result.result === PlatformResult.Success || result.result === PlatformResult.Unsupported) {
             console.log('LoginPanel: 进入主界面', result);
-            UIManager.GetInstance().ClosePanel(CommonUIID.LoginPanel);
-            UIManager.GetInstance().OpenPanel(CommonUIID.MainPanel);
+            UIManager.GetInstance().OpenPanelWithCallback(CommonUIID.MainPanel, () => {
+                UIManager.GetInstance().ClosePanel(CommonUIID.LoginPanel);
+            });
             return;
         }
 
