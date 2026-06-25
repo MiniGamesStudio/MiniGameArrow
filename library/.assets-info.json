@@ -26,7 +26,7 @@
       "uuid": "b5ad4379-da55-44a2-a5cd-3bbde1c09556"
     },
     "scene\\main.scene": {
-      "time": 1782205066837.9988,
+      "time": 1782354972749.9756,
       "uuid": "832cd028-fca2-4694-bfcf-606b1fd6a211"
     },
     "scripts.meta": {
@@ -829,7 +829,7 @@
       "uuid": "1ddebbfb-1c31-4d1a-8cc1-b8ee53713dfb"
     },
     "scripts\\Game\\CommonGame\\ui\\LoadingPanel.ts": {
-      "time": 1782353541212.2278,
+      "time": 1782354656929.8345,
       "uuid": "010892b2-c000-4095-8903-97f9f9a4f400"
     },
     "scripts\\Game\\CommonGame\\ui\\MainPanel.ts": {

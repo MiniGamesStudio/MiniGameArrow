@@ -3,7 +3,7 @@
   "splash-setting": {
     "background": {
       "image": "project://settings/bg02.png",
-      "type": "color",
+      "type": "custom",
       "color": {
         "x": 0,
         "y": 0,
@@ -12,7 +12,8 @@
       }
     },
     "logo": {
-      "type": "none"
+      "type": "custom",
+      "image": "project://settings/title.png"
     },
     "totalTime": 500
   },

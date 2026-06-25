@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 7310.9439,
+      "mTimestamp": 786185.6298,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -22112,7 +22112,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/ui/LoadingPanel.ts": {
       "mTimestamp": {
-        "mtime": 1782353541212.2278,
+        "mtime": 1782354656929.8345,
         "uuid": "010892b2-c000-4095-8903-97f9f9a4f400"
       },
       "chunkId": "09f4e32c74e1bd3b9fdf463e3a532c4bc52507c6",
@@ -22183,15 +22183,29 @@
           }
         },
         {
-          "value": "../CommonUIConfig",
+          "value": "../../../framework/FrameworkConst",
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
               "line": 5,
-              "column": 45
+              "column": 31
             },
             "end": {
               "line": 5,
+              "column": 66
+            }
+          }
+        },
+        {
+          "value": "../CommonUIConfig",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 45
+            },
+            "end": {
+              "line": 6,
               "column": 64
             }
           }
@@ -22245,6 +22259,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/engine/ui/UIManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/framework/FrameworkConst.ts"
           },
           "messages": []
         },
