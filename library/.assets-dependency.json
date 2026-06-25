@@ -13,7 +13,7 @@
         "chunks\\common\\common-define.chunk",
         "chunks\\sprite-fs.chunk"
       ],
-      "resources\\effects\\pixel-monster.effect": [
+      "subpackages\\game\\effects\\pixel-monster.effect": [
         "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
         "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
         "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",

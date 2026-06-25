@@ -44,6 +44,33 @@
             "configMode": "fallback"
           }
         }
+      },
+      "subpackage": {
+        "displayName": "subpackage",
+        "configs": {
+          "native": {
+            "preferredOptions": {
+              "isRemote": false,
+              "compressionType": "merge_dep"
+            }
+          },
+          "web": {
+            "preferredOptions": {
+              "isRemote": false,
+              "compressionType": "merge_dep"
+            },
+            "fallbackOptions": {
+              "compressionType": "merge_dep"
+            }
+          },
+          "miniGame": {
+            "fallbackOptions": {
+              "isRemote": false,
+              "compressionType": "subpackage"
+            },
+            "configMode": "fallback"
+          }
+        }
       }
     }
   }

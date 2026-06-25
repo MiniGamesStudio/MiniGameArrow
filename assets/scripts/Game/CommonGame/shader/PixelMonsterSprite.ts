@@ -1,4 +1,6 @@
-import { _decorator, CCFloat, Color, Component, EffectAsset, Material, resources, Sprite, SpriteFrame, Texture2D, UITransform, Vec4 } from 'cc';
+import { _decorator, CCFloat, Color, Component, EffectAsset, Material, Sprite, SpriteFrame, Texture2D, UITransform, Vec4 } from 'cc';
+import { ResManager } from '../../../engine/ResManager';
+import { CommonBundleName } from '../CommonUIConfig';
 
 const { ccclass, executeInEditMode, property } = _decorator;
 
@@ -152,7 +154,7 @@ export class PixelMonsterSprite extends Component {
         }
 
         this._isLoadingDefaultEffect = true;
-        resources.load('effects/pixel-monster', EffectAsset, (err, effectAsset) => {
+        ResManager.getInstance().loadFromBundle(CommonBundleName.Game, 'effects/pixel-monster', EffectAsset, (err, effectAsset) => {
             this._isLoadingDefaultEffect = false;
             if (err || !effectAsset || this.effectAsset) {
                 return;
@@ -169,7 +171,7 @@ export class PixelMonsterSprite extends Component {
         }
 
         this._isLoadingDefaultPalette = true;
-        resources.load('palettes/monster_palette/texture', Texture2D, (err, texture) => {
+        ResManager.getInstance().loadFromBundle(CommonBundleName.Game, 'palettes/monster_palette/texture', Texture2D, (err, texture) => {
             this._isLoadingDefaultPalette = false;
             if (err || !texture || this.paletteTexture) {
                 return;

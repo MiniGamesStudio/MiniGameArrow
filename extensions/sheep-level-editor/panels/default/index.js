@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const generator = require('../../lib/sheep-level-generator');
 
-const LEVEL_CONFIG_ASSET_URL = 'db://assets/resources/config/sheep_levels.json';
-const LEVEL_CONFIG_FILE_PATH = path.join('assets', 'resources', 'config', 'sheep_levels.json');
+const LEVEL_CONFIG_ASSET_URL = 'db://assets/subpackages/game/config/sheep_levels.json';
+const LEVEL_CONFIG_FILE_PATH = path.join('assets', 'subpackages', 'game', 'config', 'sheep_levels.json');
 const PREVIEW_CELL_SIZE = 40;
 const DEFAULT_EDITOR_TYPE_CONFIGS = {
     normal: {

@@ -1,4 +1,5 @@
 import { _decorator } from 'cc';
+import { DEFAULT_BUNDLE_NAME } from '../ResManager';
 const { ccclass } = _decorator;
 
 /**
@@ -31,6 +32,7 @@ export class UIData {
     id: number;
     layer: UILayer;
     name: string;
+    bundleName: string;
     prefabPath: string;
     showMode: UIShowMode;
     cacheCount: number;
@@ -55,12 +57,14 @@ export class UIDataRegistry {
         uiName: string,
         path: string,
         showMode: UIShowMode = UIShowMode.Normal,
-        cacheCount: number = 0
+        cacheCount: number = 0,
+        bundleName: string = DEFAULT_BUNDLE_NAME
     ): void {
         const data = new UIData();
         data.id = id;
         data.layer = layer;
         data.name = uiName;
+        data.bundleName = bundleName || DEFAULT_BUNDLE_NAME;
         data.prefabPath = path;
         data.showMode = showMode;
         data.cacheCount = showMode === UIShowMode.Single ? 1 : cacheCount;

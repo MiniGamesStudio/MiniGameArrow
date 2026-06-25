@@ -1,4 +1,5 @@
-import { _decorator, instantiate, Node, Prefab, resources } from 'cc';
+import { _decorator, instantiate, Node, Prefab } from 'cc';
+import { ResManager } from '../ResManager';
 import { UIDataRegistry, UIShowMode, UILayer } from './UIData';
 import { UIBase } from './UIBase';
 
@@ -145,9 +146,14 @@ export class UIManager {
         uiDatas.push(pID);
         this.m_PanelUIIDMap.set(pID, id);
 
-        resources.load(uidata.prefabPath, Prefab, (err, prefab) => {
+        ResManager.getInstance().loadFromBundle(uidata.bundleName, uidata.prefabPath, Prefab, (err, prefab) => {
             if (err) {
                 console.warn(`UIManager: 加载面板失败 [${uidata.name}]`, err);
+                this.RemovePanelRecord(pID);
+                return;
+            }
+            if (!prefab) {
+                console.warn(`UIManager: 面板资源为空 [${uidata.name}]`);
                 this.RemovePanelRecord(pID);
                 return;
             }

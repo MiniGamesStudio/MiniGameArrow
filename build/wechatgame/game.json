@@ -14,6 +14,14 @@
             "root": "subpackages/internal/"
         },
         {
+            "name": "game",
+            "root": "subpackages/game/"
+        },
+        {
+            "name": "rank",
+            "root": "subpackages/rank/"
+        },
+        {
             "name": "main",
             "root": "subpackages/main/"
         },

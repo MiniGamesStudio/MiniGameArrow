@@ -896,10 +896,10 @@
   },
   "game-view": {
     "devicesInfo": {
-      "name": "Apple iPad 10.2",
-      "type": "device",
-      "width": 1620,
-      "height": 2160
+      "name": "i18n:scene.game_view.design_resolution",
+      "type": "design",
+      "width": 750,
+      "height": 1334
     },
     "scaleValue": 37,
     "sliderValue": 15

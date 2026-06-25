@@ -1,10 +1,11 @@
-import { _decorator, Button, JsonAsset, Node, resources, RichText, Sprite, SpriteFrame, tween, UITransform, Vec3 } from 'cc';
+import { _decorator, Button, JsonAsset, Node, RichText, Sprite, SpriteFrame, tween, UITransform, Vec3 } from 'cc';
 import { AdManager, AdPlayResult } from '../../../engine/AdManager';
 import { PlatformManager, PlatformResult } from '../../../engine/PlatformManager';
+import { ResManager } from '../../../engine/ResManager';
 import { UIBase } from '../../../engine/ui/UIBase';
 import { UIManager } from '../../../engine/ui/UIManager';
 import { CommonGameProgress } from '../CommonGameProgress';
-import { CommonUIID } from '../CommonUIConfig';
+import { CommonBundleName, CommonUIID } from '../CommonUIConfig';
 const { ccclass, property } = _decorator;
 
 const MAX_ROW = 19;
@@ -210,7 +211,7 @@ export class GamePanel extends UIBase {
             return;
         }
 
-        resources.load(LEVEL_CONFIG_RESOURCE, JsonAsset, (err, asset) => {
+        ResManager.getInstance().loadFromBundle(CommonBundleName.Game, LEVEL_CONFIG_RESOURCE, JsonAsset, (err, asset) => {
             if (err || !asset) {
                 console.warn('GamePanel: 加载本地关卡配置失败，使用编辑器默认配置', err);
                 onComplete();
@@ -339,14 +340,14 @@ export class GamePanel extends UIBase {
 
     private loadSheepSpriteFrameByType(type: string, onComplete: () => void): void {
         const resourcePath = this.m_SheepTypeResourceMap.get(type) || DEFAULT_SHEEP_RESOURCE;
-        resources.load(resourcePath, SpriteFrame, (err, spriteFrame) => {
+        ResManager.getInstance().loadFromBundle(CommonBundleName.Game, resourcePath, SpriteFrame, (err, spriteFrame) => {
             if (!err && spriteFrame) {
                 this.m_SheepSpriteFrameMap.set(type, spriteFrame);
                 onComplete();
                 return;
             }
 
-            resources.load(DEFAULT_SHEEP_FALLBACK_RESOURCE, SpriteFrame, (fallbackErr, fallbackSpriteFrame) => {
+            ResManager.getInstance().loadFromBundle(CommonBundleName.Game, DEFAULT_SHEEP_FALLBACK_RESOURCE, SpriteFrame, (fallbackErr, fallbackSpriteFrame) => {
                 if (!fallbackErr && fallbackSpriteFrame) {
                     this.m_SheepSpriteFrameMap.set(type, fallbackSpriteFrame);
                 } else {

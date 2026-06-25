@@ -3676,7 +3676,7 @@
     "versionCode": 1
   },
   "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23": {
-    "url": "db://assets/resources/ui/GamePanel.prefab",
+    "url": "db://assets/subpackages/game/ui/GamePanel.prefab",
     "value": {
       "depends": [
         "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
@@ -3697,7 +3697,7 @@
     "versionCode": 1
   },
   "66c41a34-27f9-4521-9581-a81e8714a705": {
-    "url": "db://assets/resources/texture/sheep.png",
+    "url": "db://assets/subpackages/game/texture/sheep.png",
     "value": {
       "depends": []
     },
@@ -3720,7 +3720,7 @@
     "versionCode": 1
   },
   "66c41a34-27f9-4521-9581-a81e8714a705@6c48a": {
-    "url": "db://assets/resources/texture/sheep.png@6c48a",
+    "url": "db://assets/subpackages/game/texture/sheep.png@6c48a",
     "value": {
       "depends": [
         "66c41a34-27f9-4521-9581-a81e8714a705"
@@ -3729,7 +3729,7 @@
     "versionCode": 1
   },
   "66c41a34-27f9-4521-9581-a81e8714a705@f9941": {
-    "url": "db://assets/resources/texture/sheep.png@f9941",
+    "url": "db://assets/subpackages/game/texture/sheep.png@f9941",
     "value": {
       "depends": [
         "66c41a34-27f9-4521-9581-a81e8714a705@6c48a"
@@ -3747,33 +3747,33 @@
     "versionCode": 1
   },
   "c30cc32b-cb89-4481-b103-8f9095104ac8": {
-    "url": "db://assets/resources/Icons",
+    "url": "db://assets/subpackages/game/Icons",
     "value": {},
     "versionCode": 1
   },
   "483f80bc-31e2-47a5-9fae-d8fb24a81f95": {
-    "url": "db://assets/resources/Icons/Skill_1.png",
+    "url": "db://assets/subpackages/game/Icons/Skill_1.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "d0a9d6da-1e4e-46d3-8e0f-5b9c66014d93": {
-    "url": "db://assets/resources/Icons/Skill_2.png",
+    "url": "db://assets/subpackages/game/Icons/Skill_2.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "fc8553d7-131b-4691-98e7-6ceeaa07a1c7": {
-    "url": "db://assets/resources/Icons/Skill_3.png",
+    "url": "db://assets/subpackages/game/Icons/Skill_3.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "d0a9d6da-1e4e-46d3-8e0f-5b9c66014d93@6c48a": {
-    "url": "db://assets/resources/Icons/Skill_2.png@6c48a",
+    "url": "db://assets/subpackages/game/Icons/Skill_2.png@6c48a",
     "value": {
       "depends": [
         "d0a9d6da-1e4e-46d3-8e0f-5b9c66014d93"
@@ -3782,7 +3782,7 @@
     "versionCode": 1
   },
   "483f80bc-31e2-47a5-9fae-d8fb24a81f95@6c48a": {
-    "url": "db://assets/resources/Icons/Skill_1.png@6c48a",
+    "url": "db://assets/subpackages/game/Icons/Skill_1.png@6c48a",
     "value": {
       "depends": [
         "483f80bc-31e2-47a5-9fae-d8fb24a81f95"
@@ -3791,7 +3791,7 @@
     "versionCode": 1
   },
   "fc8553d7-131b-4691-98e7-6ceeaa07a1c7@6c48a": {
-    "url": "db://assets/resources/Icons/Skill_3.png@6c48a",
+    "url": "db://assets/subpackages/game/Icons/Skill_3.png@6c48a",
     "value": {
       "depends": [
         "fc8553d7-131b-4691-98e7-6ceeaa07a1c7"
@@ -3800,7 +3800,7 @@
     "versionCode": 1
   },
   "d0a9d6da-1e4e-46d3-8e0f-5b9c66014d93@f9941": {
-    "url": "db://assets/resources/Icons/Skill_2.png@f9941",
+    "url": "db://assets/subpackages/game/Icons/Skill_2.png@f9941",
     "value": {
       "depends": [
         "d0a9d6da-1e4e-46d3-8e0f-5b9c66014d93@6c48a"
@@ -3809,7 +3809,7 @@
     "versionCode": 1
   },
   "483f80bc-31e2-47a5-9fae-d8fb24a81f95@f9941": {
-    "url": "db://assets/resources/Icons/Skill_1.png@f9941",
+    "url": "db://assets/subpackages/game/Icons/Skill_1.png@f9941",
     "value": {
       "depends": [
         "483f80bc-31e2-47a5-9fae-d8fb24a81f95@6c48a"
@@ -3818,7 +3818,7 @@
     "versionCode": 1
   },
   "fc8553d7-131b-4691-98e7-6ceeaa07a1c7@f9941": {
-    "url": "db://assets/resources/Icons/Skill_3.png@f9941",
+    "url": "db://assets/subpackages/game/Icons/Skill_3.png@f9941",
     "value": {
       "depends": [
         "fc8553d7-131b-4691-98e7-6ceeaa07a1c7@6c48a"
@@ -3827,12 +3827,12 @@
     "versionCode": 1
   },
   "e6cb8f45-78b8-4f55-8d8a-e5a35444d9df": {
-    "url": "db://assets/resources/config",
+    "url": "db://assets/subpackages/game/config",
     "value": {},
     "versionCode": 1
   },
   "4c0814f7-b690-4a5f-a5c8-61b6f9219a96": {
-    "url": "db://assets/resources/config/sheep_levels.json",
+    "url": "db://assets/subpackages/game/config/sheep_levels.json",
     "value": {
       "depends": []
     },
@@ -3900,14 +3900,14 @@
     "versionCode": 1
   },
   "33d215cc-48ee-40b8-bbe8-aa21226b5f4b": {
-    "url": "db://assets/resources/texture/sheepblack.png",
+    "url": "db://assets/subpackages/game/texture/sheepblack.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "33d215cc-48ee-40b8-bbe8-aa21226b5f4b@6c48a": {
-    "url": "db://assets/resources/texture/sheepblack.png@6c48a",
+    "url": "db://assets/subpackages/game/texture/sheepblack.png@6c48a",
     "value": {
       "depends": [
         "33d215cc-48ee-40b8-bbe8-aa21226b5f4b"
@@ -3916,7 +3916,7 @@
     "versionCode": 1
   },
   "33d215cc-48ee-40b8-bbe8-aa21226b5f4b@f9941": {
-    "url": "db://assets/resources/texture/sheepblack.png@f9941",
+    "url": "db://assets/subpackages/game/texture/sheepblack.png@f9941",
     "value": {
       "depends": [
         "33d215cc-48ee-40b8-bbe8-aa21226b5f4b@6c48a"
@@ -3948,7 +3948,7 @@
     "versionCode": 2
   },
   "8ef6df47-0ec6-430e-accf-e7f7f77a5e07": {
-    "url": "db://assets/resources/ui/RankPanel.prefab",
+    "url": "db://assets/subpackages/rank/ui/RankPanel.prefab",
     "value": {
       "depends": [
         "a4840e4c-51eb-40b5-ae6f-035d58ec0152@f9941",
@@ -3961,19 +3961,19 @@
     "versionCode": 2
   },
   "2364a1ff-cca8-449b-abc8-70e20f478d52": {
-    "url": "db://assets/resources/ranking",
+    "url": "db://assets/subpackages/rank/ranking",
     "value": {},
     "versionCode": 1
   },
   "db239a29-fd7f-482c-8a49-82b641d5e489": {
-    "url": "db://assets/resources/ranking/RankingBackground.png",
+    "url": "db://assets/subpackages/rank/ranking/RankingBackground.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "db239a29-fd7f-482c-8a49-82b641d5e489@6c48a": {
-    "url": "db://assets/resources/ranking/RankingBackground.png@6c48a",
+    "url": "db://assets/subpackages/rank/ranking/RankingBackground.png@6c48a",
     "value": {
       "depends": [
         "db239a29-fd7f-482c-8a49-82b641d5e489"
@@ -3982,7 +3982,7 @@
     "versionCode": 1
   },
   "db239a29-fd7f-482c-8a49-82b641d5e489@f9941": {
-    "url": "db://assets/resources/ranking/RankingBackground.png@f9941",
+    "url": "db://assets/subpackages/rank/ranking/RankingBackground.png@f9941",
     "value": {
       "depends": [
         "db239a29-fd7f-482c-8a49-82b641d5e489@6c48a"
@@ -3991,14 +3991,14 @@
     "versionCode": 1
   },
   "2f8d7298-a520-4709-b29e-7254a68ec8e4": {
-    "url": "db://assets/resources/ranking/Menu_TopBtn.png",
+    "url": "db://assets/subpackages/rank/ranking/Menu_TopBtn.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "2f8d7298-a520-4709-b29e-7254a68ec8e4@6c48a": {
-    "url": "db://assets/resources/ranking/Menu_TopBtn.png@6c48a",
+    "url": "db://assets/subpackages/rank/ranking/Menu_TopBtn.png@6c48a",
     "value": {
       "depends": [
         "2f8d7298-a520-4709-b29e-7254a68ec8e4"
@@ -4007,7 +4007,7 @@
     "versionCode": 1
   },
   "2f8d7298-a520-4709-b29e-7254a68ec8e4@f9941": {
-    "url": "db://assets/resources/ranking/Menu_TopBtn.png@f9941",
+    "url": "db://assets/subpackages/rank/ranking/Menu_TopBtn.png@f9941",
     "value": {
       "depends": [
         "2f8d7298-a520-4709-b29e-7254a68ec8e4@6c48a"
@@ -4062,14 +4062,14 @@
     "versionCode": 1
   },
   "419870d2-343b-4884-9ff9-1c5c0934e900": {
-    "url": "db://assets/resources/ranking/ItemFrame07_n.png",
+    "url": "db://assets/subpackages/rank/ranking/ItemFrame07_n.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "419870d2-343b-4884-9ff9-1c5c0934e900@6c48a": {
-    "url": "db://assets/resources/ranking/ItemFrame07_n.png@6c48a",
+    "url": "db://assets/subpackages/rank/ranking/ItemFrame07_n.png@6c48a",
     "value": {
       "depends": [
         "419870d2-343b-4884-9ff9-1c5c0934e900"
@@ -4078,7 +4078,7 @@
     "versionCode": 1
   },
   "419870d2-343b-4884-9ff9-1c5c0934e900@f9941": {
-    "url": "db://assets/resources/ranking/ItemFrame07_n.png@f9941",
+    "url": "db://assets/subpackages/rank/ranking/ItemFrame07_n.png@f9941",
     "value": {
       "depends": [
         "419870d2-343b-4884-9ff9-1c5c0934e900@6c48a"
@@ -4166,7 +4166,7 @@
     "versionCode": 1
   },
   "2c8b954c-0045-4bcb-8ec1-847ad387b338": {
-    "url": "db://assets/resources/ui/PausePanel.prefab",
+    "url": "db://assets/subpackages/game/ui/PausePanel.prefab",
     "value": {
       "depends": [
         "a66726f4-f780-4d1d-b776-00cce3b6c51d@f9941",
@@ -4186,7 +4186,7 @@
     "versionCode": 1
   },
   "83902b23-c019-4bc5-8a63-c1703769b66e": {
-    "url": "db://assets/resources/ui/TransitionPanel.prefab",
+    "url": "db://assets/subpackages/game/ui/TransitionPanel.prefab",
     "value": {
       "depends": [
         "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
@@ -4214,7 +4214,7 @@
     "versionCode": 1
   },
   "bf2ccb89-d49f-4e88-88f7-811e2bd1b77d": {
-    "url": "db://assets/resources/palettes",
+    "url": "db://assets/subpackages/game/palettes",
     "value": {},
     "versionCode": 1
   },
@@ -4243,14 +4243,14 @@
     "versionCode": 1
   },
   "f5cc4ef9-c0a1-4dd4-a632-6278c3abdc7f": {
-    "url": "db://assets/resources/palettes/monster_palette.png",
+    "url": "db://assets/subpackages/game/palettes/monster_palette.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "f5cc4ef9-c0a1-4dd4-a632-6278c3abdc7f@6c48a": {
-    "url": "db://assets/resources/palettes/monster_palette.png@6c48a",
+    "url": "db://assets/subpackages/game/palettes/monster_palette.png@6c48a",
     "value": {
       "depends": [
         "f5cc4ef9-c0a1-4dd4-a632-6278c3abdc7f"
@@ -4259,7 +4259,7 @@
     "versionCode": 1
   },
   "f5cc4ef9-c0a1-4dd4-a632-6278c3abdc7f@f9941": {
-    "url": "db://assets/resources/palettes/monster_palette.png@f9941",
+    "url": "db://assets/subpackages/game/palettes/monster_palette.png@f9941",
     "value": {
       "depends": [
         "f5cc4ef9-c0a1-4dd4-a632-6278c3abdc7f@6c48a"
@@ -4293,15 +4293,45 @@
     "versionCode": 1
   },
   "71b798ea-f4bd-4978-9937-3d0455e4279d": {
-    "url": "db://assets/resources/effects",
+    "url": "db://assets/subpackages/game/effects",
     "value": {},
     "versionCode": 1
   },
   "dfb91869-54e1-4168-be7e-2edc2bc530cc": {
-    "url": "db://assets/resources/effects/pixel-monster.effect",
+    "url": "db://assets/subpackages/game/effects/pixel-monster.effect",
     "value": {
       "depends": []
     },
+    "versionCode": 1
+  },
+  "8df71d4f-5f7d-4e61-9b2a-2c8b33b1a101": {
+    "url": "db://assets/subpackages",
+    "value": {},
+    "versionCode": 1
+  },
+  "a0c6c8d4-10db-48a4-a2b4-5d4e3b2a9101": {
+    "url": "db://assets/subpackages/game",
+    "value": {},
+    "versionCode": 1
+  },
+  "b8ee6cb0-96db-4c3b-96d1-d14d1e8d5201": {
+    "url": "db://assets/subpackages/rank",
+    "value": {},
+    "versionCode": 1
+  },
+  "dbdbb2c4-2818-4a64-9df1-b1a9ac920201": {
+    "url": "db://assets/subpackages/game/texture",
+    "value": {},
+    "versionCode": 1
+  },
+  "4d8dfd25-3d5b-42a9-a8e2-245f2d81c301": {
+    "url": "db://assets/subpackages/game/ui",
+    "value": {},
+    "versionCode": 1
+  },
+  "052b7b89-95cf-4f28-a371-7bb037939301": {
+    "url": "db://assets/subpackages/rank/ui",
+    "value": {},
     "versionCode": 1
   }
 }

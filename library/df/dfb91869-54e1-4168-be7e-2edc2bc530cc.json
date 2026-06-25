@@ -1,6 +1,6 @@
 {
   "__type__": "cc.EffectAsset",
-  "_name": "../resources/effects/pixel-monster",
+  "_name": "../subpackages/game/effects/pixel-monster",
   "_objFlags": 0,
   "__editorExtras__": {},
   "_native": "",
@@ -21,7 +21,7 @@
           "rasterizerState": {
             "cullMode": 0
           },
-          "program": "../resources/effects/pixel-monster|sprite-vs:vert|sprite-fs:frag",
+          "program": "../subpackages/game/effects/pixel-monster|sprite-vs:vert|sprite-fs:frag",
           "depthStencilState": {
             "depthTest": false,
             "depthWrite": false
@@ -559,7 +559,7 @@
           "defines": []
         }
       ],
-      "name": "../resources/effects/pixel-monster|sprite-vs:vert|sprite-fs:frag"
+      "name": "../subpackages/game/effects/pixel-monster|sprite-vs:vert|sprite-fs:frag"
     }
   ],
   "combinations": [],
