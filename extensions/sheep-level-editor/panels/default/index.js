@@ -37,10 +37,14 @@ module.exports = Editor.Panel.define({
         requireSolvable: '#require-solvable',
         fenceCount: '#fence-count',
         fenceEliminate: '#fence-eliminate',
+        editMode: '#edit-mode',
+        placeType: '#place-type',
+        placeDirection: '#place-direction',
         generate: '#generate',
         view: '#view',
         save: '#save',
         reload: '#reload',
+        clear: '#clear',
         status: '#status',
         layout: '#layout',
     },
@@ -56,8 +60,12 @@ module.exports = Editor.Panel.define({
         this.$.save.addEventListener('click', () => this.saveLevel());
         this.$.reload.addEventListener('confirm', () => this.loadLevelFile());
         this.$.reload.addEventListener('click', () => this.loadLevelFile());
+        this.$.clear.addEventListener('confirm', () => this.clearLevelSheep());
+        this.$.clear.addEventListener('click', () => this.clearLevelSheep());
+        this.$.editMode.addEventListener('change', () => this.onEditModeChange());
 
         this.loadLevelFile();
+        this.populatePlaceTypeOptions();
     },
     methods: {
         loadLevelFile() {
@@ -80,6 +88,7 @@ module.exports = Editor.Panel.define({
                 };
                 this.setStatus(`未找到关卡文件，将在保存时创建：${LEVEL_CONFIG_FILE_PATH}`);
                 this.renderLayout('');
+                this.populatePlaceTypeOptions();
                 return;
             }
 
@@ -89,6 +98,7 @@ module.exports = Editor.Panel.define({
                 this.levelFile.sheepTypeConfigs = this.levelFile.sheepTypeConfigs || {};
                 this.levelFile.levels = Array.isArray(this.levelFile.levels) ? this.levelFile.levels : [];
                 this.setStatus(`已加载关卡文件，共 ${this.levelFile.levels.length} 关`);
+                this.populatePlaceTypeOptions();
             } catch (error) {
                 this.levelFile = null;
                 this.setStatus(`读取关卡文件失败：${error.message}`);
@@ -243,6 +253,125 @@ module.exports = Editor.Panel.define({
             return generator.canSolveLevel(levelData, typeConfigs);
         },
 
+        isEditMode() {
+            return !!this.$.editMode.checked;
+        },
+
+        getPlaceType() {
+            const value = String(this.$.placeType.value || '').trim();
+            return value || generator.DEFAULT_TYPE;
+        },
+
+        getPlaceDirection() {
+            const value = String(this.$.placeDirection.value || '').trim();
+            return ['Up', 'Right', 'Down', 'Left'].includes(value) ? value : 'Up';
+        },
+
+        populatePlaceTypeOptions() {
+            const typeConfigs = this.getGeneratorTypeConfigs();
+            const types = Object.keys(typeConfigs);
+            if (types.length <= 0) {
+                types.push(generator.DEFAULT_TYPE);
+            }
+            const select = this.$.placeType;
+            const previous = String(select.value || '').trim();
+            select.innerHTML = '';
+            types.forEach((type) => {
+                const option = document.createElement('option');
+                option.setAttribute('value', type);
+                option.textContent = type;
+                select.appendChild(option);
+            });
+            select.value = types.includes(previous) ? previous : types[0];
+        },
+
+        onEditModeChange() {
+            if (this.isEditMode()) {
+                this.ensureEditableLevel();
+            }
+            if (this.currentLevel) {
+                this.renderLevel(this.currentLevel);
+            }
+        },
+
+        ensureEditableLevel() {
+            if (this.currentLevel) return this.currentLevel;
+            let level = 1;
+            try {
+                level = this.getLevelInput();
+            } catch (error) {
+                this.setStatus(`关卡号无效，使用默认 1：${error.message}`);
+            }
+            this.currentLevel = {
+                level,
+                rowCount: generator.ROW_COUNT,
+                colCount: generator.COL_COUNT,
+                sheep: [],
+            };
+            return this.currentLevel;
+        },
+
+        onBoardCellClick(row, col) {
+            if (!this.isEditMode()) return;
+            const levelData = this.ensureEditableLevel();
+            const typeConfigs = this.getGeneratorTypeConfigs();
+            const rows = Number(levelData.rowCount) || generator.ROW_COUNT;
+            const cols = Number(levelData.colCount) || generator.COL_COUNT;
+            const sheepList = Array.isArray(levelData.sheep) ? levelData.sheep : (levelData.sheep = []);
+
+            const existingIndex = sheepList.findIndex((sheep) => {
+                const footprint = this.getFootprint(sheep.direction, sheep.type, typeConfigs);
+                return this.cellInRect(row, col, sheep.row, sheep.col, footprint.rowSpan, footprint.colSpan);
+            });
+            if (existingIndex >= 0) {
+                sheepList.splice(existingIndex, 1);
+                this.renderLevel(levelData);
+                this.setStatus(`已移除 (${row}, ${col}) 处小羊，剩余 ${sheepList.length}`);
+                return;
+            }
+
+            const direction = this.getPlaceDirection();
+            const type = this.getPlaceType();
+            const footprint = this.getFootprint(direction, type, typeConfigs);
+            if (row + footprint.rowSpan > rows || col + footprint.colSpan > cols) {
+                this.setStatus(`放不下：超出边界 (${row}, ${col})`);
+                return;
+            }
+            const overlap = sheepList.some((sheep) => {
+                const sheepFootprint = this.getFootprint(sheep.direction, sheep.type, typeConfigs);
+                return this.rectsOverlap(
+                    row, col, footprint.rowSpan, footprint.colSpan,
+                    sheep.row, sheep.col, sheepFootprint.rowSpan, sheepFootprint.colSpan,
+                );
+            });
+            if (overlap) {
+                this.setStatus(`放不下：与已有小羊重叠 (${row}, ${col})`);
+                return;
+            }
+
+            sheepList.push({ row, col, direction, type });
+            this.renderLevel(levelData);
+            this.setStatus(`已放置 ${type} ${direction} 于 (${row}, ${col})，共 ${sheepList.length}`);
+        },
+
+        clearLevelSheep() {
+            if (!this.ensureLevelFile()) return;
+            const levelData = this.ensureEditableLevel();
+            levelData.sheep = [];
+            this.renderLevel(levelData);
+            this.setStatus('已清空小羊，可手动放置');
+        },
+
+        cellInRect(row, col, rectRow, rectCol, rowSpan, colSpan) {
+            return row >= rectRow && row < rectRow + rowSpan
+                && col >= rectCol && col < rectCol + colSpan;
+        },
+
+        rectsOverlap(aRow, aCol, aRowSpan, aColSpan, bRow, bCol, bRowSpan, bColSpan) {
+            return aRow < bRow + bRowSpan && aRow + aRowSpan > bRow
+                && aCol < bCol + bColSpan && aCol + aColSpan > bCol;
+        },
+
         getGeneratorTypeConfigs() {
             const configs = this.levelFile && this.levelFile.sheepTypeConfigs ? this.levelFile.sheepTypeConfigs : {};
             return {
@@ -264,6 +393,9 @@ module.exports = Editor.Panel.define({
 
             const board = document.createElement('div');
             board.className = 'level-board';
+            if (this.isEditMode()) {
+                board.classList.add('editable');
+            }
             board.style.setProperty('--rows', String(rows));
             board.style.setProperty('--cols', String(cols));
             this.$.layout.appendChild(board);
@@ -274,6 +406,7 @@ module.exports = Editor.Panel.define({
                     cell.className = 'level-cell';
                     cell.style.gridRow = `${row + 1} / span 1`;
                     cell.style.gridColumn = `${col + 1} / span 1`;
+                    cell.addEventListener('click', () => this.onBoardCellClick(row, col));
                     board.appendChild(cell);
                 }
             }

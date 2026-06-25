@@ -21,6 +21,16 @@ h2 {
     gap: 8px;
 }
 
+select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3px 6px;
+    color: var(--color-normal-contrast-weakest);
+    background: var(--color-normal-fill);
+    border: 1px solid var(--color-normal-border);
+    border-radius: 4px;
+}
+
 .hint {
     color: var(--color-normal-contrast-weaker);
     font-size: 12px;
@@ -81,6 +91,14 @@ h2 {
     justify-content: center;
     padding: 2px;
     pointer-events: none;
+}
+
+.level-board.editable .level-cell {
+    cursor: pointer;
+}
+
+.level-board.editable .level-cell:hover {
+    background: rgba(255, 209, 102, 0.25);
 }
 
 .sheep-preview img {

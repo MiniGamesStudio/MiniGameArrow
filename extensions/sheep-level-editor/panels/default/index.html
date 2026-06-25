@@ -21,11 +21,30 @@
         <ui-input id="fence-eliminate" value=""></ui-input>
     </div>
     <div class="hint">格式：normal:8 或 normal:8,black:4。围挡数量为 0 时不生成围挡。围挡消除数留空则取非围挡小羊数的一半（自动）。</div>
+    <div class="row">
+        <label>编辑模式</label>
+        <ui-checkbox id="edit-mode"></ui-checkbox>
+    </div>
+    <div class="row">
+        <label>放置种类</label>
+        <select id="place-type"></select>
+    </div>
+    <div class="row">
+        <label>放置方向</label>
+        <select id="place-direction">
+            <option value="Up">上</option>
+            <option value="Right">右</option>
+            <option value="Down">下</option>
+            <option value="Left">左</option>
+        </select>
+    </div>
+    <div class="hint">编辑模式下：点击空格放置小羊（以点击格为左上角），点击已有小羊则移除。</div>
     <div class="buttons">
         <ui-button id="generate">生成</ui-button>
         <ui-button id="view">查看</ui-button>
         <ui-button id="save">保存</ui-button>
         <ui-button id="reload">重新加载</ui-button>
+        <ui-button id="clear">清空</ui-button>
     </div>
     <ui-label id="status">等待加载关卡文件</ui-label>
     <div id="layout"></div>
