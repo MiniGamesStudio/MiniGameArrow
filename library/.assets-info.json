@@ -865,10 +865,10 @@
       "uuid": "0f6f935e-dd32-4f8f-870f-858c31678dec"
     },
     "resources\\texture\\sheeptitle.png.meta": {
-      "time": 1782199103343.2808
+      "time": 1782461839934.5327
     },
     "resources\\texture\\sheeptitle.png": {
-      "time": 1782199046369.8674,
+      "time": 1782461820130.9172,
       "uuid": "a66726f4-f780-4d1d-b776-00cce3b6c51d"
     },
     "scripts\\Game\\CommonGame\\level.meta": {
@@ -885,7 +885,7 @@
       "time": 1782110618406.1548
     },
     "scripts\\Game\\CommonGame\\ui\\RankPanel.ts": {
-      "time": 1782301658577.893,
+      "time": 1782460324727.698,
       "uuid": "b45da2d2-3f4c-4b69-a2bb-ea92ed3a7852"
     },
     "scripts\\engine\\PlatformManager.ts": {
@@ -1120,7 +1120,7 @@
       "uuid": "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23"
     },
     "subpackages\\game\\ui\\PausePanel.prefab": {
-      "time": 1782268617436.4387,
+      "time": 1782461890959.7756,
       "uuid": "2c8b954c-0045-4bcb-8ec1-847ad387b338"
     },
     "subpackages\\game\\ui\\TransitionPanel.prefab": {
