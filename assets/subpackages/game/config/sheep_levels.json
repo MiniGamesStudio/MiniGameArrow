@@ -96,14 +96,14 @@
           "col": 1,
           "rowSpan": 2,
           "colSpan": 4,
-          "eliminateCount": 4
+          "eliminateCount": 2
         },
         {
           "row": 11,
           "col": 2,
           "rowSpan": 3,
           "colSpan": 4,
-          "eliminateCount": 4
+          "eliminateCount": 5
         }
       ]
     },
