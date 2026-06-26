@@ -98,8 +98,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2026-6-26 16:18:35 build success in 11 s!",
-        "detailMessage": "// ---- build task cocos-service：onAfterBuild ----\r",
+        "message": "2026-6-26 16:49:26 build success in 12 s!",
+        "detailMessage": "// ---- build task 给所有的资源加上 MD5 后缀 ----\r",
         "options": {
           "name": "MiniGameArrow",
           "server": "",
@@ -160,7 +160,7 @@
           "__version__": "1.3.9",
           "logDest": "project://temp/builder/log/bytedance-mini-game2026-6-26 15-59.log"
         },
-        "time": "2026-6-26 16:18:23",
+        "time": "2026-6-26 16:49:13",
         "dirty": false
       }
     }

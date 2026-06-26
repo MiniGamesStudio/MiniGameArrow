@@ -1,4 +1,5 @@
 import { _decorator, Node } from 'cc';
+import { MiniGamePlatform, PlatformManager, PlatformResult } from '../../../engine/PlatformManager';
 import { UIBase } from '../../../engine/ui/UIBase';
 import { UIManager } from '../../../engine/ui/UIManager';
 import { CommonGameProgress } from '../CommonGameProgress';
@@ -56,7 +57,7 @@ export class MainPage extends UIBase {
             button.node.setPosition(0, 120 - index * 90, 0);
         });
 
-        this.CreateUIButtonsByTable(this.m_RightRoot, [
+        const rightButtonConfigs = [
             {
                 buttonName: "Rank",
                 buttonText: "排行榜",
@@ -65,7 +66,31 @@ export class MainPage extends UIBase {
                     UIManager.GetInstance().OpenPanel(CommonUIID.RankPanel);
                 },
             },
-        ]);
+        ];
+
+        // if (PlatformManager.getInstance().getPlatform() === MiniGamePlatform.Douyin) {
+        //     rightButtonConfigs.push({
+        //         buttonName: "Sidebar",
+        //         buttonText: "侧边栏",
+        //         buttonIcon: "buttons/Icon_ImageIcon_Ranking",
+        //         onClick: () => {
+        //             this.openDouyinSidebar();
+        //         },
+        //     });
+        // }
+
+        const rightButtons = this.CreateUIButtonsByTable(this.m_RightRoot, rightButtonConfigs);
+
+        rightButtons.forEach((button, index) => {
+            button.node.setPosition(0, 80 - index * 90, 0);
+        });
+    }
+
+    private async openDouyinSidebar(): Promise<void> {
+        const result = await PlatformManager.getInstance().navigateToSidebar();
+        if (result.result !== PlatformResult.Success) {
+            console.warn('MainPage: 跳转抖音侧边栏失败', result);
+        }
     }
 
     private clearRoot(root: Node): void {

@@ -54,7 +54,7 @@ function loadCC() {
         },
     });
 
-    System.import('./application.fed03.js').then(({ Application }) => {
+    System.import('./application.a954f.js').then(({ Application }) => {
         return new Application();
     }).then((application) => {
         return onApplicationCreated(application);

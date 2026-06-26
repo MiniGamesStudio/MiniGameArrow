@@ -2,6 +2,7 @@ import { _decorator, Camera, Component, director, Node, game, Game } from 'cc';
 import { ScreenAdapter } from "./ScreenAdapter";
 import { GameManager } from "./GameManager";
 import { initCommonGame } from "../Game/CommonGame/CommonGameEntry";
+import { PlatformManager } from "./PlatformManager";
 
 const { ccclass, property } = _decorator;
 
@@ -23,6 +24,7 @@ export class Launcher extends Component {
 
     protected onLoad(): void {
         director.addPersistRootNode(this.node);
+        PlatformManager.getInstance().init();
 
         game.on(Game.EVENT_HIDE, this.onGameHide, this);
         game.on(Game.EVENT_SHOW, this.onGameShow, this);

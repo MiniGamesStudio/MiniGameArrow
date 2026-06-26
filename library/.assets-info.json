@@ -279,7 +279,7 @@
       "uuid": "c6d1d8ee-b920-4aab-b685-1366461740a1"
     },
     "scripts\\engine\\Launcher.ts": {
-      "time": 1781946493801.289,
+      "time": 1782463183575.7222,
       "uuid": "a8aceee6-ff61-4d7e-b9c6-07d67c2cf768"
     },
     "scripts\\engine\\NodePool.ts": {
@@ -847,7 +847,7 @@
       "time": 1781946493799.288
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
-      "time": 1782450143928.2073,
+      "time": 1782463745813.4404,
       "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
     },
     "scripts\\engine\\AdManager.ts.meta": {
@@ -889,7 +889,7 @@
       "uuid": "b45da2d2-3f4c-4b69-a2bb-ea92ed3a7852"
     },
     "scripts\\engine\\PlatformManager.ts": {
-      "time": 1782278971790.9082,
+      "time": 1782463179008.722,
       "uuid": "a609ec9c-c7c4-4c81-b730-8f2bef02d1ab"
     },
     "resources\\ui\\LoginPanel.prefab.meta": {

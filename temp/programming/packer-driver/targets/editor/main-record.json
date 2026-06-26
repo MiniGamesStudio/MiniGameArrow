@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 13052.1257,
+      "mTimestamp": 3360327.1634,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -22280,7 +22280,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/ui/MainPage.ts": {
       "mTimestamp": {
-        "mtime": 1782450143928.2073,
+        "mtime": 1782463745813.4404,
         "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
       },
       "chunkId": "87fdd7c6b013f263c32fb00fdf56be0fb471438a",
@@ -22309,57 +22309,71 @@
           }
         },
         {
-          "value": "../../../engine/ui/UIBase",
+          "value": "../../../engine/PlatformManager",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 2,
-              "column": 23
+              "column": 66
             },
             "end": {
               "line": 2,
+              "column": 99
+            }
+          }
+        },
+        {
+          "value": "../../../engine/ui/UIBase",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 23
+            },
+            "end": {
+              "line": 3,
               "column": 50
             }
           }
         },
         {
           "value": "../../../engine/ui/UIManager",
-          "resolved": "__unresolved_2",
+          "resolved": "__unresolved_3",
           "loc": {
             "start": {
-              "line": 3,
+              "line": 4,
               "column": 26
             },
             "end": {
-              "line": 3,
+              "line": 4,
               "column": 56
             }
           }
         },
         {
           "value": "../CommonGameProgress",
-          "resolved": "__unresolved_3",
+          "resolved": "__unresolved_4",
           "loc": {
             "start": {
-              "line": 4,
+              "line": 5,
               "column": 35
             },
             "end": {
-              "line": 4,
+              "line": 5,
               "column": 58
             }
           }
         },
         {
           "value": "../CommonUIConfig",
-          "resolved": "__unresolved_4",
+          "resolved": "__unresolved_5",
           "loc": {
             "start": {
-              "line": 5,
+              "line": 6,
               "column": 27
             },
             "end": {
-              "line": 5,
+              "line": 6,
               "column": 46
             }
           }
@@ -22392,6 +22406,13 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/engine/PlatformManager.ts"
           },
           "messages": []
         },
@@ -23025,7 +23046,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/engine/Launcher.ts": {
       "mTimestamp": {
-        "mtime": 1781946493801.289,
+        "mtime": 1782463183575.7222,
         "uuid": "a8aceee6-ff61-4d7e-b9c6-07d67c2cf768"
       },
       "chunkId": "eb218a129795533e82c4de050b0f690f873f22b2",
@@ -23094,6 +23115,20 @@
               "column": 67
             }
           }
+        },
+        {
+          "value": "./PlatformManager",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 32
+            },
+            "end": {
+              "line": 5,
+              "column": 51
+            }
+          }
         }
       ],
       "type": "esm",
@@ -23144,6 +23179,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/CommonGameEntry.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/engine/PlatformManager.ts"
           },
           "messages": []
         }
@@ -23999,7 +24041,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/engine/PlatformManager.ts": {
       "mTimestamp": {
-        "mtime": 1782278971790.9082,
+        "mtime": 1782463179008.722,
         "uuid": "a609ec9c-c7c4-4c81-b730-8f2bef02d1ab"
       },
       "chunkId": "f6659026b9e37eba1c03c58b09813b082b4e7f12",

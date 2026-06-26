@@ -57,6 +57,15 @@ export interface PlatformPrivacyAuthorizeResult {
     err?: unknown;
 }
 
+export interface PlatformSidebarResult {
+    result: PlatformResult;
+    platform: MiniGamePlatform;
+    isExist?: boolean;
+    isFromSidebar?: boolean;
+    message?: string;
+    err?: unknown;
+}
+
 export interface PlatformRankUserData {
     nickname: string;
     avatarUrl?: string;
@@ -85,6 +94,18 @@ type MiniGameUserInfoResult = {
 type MiniGamePrivacySettingResult = {
     needAuthorization?: boolean;
     privacyContractName?: string;
+};
+
+type MiniGameSceneCheckResult = {
+    isExist?: boolean;
+};
+
+type MiniGameShowOptions = {
+    scene?: string;
+    launch_from?: string;
+    location?: string;
+    query?: Record<string, string>;
+    refererInfo?: unknown;
 };
 
 type MiniGameOpenDataContext = {
@@ -147,6 +168,20 @@ type MiniGameRuntime = {
         success?: () => void;
         fail?: (err: unknown) => void;
     }) => void;
+    checkScene?: (options: {
+        scene: 'sidebar';
+        success?: (res: MiniGameSceneCheckResult) => void;
+        fail?: (err: unknown) => void;
+        complete?: () => void;
+    }) => void;
+    navigateToScene?: (options: {
+        scene: 'sidebar';
+        success?: () => void;
+        fail?: (err: unknown) => void;
+        complete?: () => void;
+    }) => void;
+    onShow?: (callback: (res: MiniGameShowOptions) => void) => void;
+    getLaunchOptionsSync?: () => MiniGameShowOptions;
     getOpenDataContext?: () => MiniGameOpenDataContext;
 };
 
@@ -156,6 +191,7 @@ export class PlatformManager {
     private _initialized: boolean = false;
     private _currentPlatform: MiniGamePlatform = MiniGamePlatform.Auto;
     private _currentRuntime: MiniGameRuntime | null = null;
+    private _latestShowOptions: MiniGameShowOptions | null = null;
 
     static getInstance(): PlatformManager {
         if (!this._instance) {
@@ -169,6 +205,7 @@ export class PlatformManager {
 
         this._currentPlatform = this.resolvePlatformBySystem();
         this._currentRuntime = this.getRuntime(this._currentPlatform);
+        this.registerShowListener(this._currentPlatform, this._currentRuntime);
         this._initialized = true;
     }
 
@@ -358,6 +395,84 @@ export class PlatformManager {
         const result = await this.requirePrivacyAuthorize(setting.platform);
         this.logPrivacyStep('隐私授权流程完成', result);
         return result;
+    }
+
+    async checkSidebarScene(platform: MiniGamePlatform = MiniGamePlatform.Auto): Promise<PlatformSidebarResult> {
+        if (!this._initialized) this.init();
+
+        const resolvedPlatform = this.resolvePlatform(platform);
+        const runtime = this.getRuntimeByPlatform(resolvedPlatform);
+        if (resolvedPlatform !== MiniGamePlatform.Douyin || !runtime?.checkScene) {
+            return {
+                result: PlatformResult.Unsupported,
+                platform: resolvedPlatform,
+                isExist: false,
+                message: '当前环境不支持抖音侧边栏入口检测',
+            };
+        }
+
+        return new Promise(resolve => {
+            runtime.checkScene({
+                scene: 'sidebar',
+                success: (res) => {
+                    resolve({
+                        result: PlatformResult.Success,
+                        platform: resolvedPlatform,
+                        isExist: !!res.isExist,
+                        message: res.isExist ? '当前宿主支持侧边栏复访' : '当前宿主不支持侧边栏复访',
+                    });
+                },
+                fail: (err: unknown) => {
+                    resolve({
+                        result: PlatformResult.Failed,
+                        platform: resolvedPlatform,
+                        isExist: false,
+                        message: '抖音侧边栏入口检测失败',
+                        err,
+                    });
+                },
+            });
+        });
+    }
+
+    async navigateToSidebar(platform: MiniGamePlatform = MiniGamePlatform.Auto): Promise<PlatformSidebarResult> {
+        if (!this._initialized) this.init();
+
+        const resolvedPlatform = this.resolvePlatform(platform);
+        const runtime = this.getRuntimeByPlatform(resolvedPlatform);
+        if (resolvedPlatform !== MiniGamePlatform.Douyin || !runtime?.navigateToScene) {
+            return {
+                result: PlatformResult.Unsupported,
+                platform: resolvedPlatform,
+                message: '当前环境不支持跳转抖音侧边栏',
+            };
+        }
+
+        return new Promise(resolve => {
+            runtime.navigateToScene({
+                scene: 'sidebar',
+                success: () => {
+                    resolve({
+                        result: PlatformResult.Success,
+                        platform: resolvedPlatform,
+                        message: '已跳转抖音侧边栏',
+                    });
+                },
+                fail: (err: unknown) => {
+                    resolve({
+                        result: PlatformResult.Failed,
+                        platform: resolvedPlatform,
+                        message: '跳转抖音侧边栏失败',
+                        err,
+                    });
+                },
+            });
+        });
+    }
+
+    isFromSidebar(): boolean {
+        if (!this._initialized) this.init();
+        return this.isSidebarShowOptions(this._latestShowOptions);
     }
 
     async submitRankScore(key: string, score: number, platform: MiniGamePlatform = MiniGamePlatform.Auto): Promise<PlatformRankResult> {
@@ -612,6 +727,22 @@ export class PlatformManager {
         if (platform === MiniGamePlatform.WeChat) return globalObj.wx ?? null;
         if (platform === MiniGamePlatform.Douyin) return globalObj.tt ?? null;
         return null;
+    }
+
+    private registerShowListener(platform: MiniGamePlatform, runtime: MiniGameRuntime | null): void {
+        if (platform !== MiniGamePlatform.Douyin || !runtime) return;
+
+        this._latestShowOptions = runtime.getLaunchOptionsSync?.() ?? null;
+        runtime.onShow?.((res) => {
+            this._latestShowOptions = res;
+            if (this.isSidebarShowOptions(res)) {
+                console.log('PlatformManager: 用户从抖音侧边栏复访进入', res);
+            }
+        });
+    }
+
+    private isSidebarShowOptions(options: MiniGameShowOptions | null): boolean {
+        return options?.launch_from === 'homepage' && options?.location === 'sidebar_card';
     }
 
     private logPrivacyStep(
