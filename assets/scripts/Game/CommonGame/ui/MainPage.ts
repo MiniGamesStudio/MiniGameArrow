@@ -28,6 +28,7 @@ export class MainPage extends UIBase {
         this.clearRoot(this.m_LeftRoot);
         this.clearRoot(this.m_RightRoot);
         this.clearRoot(this.m_MiddleRoot);
+        PlatformManager.getInstance().closeGameClub();
     }
 
     private initUI(): void {
@@ -36,6 +37,7 @@ export class MainPage extends UIBase {
         this.clearRoot(this.m_MiddleRoot);
 
         this.InitUIButtons();
+        this.tryCreateGameClubButton();
     }
 
     private InitUIButtons(): void {
@@ -84,6 +86,16 @@ export class MainPage extends UIBase {
         rightButtons.forEach((button, index) => {
             button.node.setPosition(0, 80 - index * 90, 0);
         });
+    }
+
+    /** 微信环境下直接创建原生游戏圈按钮入口 */
+    private tryCreateGameClubButton(): void {
+        if (PlatformManager.getInstance().getPlatform() !== MiniGamePlatform.WeChat) return;
+
+        const result = PlatformManager.getInstance().openGameClub();
+        if (result.result !== PlatformResult.Success) {
+            console.warn('MainPage: 创建微信游戏圈按钮失败', result);
+        }
     }
 
     private async openDouyinSidebar(): Promise<void> {

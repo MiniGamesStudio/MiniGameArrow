@@ -66,6 +66,13 @@ export interface PlatformSidebarResult {
     err?: unknown;
 }
 
+export interface PlatformGameClubResult {
+    result: PlatformResult;
+    platform: MiniGamePlatform;
+    message?: string;
+    err?: unknown;
+}
+
 export interface PlatformRankUserData {
     nickname: string;
     avatarUrl?: string;
@@ -111,6 +118,22 @@ type MiniGameShowOptions = {
 type MiniGameOpenDataContext = {
     canvas?: unknown;
     postMessage?: (message: unknown) => void;
+};
+
+type MiniGameSystemInfo = {
+    screenWidth?: number;
+    screenHeight?: number;
+    windowWidth?: number;
+    windowHeight?: number;
+    statusBarHeight?: number;
+};
+
+type MiniGameGameClubButton = {
+    show?: () => void;
+    hide?: () => void;
+    destroy?: () => void;
+    onTap?: (callback: () => void) => void;
+    offTap?: (callback: () => void) => void;
 };
 
 type MiniGameCloudStorageData = {
@@ -183,6 +206,26 @@ type MiniGameRuntime = {
     onShow?: (callback: (res: MiniGameShowOptions) => void) => void;
     getLaunchOptionsSync?: () => MiniGameShowOptions;
     getOpenDataContext?: () => MiniGameOpenDataContext;
+    getSystemInfoSync?: () => MiniGameSystemInfo;
+    createGameClubButton?: (options: {
+        type: 'text' | 'image';
+        text?: string;
+        icon?: 'dark' | 'light';
+        style: {
+            left: number;
+            top: number;
+            width: number;
+            height: number;
+            color?: string;
+            fontSize?: number;
+            borderRadius?: number;
+            textAlign?: 'left' | 'center' | 'right';
+            lineHeight?: number;
+            borderColor?: string;
+            borderWidth?: number;
+            backgroundColor?: string;
+        };
+    }) => MiniGameGameClubButton;
 };
 
 export class PlatformManager {
@@ -192,6 +235,7 @@ export class PlatformManager {
     private _currentPlatform: MiniGamePlatform = MiniGamePlatform.Auto;
     private _currentRuntime: MiniGameRuntime | null = null;
     private _latestShowOptions: MiniGameShowOptions | null = null;
+    private _gameClubButton: MiniGameGameClubButton | null = null;
 
     static getInstance(): PlatformManager {
         if (!this._instance) {
@@ -473,6 +517,82 @@ export class PlatformManager {
     isFromSidebar(): boolean {
         if (!this._initialized) this.init();
         return this.isSidebarShowOptions(this._latestShowOptions);
+    }
+
+    /**
+     * 拉起微信游戏圈入口。
+     * 微信游戏圈只能通过原生 wx.createGameClubButton 创建的按钮打开，
+     * 因此这里会在屏幕右上角创建一个原生游戏圈按钮并显示，用户点击该原生按钮即可进入游戏圈。
+     */
+    openGameClub(platform: MiniGamePlatform = MiniGamePlatform.Auto): PlatformGameClubResult {
+        if (!this._initialized) this.init();
+
+        const resolvedPlatform = this.resolvePlatform(platform);
+        const runtime = this.getRuntimeByPlatform(resolvedPlatform);
+        if (resolvedPlatform !== MiniGamePlatform.WeChat || !runtime?.createGameClubButton) {
+            return {
+                result: PlatformResult.Unsupported,
+                platform: resolvedPlatform,
+                message: '当前环境不支持微信游戏圈',
+            };
+        }
+
+        this.destroyGameClubButton();
+
+        const screenSize = this.getScreenSize(runtime);
+        const buttonSize = 44;
+        const margin = 12;
+        const style = {
+            left: (screenSize.screenWidth ?? 0) - buttonSize - margin,
+            top: (screenSize.statusBarHeight ?? margin) + margin,
+            width: buttonSize,
+            height: buttonSize,
+        };
+
+        try {
+            this._gameClubButton = runtime.createGameClubButton({
+                type: 'image',
+                icon: 'dark',
+                style,
+            });
+            this._gameClubButton?.show?.();
+            return {
+                result: PlatformResult.Success,
+                platform: resolvedPlatform,
+                message: '已显示微信游戏圈入口',
+            };
+        } catch (err) {
+            this._gameClubButton = null;
+            return {
+                result: PlatformResult.Failed,
+                platform: resolvedPlatform,
+                message: '微信游戏圈入口创建失败',
+                err,
+            };
+        }
+    }
+
+    /** 关闭（销毁）当前已创建的微信游戏圈入口按钮 */
+    closeGameClub(): void {
+        this.destroyGameClubButton();
+    }
+
+    private destroyGameClubButton(): void {
+        if (!this._gameClubButton) return;
+        try {
+            this._gameClubButton.destroy?.();
+        } catch (err) {
+            console.warn('PlatformManager: 销毁微信游戏圈按钮失败', err);
+        }
+        this._gameClubButton = null;
+    }
+
+    private getScreenSize(runtime: MiniGameRuntime): MiniGameSystemInfo {
+        try {
+            return runtime.getSystemInfoSync?.() ?? {};
+        } catch {
+            return {};
+        }
     }
 
     async submitRankScore(key: string, score: number, platform: MiniGamePlatform = MiniGamePlatform.Auto): Promise<PlatformRankResult> {

@@ -251,7 +251,7 @@
       "time": 1776483748808.626
     },
     "scripts\\engine": {
-      "time": 1782442558288.1104,
+      "time": 1782726634703.7769,
       "uuid": "211cab37-71d6-4ead-affc-1bd22b5825b3"
     },
     "scripts\\framework": {
@@ -817,7 +817,7 @@
       "uuid": "73edaae5-0b7a-425f-afe0-f601833012aa"
     },
     "scripts\\Game\\CommonGame\\ui": {
-      "time": 1782715926089.267,
+      "time": 1782726830875.4846,
       "uuid": "191bdeae-9286-465e-a518-a494dbf87eba"
     },
     "scripts\\Game\\CommonGame\\CommonGameEntry.ts": {
@@ -847,7 +847,7 @@
       "time": 1781946493799.288
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
-      "time": 1782713270400.249,
+      "time": 1782726830763.4856,
       "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
     },
     "scripts\\engine\\AdManager.ts.meta": {
@@ -889,7 +889,7 @@
       "uuid": "b45da2d2-3f4c-4b69-a2bb-ea92ed3a7852"
     },
     "scripts\\engine\\PlatformManager.ts": {
-      "time": 1782463179008.722,
+      "time": 1782726634656.777,
       "uuid": "a609ec9c-c7c4-4c81-b730-8f2bef02d1ab"
     },
     "resources\\ui\\LoginPanel.prefab.meta": {
