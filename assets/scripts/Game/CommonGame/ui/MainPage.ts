@@ -28,7 +28,6 @@ export class MainPage extends UIBase {
         this.clearRoot(this.m_LeftRoot);
         this.clearRoot(this.m_RightRoot);
         this.clearRoot(this.m_MiddleRoot);
-        PlatformManager.getInstance().closeGameClub();
     }
 
     private initUI(): void {
@@ -37,7 +36,6 @@ export class MainPage extends UIBase {
         this.clearRoot(this.m_MiddleRoot);
 
         this.InitUIButtons();
-        this.tryCreateGameClubButton();
     }
 
     private InitUIButtons(): void {
@@ -70,6 +68,17 @@ export class MainPage extends UIBase {
             },
         ];
 
+        if (PlatformManager.getInstance().getPlatform() === MiniGamePlatform.WeChat) {
+            rightButtonConfigs.push({
+                buttonName: "GameClub",
+                buttonText: "游戏圈",
+                buttonIcon: "texture/Icon_ImageIcon_Ranking",
+                onClick: () => {
+                    this.openWeChatGameClub();
+                },
+            });
+        }
+
         // if (PlatformManager.getInstance().getPlatform() === MiniGamePlatform.Douyin) {
         //     rightButtonConfigs.push({
         //         buttonName: "Sidebar",
@@ -88,13 +97,13 @@ export class MainPage extends UIBase {
         });
     }
 
-    /** 微信环境下直接创建原生游戏圈按钮入口 */
-    private tryCreateGameClubButton(): void {
-        if (PlatformManager.getInstance().getPlatform() !== MiniGamePlatform.WeChat) return;
+    /** 微信游戏圈 OPENLINK 值（由微信开放平台/渠道下发） */
+    private static readonly GAME_CLUB_OPEN_LINK = '-SSEykJvFV3pORt5kTNpS2-MczMSa1aUsUcE1ADW8e3l2BGtUIHxCLNVcvBXDjV0y8e81_K9sVzCb-FNDAK_50EBVFxe2MmRSnYv27_-Euv2Bye0q9FqwbW_ApJi_MoJ5CbomTGuKDMRlv7whMeOFUGFaganV4W3p14yBJs-ovJrKGZDQa7BwIEcmhUcHA9QzLv4ddvJkmINyixQWsQUad1hi9iUapw42CxLEJ3-Hp76oqp82oGmhdlUs_bnIOrMeYc-c4NTv4KCUkOI8T0H0WUrVlbe-QZB8Hq-edxoceJEJADWXJD6g7B8PV7A9vmuQQDsVAXNEpiykZ_EE5cLZg';
 
-        const result = PlatformManager.getInstance().openGameClub();
+    private async openWeChatGameClub(): Promise<void> {
+        const result = await PlatformManager.getInstance().openGameClubPage(MainPage.GAME_CLUB_OPEN_LINK);
         if (result.result !== PlatformResult.Success) {
-            console.warn('MainPage: 创建微信游戏圈按钮失败', result);
+            console.warn('MainPage: 拉起微信游戏圈失败', result);
         }
     }
 
