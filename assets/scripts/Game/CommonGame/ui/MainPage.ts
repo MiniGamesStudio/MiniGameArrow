@@ -42,7 +42,7 @@ export class MainPage extends UIBase {
         const buttons = this.CreateUIButtonsByTable(this.m_MiddleRoot, [
             {
                 buttonName: "StartGame",
-                buttonText: "开始游戏",
+                buttonText: "",
                 buttonIcon: "buttons/Button01_145_Orange",
                 onClick: () => {
                     const currentLevel = CommonGameProgress.getCurrentLevel(1);
@@ -60,7 +60,7 @@ export class MainPage extends UIBase {
         const rightButtonConfigs = [
             {
                 buttonName: "Rank",
-                buttonText: "排行榜",
+                buttonText: "",
                 buttonIcon: "texture/Icon_ImageIcon_Ranking",
                 onClick: () => {
                     UIManager.GetInstance().OpenPanel(CommonUIID.RankPanel);

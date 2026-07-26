@@ -55,14 +55,14 @@
       "time": 1782840047428.472
     },
     "resources\\ui": {
-      "time": 1782840047430.4656,
+      "time": 1785057536162.2468,
       "uuid": "6c60be67-475a-43dc-a592-251e41add936"
     },
     "resources\\ui\\LoadingPanel.prefab.meta": {
       "time": 1782840047429.4685
     },
     "resources\\ui\\LoadingPanel.prefab": {
-      "time": 1782840047428.472,
+      "time": 1785057541675.6514,
       "uuid": "55f8e988-f02b-41a3-8681-5a467e621d1b"
     },
     "scripts\\UIScripts\\LoadingPanel.ts.meta": {
@@ -75,7 +75,7 @@
       "time": 1782840047430.4656
     },
     "resources\\ui\\MainPanel.prefab": {
-      "time": 1782840047430.4656,
+      "time": 1785058187139.5464,
       "uuid": "e9ac1fc5-9611-4b81-934c-e3adb37b13fb"
     },
     "scripts\\UIScripts\\MainPanel.ts.meta": {
@@ -85,29 +85,8 @@
       "time": 1782840047423.489
     },
     "resources\\texture": {
-      "time": 1782840047428.472,
+      "time": 1785057706889.197,
       "uuid": "2d8f91cb-f9c9-4b31-b9da-833ea47f7044"
-    },
-    "resources\\texture\\Icon_ImageIcon_Ranking.png.meta": {
-      "time": 1782840047425.482
-    },
-    "resources\\texture\\Icon_ImageIcon_Trophy_m.png.meta": {
-      "time": 1782840047425.482
-    },
-    "resources\\texture\\Icon_ImageIcon_Ranking.png": {
-      "time": 1782840047425.482,
-      "uuid": "8f2bf944-ec0d-49ad-9f67-9485e9e0288d"
-    },
-    "resources\\texture\\Icon_ImageIcon_Trophy_m.png": {
-      "time": 1782840047425.482,
-      "uuid": "12802953-430c-4b56-899e-68fd8ebabcb9"
-    },
-    "resources\\texture\\Icon_ImageIcon_Coin02.png.meta": {
-      "time": 1782840047425.482
-    },
-    "resources\\texture\\Icon_ImageIcon_Coin02.png": {
-      "time": 1782840047424.4854,
-      "uuid": "83985e7f-c240-4752-b17d-27c185892c87"
     },
     "scripts\\UIScripts\\GamePage.ts.meta": {
       "time": 1758166749347.6506
@@ -145,57 +124,36 @@
     "resources\\buttons.meta": {
       "time": 1782840047421.4956
     },
-    "resources\\buttons\\Button01_145_Orange.Png.meta": {
-      "time": 1782840047422.492
-    },
     "resources\\buttons": {
-      "time": 1782840047423.489,
+      "time": 1785057840272.091,
       "uuid": "32f388a2-302f-42ca-9b4e-d29b82055982"
-    },
-    "resources\\buttons\\Button01_145_Orange.Png": {
-      "time": 1782840047421.4956,
-      "uuid": "ee9a4b5e-9cf7-4e80-82f7-1295f0ae2500"
     },
     "resources\\background.meta": {
       "time": 1782840047419.9954
     },
-    "resources\\background\\bg02.png.meta": {
-      "time": 1782840047421.4956
-    },
     "resources\\background": {
-      "time": 1782840047421.4956,
+      "time": 1785058192673.087,
       "uuid": "e0980062-77e2-404d-a33b-b2572af00af1"
     },
-    "resources\\background\\bg02.png": {
-      "time": 1782840047420.4973,
-      "uuid": "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa"
-    },
     "resources\\buttons\\PictoIcon_Close.Png.meta": {
-      "time": 1782840047423.489
+      "time": 1785057821380.9211
     },
     "resources\\buttons\\PictoIcon_Close.Png": {
-      "time": 1782840047423.489,
+      "time": 1785054250468.361,
       "uuid": "a4840e4c-51eb-40b5-ae6f-035d58ec0152"
     },
-    "resources\\texture\\title.png.meta": {
-      "time": 1782840047427.4753
-    },
-    "resources\\texture\\title.png": {
-      "time": 1782840047427.4753,
-      "uuid": "4dfad19b-187b-40d5-ba83-2e74171fdee1"
-    },
     "resources\\buttons\\Icon_PictoIcon_Pause.png.meta": {
-      "time": 1782840047422.492
+      "time": 1785057821379.9246
     },
     "resources\\buttons\\Icon_PictoIcon_Pause.png": {
-      "time": 1782840047422.492,
+      "time": 1785054735308.7212,
       "uuid": "9f0061d1-19dd-4e32-8c0b-2dcf7d57772e"
     },
     "resources\\buttons\\Icon_Star.png.meta": {
-      "time": 1782840047423.489
+      "time": 1785057821380.9211
     },
     "resources\\buttons\\Icon_Star.png": {
-      "time": 1782840047422.492,
+      "time": 1785055611322.6172,
       "uuid": "52792a94-0132-4a9e-99e0-365f1a486ccc"
     },
     "scripts\\UIScripts\\Flower.ts.meta": {
@@ -840,14 +798,14 @@
       "time": 1782840047430.4656
     },
     "resources\\ui\\MainPage.prefab": {
-      "time": 1782840047429.4685,
+      "time": 1785057631694.784,
       "uuid": "f7e7fc73-23fc-4f8f-838a-3643ae2e8713"
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts.meta": {
       "time": 1782840047436.973
     },
     "scripts\\Game\\CommonGame\\ui\\MainPage.ts": {
-      "time": 1782840047436.973,
+      "time": 1785058239171.1238,
       "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
     },
     "scripts\\engine\\AdManager.ts.meta": {
@@ -863,13 +821,6 @@
     "scripts\\Game\\CommonGame\\ui\\GamePanel.ts": {
       "time": 1782840047435.473,
       "uuid": "0f6f935e-dd32-4f8f-870f-858c31678dec"
-    },
-    "resources\\texture\\sheeptitle.png.meta": {
-      "time": 1782840047427.4753
-    },
-    "resources\\texture\\sheeptitle.png": {
-      "time": 1782840047427.4753,
-      "uuid": "a66726f4-f780-4d1d-b776-00cce3b6c51d"
     },
     "scripts\\Game\\CommonGame\\level.meta": {
       "time": 1781968465673.9724
@@ -892,7 +843,7 @@
       "time": 1782840047429.4685
     },
     "resources\\ui\\LoginPanel.prefab": {
-      "time": 1782840047429.4685,
+      "time": 1785057579744.9585,
       "uuid": "b6b4c5ef-8ac7-4533-a50a-dadbc41c189e"
     },
     "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts.meta": {
@@ -976,7 +927,7 @@
       "uuid": "8df71d4f-5f7d-4e61-9b2a-2c8b33b1a101"
     },
     "subpackages\\game": {
-      "time": 1785054802451.6875,
+      "time": 1785058564333.4985,
       "uuid": "a0c6c8d4-10db-48a4-a2b4-5d4e3b2a9101"
     },
     "subpackages\\rank": {
@@ -992,7 +943,7 @@
       "uuid": "c30cc32b-cb89-4481-b103-8f9095104ac8"
     },
     "subpackages\\game\\texture": {
-      "time": 1782840047454.5,
+      "time": 1785059226668.7375,
       "uuid": "dbdbb2c4-2818-4a64-9df1-b1a9ac920201"
     },
     "subpackages\\game\\ui": {
@@ -1004,20 +955,20 @@
       "uuid": "2364a1ff-cca8-449b-abc8-70e20f478d52"
     },
     "subpackages\\rank\\ui": {
-      "time": 1782840047459.483,
+      "time": 1785059744123.544,
       "uuid": "052b7b89-95cf-4f28-a371-7bb037939301"
     },
     "subpackages\\game\\config\\sheep_levels.json.meta": {
       "time": 1782840047449.9294
     },
     "subpackages\\game\\Icons\\Skill_1.png.meta": {
-      "time": 1782840047447.9363
+      "time": 1785058510918.987
     },
     "subpackages\\game\\Icons\\Skill_2.png.meta": {
-      "time": 1782840047447.9363
+      "time": 1785058510919.9749
     },
     "subpackages\\game\\Icons\\Skill_3.png.meta": {
-      "time": 1782840047448.9326
+      "time": 1785058510920.9717
     },
     "subpackages\\game\\texture\\sheep.png.meta": {
       "time": 1782840047453.5034
@@ -1051,15 +1002,15 @@
       "uuid": "4c0814f7-b690-4a5f-a5c8-61b6f9219a96"
     },
     "subpackages\\game\\Icons\\Skill_2.png": {
-      "time": 1782840047447.9363,
+      "time": 1785054406902.346,
       "uuid": "d0a9d6da-1e4e-46d3-8e0f-5b9c66014d93"
     },
     "subpackages\\game\\Icons\\Skill_1.png": {
-      "time": 1782840047447.9363,
+      "time": 1785054430013.377,
       "uuid": "483f80bc-31e2-47a5-9fae-d8fb24a81f95"
     },
     "subpackages\\game\\Icons\\Skill_3.png": {
-      "time": 1782840047448.9326,
+      "time": 1785054449479.5847,
       "uuid": "fc8553d7-131b-4691-98e7-6ceeaa07a1c7"
     },
     "subpackages\\game\\texture\\sheep.png": {
@@ -1067,15 +1018,15 @@
       "uuid": "66c41a34-27f9-4521-9581-a81e8714a705"
     },
     "subpackages\\game\\ui\\GamePanel.prefab": {
-      "time": 1782840047455.4966,
+      "time": 1785058767409.973,
       "uuid": "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23"
     },
     "subpackages\\game\\ui\\PausePanel.prefab": {
-      "time": 1782840047455.4966,
+      "time": 1785059760365.386,
       "uuid": "2c8b954c-0045-4bcb-8ec1-847ad387b338"
     },
     "subpackages\\game\\ui\\TransitionPanel.prefab": {
-      "time": 1782840047456.4932,
+      "time": 1785059405666.5989,
       "uuid": "83902b23-c019-4bc5-8a63-c1703769b66e"
     },
     "subpackages\\game\\texture\\sheepblack.png": {
@@ -1091,7 +1042,7 @@
       "uuid": "419870d2-343b-4884-9ff9-1c5c0934e900"
     },
     "subpackages\\rank\\ui\\RankPanel.prefab": {
-      "time": 1782840047459.483,
+      "time": 1785059778400.348,
       "uuid": "8ef6df47-0ec6-430e-accf-e7f7f77a5e07"
     },
     "subpackages\\rank\\ranking\\RankingBackground.png": {
@@ -1104,6 +1055,265 @@
     "resources\\ui\\ProgressBar.prefab": {
       "time": 1782840047430.4656,
       "uuid": "f4792ee9-76b7-4236-81bc-de8678eadf47"
+    },
+    "resources\\background\\loading_bg.png.meta": {
+      "time": 1785057049056.4268
+    },
+    "resources\\background\\loading_bg.png": {
+      "time": 1785053553393.5603,
+      "uuid": "a6660959-86b3-45ab-8657-157eabca6c48"
+    },
+    "resources\\background\\main_bg.png.meta": {
+      "time": 1785057124539.0051
+    },
+    "resources\\background\\main_bg.png": {
+      "time": 1785053805522.4119,
+      "uuid": "d2444a6a-3443-49c1-a1cb-946128b1d6d0"
+    },
+    "resources\\texture\\chong.png.meta": {
+      "time": 1785057202117.8364
+    },
+    "resources\\texture\\mie.png.meta": {
+      "time": 1785057202118.8335
+    },
+    "resources\\texture\\qian.png.meta": {
+      "time": 1785057202116.8398
+    },
+    "resources\\texture\\sheep.png.meta": {
+      "time": 1785057202115.8433
+    },
+    "resources\\texture\\yang.png.meta": {
+      "time": 1785057202114.8464
+    },
+    "resources\\texture\\yang.png": {
+      "time": 1785053491968.2415,
+      "uuid": "f3a4d25a-021e-4f8b-a3d2-45a8e255dcf8"
+    },
+    "resources\\texture\\sheep.png": {
+      "time": 1785043875971.054,
+      "uuid": "2075fbad-9c2c-488e-a39a-bbaaf578cca7"
+    },
+    "resources\\texture\\qian.png": {
+      "time": 1785053477821.0254,
+      "uuid": "3bf18fca-8400-4e69-8562-befd43e19d7c"
+    },
+    "resources\\texture\\chong.png": {
+      "time": 1785053465927.9407,
+      "uuid": "ab44771b-66e9-4e5c-a60c-442fe3c5b153"
+    },
+    "resources\\texture\\mie.png": {
+      "time": 1785056835325.303,
+      "uuid": "7058e569-8506-4a68-ae35-7a7a17631931"
+    },
+    "resources\\texture\\a.png.meta": {
+      "time": 1785057370079.895
+    },
+    "resources\\texture\\a.png": {
+      "time": 1785056971689.171,
+      "uuid": "bcd4452b-44a4-40de-9efd-50196fdc176d"
+    },
+    "resources\\ui\\TitleRoot.prefab.meta": {
+      "time": 1785057536164.2397
+    },
+    "resources\\ui\\TitleRoot.prefab": {
+      "time": 1785057536163.243,
+      "uuid": "cab4e68c-1c1e-48d5-99f8-de9cb5b84a59"
+    },
+    "resources\\texture\\Icon_ImageIcon_Ranking.png.meta": {
+      "time": 1785057706899.164
+    },
+    "resources\\texture\\Icon_ImageIcon_Ranking.png": {
+      "time": 1785053709620.5254,
+      "uuid": "75e973e4-94d8-4b4c-af8f-315487ec9c24"
+    },
+    "resources\\buttons\\Button01_145_Orange.png.meta": {
+      "time": 1785057840281.0605
+    },
+    "resources\\buttons\\Button01_145_Orange.png": {
+      "time": 1785053733675.1243,
+      "uuid": "cf386d6d-68c1-4232-99e2-8a3009320b12"
+    },
+    "subpackages\\game\\background.meta": {
+      "time": 1785058564334.4946
+    },
+    "subpackages\\game\\background": {
+      "time": 1785058564334.4946,
+      "uuid": "d3f2afdd-f52b-485e-83e1-0f7c0b1e4442"
+    },
+    "subpackages\\game\\background\\game_bg.png.meta": {
+      "time": 1785058564358.941
+    },
+    "subpackages\\game\\background\\game_bg.png": {
+      "time": 1785054957365.617,
+      "uuid": "0b025332-a07a-4aa1-87da-7b3802e85833"
+    },
+    "subpackages\\game\\texture\\ad_use.png.meta": {
+      "time": 1785058865878.259
+    },
+    "subpackages\\game\\texture\\backbtn.png.meta": {
+      "time": 1785058865873.2832
+    },
+    "subpackages\\game\\texture\\continuebtn.png.meta": {
+      "time": 1785058865874.273
+    },
+    "subpackages\\game\\texture\\diban.png.meta": {
+      "time": 1785058865879.2556
+    },
+    "subpackages\\game\\texture\\fanpai_icon.png.meta": {
+      "time": 1785058865877.2627
+    },
+    "subpackages\\game\\texture\\fanpai_title.png.meta": {
+      "time": 1785058865886.233
+    },
+    "subpackages\\game\\texture\\pause_title.png.meta": {
+      "time": 1785058865888.2258
+    },
+    "subpackages\\game\\texture\\PictoIcon_Close.png.meta": {
+      "time": 1785058865888.2258
+    },
+    "subpackages\\game\\texture\\rank_bg1.png.meta": {
+      "time": 1785058865890.2192
+    },
+    "subpackages\\game\\texture\\rank_bg2.png.meta": {
+      "time": 1785058865889.2224
+    },
+    "subpackages\\game\\texture\\rank_bg3.png.meta": {
+      "time": 1785058865897.196
+    },
+    "subpackages\\game\\texture\\rank_bg4.png.meta": {
+      "time": 1785058865898.1926
+    },
+    "subpackages\\game\\texture\\rank_diban.png.meta": {
+      "time": 1785058865902.3572
+    },
+    "subpackages\\game\\texture\\rank_one.png.meta": {
+      "time": 1785058865901.3857
+    },
+    "subpackages\\game\\texture\\rank_three.png.meta": {
+      "time": 1785058865899.1895
+    },
+    "subpackages\\game\\texture\\rank_two.png.meta": {
+      "time": 1785058865909.3335
+    },
+    "subpackages\\game\\texture\\remove.png.meta": {
+      "time": 1785058865911.3267
+    },
+    "subpackages\\game\\texture\\remove_title.png.meta": {
+      "time": 1785058865910.33
+    },
+    "subpackages\\game\\texture\\restartbtn.png.meta": {
+      "time": 1785058865912.3235
+    },
+    "subpackages\\game\\texture\\sheep_game.png.meta": {
+      "time": 1785058865913.3203
+    },
+    "subpackages\\game\\texture\\xipai_icon.png.meta": {
+      "time": 1785058865920.2969
+    },
+    "subpackages\\game\\texture\\xipai_title.png.meta": {
+      "time": 1785058865919.3005
+    },
+    "subpackages\\game\\texture\\backbtn.png": {
+      "time": 1785054211290.912,
+      "uuid": "3e8b0e42-4d15-43fd-a504-7569853b0b3c"
+    },
+    "subpackages\\game\\texture\\continuebtn.png": {
+      "time": 1785054156245.1772,
+      "uuid": "9be1b56e-a0c0-4a34-b931-3aee5af53a2a"
+    },
+    "subpackages\\game\\texture\\fanpai_icon.png": {
+      "time": 1785055423874.2876,
+      "uuid": "2f6324c2-e541-4fff-8f42-b9ac0fb7f989"
+    },
+    "subpackages\\game\\texture\\ad_use.png": {
+      "time": 1785055105546.881,
+      "uuid": "98fd442a-724a-4f65-ac2e-47d3367e34f6"
+    },
+    "subpackages\\game\\texture\\diban.png": {
+      "time": 1785055485700.8672,
+      "uuid": "372a8730-d0cd-488f-bdfe-e67c41a2917d"
+    },
+    "subpackages\\game\\texture\\fanpai_title.png": {
+      "time": 1785055329407.0674,
+      "uuid": "8471ddf3-b0f4-4008-b3e9-2fde773d181f"
+    },
+    "subpackages\\game\\texture\\PictoIcon_Close.png": {
+      "time": 1785054250468.361,
+      "uuid": "ae0f9378-35a5-453b-b013-fc95ba8bf213"
+    },
+    "subpackages\\game\\texture\\pause_title.png": {
+      "time": 1785055539116.8684,
+      "uuid": "348ebc2a-6442-4dbf-ba11-e7caace7d77d"
+    },
+    "subpackages\\game\\texture\\rank_bg2.png": {
+      "time": 1785056034249.8882,
+      "uuid": "06c61434-69ef-4996-8a7e-57aa1a5cdf6b"
+    },
+    "subpackages\\game\\texture\\rank_bg1.png": {
+      "time": 1785056085689.7793,
+      "uuid": "acc21694-43b6-4f73-8062-1ae3b315637e"
+    },
+    "subpackages\\game\\texture\\rank_bg3.png": {
+      "time": 1785056000366.2915,
+      "uuid": "4632f6fe-4ed6-4f7f-9579-9ad740bc8555"
+    },
+    "subpackages\\game\\texture\\rank_bg4.png": {
+      "time": 1785055857980.832,
+      "uuid": "f00583b5-46cb-45ae-b50b-a3045f264eae"
+    },
+    "subpackages\\game\\texture\\rank_three.png": {
+      "time": 1785055688030.4583,
+      "uuid": "6401d430-58df-4a2d-969c-db796439d4d4"
+    },
+    "subpackages\\game\\texture\\rank_one.png": {
+      "time": 1785055724180.9458,
+      "uuid": "daa17f79-e517-4b83-8c4d-7fa5613b7374"
+    },
+    "subpackages\\game\\texture\\rank_diban.png": {
+      "time": 1785056159810.1348,
+      "uuid": "aa9b724d-e5df-4981-837c-26eb0130a07d"
+    },
+    "subpackages\\game\\texture\\rank_two.png": {
+      "time": 1785055707236.203,
+      "uuid": "4f734dbf-6ef4-4245-9053-7630fb89a3df"
+    },
+    "subpackages\\game\\texture\\remove_title.png": {
+      "time": 1785055289773.401,
+      "uuid": "b2c5327f-ab21-4da5-9922-1c0a1e476f6a"
+    },
+    "subpackages\\game\\texture\\remove.png": {
+      "time": 1785055365554.551,
+      "uuid": "f533790b-f715-40d9-a4e5-c599ee426aca"
+    },
+    "subpackages\\game\\texture\\restartbtn.png": {
+      "time": 1785054183840.736,
+      "uuid": "49307cc8-b504-48a1-b851-b34d15cb9017"
+    },
+    "subpackages\\game\\texture\\sheep_game.png": {
+      "time": 1785054903666.5413,
+      "uuid": "76a09474-82e9-42db-80c3-fd76c995aad8"
+    },
+    "subpackages\\game\\texture\\xipai_title.png": {
+      "time": 1785055319282.2559,
+      "uuid": "4cce00d6-a3ba-4209-aa86-d70c9ac550dd"
+    },
+    "subpackages\\game\\texture\\xipai_icon.png": {
+      "time": 1785055409468.934,
+      "uuid": "c1901fbf-b632-48fd-97ef-056801e6852d"
+    },
+    "subpackages\\game\\texture\\sheep2.png.meta": {
+      "time": 1785059226681.6943
+    },
+    "subpackages\\game\\texture\\sheep2.png": {
+      "time": 1785054273346.6858,
+      "uuid": "86b288ff-fbed-4386-aadf-7ff04e404791"
+    },
+    "subpackages\\rank\\ui\\Mask.prefab.meta": {
+      "time": 1785059744125.5374
+    },
+    "subpackages\\rank\\ui\\Mask.prefab": {
+      "time": 1785059744124.5408,
+      "uuid": "eee7d836-c9e9-4e32-8aa8-0923abd0a03f"
     }
   },
   "missing": {}

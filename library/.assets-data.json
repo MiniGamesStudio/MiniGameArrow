@@ -113,12 +113,13 @@
     "url": "db://assets/resources/ui/LoadingPanel.prefab",
     "value": {
       "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "4dfad19b-187b-40d5-ba83-2e74171fdee1@f9941",
+        "a6660959-86b3-45ab-8657-157eabca6c48@f9941",
+        "cab4e68c-1c1e-48d5-99f8-de9cb5b84a59",
         "44f25ea4-0bae-4c44-b956-c589a7fe0cc7@f9941",
         "dc0e3e75-7237-44c7-ab16-f748c67753bb@f9941"
       ],
       "dependScripts": [
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
         "010892b2-c000-4095-8903-97f9f9a4f400"
       ]
     },
@@ -148,10 +149,9 @@
     "url": "db://assets/resources/ui/MainPanel.prefab",
     "value": {
       "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
+        "d2444a6a-3443-49c1-a1cb-946128b1d6d0@f9941",
         "3bf25aa3-df77-4011-a29d-020e61ca8403@f9941",
-        "8f2bf944-ec0d-49ad-9f67-9485e9e0288d@f9941",
-        "12802953-430c-4b56-899e-68fd8ebabcb9@f9941"
+        "75e973e4-94d8-4b4c-af8f-315487ec9c24@f9941"
       ],
       "dependScripts": [
         "22de7818-fe8e-470c-bec7-91ab37d108dd"
@@ -379,9 +379,7 @@
   },
   "8f2bf944-ec0d-49ad-9f67-9485e9e0288d": {
     "url": "db://assets/resources/texture/Icon_ImageIcon_Ranking.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "23356bcd-801e-47ef-ae43-098e3b36d8c7@f9941": {
@@ -395,9 +393,7 @@
   },
   "12802953-430c-4b56-899e-68fd8ebabcb9": {
     "url": "db://assets/resources/texture/Icon_ImageIcon_Trophy_m.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "0facc399-0ce1-412e-a645-c43c9e60305f@f9941": {
@@ -525,9 +521,7 @@
   },
   "83985e7f-c240-4752-b17d-27c185892c87": {
     "url": "db://assets/resources/texture/Icon_ImageIcon_Coin02.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "c03983d3-1d8c-4408-9909-e9ac585800b3": {
@@ -2014,9 +2008,7 @@
   },
   "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa": {
     "url": "db://assets/resources/background/bg02.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@6c48a": {
@@ -2054,9 +2046,7 @@
   },
   "ee9a4b5e-9cf7-4e80-82f7-1295f0ae2500": {
     "url": "db://assets/resources/buttons/Button01_145_Orange.Png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "2cfb15e5-2c31-43db-870c-f84dddd475a7": {
@@ -2364,9 +2354,7 @@
   },
   "4dfad19b-187b-40d5-ba83-2e74171fdee1": {
     "url": "db://assets/resources/texture/title.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "4dfad19b-187b-40d5-ba83-2e74171fdee1@6c48a": {
@@ -3656,8 +3644,7 @@
     "url": "db://assets/resources/ui/MainPage.prefab",
     "value": {
       "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "a66726f4-f780-4d1d-b776-00cce3b6c51d@f9941"
+        "d2444a6a-3443-49c1-a1cb-946128b1d6d0@f9941"
       ],
       "dependScripts": [
         "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
@@ -3679,7 +3666,7 @@
     "url": "db://assets/subpackages/game/ui/GamePanel.prefab",
     "value": {
       "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
+        "0b025332-a07a-4aa1-87da-7b3802e85833@f9941",
         "9f0061d1-19dd-4e32-8c0b-2dcf7d57772e@f9941",
         "483f80bc-31e2-47a5-9fae-d8fb24a81f95@f9941",
         "d0a9d6da-1e4e-46d3-8e0f-5b9c66014d93@f9941",
@@ -3705,9 +3692,7 @@
   },
   "a66726f4-f780-4d1d-b776-00cce3b6c51d": {
     "url": "db://assets/resources/texture/sheeptitle.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "a66726f4-f780-4d1d-b776-00cce3b6c51d@6c48a": {
@@ -3938,12 +3923,13 @@
     "url": "db://assets/resources/ui/LoginPanel.prefab",
     "value": {
       "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "4dfad19b-187b-40d5-ba83-2e74171fdee1@f9941",
+        "a6660959-86b3-45ab-8657-157eabca6c48@f9941",
+        "cab4e68c-1c1e-48d5-99f8-de9cb5b84a59",
         "44f25ea4-0bae-4c44-b956-c589a7fe0cc7@f9941",
         "dc0e3e75-7237-44c7-ab16-f748c67753bb@f9941"
       ],
       "dependScripts": [
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
         "11111111-1111-4111-8111-111111111111"
       ]
     },
@@ -3953,10 +3939,12 @@
     "url": "db://assets/subpackages/rank/ui/RankPanel.prefab",
     "value": {
       "depends": [
+        "eee7d836-c9e9-4e32-8aa8-0923abd0a03f",
         "a4840e4c-51eb-40b5-ae6f-035d58ec0152@f9941",
-        "db239a29-fd7f-482c-8a49-82b641d5e489@f9941"
+        "aa9b724d-e5df-4981-837c-26eb0130a07d@f9941"
       ],
       "dependScripts": [
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
         "b45da2d2-3f4c-4b69-a2bb-ea92ed3a7852"
       ]
     },
@@ -4171,10 +4159,14 @@
     "url": "db://assets/subpackages/game/ui/PausePanel.prefab",
     "value": {
       "depends": [
-        "a66726f4-f780-4d1d-b776-00cce3b6c51d@f9941",
+        "3bf25aa3-df77-4011-a29d-020e61ca8403@f9941",
+        "348ebc2a-6442-4dbf-ba11-e7caace7d77d@f9941",
+        "86b288ff-fbed-4386-aadf-7ff04e404791@f9941",
         "a4840e4c-51eb-40b5-ae6f-035d58ec0152@f9941",
-        "ee9a4b5e-9cf7-4e80-82f7-1295f0ae2500@f9941",
-        "db239a29-fd7f-482c-8a49-82b641d5e489@f9941"
+        "3e8b0e42-4d15-43fd-a504-7569853b0b3c@f9941",
+        "49307cc8-b504-48a1-b851-b34d15cb9017@f9941",
+        "9be1b56e-a0c0-4a34-b931-3aee5af53a2a@f9941",
+        "372a8730-d0cd-488f-bdfe-e67c41a2917d@f9941"
       ],
       "dependScripts": [
         "22222222-2222-4222-8222-222222222222"
@@ -4191,8 +4183,8 @@
     "url": "db://assets/subpackages/game/ui/TransitionPanel.prefab",
     "value": {
       "depends": [
-        "fd3a19d6-81ed-4efa-84d3-7d8c045fa7aa@f9941",
-        "a66726f4-f780-4d1d-b776-00cce3b6c51d@f9941"
+        "f9a454c9-13b1-424b-8a96-402bf62d6ad6@f9941",
+        "86b288ff-fbed-4386-aadf-7ff04e404791@f9941"
       ],
       "dependScripts": [
         "33333333-3333-4333-8333-333333333333"
@@ -4334,6 +4326,907 @@
       "depends": [
         "44f25ea4-0bae-4c44-b956-c589a7fe0cc7@f9941",
         "dc0e3e75-7237-44c7-ab16-f748c67753bb@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a6660959-86b3-45ab-8657-157eabca6c48": {
+    "url": "db://assets/resources/background/loading_bg.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a6660959-86b3-45ab-8657-157eabca6c48@6c48a": {
+    "url": "db://assets/resources/background/loading_bg.png@6c48a",
+    "value": {
+      "depends": [
+        "a6660959-86b3-45ab-8657-157eabca6c48"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a6660959-86b3-45ab-8657-157eabca6c48@f9941": {
+    "url": "db://assets/resources/background/loading_bg.png@f9941",
+    "value": {
+      "depends": [
+        "a6660959-86b3-45ab-8657-157eabca6c48@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d2444a6a-3443-49c1-a1cb-946128b1d6d0": {
+    "url": "db://assets/resources/background/main_bg.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d2444a6a-3443-49c1-a1cb-946128b1d6d0@6c48a": {
+    "url": "db://assets/resources/background/main_bg.png@6c48a",
+    "value": {
+      "depends": [
+        "d2444a6a-3443-49c1-a1cb-946128b1d6d0"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d2444a6a-3443-49c1-a1cb-946128b1d6d0@f9941": {
+    "url": "db://assets/resources/background/main_bg.png@f9941",
+    "value": {
+      "depends": [
+        "d2444a6a-3443-49c1-a1cb-946128b1d6d0@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d161bf89-6acc-4c10-aeb9-253d9a3437b7": {
+    "url": "db://assets/resources/buttons/startbtn.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "d161bf89-6acc-4c10-aeb9-253d9a3437b7@6c48a": {
+    "url": "db://assets/resources/buttons/startbtn.png@6c48a",
+    "value": {
+      "depends": [
+        "d161bf89-6acc-4c10-aeb9-253d9a3437b7"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d161bf89-6acc-4c10-aeb9-253d9a3437b7@f9941": {
+    "url": "db://assets/resources/buttons/startbtn.png@f9941",
+    "value": {
+      "depends": [
+        "d161bf89-6acc-4c10-aeb9-253d9a3437b7@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ab44771b-66e9-4e5c-a60c-442fe3c5b153": {
+    "url": "db://assets/resources/texture/chong.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "7058e569-8506-4a68-ae35-7a7a17631931": {
+    "url": "db://assets/resources/texture/mie.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "3bf18fca-8400-4e69-8562-befd43e19d7c": {
+    "url": "db://assets/resources/texture/qian.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "2075fbad-9c2c-488e-a39a-bbaaf578cca7": {
+    "url": "db://assets/resources/texture/sheep.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f3a4d25a-021e-4f8b-a3d2-45a8e255dcf8": {
+    "url": "db://assets/resources/texture/yang.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f3a4d25a-021e-4f8b-a3d2-45a8e255dcf8@6c48a": {
+    "url": "db://assets/resources/texture/yang.png@6c48a",
+    "value": {
+      "depends": [
+        "f3a4d25a-021e-4f8b-a3d2-45a8e255dcf8"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2075fbad-9c2c-488e-a39a-bbaaf578cca7@6c48a": {
+    "url": "db://assets/resources/texture/sheep.png@6c48a",
+    "value": {
+      "depends": [
+        "2075fbad-9c2c-488e-a39a-bbaaf578cca7"
+      ]
+    },
+    "versionCode": 1
+  },
+  "3bf18fca-8400-4e69-8562-befd43e19d7c@6c48a": {
+    "url": "db://assets/resources/texture/qian.png@6c48a",
+    "value": {
+      "depends": [
+        "3bf18fca-8400-4e69-8562-befd43e19d7c"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ab44771b-66e9-4e5c-a60c-442fe3c5b153@6c48a": {
+    "url": "db://assets/resources/texture/chong.png@6c48a",
+    "value": {
+      "depends": [
+        "ab44771b-66e9-4e5c-a60c-442fe3c5b153"
+      ]
+    },
+    "versionCode": 1
+  },
+  "7058e569-8506-4a68-ae35-7a7a17631931@6c48a": {
+    "url": "db://assets/resources/texture/mie.png@6c48a",
+    "value": {
+      "depends": [
+        "7058e569-8506-4a68-ae35-7a7a17631931"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f3a4d25a-021e-4f8b-a3d2-45a8e255dcf8@f9941": {
+    "url": "db://assets/resources/texture/yang.png@f9941",
+    "value": {
+      "depends": [
+        "f3a4d25a-021e-4f8b-a3d2-45a8e255dcf8@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2075fbad-9c2c-488e-a39a-bbaaf578cca7@f9941": {
+    "url": "db://assets/resources/texture/sheep.png@f9941",
+    "value": {
+      "depends": [
+        "2075fbad-9c2c-488e-a39a-bbaaf578cca7@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "3bf18fca-8400-4e69-8562-befd43e19d7c@f9941": {
+    "url": "db://assets/resources/texture/qian.png@f9941",
+    "value": {
+      "depends": [
+        "3bf18fca-8400-4e69-8562-befd43e19d7c@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ab44771b-66e9-4e5c-a60c-442fe3c5b153@f9941": {
+    "url": "db://assets/resources/texture/chong.png@f9941",
+    "value": {
+      "depends": [
+        "ab44771b-66e9-4e5c-a60c-442fe3c5b153@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "7058e569-8506-4a68-ae35-7a7a17631931@f9941": {
+    "url": "db://assets/resources/texture/mie.png@f9941",
+    "value": {
+      "depends": [
+        "7058e569-8506-4a68-ae35-7a7a17631931@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "bcd4452b-44a4-40de-9efd-50196fdc176d": {
+    "url": "db://assets/resources/texture/a.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "bcd4452b-44a4-40de-9efd-50196fdc176d@6c48a": {
+    "url": "db://assets/resources/texture/a.png@6c48a",
+    "value": {
+      "depends": [
+        "bcd4452b-44a4-40de-9efd-50196fdc176d"
+      ]
+    },
+    "versionCode": 1
+  },
+  "bcd4452b-44a4-40de-9efd-50196fdc176d@f9941": {
+    "url": "db://assets/resources/texture/a.png@f9941",
+    "value": {
+      "depends": [
+        "bcd4452b-44a4-40de-9efd-50196fdc176d@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "cab4e68c-1c1e-48d5-99f8-de9cb5b84a59": {
+    "url": "db://assets/resources/ui/TitleRoot.prefab",
+    "value": {
+      "depends": [
+        "7058e569-8506-4a68-ae35-7a7a17631931@f9941",
+        "2075fbad-9c2c-488e-a39a-bbaaf578cca7@f9941",
+        "ab44771b-66e9-4e5c-a60c-442fe3c5b153@f9941",
+        "bcd4452b-44a4-40de-9efd-50196fdc176d@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "75e973e4-94d8-4b4c-af8f-315487ec9c24": {
+    "url": "db://assets/resources/texture/Icon_ImageIcon_Ranking.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "75e973e4-94d8-4b4c-af8f-315487ec9c24@6c48a": {
+    "url": "db://assets/resources/texture/Icon_ImageIcon_Ranking.png@6c48a",
+    "value": {
+      "depends": [
+        "75e973e4-94d8-4b4c-af8f-315487ec9c24"
+      ]
+    },
+    "versionCode": 1
+  },
+  "75e973e4-94d8-4b4c-af8f-315487ec9c24@f9941": {
+    "url": "db://assets/resources/texture/Icon_ImageIcon_Ranking.png@f9941",
+    "value": {
+      "depends": [
+        "75e973e4-94d8-4b4c-af8f-315487ec9c24@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "cf386d6d-68c1-4232-99e2-8a3009320b12": {
+    "url": "db://assets/resources/buttons/Button01_145_Orange.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "cf386d6d-68c1-4232-99e2-8a3009320b12@6c48a": {
+    "url": "db://assets/resources/buttons/Button01_145_Orange.png@6c48a",
+    "value": {
+      "depends": [
+        "cf386d6d-68c1-4232-99e2-8a3009320b12"
+      ]
+    },
+    "versionCode": 1
+  },
+  "cf386d6d-68c1-4232-99e2-8a3009320b12@f9941": {
+    "url": "db://assets/resources/buttons/Button01_145_Orange.png@f9941",
+    "value": {
+      "depends": [
+        "cf386d6d-68c1-4232-99e2-8a3009320b12@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d3f2afdd-f52b-485e-83e1-0f7c0b1e4442": {
+    "url": "db://assets/subpackages/game/background",
+    "value": {},
+    "versionCode": 1
+  },
+  "0b025332-a07a-4aa1-87da-7b3802e85833": {
+    "url": "db://assets/subpackages/game/background/game_bg.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "0b025332-a07a-4aa1-87da-7b3802e85833@6c48a": {
+    "url": "db://assets/subpackages/game/background/game_bg.png@6c48a",
+    "value": {
+      "depends": [
+        "0b025332-a07a-4aa1-87da-7b3802e85833"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0b025332-a07a-4aa1-87da-7b3802e85833@f9941": {
+    "url": "db://assets/subpackages/game/background/game_bg.png@f9941",
+    "value": {
+      "depends": [
+        "0b025332-a07a-4aa1-87da-7b3802e85833@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "98fd442a-724a-4f65-ac2e-47d3367e34f6": {
+    "url": "db://assets/subpackages/game/texture/ad_use.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "3e8b0e42-4d15-43fd-a504-7569853b0b3c": {
+    "url": "db://assets/subpackages/game/texture/backbtn.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "9be1b56e-a0c0-4a34-b931-3aee5af53a2a": {
+    "url": "db://assets/subpackages/game/texture/continuebtn.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "372a8730-d0cd-488f-bdfe-e67c41a2917d": {
+    "url": "db://assets/subpackages/game/texture/diban.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "2f6324c2-e541-4fff-8f42-b9ac0fb7f989": {
+    "url": "db://assets/subpackages/game/texture/fanpai_icon.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "3e8b0e42-4d15-43fd-a504-7569853b0b3c@6c48a": {
+    "url": "db://assets/subpackages/game/texture/backbtn.png@6c48a",
+    "value": {
+      "depends": [
+        "3e8b0e42-4d15-43fd-a504-7569853b0b3c"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9be1b56e-a0c0-4a34-b931-3aee5af53a2a@6c48a": {
+    "url": "db://assets/subpackages/game/texture/continuebtn.png@6c48a",
+    "value": {
+      "depends": [
+        "9be1b56e-a0c0-4a34-b931-3aee5af53a2a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2f6324c2-e541-4fff-8f42-b9ac0fb7f989@6c48a": {
+    "url": "db://assets/subpackages/game/texture/fanpai_icon.png@6c48a",
+    "value": {
+      "depends": [
+        "2f6324c2-e541-4fff-8f42-b9ac0fb7f989"
+      ]
+    },
+    "versionCode": 1
+  },
+  "372a8730-d0cd-488f-bdfe-e67c41a2917d@6c48a": {
+    "url": "db://assets/subpackages/game/texture/diban.png@6c48a",
+    "value": {
+      "depends": [
+        "372a8730-d0cd-488f-bdfe-e67c41a2917d"
+      ]
+    },
+    "versionCode": 1
+  },
+  "98fd442a-724a-4f65-ac2e-47d3367e34f6@6c48a": {
+    "url": "db://assets/subpackages/game/texture/ad_use.png@6c48a",
+    "value": {
+      "depends": [
+        "98fd442a-724a-4f65-ac2e-47d3367e34f6"
+      ]
+    },
+    "versionCode": 1
+  },
+  "3e8b0e42-4d15-43fd-a504-7569853b0b3c@f9941": {
+    "url": "db://assets/subpackages/game/texture/backbtn.png@f9941",
+    "value": {
+      "depends": [
+        "3e8b0e42-4d15-43fd-a504-7569853b0b3c@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8471ddf3-b0f4-4008-b3e9-2fde773d181f": {
+    "url": "db://assets/subpackages/game/texture/fanpai_title.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "9be1b56e-a0c0-4a34-b931-3aee5af53a2a@f9941": {
+    "url": "db://assets/subpackages/game/texture/continuebtn.png@f9941",
+    "value": {
+      "depends": [
+        "9be1b56e-a0c0-4a34-b931-3aee5af53a2a@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "348ebc2a-6442-4dbf-ba11-e7caace7d77d": {
+    "url": "db://assets/subpackages/game/texture/pause_title.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "2f6324c2-e541-4fff-8f42-b9ac0fb7f989@f9941": {
+    "url": "db://assets/subpackages/game/texture/fanpai_icon.png@f9941",
+    "value": {
+      "depends": [
+        "2f6324c2-e541-4fff-8f42-b9ac0fb7f989@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ae0f9378-35a5-453b-b013-fc95ba8bf213": {
+    "url": "db://assets/subpackages/game/texture/PictoIcon_Close.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "98fd442a-724a-4f65-ac2e-47d3367e34f6@f9941": {
+    "url": "db://assets/subpackages/game/texture/ad_use.png@f9941",
+    "value": {
+      "depends": [
+        "98fd442a-724a-4f65-ac2e-47d3367e34f6@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "372a8730-d0cd-488f-bdfe-e67c41a2917d@f9941": {
+    "url": "db://assets/subpackages/game/texture/diban.png@f9941",
+    "value": {
+      "depends": [
+        "372a8730-d0cd-488f-bdfe-e67c41a2917d@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "acc21694-43b6-4f73-8062-1ae3b315637e": {
+    "url": "db://assets/subpackages/game/texture/rank_bg1.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "06c61434-69ef-4996-8a7e-57aa1a5cdf6b": {
+    "url": "db://assets/subpackages/game/texture/rank_bg2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "8471ddf3-b0f4-4008-b3e9-2fde773d181f@6c48a": {
+    "url": "db://assets/subpackages/game/texture/fanpai_title.png@6c48a",
+    "value": {
+      "depends": [
+        "8471ddf3-b0f4-4008-b3e9-2fde773d181f"
+      ]
+    },
+    "versionCode": 1
+  },
+  "348ebc2a-6442-4dbf-ba11-e7caace7d77d@6c48a": {
+    "url": "db://assets/subpackages/game/texture/pause_title.png@6c48a",
+    "value": {
+      "depends": [
+        "348ebc2a-6442-4dbf-ba11-e7caace7d77d"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ae0f9378-35a5-453b-b013-fc95ba8bf213@6c48a": {
+    "url": "db://assets/subpackages/game/texture/PictoIcon_Close.png@6c48a",
+    "value": {
+      "depends": [
+        "ae0f9378-35a5-453b-b013-fc95ba8bf213"
+      ]
+    },
+    "versionCode": 1
+  },
+  "06c61434-69ef-4996-8a7e-57aa1a5cdf6b@6c48a": {
+    "url": "db://assets/subpackages/game/texture/rank_bg2.png@6c48a",
+    "value": {
+      "depends": [
+        "06c61434-69ef-4996-8a7e-57aa1a5cdf6b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "acc21694-43b6-4f73-8062-1ae3b315637e@6c48a": {
+    "url": "db://assets/subpackages/game/texture/rank_bg1.png@6c48a",
+    "value": {
+      "depends": [
+        "acc21694-43b6-4f73-8062-1ae3b315637e"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8471ddf3-b0f4-4008-b3e9-2fde773d181f@f9941": {
+    "url": "db://assets/subpackages/game/texture/fanpai_title.png@f9941",
+    "value": {
+      "depends": [
+        "8471ddf3-b0f4-4008-b3e9-2fde773d181f@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4632f6fe-4ed6-4f7f-9579-9ad740bc8555": {
+    "url": "db://assets/subpackages/game/texture/rank_bg3.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "ae0f9378-35a5-453b-b013-fc95ba8bf213@f9941": {
+    "url": "db://assets/subpackages/game/texture/PictoIcon_Close.png@f9941",
+    "value": {
+      "depends": [
+        "ae0f9378-35a5-453b-b013-fc95ba8bf213@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "348ebc2a-6442-4dbf-ba11-e7caace7d77d@f9941": {
+    "url": "db://assets/subpackages/game/texture/pause_title.png@f9941",
+    "value": {
+      "depends": [
+        "348ebc2a-6442-4dbf-ba11-e7caace7d77d@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f00583b5-46cb-45ae-b50b-a3045f264eae": {
+    "url": "db://assets/subpackages/game/texture/rank_bg4.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "aa9b724d-e5df-4981-837c-26eb0130a07d": {
+    "url": "db://assets/subpackages/game/texture/rank_diban.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "06c61434-69ef-4996-8a7e-57aa1a5cdf6b@f9941": {
+    "url": "db://assets/subpackages/game/texture/rank_bg2.png@f9941",
+    "value": {
+      "depends": [
+        "06c61434-69ef-4996-8a7e-57aa1a5cdf6b@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "daa17f79-e517-4b83-8c4d-7fa5613b7374": {
+    "url": "db://assets/subpackages/game/texture/rank_one.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "acc21694-43b6-4f73-8062-1ae3b315637e@f9941": {
+    "url": "db://assets/subpackages/game/texture/rank_bg1.png@f9941",
+    "value": {
+      "depends": [
+        "acc21694-43b6-4f73-8062-1ae3b315637e@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6401d430-58df-4a2d-969c-db796439d4d4": {
+    "url": "db://assets/subpackages/game/texture/rank_three.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "4632f6fe-4ed6-4f7f-9579-9ad740bc8555@6c48a": {
+    "url": "db://assets/subpackages/game/texture/rank_bg3.png@6c48a",
+    "value": {
+      "depends": [
+        "4632f6fe-4ed6-4f7f-9579-9ad740bc8555"
+      ]
+    },
+    "versionCode": 1
+  },
+  "aa9b724d-e5df-4981-837c-26eb0130a07d@6c48a": {
+    "url": "db://assets/subpackages/game/texture/rank_diban.png@6c48a",
+    "value": {
+      "depends": [
+        "aa9b724d-e5df-4981-837c-26eb0130a07d"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f00583b5-46cb-45ae-b50b-a3045f264eae@6c48a": {
+    "url": "db://assets/subpackages/game/texture/rank_bg4.png@6c48a",
+    "value": {
+      "depends": [
+        "f00583b5-46cb-45ae-b50b-a3045f264eae"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6401d430-58df-4a2d-969c-db796439d4d4@6c48a": {
+    "url": "db://assets/subpackages/game/texture/rank_three.png@6c48a",
+    "value": {
+      "depends": [
+        "6401d430-58df-4a2d-969c-db796439d4d4"
+      ]
+    },
+    "versionCode": 1
+  },
+  "daa17f79-e517-4b83-8c4d-7fa5613b7374@6c48a": {
+    "url": "db://assets/subpackages/game/texture/rank_one.png@6c48a",
+    "value": {
+      "depends": [
+        "daa17f79-e517-4b83-8c4d-7fa5613b7374"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4632f6fe-4ed6-4f7f-9579-9ad740bc8555@f9941": {
+    "url": "db://assets/subpackages/game/texture/rank_bg3.png@f9941",
+    "value": {
+      "depends": [
+        "4632f6fe-4ed6-4f7f-9579-9ad740bc8555@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4f734dbf-6ef4-4245-9053-7630fb89a3df": {
+    "url": "db://assets/subpackages/game/texture/rank_two.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f00583b5-46cb-45ae-b50b-a3045f264eae@f9941": {
+    "url": "db://assets/subpackages/game/texture/rank_bg4.png@f9941",
+    "value": {
+      "depends": [
+        "f00583b5-46cb-45ae-b50b-a3045f264eae@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f533790b-f715-40d9-a4e5-c599ee426aca": {
+    "url": "db://assets/subpackages/game/texture/remove.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "6401d430-58df-4a2d-969c-db796439d4d4@f9941": {
+    "url": "db://assets/subpackages/game/texture/rank_three.png@f9941",
+    "value": {
+      "depends": [
+        "6401d430-58df-4a2d-969c-db796439d4d4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b2c5327f-ab21-4da5-9922-1c0a1e476f6a": {
+    "url": "db://assets/subpackages/game/texture/remove_title.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "daa17f79-e517-4b83-8c4d-7fa5613b7374@f9941": {
+    "url": "db://assets/subpackages/game/texture/rank_one.png@f9941",
+    "value": {
+      "depends": [
+        "daa17f79-e517-4b83-8c4d-7fa5613b7374@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "49307cc8-b504-48a1-b851-b34d15cb9017": {
+    "url": "db://assets/subpackages/game/texture/restartbtn.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "aa9b724d-e5df-4981-837c-26eb0130a07d@f9941": {
+    "url": "db://assets/subpackages/game/texture/rank_diban.png@f9941",
+    "value": {
+      "depends": [
+        "aa9b724d-e5df-4981-837c-26eb0130a07d@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "76a09474-82e9-42db-80c3-fd76c995aad8": {
+    "url": "db://assets/subpackages/game/texture/sheep_game.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "4f734dbf-6ef4-4245-9053-7630fb89a3df@6c48a": {
+    "url": "db://assets/subpackages/game/texture/rank_two.png@6c48a",
+    "value": {
+      "depends": [
+        "4f734dbf-6ef4-4245-9053-7630fb89a3df"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b2c5327f-ab21-4da5-9922-1c0a1e476f6a@6c48a": {
+    "url": "db://assets/subpackages/game/texture/remove_title.png@6c48a",
+    "value": {
+      "depends": [
+        "b2c5327f-ab21-4da5-9922-1c0a1e476f6a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f533790b-f715-40d9-a4e5-c599ee426aca@6c48a": {
+    "url": "db://assets/subpackages/game/texture/remove.png@6c48a",
+    "value": {
+      "depends": [
+        "f533790b-f715-40d9-a4e5-c599ee426aca"
+      ]
+    },
+    "versionCode": 1
+  },
+  "49307cc8-b504-48a1-b851-b34d15cb9017@6c48a": {
+    "url": "db://assets/subpackages/game/texture/restartbtn.png@6c48a",
+    "value": {
+      "depends": [
+        "49307cc8-b504-48a1-b851-b34d15cb9017"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4f734dbf-6ef4-4245-9053-7630fb89a3df@f9941": {
+    "url": "db://assets/subpackages/game/texture/rank_two.png@f9941",
+    "value": {
+      "depends": [
+        "4f734dbf-6ef4-4245-9053-7630fb89a3df@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c1901fbf-b632-48fd-97ef-056801e6852d": {
+    "url": "db://assets/subpackages/game/texture/xipai_icon.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "76a09474-82e9-42db-80c3-fd76c995aad8@6c48a": {
+    "url": "db://assets/subpackages/game/texture/sheep_game.png@6c48a",
+    "value": {
+      "depends": [
+        "76a09474-82e9-42db-80c3-fd76c995aad8"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b2c5327f-ab21-4da5-9922-1c0a1e476f6a@f9941": {
+    "url": "db://assets/subpackages/game/texture/remove_title.png@f9941",
+    "value": {
+      "depends": [
+        "b2c5327f-ab21-4da5-9922-1c0a1e476f6a@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4cce00d6-a3ba-4209-aa86-d70c9ac550dd": {
+    "url": "db://assets/subpackages/game/texture/xipai_title.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f533790b-f715-40d9-a4e5-c599ee426aca@f9941": {
+    "url": "db://assets/subpackages/game/texture/remove.png@f9941",
+    "value": {
+      "depends": [
+        "f533790b-f715-40d9-a4e5-c599ee426aca@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "49307cc8-b504-48a1-b851-b34d15cb9017@f9941": {
+    "url": "db://assets/subpackages/game/texture/restartbtn.png@f9941",
+    "value": {
+      "depends": [
+        "49307cc8-b504-48a1-b851-b34d15cb9017@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "76a09474-82e9-42db-80c3-fd76c995aad8@f9941": {
+    "url": "db://assets/subpackages/game/texture/sheep_game.png@f9941",
+    "value": {
+      "depends": [
+        "76a09474-82e9-42db-80c3-fd76c995aad8@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c1901fbf-b632-48fd-97ef-056801e6852d@6c48a": {
+    "url": "db://assets/subpackages/game/texture/xipai_icon.png@6c48a",
+    "value": {
+      "depends": [
+        "c1901fbf-b632-48fd-97ef-056801e6852d"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4cce00d6-a3ba-4209-aa86-d70c9ac550dd@6c48a": {
+    "url": "db://assets/subpackages/game/texture/xipai_title.png@6c48a",
+    "value": {
+      "depends": [
+        "4cce00d6-a3ba-4209-aa86-d70c9ac550dd"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4cce00d6-a3ba-4209-aa86-d70c9ac550dd@f9941": {
+    "url": "db://assets/subpackages/game/texture/xipai_title.png@f9941",
+    "value": {
+      "depends": [
+        "4cce00d6-a3ba-4209-aa86-d70c9ac550dd@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c1901fbf-b632-48fd-97ef-056801e6852d@f9941": {
+    "url": "db://assets/subpackages/game/texture/xipai_icon.png@f9941",
+    "value": {
+      "depends": [
+        "c1901fbf-b632-48fd-97ef-056801e6852d@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "86b288ff-fbed-4386-aadf-7ff04e404791": {
+    "url": "db://assets/subpackages/game/texture/sheep2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "86b288ff-fbed-4386-aadf-7ff04e404791@6c48a": {
+    "url": "db://assets/subpackages/game/texture/sheep2.png@6c48a",
+    "value": {
+      "depends": [
+        "86b288ff-fbed-4386-aadf-7ff04e404791"
+      ]
+    },
+    "versionCode": 1
+  },
+  "86b288ff-fbed-4386-aadf-7ff04e404791@f9941": {
+    "url": "db://assets/subpackages/game/texture/sheep2.png@f9941",
+    "value": {
+      "depends": [
+        "86b288ff-fbed-4386-aadf-7ff04e404791@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "eee7d836-c9e9-4e32-8aa8-0923abd0a03f": {
+    "url": "db://assets/subpackages/rank/ui/Mask.prefab",
+    "value": {
+      "depends": [
+        "3bf25aa3-df77-4011-a29d-020e61ca8403@f9941"
       ],
       "dependScripts": []
     },

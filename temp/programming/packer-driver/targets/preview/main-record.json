@@ -514,7 +514,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 15159.1074,
+      "mTimestamp": 5068090.6187,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -25065,7 +25065,7 @@
     },
     "file:///D:/MyProjects/CocosProjects/MiniGameArrow/assets/scripts/Game/CommonGame/ui/MainPage.ts": {
       "mTimestamp": {
-        "mtime": 1782840047436.973,
+        "mtime": 1785058239171.1238,
         "uuid": "5dac72fe-9aae-4a79-b72e-3eb8c3c18fac"
       },
       "chunkId": "8ea86f84db55870e3e0ed6e5e5cb8b81a19c695c",
