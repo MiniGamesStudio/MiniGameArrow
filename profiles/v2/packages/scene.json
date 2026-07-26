@@ -830,8 +830,8 @@
       "contentRect": {
         "x": 0,
         "y": 0,
-        "width": 1500,
-        "height": 1000
+        "width": 655,
+        "height": 943
       },
       "scale": 1
     }
@@ -901,7 +901,7 @@
       "width": 1640,
       "height": 2360
     },
-    "scaleValue": 24,
-    "sliderValue": 8
+    "scaleValue": 40,
+    "sliderValue": 17
   }
 }
