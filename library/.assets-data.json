@@ -4593,14 +4593,14 @@
     "versionCode": 1
   },
   "cf386d6d-68c1-4232-99e2-8a3009320b12": {
-    "url": "db://assets/resources/buttons/Button01_145_Orange.png",
+    "url": "db://assets/resources/buttons/Button01_145_Orange.Png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "cf386d6d-68c1-4232-99e2-8a3009320b12@6c48a": {
-    "url": "db://assets/resources/buttons/Button01_145_Orange.png@6c48a",
+    "url": "db://assets/resources/buttons/Button01_145_Orange.Png@6c48a",
     "value": {
       "depends": [
         "cf386d6d-68c1-4232-99e2-8a3009320b12"
@@ -4609,7 +4609,7 @@
     "versionCode": 1
   },
   "cf386d6d-68c1-4232-99e2-8a3009320b12@f9941": {
-    "url": "db://assets/resources/buttons/Button01_145_Orange.png@f9941",
+    "url": "db://assets/resources/buttons/Button01_145_Orange.Png@f9941",
     "value": {
       "depends": [
         "cf386d6d-68c1-4232-99e2-8a3009320b12@6c48a"
@@ -5231,5 +5231,10 @@
       "dependScripts": []
     },
     "versionCode": 2
+  },
+  "753a8d5e-7595-4af0-bbef-d8f8c0dce402": {
+    "url": "db://assets/resources/background/folder",
+    "value": {},
+    "versionCode": 1
   }
 }

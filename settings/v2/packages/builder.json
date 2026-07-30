@@ -13,7 +13,7 @@
     },
     "logo": {
       "type": "custom",
-      "image": "project://settings/title.png"
+      "image": "project://settings/sheep.png"
     },
     "totalTime": 500
   },
