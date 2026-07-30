@@ -72,7 +72,7 @@ export class MainPage extends UIBase {
         const leftButtonConfigs = [{
             buttonName: "GameClub",
             buttonText: "",
-            buttonIcon: "texture/Icon_ImageIcon_Ranking",
+            buttonIcon: "texture/Icon_ImageIcon_Game",
             onClick: () => {
                 this.openWeChatGameClub();
             },
