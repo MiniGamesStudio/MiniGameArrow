@@ -68,14 +68,21 @@ export class MainPage extends UIBase {
             },
         ];
 
+        
+        const leftButtonConfigs = [{
+            buttonName: "GameClub",
+            buttonText: "",
+            buttonIcon: "texture/Icon_ImageIcon_Ranking",
+            onClick: () => {
+                this.openWeChatGameClub();
+            },
+        }];
+
         if (PlatformManager.getInstance().getPlatform() === MiniGamePlatform.WeChat) {
-            rightButtonConfigs.push({
-                buttonName: "GameClub",
-                buttonText: "游戏圈",
-                buttonIcon: "texture/Icon_ImageIcon_Ranking",
-                onClick: () => {
-                    this.openWeChatGameClub();
-                },
+            const leftButtons = this.CreateUIButtonsByTable(this.m_LeftRoot, leftButtonConfigs);
+    
+            leftButtons.forEach((button, index) => {
+                button.node.setPosition(0, 80 - index * 90, 0);
             });
         }
 
