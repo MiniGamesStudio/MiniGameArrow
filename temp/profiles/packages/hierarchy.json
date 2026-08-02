@@ -825,5 +825,20 @@
       "0",
       "0_0"
     ]
+  },
+  "961e7ba8-328e-460d-ba41-071fc0bcebd9": {
+    "assetUuid": "961e7ba8-328e-460d-ba41-071fc0bcebd9",
+    "animationUuid": "",
+    "expandLevels": [
+      "0",
+      "0_1"
+    ]
+  },
+  "f4792ee9-76b7-4236-81bc-de8678eadf47": {
+    "assetUuid": "f4792ee9-76b7-4236-81bc-de8678eadf47",
+    "animationUuid": "",
+    "expandLevels": [
+      "0"
+    ]
   }
 }

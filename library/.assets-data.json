@@ -5261,5 +5261,31 @@
       ]
     },
     "versionCode": 1
+  },
+  "961e7ba8-328e-460d-ba41-071fc0bcebd9": {
+    "url": "db://assets/subpackages/game/ui/AdPanel.prefab",
+    "value": {
+      "depends": [
+        "3bf25aa3-df77-4011-a29d-020e61ca8403@f9941",
+        "b2c5327f-ab21-4da5-9922-1c0a1e476f6a@f9941",
+        "4cce00d6-a3ba-4209-aa86-d70c9ac550dd@f9941",
+        "8471ddf3-b0f4-4008-b3e9-2fde773d181f@f9941",
+        "f533790b-f715-40d9-a4e5-c599ee426aca@f9941",
+        "c1901fbf-b632-48fd-97ef-056801e6852d@f9941",
+        "2f6324c2-e541-4fff-8f42-b9ac0fb7f989@f9941",
+        "a4840e4c-51eb-40b5-ae6f-035d58ec0152@f9941",
+        "98fd442a-724a-4f65-ac2e-47d3367e34f6@f9941",
+        "372a8730-d0cd-488f-bdfe-e67c41a2917d@f9941"
+      ],
+      "dependScripts": [
+        "99999999-9999-4999-8999-999999999999"
+      ]
+    },
+    "versionCode": 2
+  },
+  "99999999-9999-4999-8999-999999999999": {
+    "url": "db://assets/scripts/Game/CommonGame/ui/AdPanel.ts",
+    "value": {},
+    "versionCode": 1
   }
 }

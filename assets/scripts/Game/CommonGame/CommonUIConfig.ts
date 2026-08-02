@@ -18,6 +18,7 @@ export enum CommonUIID {
     LoginPanel = 5,
     PausePanel = 6,
     TransitionPanel = 7,
+    AdPanel = 8,
 }
 
 /**
@@ -31,4 +32,5 @@ export function registerCommonGameUI(): void {
     UIDataRegistry.Register(CommonUIID.LoginPanel, UILayer.Normal, "LoginPanel", "ui/LoginPanel", UIShowMode.Normal, 1);
     UIDataRegistry.Register(CommonUIID.PausePanel, UILayer.PopUp, "PausePanel", "ui/PausePanel", UIShowMode.Normal, 1, CommonBundleName.Game);
     UIDataRegistry.Register(CommonUIID.TransitionPanel, UILayer.TopMost, "TransitionPanel", "ui/TransitionPanel", UIShowMode.Normal, 0, CommonBundleName.Game);
+    UIDataRegistry.Register(CommonUIID.AdPanel, UILayer.PopUp, "AdPanel", "ui/AdPanel", UIShowMode.Normal, 1, CommonBundleName.Game);
 }

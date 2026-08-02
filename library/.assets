@@ -71,6 +71,7 @@
             "resources\\texture\\a.png",
             "resources\\texture\\Background_ScreenDimed_Navy.png",
             "resources\\texture\\chong.png",
+            "resources\\texture\\Icon_ImageIcon_Game.png",
             "resources\\texture\\Icon_ImageIcon_Ranking.png",
             "resources\\texture\\mie.png",
             "resources\\texture\\qian.png",
@@ -123,7 +124,8 @@
             "subpackages\\rank\\ranking\\RankingBackground.png",
             "subpackages\\rank\\ui\\Mask.prefab",
             "subpackages\\rank\\ui\\RankPanel.prefab",
-            "resources\\texture\\Icon_ImageIcon_Game.png"
+            "subpackages\\game\\ui\\AdPanel.prefab",
+            "scripts\\Game\\CommonGame\\ui\\AdPanel.ts"
         ]
     }
 }

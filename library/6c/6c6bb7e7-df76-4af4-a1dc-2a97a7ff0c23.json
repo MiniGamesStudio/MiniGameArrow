@@ -637,7 +637,7 @@
     },
     "clickEvents": [],
     "_interactable": true,
-    "_transition": 2,
+    "_transition": 3,
     "_normalColor": {
       "__type__": "cc.Color",
       "r": 214,
@@ -885,7 +885,7 @@
     },
     "clickEvents": [],
     "_interactable": true,
-    "_transition": 2,
+    "_transition": 3,
     "_normalColor": {
       "__type__": "cc.Color",
       "r": 214,
@@ -1133,7 +1133,7 @@
     },
     "clickEvents": [],
     "_interactable": true,
-    "_transition": 2,
+    "_transition": 3,
     "_normalColor": {
       "__type__": "cc.Color",
       "r": 214,
@@ -1381,7 +1381,7 @@
     },
     "clickEvents": [],
     "_interactable": true,
-    "_transition": 2,
+    "_transition": 3,
     "_normalColor": {
       "__type__": "cc.Color",
       "r": 214,
@@ -1553,8 +1553,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 84.49161016413595,
-      "height": 50.400000000000006
+      "width": 160.02685546875,
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",

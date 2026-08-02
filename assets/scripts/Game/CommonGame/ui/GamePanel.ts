@@ -1,11 +1,11 @@
 import { _decorator, Button, Color, Graphics, HorizontalTextAlignment, JsonAsset, Label, Node, RichText, Sprite, SpriteFrame, tween, UITransform, Vec3, VerticalTextAlignment, view } from 'cc';
-import { AdManager, AdPlayResult } from '../../../engine/AdManager';
 import { PlatformManager, PlatformResult } from '../../../engine/PlatformManager';
 import { ResManager } from '../../../engine/ResManager';
 import { UIBase } from '../../../engine/ui/UIBase';
 import { UIManager } from '../../../engine/ui/UIManager';
 import { CommonGameProgress } from '../CommonGameProgress';
 import { CommonBundleName, CommonUIID } from '../CommonUIConfig';
+import type { AdSkillIndex } from './AdPanel';
 const { ccclass, property } = _decorator;
 
 const MAX_ROW = 19;
@@ -812,65 +812,48 @@ export class GamePanel extends UIBase {
         });
     }
 
-    private async onSkillOneBtnClick(): Promise<void> {
+    private onSkillOneBtnClick(): void {
         if (this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning || this.m_SheepList.length <= 0) return;
-
-        const shared = await this.shareForReward();
-        if (!shared || !this.isValid) return;
-
-        this.m_SkillMode = 'removeTwo';
-        this.m_SkillRemoveRemain = Math.min(2, this.getAvailableSheepCount());
+        this.openSkillAdPanel(1);
     }
 
-    private async onSkillTwoBtnClick(): Promise<void> {
+    private onSkillTwoBtnClick(): void {
         if (this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning || this.m_SheepList.length <= 0) return;
         if (this.getAvailableSheepCount() <= 0) return;
+        this.openSkillAdPanel(2);
+    }
 
-        const shared = await this.shareForReward();
-        if (!shared || !this.isValid) return;
+    private onSkillThreeBtnClick(): void {
+        if (this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning || this.m_SheepList.length <= 0) return;
+        if (this.getAvailableSheepCount() <= 0) return;
+        this.openSkillAdPanel(3);
+    }
 
-        this.getRandomSheepList(Math.min(5, this.getAvailableSheepCount())).forEach(sheep => {
-            this.flipSheep(sheep);
+    private openSkillAdPanel(skillIndex: AdSkillIndex): void {
+        UIManager.GetInstance().OpenPanel(CommonUIID.AdPanel, {
+            skillIndex,
+            onUse: () => this.applySkill(skillIndex),
         });
     }
 
-    private async onSkillThreeBtnClick(): Promise<void> {
-        if (this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning || this.m_SheepList.length <= 0) return;
-        if (this.getAvailableSheepCount() <= 0) return;
+    private applySkill(skillIndex: AdSkillIndex): void {
+        if (!this.isValid || this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning) return;
 
-        const shared = await this.shareForReward();
-        if (!shared || !this.isValid) return;
+        if (skillIndex === 1) {
+            this.m_SkillMode = 'removeTwo';
+            this.m_SkillRemoveRemain = Math.min(2, this.getAvailableSheepCount());
+            return;
+        }
+
+        if (skillIndex === 2) {
+            this.getRandomSheepList(Math.min(5, this.getAvailableSheepCount())).forEach(sheep => {
+                this.flipSheep(sheep);
+            });
+            return;
+        }
 
         this.m_SkillMode = 'flipOne';
         this.m_SkillRemoveRemain = 0;
-    }
-
-    private async shareForReward(): Promise<boolean> {
-        const result = await PlatformManager.getInstance().shareAppMessage({
-            title: '快来一起玩吧',
-            query: `level=${this.m_CurrentLevel}`,
-        });
-        if (result.result === PlatformResult.Success) {
-            return true;
-        }
-
-        if (result.result === PlatformResult.Unsupported) {
-            console.warn('GamePanel: 当前环境不支持分享，直接发放技能奖励用于调试', result.message);
-            return true;
-        }
-
-        console.warn('GamePanel: 分享未完成，技能未生效', result.message);
-        return false;
-    }
-
-    private async playRewardedAd(): Promise<boolean> {
-        const result = await AdManager.getInstance().playRewardedVideoAd();
-        if (result.result !== AdPlayResult.Completed) {
-            console.warn('GamePanel: 广告未完整播放，技能未生效', result.message);
-            return false;
-        }
-
-        return true;
     }
 
     private removeSheepBySkill(sheep: SheepData): void {

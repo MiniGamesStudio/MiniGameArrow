@@ -74,6 +74,7 @@ export class LoadingPanel extends UIBase {
             { bundleName: CommonBundleName.Game, path: 'ui/GamePanel', type: Prefab },
             { bundleName: CommonBundleName.Game, path: 'ui/PausePanel', type: Prefab },
             { bundleName: CommonBundleName.Game, path: 'ui/TransitionPanel', type: Prefab },
+            { bundleName: CommonBundleName.Game, path: 'ui/AdPanel', type: Prefab },
             { bundleName: CommonBundleName.Rank, path: 'ui/RankPanel', type: Prefab },
         ];
 
