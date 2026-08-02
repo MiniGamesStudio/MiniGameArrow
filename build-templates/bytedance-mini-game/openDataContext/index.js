@@ -3,15 +3,19 @@
 const runtime = typeof tt !== 'undefined' ? tt : typeof wx !== 'undefined' ? wx : null;
 const sharedCanvas = runtime && runtime.getSharedCanvas ? runtime.getSharedCanvas() : null;
 const context = sharedCanvas ? sharedCanvas.getContext('2d') : null;
-const MEDAL_IMAGE_SOURCES = [
-    'openDataContext/images/Icon_ImageIcon_Medal_Gold.png',
-    'openDataContext/images/Icon_ImageIcon_Medal_Silver.png',
-    'openDataContext/images/Icon_ImageIcon_Medal_Bronze.png',
+const RANK_IMAGE_SOURCES = [
+    'openDataContext/images/rank_bg1.png',
+    'openDataContext/images/rank_bg2.png',
+    'openDataContext/images/rank_bg3.png',
+    'openDataContext/images/rank_bg4.png',
+    'openDataContext/images/rank_one.png',
+    'openDataContext/images/rank_two.png',
+    'openDataContext/images/rank_three.png',
 ];
-const medalImages = [];
+const rankImages = [];
 const avatarImages = {};
-let medalImagesLoaded = false;
-let medalImagesLoading = false;
+let rankImagesLoaded = false;
+let rankImagesLoading = false;
 
 function clear() {
     if (!context || !sharedCanvas) return;
@@ -35,42 +39,41 @@ function createImage() {
     return null;
 }
 
-function loadMedalImages(callback) {
-    if (medalImagesLoaded) {
+function loadRankImages(callback) {
+    if (rankImagesLoaded) {
         callback();
         return;
     }
-    if (medalImagesLoading) {
-        setTimeout(() => loadMedalImages(callback), 50);
+    if (rankImagesLoading) {
+        setTimeout(() => loadRankImages(callback), 50);
         return;
     }
 
-    medalImagesLoading = true;
+    rankImagesLoading = true;
     let loadedCount = 0;
     const finishOne = () => {
         loadedCount += 1;
-        if (loadedCount >= MEDAL_IMAGE_SOURCES.length) {
-            medalImagesLoaded = true;
-            medalImagesLoading = false;
+        if (loadedCount >= RANK_IMAGE_SOURCES.length) {
+            rankImagesLoaded = true;
+            rankImagesLoading = false;
             callback();
         }
     };
 
-    MEDAL_IMAGE_SOURCES.forEach((src, index) => {
+    RANK_IMAGE_SOURCES.forEach((src, index) => {
         const image = createImage();
         if (!image) {
-            console.warn('OpenDataContext: create medal image failed', src);
+            console.warn('OpenDataContext: create rank image failed', src);
             finishOne();
             return;
         }
 
         image.onload = () => {
-            console.log('OpenDataContext: medal image loaded', src);
-            medalImages[index] = image;
+            rankImages[index] = image;
             finishOne();
         };
         image.onerror = (err) => {
-            console.warn('OpenDataContext: medal image load failed', src, err);
+            console.warn('OpenDataContext: rank image load failed', src, err);
             finishOne();
         };
         image.src = src;
@@ -86,15 +89,26 @@ function setSharedCanvasSize(width, height) {
 }
 
 function drawRankMark(rank, x, y) {
-    const medal = medalImages[rank - 1];
-    if (rank <= 3 && medal) {
-        context.drawImage(medal, x - 2, y - 29, 40, 40);
+    const rankMark = rankImages[rank + 3];
+    if (rank <= 3 && rankMark) {
+        context.drawImage(rankMark, x - 2, y - 29, 40, 40);
         return;
     }
 
     context.fillStyle = '#ffffff';
     context.textAlign = 'center';
     context.fillText(String(rank), x + 18, y);
+}
+
+function drawRankBackground(rank, x, y, width, height) {
+    const background = rankImages[Math.min(rank, 4) - 1];
+    if (background) {
+        context.drawImage(background, x, y, width, height);
+        return;
+    }
+
+    context.fillStyle = 'rgba(255, 255, 255, 0.12)';
+    context.fillRect(x, y, width, height);
 }
 
 function drawAvatar(item, x, y, size) {
@@ -199,8 +213,7 @@ function drawRankList(dataList, key) {
     sortedList.forEach((item, index) => {
         const rank = index + 1;
         const y = 110 + index * 48;
-        context.fillStyle = item.isSelf ? 'rgba(255, 220, 96, 0.58)' : index % 2 === 0 ? 'rgba(255, 255, 255, 0.12)' : 'rgba(255, 255, 255, 0.06)';
-        context.fillRect(40, y - 30, sharedCanvas.width - 80, 40);
+        drawRankBackground(rank, 40, y - 30, sharedCanvas.width - 80, 40);
         if (item.isSelf) {
             context.strokeStyle = 'rgba(255, 255, 255, 0.82)';
             context.lineWidth = 2;
@@ -243,15 +256,14 @@ function drawSelfRankFooter(hasSelfScore, selfIndex, selfItem) {
         return;
     }
 
-    // Mirrors a leaderboard row so the footer reads like an entry in the list.
-    context.fillStyle = 'rgba(255, 220, 96, 0.58)';
-    context.fillRect(rectX, rectTop, rectW, 40);
+    const selfRank = selfIndex + 1;
+    drawRankBackground(selfRank, rectX, rectTop, rectW, 40);
     context.strokeStyle = 'rgba(255, 255, 255, 0.82)';
     context.lineWidth = 2;
     context.strokeRect(rectX, rectTop, rectW, 40);
 
     context.font = '24px Arial';
-    drawRankMark(selfIndex + 1, 58, y);
+    drawRankMark(selfRank, 58, y);
     drawAvatar(selfItem, 104, y - 28, 36);
 
     context.fillStyle = '#ffffff';
@@ -341,7 +353,7 @@ function showFriendRank(key, width, height) {
                 const rankData = buildRankData(res.data, selfData, key);
                 console.log('OpenDataContext: merged rank data', rankData);
                 drawRankList(rankData, key);
-                loadMedalImages(() => drawRankList(rankData, key));
+                loadRankImages(() => drawRankList(rankData, key));
                 loadAvatarImages(rankData, () => drawRankList(rankData, key));
             });
         },
