@@ -3,6 +3,9 @@
 const runtime = typeof wx !== 'undefined' ? wx : typeof tt !== 'undefined' ? tt : null;
 const sharedCanvas = runtime && runtime.getSharedCanvas ? runtime.getSharedCanvas() : null;
 const context = sharedCanvas ? sharedCanvas.getContext('2d') : null;
+const RANK_ROW_WIDTH = 486;
+const RANK_ROW_HEIGHT = 77;
+const RANK_FOOTER_GAP = 20;
 const RANK_IMAGE_SOURCES = [
     'openDataContext/images/rank_bg1.png',
     'openDataContext/images/rank_bg2.png',
@@ -25,8 +28,6 @@ function clear() {
 function drawMessage(message) {
     if (!context || !sharedCanvas) return;
     clear();
-    context.fillStyle = 'rgba(0, 0, 0, 0.62)';
-    context.fillRect(0, 0, sharedCanvas.width, sharedCanvas.height);
     context.fillStyle = '#ffffff';
     context.font = '28px Arial';
     context.textAlign = 'center';
@@ -100,15 +101,14 @@ function drawRankMark(rank, x, y) {
     context.fillText(String(rank), x + 18, y);
 }
 
-function drawRankBackground(rank, x, y, width, height) {
+function drawRankBackground(rank, x, y) {
     const background = rankImages[Math.min(rank, 4) - 1];
     if (background) {
-        context.drawImage(background, x, y, width, height);
-        return;
+        context.save();
+        context.globalAlpha = 1;
+        context.drawImage(background, x, y);
+        context.restore();
     }
-
-    context.fillStyle = 'rgba(255, 255, 255, 0.12)';
-    context.fillRect(x, y, width, height);
 }
 
 function drawAvatar(item, x, y, size) {
@@ -177,13 +177,6 @@ function drawRankList(dataList, key) {
     clear();
 
     context.textBaseline = 'alphabetic';
-    context.fillStyle = 'rgba(0, 0, 0, 0.62)';
-    context.fillRect(0, 0, sharedCanvas.width, sharedCanvas.height);
-
-    context.fillStyle = '#ffffff';
-    context.font = '32px Arial';
-    context.textAlign = 'center';
-    context.fillText('好友排行榜', sharedCanvas.width * 0.5, 56);
 
     const fullList = dataList
         .map((item) => {
@@ -201,7 +194,11 @@ function drawRankList(dataList, key) {
     const selfItem = selfIndex >= 0 ? fullList[selfIndex] : null;
     const hasSelfScore = !!(selfItem && selfItem.score > 0);
 
-    const sortedList = fullList.slice(0, 13);
+    const maxVisibleRows = Math.max(
+        1,
+        Math.floor((sharedCanvas.height - RANK_ROW_HEIGHT - RANK_FOOTER_GAP) / RANK_ROW_HEIGHT),
+    );
+    const sortedList = fullList.slice(0, maxVisibleRows);
     console.log('OpenDataContext: drawRankList data count', sortedList.length, sortedList);
 
     if (sortedList.length <= 0) {
@@ -212,22 +209,24 @@ function drawRankList(dataList, key) {
     context.font = '24px Arial';
     sortedList.forEach((item, index) => {
         const rank = index + 1;
-        const y = 110 + index * 48;
-        drawRankBackground(rank, 40, y - 30, sharedCanvas.width - 80, 40);
+        const rowX = (sharedCanvas.width - RANK_ROW_WIDTH) * 0.5;
+        const rowTop = index * RANK_ROW_HEIGHT;
+        const y = rowTop + 49;
+        drawRankBackground(rank, rowX, rowTop);
         if (item.isSelf) {
             context.strokeStyle = 'rgba(255, 255, 255, 0.82)';
             context.lineWidth = 2;
-            context.strokeRect(40, y - 30, sharedCanvas.width - 80, 40);
+            context.strokeRect(rowX, rowTop, RANK_ROW_WIDTH, RANK_ROW_HEIGHT);
         }
 
-        drawRankMark(rank, 58, y);
-        drawAvatar(item, 104, y - 28, 36);
+        drawRankMark(rank, rowX + 18, y);
+        drawAvatar(item, rowX + 86, rowTop + 20, 36);
 
         context.fillStyle = '#ffffff';
         context.textAlign = 'left';
-        context.fillText(item.nickname, 152, y);
+        context.fillText(item.nickname, rowX + 134, y);
         context.textAlign = 'right';
-        context.fillText(String(item.score), sharedCanvas.width - 60, y);
+        context.fillText(String(item.score), rowX + RANK_ROW_WIDTH - 20, y);
     });
 
     drawSelfRankFooter(hasSelfScore, selfIndex, selfItem);
@@ -236,41 +235,40 @@ function drawRankList(dataList, key) {
 function drawSelfRankFooter(hasSelfScore, selfIndex, selfItem) {
     if (!context || !sharedCanvas) return;
 
-    const y = sharedCanvas.height - 14;
-    const rectX = 40;
-    const rectW = sharedCanvas.width - 80;
-    const rectTop = y - 30;
+    const rectX = (sharedCanvas.width - RANK_ROW_WIDTH) * 0.5;
+    const rectTop = sharedCanvas.height - RANK_ROW_HEIGHT - 30;
+    const y = rectTop + 49;
 
     if (!hasSelfScore || !selfItem) {
         context.fillStyle = 'rgba(255, 220, 96, 0.18)';
-        context.fillRect(rectX, rectTop, rectW, 40);
+        context.fillRect(rectX, rectTop, RANK_ROW_WIDTH, RANK_ROW_HEIGHT);
         context.strokeStyle = 'rgba(255, 220, 96, 0.5)';
         context.lineWidth = 1;
-        context.strokeRect(rectX, rectTop, rectW, 40);
+        context.strokeRect(rectX, rectTop, RANK_ROW_WIDTH, RANK_ROW_HEIGHT);
         context.fillStyle = '#ffe27a';
         context.font = '26px Arial';
         context.textAlign = 'center';
         context.textBaseline = 'middle';
-        context.fillText('暂未进入排行榜', sharedCanvas.width * 0.5, rectTop + 20);
+        context.fillText('暂未进入排行榜', sharedCanvas.width * 0.5, rectTop + RANK_ROW_HEIGHT * 0.5);
         context.textBaseline = 'alphabetic';
         return;
     }
 
     const selfRank = selfIndex + 1;
-    drawRankBackground(selfRank, rectX, rectTop, rectW, 40);
+    drawRankBackground(selfRank, rectX, rectTop);
     context.strokeStyle = 'rgba(255, 255, 255, 0.82)';
     context.lineWidth = 2;
-    context.strokeRect(rectX, rectTop, rectW, 40);
+    context.strokeRect(rectX, rectTop, RANK_ROW_WIDTH, RANK_ROW_HEIGHT);
 
     context.font = '24px Arial';
-    drawRankMark(selfRank, 58, y);
-    drawAvatar(selfItem, 104, y - 28, 36);
+    drawRankMark(selfRank, rectX + 18, y);
+    drawAvatar(selfItem, rectX + 86, rectTop + 20, 36);
 
     context.fillStyle = '#ffffff';
     context.textAlign = 'left';
-    context.fillText(selfItem.nickname || '我', 152, y);
+    context.fillText(selfItem.nickname || '我', rectX + 134, y);
     context.textAlign = 'right';
-    context.fillText(String(selfItem.score), sharedCanvas.width - 60, y);
+    context.fillText(String(selfItem.score), rectX + RANK_ROW_WIDTH - 20, y);
 }
 
 function getSelfCloudStorage(key, callback) {

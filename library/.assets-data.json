@@ -4795,16 +4795,12 @@
   },
   "acc21694-43b6-4f73-8062-1ae3b315637e": {
     "url": "db://assets/subpackages/game/texture/rank_bg1.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "06c61434-69ef-4996-8a7e-57aa1a5cdf6b": {
     "url": "db://assets/subpackages/game/texture/rank_bg2.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "8471ddf3-b0f4-4008-b3e9-2fde773d181f@6c48a": {
@@ -4863,9 +4859,7 @@
   },
   "4632f6fe-4ed6-4f7f-9579-9ad740bc8555": {
     "url": "db://assets/subpackages/game/texture/rank_bg3.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "ae0f9378-35a5-453b-b013-fc95ba8bf213@f9941": {
@@ -4888,9 +4882,7 @@
   },
   "f00583b5-46cb-45ae-b50b-a3045f264eae": {
     "url": "db://assets/subpackages/game/texture/rank_bg4.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "aa9b724d-e5df-4981-837c-26eb0130a07d": {
@@ -4911,9 +4903,7 @@
   },
   "daa17f79-e517-4b83-8c4d-7fa5613b7374": {
     "url": "db://assets/subpackages/game/texture/rank_one.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "acc21694-43b6-4f73-8062-1ae3b315637e@f9941": {
@@ -4927,9 +4917,7 @@
   },
   "6401d430-58df-4a2d-969c-db796439d4d4": {
     "url": "db://assets/subpackages/game/texture/rank_three.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "4632f6fe-4ed6-4f7f-9579-9ad740bc8555@6c48a": {
@@ -4988,9 +4976,7 @@
   },
   "4f734dbf-6ef4-4245-9053-7630fb89a3df": {
     "url": "db://assets/subpackages/game/texture/rank_two.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "f00583b5-46cb-45ae-b50b-a3045f264eae@f9941": {

@@ -3,15 +3,22 @@
 const runtime = typeof wx !== 'undefined' ? wx : typeof tt !== 'undefined' ? tt : null;
 const sharedCanvas = runtime && runtime.getSharedCanvas ? runtime.getSharedCanvas() : null;
 const context = sharedCanvas ? sharedCanvas.getContext('2d') : null;
-const MEDAL_IMAGE_SOURCES = [
-    'openDataContext/images/Icon_ImageIcon_Medal_Gold.png',
-    'openDataContext/images/Icon_ImageIcon_Medal_Silver.png',
-    'openDataContext/images/Icon_ImageIcon_Medal_Bronze.png',
+const RANK_ROW_WIDTH = 486;
+const RANK_ROW_HEIGHT = 77;
+const RANK_FOOTER_GAP = 20;
+const RANK_IMAGE_SOURCES = [
+    'openDataContext/images/rank_bg1.png',
+    'openDataContext/images/rank_bg2.png',
+    'openDataContext/images/rank_bg3.png',
+    'openDataContext/images/rank_bg4.png',
+    'openDataContext/images/rank_one.png',
+    'openDataContext/images/rank_two.png',
+    'openDataContext/images/rank_three.png',
 ];
-const medalImages = [];
+const rankImages = [];
 const avatarImages = {};
-let medalImagesLoaded = false;
-let medalImagesLoading = false;
+let rankImagesLoaded = false;
+let rankImagesLoading = false;
 
 function clear() {
     if (!context || !sharedCanvas) return;
@@ -21,8 +28,6 @@ function clear() {
 function drawMessage(message) {
     if (!context || !sharedCanvas) return;
     clear();
-    context.fillStyle = 'rgba(0, 0, 0, 0.62)';
-    context.fillRect(0, 0, sharedCanvas.width, sharedCanvas.height);
     context.fillStyle = '#ffffff';
     context.font = '28px Arial';
     context.textAlign = 'center';
@@ -35,42 +40,41 @@ function createImage() {
     return null;
 }
 
-function loadMedalImages(callback) {
-    if (medalImagesLoaded) {
+function loadRankImages(callback) {
+    if (rankImagesLoaded) {
         callback();
         return;
     }
-    if (medalImagesLoading) {
-        setTimeout(() => loadMedalImages(callback), 50);
+    if (rankImagesLoading) {
+        setTimeout(() => loadRankImages(callback), 50);
         return;
     }
 
-    medalImagesLoading = true;
+    rankImagesLoading = true;
     let loadedCount = 0;
     const finishOne = () => {
         loadedCount += 1;
-        if (loadedCount >= MEDAL_IMAGE_SOURCES.length) {
-            medalImagesLoaded = true;
-            medalImagesLoading = false;
+        if (loadedCount >= RANK_IMAGE_SOURCES.length) {
+            rankImagesLoaded = true;
+            rankImagesLoading = false;
             callback();
         }
     };
 
-    MEDAL_IMAGE_SOURCES.forEach((src, index) => {
+    RANK_IMAGE_SOURCES.forEach((src, index) => {
         const image = createImage();
         if (!image) {
-            console.warn('OpenDataContext: create medal image failed', src);
+            console.warn('OpenDataContext: create rank image failed', src);
             finishOne();
             return;
         }
 
         image.onload = () => {
-            console.log('OpenDataContext: medal image loaded', src);
-            medalImages[index] = image;
+            rankImages[index] = image;
             finishOne();
         };
         image.onerror = (err) => {
-            console.warn('OpenDataContext: medal image load failed', src, err);
+            console.warn('OpenDataContext: rank image load failed', src, err);
             finishOne();
         };
         image.src = src;
@@ -86,15 +90,25 @@ function setSharedCanvasSize(width, height) {
 }
 
 function drawRankMark(rank, x, y) {
-    const medal = medalImages[rank - 1];
-    if (rank <= 3 && medal) {
-        context.drawImage(medal, x - 2, y - 29, 40, 40);
+    const rankMark = rankImages[rank + 3];
+    if (rank <= 3 && rankMark) {
+        context.drawImage(rankMark, x - 2, y - 29, 40, 40);
         return;
     }
 
     context.fillStyle = '#ffffff';
     context.textAlign = 'center';
     context.fillText(String(rank), x + 18, y);
+}
+
+function drawRankBackground(rank, x, y) {
+    const background = rankImages[Math.min(rank, 4) - 1];
+    if (background) {
+        context.save();
+        context.globalAlpha = 1;
+        context.drawImage(background, x, y);
+        context.restore();
+    }
 }
 
 function drawAvatar(item, x, y, size) {
@@ -163,13 +177,6 @@ function drawRankList(dataList, key) {
     clear();
 
     context.textBaseline = 'alphabetic';
-    context.fillStyle = 'rgba(0, 0, 0, 0.62)';
-    context.fillRect(0, 0, sharedCanvas.width, sharedCanvas.height);
-
-    context.fillStyle = '#ffffff';
-    context.font = '32px Arial';
-    context.textAlign = 'center';
-    context.fillText('好友排行榜', sharedCanvas.width * 0.5, 56);
 
     const fullList = dataList
         .map((item) => {
@@ -187,7 +194,11 @@ function drawRankList(dataList, key) {
     const selfItem = selfIndex >= 0 ? fullList[selfIndex] : null;
     const hasSelfScore = !!(selfItem && selfItem.score > 0);
 
-    const sortedList = fullList.slice(0, 13);
+    const maxVisibleRows = Math.max(
+        1,
+        Math.floor((sharedCanvas.height - RANK_ROW_HEIGHT - RANK_FOOTER_GAP) / RANK_ROW_HEIGHT),
+    );
+    const sortedList = fullList.slice(0, maxVisibleRows);
     console.log('OpenDataContext: drawRankList data count', sortedList.length, sortedList);
 
     if (sortedList.length <= 0) {
@@ -198,23 +209,24 @@ function drawRankList(dataList, key) {
     context.font = '24px Arial';
     sortedList.forEach((item, index) => {
         const rank = index + 1;
-        const y = 110 + index * 48;
-        context.fillStyle = item.isSelf ? 'rgba(255, 220, 96, 0.58)' : index % 2 === 0 ? 'rgba(255, 255, 255, 0.12)' : 'rgba(255, 255, 255, 0.06)';
-        context.fillRect(40, y - 30, sharedCanvas.width - 80, 40);
+        const rowX = (sharedCanvas.width - RANK_ROW_WIDTH) * 0.5;
+        const rowTop = index * RANK_ROW_HEIGHT;
+        const y = rowTop + 49;
+        drawRankBackground(rank, rowX, rowTop);
         if (item.isSelf) {
             context.strokeStyle = 'rgba(255, 255, 255, 0.82)';
             context.lineWidth = 2;
-            context.strokeRect(40, y - 30, sharedCanvas.width - 80, 40);
+            context.strokeRect(rowX, rowTop, RANK_ROW_WIDTH, RANK_ROW_HEIGHT);
         }
 
-        drawRankMark(rank, 58, y);
-        drawAvatar(item, 104, y - 28, 36);
+        drawRankMark(rank, rowX + 18, y);
+        drawAvatar(item, rowX + 86, rowTop + 20, 36);
 
         context.fillStyle = '#ffffff';
         context.textAlign = 'left';
-        context.fillText(item.nickname, 152, y);
+        context.fillText(item.nickname, rowX + 134, y);
         context.textAlign = 'right';
-        context.fillText(String(item.score), sharedCanvas.width - 60, y);
+        context.fillText(String(item.score), rowX + RANK_ROW_WIDTH - 20, y);
     });
 
     drawSelfRankFooter(hasSelfScore, selfIndex, selfItem);
@@ -223,42 +235,40 @@ function drawRankList(dataList, key) {
 function drawSelfRankFooter(hasSelfScore, selfIndex, selfItem) {
     if (!context || !sharedCanvas) return;
 
-    const y = sharedCanvas.height - 14;
-    const rectX = 40;
-    const rectW = sharedCanvas.width - 80;
-    const rectTop = y - 30;
+    const rectX = (sharedCanvas.width - RANK_ROW_WIDTH) * 0.5;
+    const rectTop = sharedCanvas.height - RANK_ROW_HEIGHT - 30;
+    const y = rectTop + 49;
 
     if (!hasSelfScore || !selfItem) {
         context.fillStyle = 'rgba(255, 220, 96, 0.18)';
-        context.fillRect(rectX, rectTop, rectW, 40);
+        context.fillRect(rectX, rectTop, RANK_ROW_WIDTH, RANK_ROW_HEIGHT);
         context.strokeStyle = 'rgba(255, 220, 96, 0.5)';
         context.lineWidth = 1;
-        context.strokeRect(rectX, rectTop, rectW, 40);
+        context.strokeRect(rectX, rectTop, RANK_ROW_WIDTH, RANK_ROW_HEIGHT);
         context.fillStyle = '#ffe27a';
         context.font = '26px Arial';
         context.textAlign = 'center';
         context.textBaseline = 'middle';
-        context.fillText('暂未进入排行榜', sharedCanvas.width * 0.5, rectTop + 20);
+        context.fillText('暂未进入排行榜', sharedCanvas.width * 0.5, rectTop + RANK_ROW_HEIGHT * 0.5);
         context.textBaseline = 'alphabetic';
         return;
     }
 
-    // Mirrors a leaderboard row so the footer reads like an entry in the list.
-    context.fillStyle = 'rgba(255, 220, 96, 0.58)';
-    context.fillRect(rectX, rectTop, rectW, 40);
+    const selfRank = selfIndex + 1;
+    drawRankBackground(selfRank, rectX, rectTop);
     context.strokeStyle = 'rgba(255, 255, 255, 0.82)';
     context.lineWidth = 2;
-    context.strokeRect(rectX, rectTop, rectW, 40);
+    context.strokeRect(rectX, rectTop, RANK_ROW_WIDTH, RANK_ROW_HEIGHT);
 
     context.font = '24px Arial';
-    drawRankMark(selfIndex + 1, 58, y);
-    drawAvatar(selfItem, 104, y - 28, 36);
+    drawRankMark(selfRank, rectX + 18, y);
+    drawAvatar(selfItem, rectX + 86, rectTop + 20, 36);
 
     context.fillStyle = '#ffffff';
     context.textAlign = 'left';
-    context.fillText(selfItem.nickname || '我', 152, y);
+    context.fillText(selfItem.nickname || '我', rectX + 134, y);
     context.textAlign = 'right';
-    context.fillText(String(selfItem.score), sharedCanvas.width - 60, y);
+    context.fillText(String(selfItem.score), rectX + RANK_ROW_WIDTH - 20, y);
 }
 
 function getSelfCloudStorage(key, callback) {
@@ -341,7 +351,7 @@ function showFriendRank(key, width, height) {
                 const rankData = buildRankData(res.data, selfData, key);
                 console.log('OpenDataContext: merged rank data', rankData);
                 drawRankList(rankData, key);
-                loadMedalImages(() => drawRankList(rankData, key));
+                loadRankImages(() => drawRankList(rankData, key));
                 loadAvatarImages(rankData, () => drawRankList(rankData, key));
             });
         },

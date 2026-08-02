@@ -943,7 +943,7 @@
       "uuid": "c30cc32b-cb89-4481-b103-8f9095104ac8"
     },
     "subpackages\\game\\texture": {
-      "time": 1785389147938.0293,
+      "time": 1785658936940.2166,
       "uuid": "dbdbb2c4-2818-4a64-9df1-b1a9ac920201"
     },
     "subpackages\\game\\ui": {
@@ -1171,29 +1171,8 @@
     "subpackages\\game\\texture\\PictoIcon_Close.png.meta": {
       "time": 1785388180227.566
     },
-    "subpackages\\game\\texture\\rank_bg1.png.meta": {
-      "time": 1785388180230.5667
-    },
-    "subpackages\\game\\texture\\rank_bg2.png.meta": {
-      "time": 1785388180231.5654
-    },
-    "subpackages\\game\\texture\\rank_bg3.png.meta": {
-      "time": 1785388180231.5654
-    },
-    "subpackages\\game\\texture\\rank_bg4.png.meta": {
-      "time": 1785388180231.5654
-    },
     "subpackages\\game\\texture\\rank_diban.png.meta": {
       "time": 1785388180232.5662
-    },
-    "subpackages\\game\\texture\\rank_one.png.meta": {
-      "time": 1785388180232.5662
-    },
-    "subpackages\\game\\texture\\rank_three.png.meta": {
-      "time": 1785388180233.5657
-    },
-    "subpackages\\game\\texture\\rank_two.png.meta": {
-      "time": 1785388180245.566
     },
     "subpackages\\game\\texture\\remove.png.meta": {
       "time": 1785388180245.566
@@ -1245,37 +1224,9 @@
       "time": 1785388180230.5667,
       "uuid": "348ebc2a-6442-4dbf-ba11-e7caace7d77d"
     },
-    "subpackages\\game\\texture\\rank_bg2.png": {
-      "time": 1785388180231.5654,
-      "uuid": "06c61434-69ef-4996-8a7e-57aa1a5cdf6b"
-    },
-    "subpackages\\game\\texture\\rank_bg1.png": {
-      "time": 1785388180230.5667,
-      "uuid": "acc21694-43b6-4f73-8062-1ae3b315637e"
-    },
-    "subpackages\\game\\texture\\rank_bg3.png": {
-      "time": 1785388180231.5654,
-      "uuid": "4632f6fe-4ed6-4f7f-9579-9ad740bc8555"
-    },
-    "subpackages\\game\\texture\\rank_bg4.png": {
-      "time": 1785388180231.5654,
-      "uuid": "f00583b5-46cb-45ae-b50b-a3045f264eae"
-    },
-    "subpackages\\game\\texture\\rank_three.png": {
-      "time": 1785388180233.5657,
-      "uuid": "6401d430-58df-4a2d-969c-db796439d4d4"
-    },
-    "subpackages\\game\\texture\\rank_one.png": {
-      "time": 1785388180232.5662,
-      "uuid": "daa17f79-e517-4b83-8c4d-7fa5613b7374"
-    },
     "subpackages\\game\\texture\\rank_diban.png": {
       "time": 1785360284000,
       "uuid": "aa9b724d-e5df-4981-837c-26eb0130a07d"
-    },
-    "subpackages\\game\\texture\\rank_two.png": {
-      "time": 1785388180245.006,
-      "uuid": "4f734dbf-6ef4-4245-9053-7630fb89a3df"
     },
     "subpackages\\game\\texture\\remove_title.png": {
       "time": 1785388180245.566,
