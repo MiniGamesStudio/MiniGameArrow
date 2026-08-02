@@ -833,6 +833,7 @@ export class GamePanel extends UIBase {
         UIManager.GetInstance().OpenPanel(CommonUIID.AdPanel, {
             skillIndex,
             onUse: () => this.applySkill(skillIndex),
+            shareQuery: `level=${this.m_CurrentLevel}`,
         });
     }
 

@@ -1,20 +1,31 @@
 import { _decorator, Button, Node } from 'cc';
 import { AdManager, AdPlayResult } from '../../../engine/AdManager';
+import { PlatformManager, PlatformResult } from '../../../engine/PlatformManager';
 import { UIBase } from '../../../engine/ui/UIBase';
 const { ccclass } = _decorator;
 
 export type AdSkillIndex = 1 | 2 | 3;
 
+export enum SkillRewardMode {
+    Share = 'share',
+    Ad = 'ad',
+}
+
+/** 技能获取方式：当前暂用分享，改为 Ad 即可恢复激励广告。 */
+export let SKILL_REWARD_MODE: SkillRewardMode = SkillRewardMode.Share;
+
 export interface AdPanelOptions {
     skillIndex: AdSkillIndex;
     onUse?: () => void;
+    shareQuery?: string;
 }
 
 @ccclass('AdPanel')
 export class AdPanel extends UIBase {
     private m_OnUse: (() => void) | null = null;
+    private m_ShareQuery: string = '';
     private m_UseButton: Button | null = null;
-    private m_IsPlaying: boolean = false;
+    private m_IsRequestingReward: boolean = false;
     private m_RequestSerial: number = 0;
 
     OnInit(): void {
@@ -22,7 +33,7 @@ export class AdPanel extends UIBase {
         if (!background) return;
 
         this.m_UseButton = this.bindButton(background, 'UseBtn', () => {
-            void this.playAdAndUseSkill();
+            void this.requestRewardAndUseSkill();
         });
         this.bindButton(background, 'CloseBtn', () => this.CloseSelf());
     }
@@ -36,7 +47,8 @@ export class AdPanel extends UIBase {
         }
 
         this.m_OnUse = options.onUse || null;
-        this.m_IsPlaying = false;
+        this.m_ShareQuery = options.shareQuery || '';
+        this.m_IsRequestingReward = false;
         this.m_RequestSerial++;
         this.setUseButtonInteractable(true);
         this.updateSkillContent(skillIndex);
@@ -45,7 +57,8 @@ export class AdPanel extends UIBase {
     OnClose(): void {
         super.OnClose();
         this.m_OnUse = null;
-        this.m_IsPlaying = false;
+        this.m_ShareQuery = '';
+        this.m_IsRequestingReward = false;
         this.m_RequestSerial++;
         this.setUseButtonInteractable(true);
     }
@@ -60,26 +73,49 @@ export class AdPanel extends UIBase {
         }
     }
 
-    private async playAdAndUseSkill(): Promise<void> {
-        if (this.m_IsPlaying) return;
+    private async requestRewardAndUseSkill(): Promise<void> {
+        if (this.m_IsRequestingReward) return;
 
-        this.m_IsPlaying = true;
+        this.m_IsRequestingReward = true;
         this.setUseButtonInteractable(false);
         const requestSerial = ++this.m_RequestSerial;
-        const result = await AdManager.getInstance().playRewardedVideoAd();
+        const rewarded = SKILL_REWARD_MODE === SkillRewardMode.Ad
+            ? await this.playRewardedAd()
+            : await this.shareForReward();
 
         if (!this.isValid || requestSerial !== this.m_RequestSerial) return;
 
-        this.m_IsPlaying = false;
+        this.m_IsRequestingReward = false;
         this.setUseButtonInteractable(true);
-        if (result.result !== AdPlayResult.Completed) {
-            console.warn('AdPanel: 广告未完整播放，技能未生效', result.message);
-            return;
-        }
+        if (!rewarded) return;
 
         const onUse = this.m_OnUse;
         this.CloseSelf();
         onUse?.();
+    }
+
+    private async playRewardedAd(): Promise<boolean> {
+        const result = await AdManager.getInstance().playRewardedVideoAd();
+        if (result.result === AdPlayResult.Completed) return true;
+
+        console.warn('AdPanel: 广告未完整播放，技能未生效', result.message);
+        return false;
+    }
+
+    private async shareForReward(): Promise<boolean> {
+        const result = await PlatformManager.getInstance().shareAppMessage({
+            title: '快来一起玩吧',
+            query: this.m_ShareQuery,
+        });
+        if (result.result === PlatformResult.Success) return true;
+
+        if (result.result === PlatformResult.Unsupported) {
+            console.warn('AdPanel: 当前环境不支持分享，直接发放技能奖励用于调试', result.message);
+            return true;
+        }
+
+        console.warn('AdPanel: 分享未完成，技能未生效', result.message);
+        return false;
     }
 
     private bindButton(root: Node, name: string, callback: () => void): Button | null {
