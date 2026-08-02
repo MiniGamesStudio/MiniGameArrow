@@ -69,11 +69,19 @@ function loadRankImages(callback) {
             return;
         }
 
+        let triedRelativePath = false;
         image.onload = () => {
             rankImages[index] = image;
+            callback();
             finishOne();
         };
         image.onerror = (err) => {
+            if (!triedRelativePath && src.indexOf('openDataContext/') === 0) {
+                triedRelativePath = true;
+                image.src = src.replace('openDataContext/', '');
+                return;
+            }
+
             console.warn('OpenDataContext: rank image load failed', src, err);
             finishOne();
         };
@@ -106,7 +114,7 @@ function drawRankBackground(rank, x, y) {
     if (background) {
         context.save();
         context.globalAlpha = 1;
-        context.drawImage(background, x, y);
+        context.drawImage(background, x, y, RANK_ROW_WIDTH, RANK_ROW_HEIGHT);
         context.restore();
     }
 }
