@@ -760,31 +760,6 @@
       },
       "scale": 1
     },
-    "f7e7fc73-23fc-4f8f-838a-3643ae2e8713": {
-      "position": {
-        "x": 375,
-        "y": 667,
-        "z": 2570.392465145721
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "viewCenter": {
-        "x": 375,
-        "y": 667,
-        "z": 0
-      },
-      "contentRect": {
-        "x": 0,
-        "y": 0,
-        "width": 967,
-        "height": 684
-      },
-      "scale": 1
-    },
     "e9ac1fc5-9611-4b81-934c-e3adb37b13fb": {
       "position": {
         "x": 373.4358900996487,
@@ -860,6 +835,31 @@
       },
       "scale": 1
     },
+    "f7e7fc73-23fc-4f8f-838a-3643ae2e8713": {
+      "position": {
+        "x": 375,
+        "y": 667,
+        "z": 2570.392465145721
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 375,
+        "y": 667,
+        "z": 0
+      },
+      "contentRect": {
+        "x": 0,
+        "y": 0,
+        "width": 967,
+        "height": 684
+      },
+      "scale": 1
+    },
     "832cd028-fca2-4694-bfcf-606b1fd6a211": {
       "position": {
         "x": 253.23833037028072,
@@ -880,8 +880,8 @@
       "contentRect": {
         "x": 0,
         "y": 0,
-        "width": 300,
-        "height": 533
+        "width": 1500,
+        "height": 1000
       },
       "scale": 1
     }
@@ -915,10 +915,10 @@
     "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23",
     "83902b23-c019-4bc5-8a63-c1703769b66e",
     "b6b4c5ef-8ac7-4533-a50a-dadbc41c189e",
-    "f7e7fc73-23fc-4f8f-838a-3643ae2e8713",
     "e9ac1fc5-9611-4b81-934c-e3adb37b13fb",
     "f4792ee9-76b7-4236-81bc-de8678eadf47",
     "961e7ba8-328e-460d-ba41-071fc0bcebd9",
+    "f7e7fc73-23fc-4f8f-838a-3643ae2e8713",
     "832cd028-fca2-4694-bfcf-606b1fd6a211"
   ],
   "camera": {

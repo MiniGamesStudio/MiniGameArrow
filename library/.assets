@@ -52,6 +52,7 @@
             "scripts\\Game\\CommonGame\\CommonGameProgress.ts",
             "scripts\\Game\\CommonGame\\CommonUIConfig.ts",
             "scripts\\Game\\CommonGame\\shader\\PixelMonsterSprite.ts",
+            "scripts\\Game\\CommonGame\\ui\\AdPanel.ts",
             "scripts\\Game\\CommonGame\\ui\\GamePanel.ts",
             "scripts\\Game\\CommonGame\\ui\\LoadingPanel.ts",
             "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts",
@@ -109,6 +110,7 @@
             "subpackages\\game\\texture\\sheep_game.png",
             "subpackages\\game\\texture\\xipai_icon.png",
             "subpackages\\game\\texture\\xipai_title.png",
+            "subpackages\\game\\ui\\AdPanel.prefab",
             "subpackages\\game\\ui\\GamePanel.prefab",
             "subpackages\\game\\ui\\PausePanel.prefab",
             "subpackages\\game\\ui\\TransitionPanel.prefab",
@@ -116,9 +118,7 @@
             "subpackages\\rank\\ranking\\Menu_TopBtn.png",
             "subpackages\\rank\\ranking\\RankingBackground.png",
             "subpackages\\rank\\ui\\Mask.prefab",
-            "subpackages\\rank\\ui\\RankPanel.prefab",
-            "subpackages\\game\\ui\\AdPanel.prefab",
-            "scripts\\Game\\CommonGame\\ui\\AdPanel.ts"
+            "subpackages\\rank\\ui\\RankPanel.prefab"
         ]
     }
 }
