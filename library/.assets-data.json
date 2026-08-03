@@ -5273,5 +5273,180 @@
     "url": "db://assets/scripts/Game/CommonGame/ui/AdPanel.ts",
     "value": {},
     "versionCode": 1
+  },
+  "24eb3cea-ff30-4d02-8189-1831683ec821": {
+    "url": "db://assets/subpackages/game/texture/chicken.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "40f10a33-4a13-4ef3-adbd-71d36ab6e532": {
+    "url": "db://assets/subpackages/game/texture/cow.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "cf459e42-9b5a-4821-b1b5-3dd4f93a26b3": {
+    "url": "db://assets/subpackages/game/texture/monkey.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "2d74eb98-44a2-4304-bce4-44543f57ae23": {
+    "url": "db://assets/subpackages/game/texture/pig.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d06c8463-6aa7-49a5-8376-999340c06d1c": {
+    "url": "db://assets/subpackages/game/texture/rabbit.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "40f10a33-4a13-4ef3-adbd-71d36ab6e532@6c48a": {
+    "url": "db://assets/subpackages/game/texture/cow.png@6c48a",
+    "value": {
+      "depends": [
+        "40f10a33-4a13-4ef3-adbd-71d36ab6e532"
+      ]
+    },
+    "versionCode": 1
+  },
+  "cf459e42-9b5a-4821-b1b5-3dd4f93a26b3@6c48a": {
+    "url": "db://assets/subpackages/game/texture/monkey.png@6c48a",
+    "value": {
+      "depends": [
+        "cf459e42-9b5a-4821-b1b5-3dd4f93a26b3"
+      ]
+    },
+    "versionCode": 1
+  },
+  "40f10a33-4a13-4ef3-adbd-71d36ab6e532@f9941": {
+    "url": "db://assets/subpackages/game/texture/cow.png@f9941",
+    "value": {
+      "depends": [
+        "40f10a33-4a13-4ef3-adbd-71d36ab6e532@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ad7fbb47-55bb-400d-89a3-5d18dedeb95a": {
+    "url": "db://assets/subpackages/game/texture/rice.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "cf459e42-9b5a-4821-b1b5-3dd4f93a26b3@f9941": {
+    "url": "db://assets/subpackages/game/texture/monkey.png@f9941",
+    "value": {
+      "depends": [
+        "cf459e42-9b5a-4821-b1b5-3dd4f93a26b3@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a38217d3-f827-4704-93c4-c31fe13396e9": {
+    "url": "db://assets/subpackages/game/texture/tigger.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "24eb3cea-ff30-4d02-8189-1831683ec821@6c48a": {
+    "url": "db://assets/subpackages/game/texture/chicken.png@6c48a",
+    "value": {
+      "depends": [
+        "24eb3cea-ff30-4d02-8189-1831683ec821"
+      ]
+    },
+    "versionCode": 1
+  },
+  "24eb3cea-ff30-4d02-8189-1831683ec821@f9941": {
+    "url": "db://assets/subpackages/game/texture/chicken.png@f9941",
+    "value": {
+      "depends": [
+        "24eb3cea-ff30-4d02-8189-1831683ec821@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2d74eb98-44a2-4304-bce4-44543f57ae23@6c48a": {
+    "url": "db://assets/subpackages/game/texture/pig.png@6c48a",
+    "value": {
+      "depends": [
+        "2d74eb98-44a2-4304-bce4-44543f57ae23"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d06c8463-6aa7-49a5-8376-999340c06d1c@6c48a": {
+    "url": "db://assets/subpackages/game/texture/rabbit.png@6c48a",
+    "value": {
+      "depends": [
+        "d06c8463-6aa7-49a5-8376-999340c06d1c"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2d74eb98-44a2-4304-bce4-44543f57ae23@f9941": {
+    "url": "db://assets/subpackages/game/texture/pig.png@f9941",
+    "value": {
+      "depends": [
+        "2d74eb98-44a2-4304-bce4-44543f57ae23@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d06c8463-6aa7-49a5-8376-999340c06d1c@f9941": {
+    "url": "db://assets/subpackages/game/texture/rabbit.png@f9941",
+    "value": {
+      "depends": [
+        "d06c8463-6aa7-49a5-8376-999340c06d1c@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ad7fbb47-55bb-400d-89a3-5d18dedeb95a@6c48a": {
+    "url": "db://assets/subpackages/game/texture/rice.png@6c48a",
+    "value": {
+      "depends": [
+        "ad7fbb47-55bb-400d-89a3-5d18dedeb95a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a38217d3-f827-4704-93c4-c31fe13396e9@6c48a": {
+    "url": "db://assets/subpackages/game/texture/tigger.png@6c48a",
+    "value": {
+      "depends": [
+        "a38217d3-f827-4704-93c4-c31fe13396e9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ad7fbb47-55bb-400d-89a3-5d18dedeb95a@f9941": {
+    "url": "db://assets/subpackages/game/texture/rice.png@f9941",
+    "value": {
+      "depends": [
+        "ad7fbb47-55bb-400d-89a3-5d18dedeb95a@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a38217d3-f827-4704-93c4-c31fe13396e9@f9941": {
+    "url": "db://assets/subpackages/game/texture/tigger.png@f9941",
+    "value": {
+      "depends": [
+        "a38217d3-f827-4704-93c4-c31fe13396e9@6c48a"
+      ]
+    },
+    "versionCode": 1
   }
 }

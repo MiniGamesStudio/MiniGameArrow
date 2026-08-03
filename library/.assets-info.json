@@ -943,7 +943,7 @@
       "uuid": "c30cc32b-cb89-4481-b103-8f9095104ac8"
     },
     "subpackages\\game\\texture": {
-      "time": 1785658936940.2166,
+      "time": 1785751701682.898,
       "uuid": "dbdbb2c4-2818-4a64-9df1-b1a9ac920201"
     },
     "subpackages\\game\\ui": {
@@ -1297,6 +1297,55 @@
     "scripts\\Game\\CommonGame\\ui\\AdPanel.ts": {
       "time": 1785657655470.3533,
       "uuid": "99999999-9999-4999-8999-999999999999"
+    },
+    "subpackages\\game\\texture\\chicken.png": {
+      "time": 1785751483653.9724,
+      "uuid": "24eb3cea-ff30-4d02-8189-1831683ec821"
+    },
+    "subpackages\\game\\texture\\cow.png": {
+      "time": 1785751444245.4126,
+      "uuid": "40f10a33-4a13-4ef3-adbd-71d36ab6e532"
+    },
+    "subpackages\\game\\texture\\monkey.png": {
+      "time": 1785751547945.6602,
+      "uuid": "cf459e42-9b5a-4821-b1b5-3dd4f93a26b3"
+    },
+    "subpackages\\game\\texture\\pig.png": {
+      "time": 1785751348204.954,
+      "uuid": "2d74eb98-44a2-4304-bce4-44543f57ae23"
+    },
+    "subpackages\\game\\texture\\rabbit.png": {
+      "time": 1785751382467.3645,
+      "uuid": "d06c8463-6aa7-49a5-8376-999340c06d1c"
+    },
+    "subpackages\\game\\texture\\rice.png": {
+      "time": 1785751416754.8574,
+      "uuid": "ad7fbb47-55bb-400d-89a3-5d18dedeb95a"
+    },
+    "subpackages\\game\\texture\\tigger.png": {
+      "time": 1785751509674.595,
+      "uuid": "a38217d3-f827-4704-93c4-c31fe13396e9"
+    },
+    "subpackages\\game\\texture\\cow.png.meta": {
+      "time": 1785751701899.9001
+    },
+    "subpackages\\game\\texture\\monkey.png.meta": {
+      "time": 1785751701906.8997
+    },
+    "subpackages\\game\\texture\\chicken.png.meta": {
+      "time": 1785751701942.9004
+    },
+    "subpackages\\game\\texture\\pig.png.meta": {
+      "time": 1785751701953.9006
+    },
+    "subpackages\\game\\texture\\rabbit.png.meta": {
+      "time": 1785751701954.9004
+    },
+    "subpackages\\game\\texture\\rice.png.meta": {
+      "time": 1785751701962.9006
+    },
+    "subpackages\\game\\texture\\tigger.png.meta": {
+      "time": 1785751701965.9019
     }
   },
   "missing": {}
