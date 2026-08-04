@@ -485,8 +485,77 @@ function generateLaneLayout(typeSequence, typeConfigs) {
     });
 
     return layouts
+        .map((layout) => {
+            for (let attempt = 0; attempt < 4; attempt++) {
+                const randomized = randomizePackedLayout(layout, typeConfigs);
+                const solved = assignRandomSolvableDirections(randomized, typeConfigs);
+                if (solved.length === layout.length) return solved;
+            }
+            return layout;
+        })
         .filter((layout) => canSolveLevel({ sheep: layout }, typeConfigs))
         .sort((a, b) => b.length - a.length)[0] || [];
+}
+
+function randomizePackedLayout(layout, typeConfigs) {
+    const result = layout.map((item) => ({ ...item }));
+    const flipAttempts = Math.max(100, result.length * 6);
+
+    for (let attempt = 0; attempt < flipAttempts; attempt++) {
+        const blockRow = randInt(0, ROW_COUNT - 2);
+        const blockCol = randInt(0, COL_COUNT - 2);
+        const itemGrid = createItemGrid(result, typeConfigs);
+        const blockItems = new Set();
+        for (let rowOffset = 0; rowOffset < 2; rowOffset++) {
+            for (let colOffset = 0; colOffset < 2; colOffset++) {
+                const item = itemGrid[blockRow + rowOffset][blockCol + colOffset];
+                if (item) blockItems.add(item);
+            }
+        }
+        if (blockItems.size !== 2) continue;
+
+        const items = Array.from(blockItems);
+        const rects = items.map((item) => getRect(item, typeConfigs));
+        if (!rects.every((rect) => rect.row >= blockRow
+            && rect.col >= blockCol
+            && rect.row + rect.rowSpan <= blockRow + 2
+            && rect.col + rect.colSpan <= blockCol + 2
+            && rect.rowSpan * rect.colSpan === 2)) {
+            continue;
+        }
+
+        const horizontal = rects.every((rect) => rect.rowSpan === 1 && rect.colSpan === 2);
+        const vertical = rects.every((rect) => rect.rowSpan === 2 && rect.colSpan === 1);
+        if (!horizontal && !vertical) continue;
+
+        const targetDirection = horizontal ? Direction.Up : Direction.Left;
+        const targetFootprints = items.map((item) => getFootprint(targetDirection, item.type, typeConfigs));
+        const canFlip = horizontal
+            ? targetFootprints.every((footprint) => footprint.rowSpan === 2 && footprint.colSpan === 1)
+            : targetFootprints.every((footprint) => footprint.rowSpan === 1 && footprint.colSpan === 2);
+        if (!canFlip) continue;
+
+        shuffle(items).forEach((item, index) => {
+            item.row = blockRow + (vertical ? index : 0);
+            item.col = blockCol + (horizontal ? index : 0);
+            item.direction = targetDirection;
+        });
+    }
+
+    return result;
+}
+
+function createItemGrid(items, typeConfigs) {
+    const grid = Array.from({ length: ROW_COUNT }, () => Array(COL_COUNT).fill(null));
+    items.forEach((item) => {
+        const rect = getRect(item, typeConfigs);
+        for (let rowOffset = 0; rowOffset < rect.rowSpan; rowOffset++) {
+            for (let colOffset = 0; colOffset < rect.colSpan; colOffset++) {
+                grid[rect.row + rowOffset][rect.col + colOffset] = item;
+            }
+        }
+    });
+    return grid;
 }
 
 function canUseLaneAxis(typeSequence, typeConfigs, axis, direction) {
