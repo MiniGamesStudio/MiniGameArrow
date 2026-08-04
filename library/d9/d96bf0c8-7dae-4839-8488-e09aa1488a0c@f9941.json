@@ -1,13 +1,13 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "xiaoji",
+    "name": "game_pig2",
     "atlas": "",
     "rect": {
       "x": 0,
-      "y": 3,
+      "y": 0,
       "width": 50,
-      "height": 44
+      "height": 50
     },
     "offset": {
       "x": 0,
@@ -27,16 +27,16 @@
     "vertices": {
       "rawPosition": [
         -25,
-        -22,
+        -25,
         0,
         25,
-        -22,
+        -25,
         0,
         -25,
-        22,
+        25,
         0,
         25,
-        22,
+        25,
         0
       ],
       "indexes": [
@@ -49,36 +49,36 @@
       ],
       "uv": [
         0,
-        47,
         50,
-        47,
+        50,
+        50,
         0,
-        3,
+        0,
         50,
-        3
+        0
       ],
       "nuv": [
         0,
-        0.06,
-        1,
-        0.06,
         0,
-        0.94,
         1,
-        0.94
+        0,
+        0,
+        1,
+        1,
+        1
       ],
       "minPos": {
         "x": -25,
-        "y": -22,
+        "y": -25,
         "z": 0
       },
       "maxPos": {
         "x": 25,
-        "y": 22,
+        "y": 25,
         "z": 0
       }
     },
-    "texture": "52b6e732-eac5-41a3-b315-4a7ef46dcaa2@6c48a",
+    "texture": "d96bf0c8-7dae-4839-8488-e09aa1488a0c@6c48a",
     "packable": true,
     "pixelsToUnit": 100,
     "pivot": {

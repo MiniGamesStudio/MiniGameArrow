@@ -1,21 +1,21 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "rice",
+    "name": "game_cow",
     "atlas": "",
     "rect": {
       "x": 0,
       "y": 0,
-      "width": 172,
-      "height": 145
+      "width": 50,
+      "height": 100
     },
     "offset": {
       "x": 0,
       "y": 0
     },
     "originalSize": {
-      "width": 172,
-      "height": 145
+      "width": 50,
+      "height": 100
     },
     "rotated": false,
     "capInsets": [
@@ -26,17 +26,17 @@
     ],
     "vertices": {
       "rawPosition": [
-        -86,
-        -72.5,
+        -25,
+        -50,
         0,
-        86,
-        -72.5,
+        25,
+        -50,
         0,
-        -86,
-        72.5,
+        -25,
+        50,
         0,
-        86,
-        72.5,
+        25,
+        50,
         0
       ],
       "indexes": [
@@ -49,12 +49,12 @@
       ],
       "uv": [
         0,
-        145,
-        172,
-        145,
+        100,
+        50,
+        100,
         0,
         0,
-        172,
+        50,
         0
       ],
       "nuv": [
@@ -68,17 +68,17 @@
         1
       ],
       "minPos": {
-        "x": -86,
-        "y": -72.5,
+        "x": -25,
+        "y": -50,
         "z": 0
       },
       "maxPos": {
-        "x": 86,
-        "y": 72.5,
+        "x": 25,
+        "y": 50,
         "z": 0
       }
     },
-    "texture": "ad7fbb47-55bb-400d-89a3-5d18dedeb95a@6c48a",
+    "texture": "a0c02293-77b4-498d-a11f-e9055b752554@6c48a",
     "packable": true,
     "pixelsToUnit": 100,
     "pivot": {

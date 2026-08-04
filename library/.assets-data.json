@@ -5473,5 +5473,130 @@
       ]
     },
     "versionCode": 1
+  },
+  "763aeaf5-62e5-495e-b79d-55cc461b62f0": {
+    "url": "db://assets/subpackages/game/texture/game_chiken.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a0c02293-77b4-498d-a11f-e9055b752554": {
+    "url": "db://assets/subpackages/game/texture/game_cow.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "2a106bcf-9ef4-4710-b0a6-d5cec632f56a": {
+    "url": "db://assets/subpackages/game/texture/game_pig.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d96bf0c8-7dae-4839-8488-e09aa1488a0c": {
+    "url": "db://assets/subpackages/game/texture/game_pig2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "e631350a-8fc6-4daa-a829-e51aebdfd5cf": {
+    "url": "db://assets/subpackages/game/texture/game_sheep.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a0c02293-77b4-498d-a11f-e9055b752554@6c48a": {
+    "url": "db://assets/subpackages/game/texture/game_cow.png@6c48a",
+    "value": {
+      "depends": [
+        "a0c02293-77b4-498d-a11f-e9055b752554"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d96bf0c8-7dae-4839-8488-e09aa1488a0c@6c48a": {
+    "url": "db://assets/subpackages/game/texture/game_pig2.png@6c48a",
+    "value": {
+      "depends": [
+        "d96bf0c8-7dae-4839-8488-e09aa1488a0c"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d96bf0c8-7dae-4839-8488-e09aa1488a0c@f9941": {
+    "url": "db://assets/subpackages/game/texture/game_pig2.png@f9941",
+    "value": {
+      "depends": [
+        "d96bf0c8-7dae-4839-8488-e09aa1488a0c@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a0c02293-77b4-498d-a11f-e9055b752554@f9941": {
+    "url": "db://assets/subpackages/game/texture/game_cow.png@f9941",
+    "value": {
+      "depends": [
+        "a0c02293-77b4-498d-a11f-e9055b752554@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2a106bcf-9ef4-4710-b0a6-d5cec632f56a@6c48a": {
+    "url": "db://assets/subpackages/game/texture/game_pig.png@6c48a",
+    "value": {
+      "depends": [
+        "2a106bcf-9ef4-4710-b0a6-d5cec632f56a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e631350a-8fc6-4daa-a829-e51aebdfd5cf@6c48a": {
+    "url": "db://assets/subpackages/game/texture/game_sheep.png@6c48a",
+    "value": {
+      "depends": [
+        "e631350a-8fc6-4daa-a829-e51aebdfd5cf"
+      ]
+    },
+    "versionCode": 1
+  },
+  "763aeaf5-62e5-495e-b79d-55cc461b62f0@6c48a": {
+    "url": "db://assets/subpackages/game/texture/game_chiken.png@6c48a",
+    "value": {
+      "depends": [
+        "763aeaf5-62e5-495e-b79d-55cc461b62f0"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2a106bcf-9ef4-4710-b0a6-d5cec632f56a@f9941": {
+    "url": "db://assets/subpackages/game/texture/game_pig.png@f9941",
+    "value": {
+      "depends": [
+        "2a106bcf-9ef4-4710-b0a6-d5cec632f56a@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "763aeaf5-62e5-495e-b79d-55cc461b62f0@f9941": {
+    "url": "db://assets/subpackages/game/texture/game_chiken.png@f9941",
+    "value": {
+      "depends": [
+        "763aeaf5-62e5-495e-b79d-55cc461b62f0@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e631350a-8fc6-4daa-a829-e51aebdfd5cf@f9941": {
+    "url": "db://assets/subpackages/game/texture/game_sheep.png@f9941",
+    "value": {
+      "depends": [
+        "e631350a-8fc6-4daa-a829-e51aebdfd5cf@6c48a"
+      ]
+    },
+    "versionCode": 1
   }
 }

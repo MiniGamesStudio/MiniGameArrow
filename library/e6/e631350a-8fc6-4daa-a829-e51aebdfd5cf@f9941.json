@@ -1,21 +1,21 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "monkey",
+    "name": "game_sheep",
     "atlas": "",
     "rect": {
       "x": 0,
       "y": 0,
-      "width": 200,
-      "height": 165
+      "width": 50,
+      "height": 100
     },
     "offset": {
       "x": 0,
       "y": 0
     },
     "originalSize": {
-      "width": 200,
-      "height": 165
+      "width": 50,
+      "height": 100
     },
     "rotated": false,
     "capInsets": [
@@ -26,17 +26,17 @@
     ],
     "vertices": {
       "rawPosition": [
-        -100,
-        -82.5,
+        -25,
+        -50,
         0,
-        100,
-        -82.5,
+        25,
+        -50,
         0,
-        -100,
-        82.5,
+        -25,
+        50,
         0,
-        100,
-        82.5,
+        25,
+        50,
         0
       ],
       "indexes": [
@@ -49,12 +49,12 @@
       ],
       "uv": [
         0,
-        165,
-        200,
-        165,
+        100,
+        50,
+        100,
         0,
         0,
-        200,
+        50,
         0
       ],
       "nuv": [
@@ -68,17 +68,17 @@
         1
       ],
       "minPos": {
-        "x": -100,
-        "y": -82.5,
+        "x": -25,
+        "y": -50,
         "z": 0
       },
       "maxPos": {
-        "x": 100,
-        "y": 82.5,
+        "x": 25,
+        "y": 50,
         "z": 0
       }
     },
-    "texture": "cf459e42-9b5a-4821-b1b5-3dd4f93a26b3@6c48a",
+    "texture": "e631350a-8fc6-4daa-a829-e51aebdfd5cf@6c48a",
     "packable": true,
     "pixelsToUnit": 100,
     "pivot": {

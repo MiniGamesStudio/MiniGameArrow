@@ -943,7 +943,7 @@
       "uuid": "c30cc32b-cb89-4481-b103-8f9095104ac8"
     },
     "subpackages\\game\\texture": {
-      "time": 1785760608946.7383,
+      "time": 1785824053742.121,
       "uuid": "dbdbb2c4-2818-4a64-9df1-b1a9ac920201"
     },
     "subpackages\\game\\ui": {
@@ -1013,10 +1013,6 @@
       "time": 1785388180221.5657,
       "uuid": "fc8553d7-131b-4691-98e7-6ceeaa07a1c7"
     },
-    "subpackages\\game\\texture\\sheep.png": {
-      "time": 1782032644323.206,
-      "uuid": "66c41a34-27f9-4521-9581-a81e8714a705"
-    },
     "subpackages\\game\\ui\\GamePanel.prefab": {
       "time": 1785656761370.3843,
       "uuid": "6c6bb7e7-df76-4af4-a1dc-2a97a7ff0c23"
@@ -1028,10 +1024,6 @@
     "subpackages\\game\\ui\\TransitionPanel.prefab": {
       "time": 1785747325301.8762,
       "uuid": "83902b23-c019-4bc5-8a63-c1703769b66e"
-    },
-    "subpackages\\game\\texture\\sheepblack.png": {
-      "time": 1782107862577.3835,
-      "uuid": "33d215cc-48ee-40b8-bbe8-aa21226b5f4b"
     },
     "subpackages\\rank\\ranking\\Menu_TopBtn.png": {
       "time": 1746611300000,
@@ -1240,10 +1232,6 @@
       "time": 1785388180246.5657,
       "uuid": "49307cc8-b504-48a1-b851-b34d15cb9017"
     },
-    "subpackages\\game\\texture\\sheep_game.png": {
-      "time": 1785388180247.5674,
-      "uuid": "76a09474-82e9-42db-80c3-fd76c995aad8"
-    },
     "subpackages\\game\\texture\\xipai_title.png": {
       "time": 1785388180248.566,
       "uuid": "4cce00d6-a3ba-4209-aa86-d70c9ac550dd"
@@ -1298,34 +1286,6 @@
       "time": 1785657655470.3533,
       "uuid": "99999999-9999-4999-8999-999999999999"
     },
-    "subpackages\\game\\texture\\chicken.png": {
-      "time": 1785751483653.9724,
-      "uuid": "24eb3cea-ff30-4d02-8189-1831683ec821"
-    },
-    "subpackages\\game\\texture\\cow.png": {
-      "time": 1785751444245.4126,
-      "uuid": "40f10a33-4a13-4ef3-adbd-71d36ab6e532"
-    },
-    "subpackages\\game\\texture\\monkey.png": {
-      "time": 1785751547945.6602,
-      "uuid": "cf459e42-9b5a-4821-b1b5-3dd4f93a26b3"
-    },
-    "subpackages\\game\\texture\\pig.png": {
-      "time": 1785751348204.954,
-      "uuid": "2d74eb98-44a2-4304-bce4-44543f57ae23"
-    },
-    "subpackages\\game\\texture\\rabbit.png": {
-      "time": 1785751382467.3645,
-      "uuid": "d06c8463-6aa7-49a5-8376-999340c06d1c"
-    },
-    "subpackages\\game\\texture\\rice.png": {
-      "time": 1785751416754.8574,
-      "uuid": "ad7fbb47-55bb-400d-89a3-5d18dedeb95a"
-    },
-    "subpackages\\game\\texture\\tigger.png": {
-      "time": 1785751509674.595,
-      "uuid": "a38217d3-f827-4704-93c4-c31fe13396e9"
-    },
     "subpackages\\game\\texture\\cow.png.meta": {
       "time": 1785751701899.9001
     },
@@ -1350,9 +1310,40 @@
     "subpackages\\game\\texture\\xiaoji.png.meta": {
       "time": 1785760609081.948
     },
-    "subpackages\\game\\texture\\xiaoji.png": {
-      "time": 1785758303152.43,
-      "uuid": "52b6e732-eac5-41a3-b315-4a7ef46dcaa2"
+    "subpackages\\game\\texture\\game_chiken.png": {
+      "time": 1785823780160.4468,
+      "uuid": "763aeaf5-62e5-495e-b79d-55cc461b62f0"
+    },
+    "subpackages\\game\\texture\\game_cow.png": {
+      "time": 1785809167050.8542,
+      "uuid": "a0c02293-77b4-498d-a11f-e9055b752554"
+    },
+    "subpackages\\game\\texture\\game_pig.png": {
+      "time": 1785809177769.8318,
+      "uuid": "2a106bcf-9ef4-4710-b0a6-d5cec632f56a"
+    },
+    "subpackages\\game\\texture\\game_pig2.png": {
+      "time": 1785809190442.8293,
+      "uuid": "d96bf0c8-7dae-4839-8488-e09aa1488a0c"
+    },
+    "subpackages\\game\\texture\\game_sheep.png": {
+      "time": 1785809200342.8481,
+      "uuid": "e631350a-8fc6-4daa-a829-e51aebdfd5cf"
+    },
+    "subpackages\\game\\texture\\game_pig2.png.meta": {
+      "time": 1785824054056.214
+    },
+    "subpackages\\game\\texture\\game_cow.png.meta": {
+      "time": 1785824054060.214
+    },
+    "subpackages\\game\\texture\\game_pig.png.meta": {
+      "time": 1785824054073.216
+    },
+    "subpackages\\game\\texture\\game_chiken.png.meta": {
+      "time": 1785824054075.2158
+    },
+    "subpackages\\game\\texture\\game_sheep.png.meta": {
+      "time": 1785824054076.2166
     }
   },
   "missing": {}

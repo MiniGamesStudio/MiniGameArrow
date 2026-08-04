@@ -1,21 +1,21 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "rabbit",
+    "name": "game_chiken",
     "atlas": "",
     "rect": {
       "x": 0,
       "y": 0,
-      "width": 158,
-      "height": 178
+      "width": 50,
+      "height": 50
     },
     "offset": {
       "x": 0,
       "y": 0
     },
     "originalSize": {
-      "width": 158,
-      "height": 178
+      "width": 50,
+      "height": 50
     },
     "rotated": false,
     "capInsets": [
@@ -26,17 +26,17 @@
     ],
     "vertices": {
       "rawPosition": [
-        -79,
-        -89,
+        -25,
+        -25,
         0,
-        79,
-        -89,
+        25,
+        -25,
         0,
-        -79,
-        89,
+        -25,
+        25,
         0,
-        79,
-        89,
+        25,
+        25,
         0
       ],
       "indexes": [
@@ -49,12 +49,12 @@
       ],
       "uv": [
         0,
-        178,
-        158,
-        178,
+        50,
+        50,
+        50,
         0,
         0,
-        158,
+        50,
         0
       ],
       "nuv": [
@@ -68,17 +68,17 @@
         1
       ],
       "minPos": {
-        "x": -79,
-        "y": -89,
+        "x": -25,
+        "y": -25,
         "z": 0
       },
       "maxPos": {
-        "x": 79,
-        "y": 89,
+        "x": 25,
+        "y": 25,
         "z": 0
       }
     },
-    "texture": "d06c8463-6aa7-49a5-8376-999340c06d1c@6c48a",
+    "texture": "763aeaf5-62e5-495e-b79d-55cc461b62f0@6c48a",
     "packable": true,
     "pixelsToUnit": 100,
     "pivot": {
