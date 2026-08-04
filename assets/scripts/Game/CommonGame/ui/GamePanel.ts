@@ -11,6 +11,9 @@ const { ccclass, property } = _decorator;
 const MAX_ROW = 19;
 const MAX_COL = 12;
 const LEVEL_CONFIG_RESOURCE = 'config/sheep_levels';
+const RANDOM_LEVEL_THRESHOLD = 100;
+const RANDOM_LEVEL_MIN = 80;
+const RANDOM_LEVEL_MAX = 100;
 const DEFAULT_SHEEP_TYPE = 'sheep';
 const DEFAULT_SHEEP_RESOURCE = 'texture/game_sheep/spriteFrame';
 const DEFAULT_SHEEP_FALLBACK_RESOURCE = 'texture/game_sheep';
@@ -327,8 +330,38 @@ export class GamePanel extends UIBase {
             return level || null;
         }
 
-        this.m_CurrentLevel = this.clampInt(level, 1, Math.max(1, this.m_LevelConfigList.length));
-        return this.m_LevelConfigList[this.m_CurrentLevel - 1] || null;
+        const requestedLevel = Number.isFinite(level)
+            ? Math.max(1, Math.floor(level))
+            : this.m_StartLevel;
+        if (requestedLevel > RANDOM_LEVEL_THRESHOLD
+            && requestedLevel === this.m_CurrentLevel
+            && this.m_OpenLevelConfig) {
+            return this.m_OpenLevelConfig;
+        }
+
+        this.m_CurrentLevel = requestedLevel;
+        if (requestedLevel > RANDOM_LEVEL_THRESHOLD) {
+            return this.getRandomRepeatLevelConfig();
+        }
+
+        const exactConfig = this.m_LevelConfigList.find(config => Number(config.level) === requestedLevel);
+        if (exactConfig) return exactConfig;
+
+        const fallbackIndex = this.clampInt(requestedLevel, 1, Math.max(1, this.m_LevelConfigList.length)) - 1;
+        return this.m_LevelConfigList[fallbackIndex] || null;
+    }
+
+    private getRandomRepeatLevelConfig(): GameLevelConfig | null {
+        const candidateConfigs = this.m_LevelConfigList.filter(config => {
+            const configLevel = Number(config.level);
+            return configLevel >= RANDOM_LEVEL_MIN && configLevel <= RANDOM_LEVEL_MAX;
+        });
+        if (candidateConfigs.length <= 0) {
+            return this.m_LevelConfigList[this.m_LevelConfigList.length - 1] || null;
+        }
+
+        const randomIndex = Math.floor(Math.random() * candidateConfigs.length);
+        return candidateConfigs[randomIndex];
     }
 
     private resetGame(): void {
@@ -1051,11 +1084,6 @@ export class GamePanel extends UIBase {
 
     private startNextLevel(): void {
         const nextLevel = this.m_CurrentLevel + 1;
-        if (this.m_LevelConfigList.length > 0 && nextLevel > this.m_LevelConfigList.length) {
-            console.log('GamePanel: 已完成全部关卡');
-            return;
-        }
-
         this.loadLevel(nextLevel);
     }
 
