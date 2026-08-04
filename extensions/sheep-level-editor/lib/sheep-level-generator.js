@@ -55,11 +55,32 @@ function generateLevel(level, typeCounts, typeConfigs, options = {}) {
     const typeSequence = createTypeSequence(typeCounts);
     const requireSolvable = options.requireSolvable !== false;
     const fenceCount = Math.max(0, Math.floor(Number(options.fenceCount) || 0));
+    const randomLayout = requireSolvable ? generateRandomSolvableLayout(typeSequence, normalizedTypeConfigs) : [];
+    const laneLayout = requireSolvable ? generateLaneLayout(typeSequence, normalizedTypeConfigs) : [];
     let bestLevelData = null;
+
+    if (requireSolvable && fenceCount <= 0) {
+        const initialLayout = randomLayout.length >= laneLayout.length ? randomLayout : laneLayout;
+        if (initialLayout.length > 0) {
+            bestLevelData = {
+                level,
+                rowCount: ROW_COUNT,
+                colCount: COL_COUNT,
+                sheep: initialLayout,
+            };
+            if (randomLayout.length >= typeSequence.length) {
+                return bestLevelData;
+            }
+        }
+    }
 
     for (let attempt = 0; attempt < GENERATE_ATTEMPTS; attempt++) {
         const sheep = requireSolvable
-            ? generateSolvableLayout(typeSequence, normalizedTypeConfigs)
+            ? (attempt % 3 === 0 && randomLayout.length > 0
+                ? randomLayout
+                : attempt % 3 === 1 && laneLayout.length > 0
+                    ? laneLayout
+                    : generateSolvableLayout(typeSequence, normalizedTypeConfigs))
             : generateDenseLayout(typeSequence, normalizedTypeConfigs);
         if (sheep.length <= 0) continue;
 
@@ -290,21 +311,265 @@ function createTypeSequence(typeCounts) {
     return sequence.length > 0 ? sequence : [DEFAULT_TYPE];
 }
 
+function generateRandomSolvableLayout(typeSequence, typeConfigs) {
+    let bestLayout = [];
+    const maxAttempts = typeSequence.length >= 120 ? 16 : 28;
+
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+        const packed = generateRandomPackedLayout(typeSequence, typeConfigs);
+        const solved = assignRandomSolvableDirections(packed, typeConfigs);
+        if (solved.length > bestLayout.length) {
+            bestLayout = solved;
+        }
+        if (solved.length >= typeSequence.length) {
+            return solved;
+        }
+    }
+
+    return bestLayout;
+}
+
+function generateRandomPackedLayout(typeSequence, typeConfigs) {
+    const placed = [];
+    const occupied = createOccupiedGrid();
+    const directionMap = new Map();
+    const areaOf = (type) => {
+        const directions = getDistinctFootprintDirections(type, typeConfigs);
+        return Math.max(...directions.map((direction) => {
+            const footprint = getFootprint(direction, type, typeConfigs);
+            return footprint.rowSpan * footprint.colSpan;
+        }));
+    };
+    const orderedTypes = shuffle(typeSequence).sort((a, b) => areaOf(b) - areaOf(a));
+
+    orderedTypes.forEach((type) => {
+        if (!directionMap.has(type)) {
+            directionMap.set(type, getDistinctFootprintDirections(type, typeConfigs));
+        }
+        const candidates = [];
+        directionMap.get(type).forEach((direction) => {
+            for (let row = 0; row < ROW_COUNT; row++) {
+                for (let col = 0; col < COL_COUNT; col++) {
+                    const item = { row, col, direction, type };
+                    if (!canPlace(item, occupied, typeConfigs)) continue;
+
+                    const rect = getRect(item, typeConfigs);
+                    const centerDistance = Math.abs(row + rect.rowSpan * 0.5 - ROW_COUNT * 0.5)
+                        + Math.abs(col + rect.colSpan * 0.5 - COL_COUNT * 0.5);
+                    const adjacentCount = countAdjacentOccupied(rect, occupied);
+                    candidates.push({
+                        item,
+                        score: centerDistance - adjacentCount * 3 + Math.random() * 6,
+                    });
+                }
+            }
+        });
+
+        if (candidates.length <= 0) return;
+        candidates.sort((a, b) => a.score - b.score);
+        const choiceRange = Math.min(18, candidates.length);
+        const next = candidates[Math.floor(Math.random() * choiceRange)].item;
+        placed.push(next);
+        markOccupied(next, occupied, typeConfigs);
+    });
+
+    return placed;
+}
+
+function getDistinctFootprintDirections(type, typeConfigs) {
+    const directions = [];
+    const footprintKeys = new Set();
+    DirectionCycle.forEach((direction) => {
+        const footprint = getFootprint(direction, type, typeConfigs);
+        const key = `${footprint.rowSpan}:${footprint.colSpan}`;
+        if (footprintKeys.has(key)) return;
+        footprintKeys.add(key);
+        directions.push(direction);
+    });
+    return directions;
+}
+
+function countAdjacentOccupied(rect, occupied) {
+    let count = 0;
+    const startRow = Math.max(0, rect.row - 1);
+    const endRow = Math.min(ROW_COUNT, rect.row + rect.rowSpan + 1);
+    const startCol = Math.max(0, rect.col - 1);
+    const endCol = Math.min(COL_COUNT, rect.col + rect.colSpan + 1);
+    for (let row = startRow; row < endRow; row++) {
+        for (let col = startCol; col < endCol; col++) {
+            const insideRect = row >= rect.row
+                && row < rect.row + rect.rowSpan
+                && col >= rect.col
+                && col < rect.col + rect.colSpan;
+            if (!insideRect && occupied[row][col]) count++;
+        }
+    }
+    return count;
+}
+
+function assignRandomSolvableDirections(placed, typeConfigs) {
+    const remaining = placed.map((item) => ({ ...item }));
+    const solved = [];
+    const directionCounts = new Map(DirectionCycle.map((direction) => [direction, 0]));
+
+    while (remaining.length > 0) {
+        const removableOptions = [];
+        remaining.forEach((item) => {
+            getCompatibleDirections(item, typeConfigs).forEach((direction) => {
+                const candidate = { ...item, direction };
+                if (!isBlockedByOthers(candidate, item, remaining, typeConfigs)) {
+                    removableOptions.push(candidate);
+                }
+            });
+        });
+        if (removableOptions.length <= 0) return [];
+
+        removableOptions.sort((a, b) => {
+            const directionBalance = directionCounts.get(a.direction) - directionCounts.get(b.direction);
+            return directionBalance || Math.random() - 0.5;
+        });
+        const choiceRange = Math.min(10, removableOptions.length);
+        const selected = removableOptions[Math.floor(Math.random() * choiceRange)];
+        const selectedIndex = remaining.findIndex((item) => item.row === selected.row
+            && item.col === selected.col
+            && item.type === selected.type);
+        if (selectedIndex < 0) return [];
+
+        remaining.splice(selectedIndex, 1);
+        solved.push(selected);
+        directionCounts.set(selected.direction, directionCounts.get(selected.direction) + 1);
+    }
+
+    return solved;
+}
+
+function getCompatibleDirections(item, typeConfigs) {
+    const footprint = getFootprint(item.direction, item.type, typeConfigs);
+    return shuffle(DirectionCycle.filter((direction) => {
+        const candidateFootprint = getFootprint(direction, item.type, typeConfigs);
+        return candidateFootprint.rowSpan === footprint.rowSpan
+            && candidateFootprint.colSpan === footprint.colSpan;
+    }));
+}
+
+function isBlockedByOthers(item, sourceItem, itemList, typeConfigs) {
+    const pathRects = getPathRects(item, typeConfigs);
+    return itemList.some((other) => {
+        if (other === sourceItem) return false;
+        const otherRect = getRect(other, typeConfigs);
+        return pathRects.some((pathRect) => rectsOverlap(otherRect, pathRect));
+    });
+}
+
+function generateLaneLayout(typeSequence, typeConfigs) {
+    const layouts = [];
+    const directions = [
+        { axis: 'horizontal', direction: Direction.Left },
+        { axis: 'vertical', direction: Direction.Up },
+    ];
+
+    directions.forEach(({ axis, direction }) => {
+        if (!canUseLaneAxis(typeSequence, typeConfigs, axis, direction)) return;
+
+        const areaOf = (type) => {
+            const footprint = getFootprint(direction, type, typeConfigs);
+            return footprint.rowSpan * footprint.colSpan;
+        };
+        const descending = shuffle(typeSequence).sort((a, b) => areaOf(b) - areaOf(a));
+        const ascending = shuffle(typeSequence).sort((a, b) => areaOf(a) - areaOf(b));
+        layouts.push(packLaneLayout(descending, typeConfigs, axis));
+        layouts.push(packLaneLayout(ascending, typeConfigs, axis));
+        for (let attempt = 0; attempt < 4; attempt++) {
+            layouts.push(packLaneLayout(shuffle(typeSequence), typeConfigs, axis));
+        }
+    });
+
+    return layouts
+        .filter((layout) => canSolveLevel({ sheep: layout }, typeConfigs))
+        .sort((a, b) => b.length - a.length)[0] || [];
+}
+
+function canUseLaneAxis(typeSequence, typeConfigs, axis, direction) {
+    return getUniqueTypes(typeSequence).every((type) => {
+        const footprint = getFootprint(direction, type, typeConfigs);
+        return axis === 'horizontal' ? footprint.rowSpan === 1 : footprint.colSpan === 1;
+    });
+}
+
+function packLaneLayout(typeSequence, typeConfigs, axis) {
+    const placed = [];
+    const occupied = createOccupiedGrid();
+
+    typeSequence.forEach((type) => {
+        const position = findLanePosition(type, occupied, typeConfigs, axis);
+        if (!position) return;
+
+        const item = { ...position, type };
+        placed.push(item);
+        markOccupied(item, occupied, typeConfigs);
+    });
+
+    return placed;
+}
+
+function findLanePosition(type, occupied, typeConfigs, axis) {
+    if (axis === 'horizontal') {
+        for (let row = 0; row < ROW_COUNT; row++) {
+            const direction = row % 2 === 0 ? Direction.Left : Direction.Right;
+            for (let col = 0; col < COL_COUNT; col++) {
+                const item = { row, col, direction, type };
+                if (canPlace(item, occupied, typeConfigs)) return item;
+            }
+        }
+        return null;
+    }
+
+    for (let col = 0; col < COL_COUNT; col++) {
+        const direction = col % 2 === 0 ? Direction.Up : Direction.Down;
+        for (let row = 0; row < ROW_COUNT; row++) {
+            const item = { row, col, direction, type };
+            if (canPlace(item, occupied, typeConfigs)) return item;
+        }
+    }
+    return null;
+}
+
 function generateSolvableLayout(typeSequence, typeConfigs) {
     const placed = [];
     const occupied = createOccupiedGrid();
+    const protectedPaths = createOccupiedGrid();
     const remainingTypes = shuffle(typeSequence);
     const centerRow = (ROW_COUNT - 1) * 0.5;
     const centerCol = (COL_COUNT - 1) * 0.5;
 
     while (remainingTypes.length > 0) {
-        const candidates = collectCandidatesForTypes(placed, occupied, centerRow, centerCol, typeConfigs, remainingTypes);
+        const uniqueTypes = getUniqueTypes(remainingTypes);
+        const priorityTypes = getLargestFootprintTypes(uniqueTypes, typeConfigs);
+        let candidates = collectCandidatesForTypes(
+            occupied,
+            protectedPaths,
+            centerRow,
+            centerCol,
+            typeConfigs,
+            priorityTypes,
+        );
+        if (candidates.length <= 0 && priorityTypes.length < uniqueTypes.length) {
+            candidates = collectCandidatesForTypes(
+                occupied,
+                protectedPaths,
+                centerRow,
+                centerCol,
+                typeConfigs,
+                uniqueTypes,
+            );
+        }
         if (candidates.length <= 0) break;
 
         candidates.sort((a, b) => a.score - b.score || Math.random() - 0.5);
         const next = candidates[Math.floor(Math.random() * Math.min(5, candidates.length))].item;
         placed.push(next);
         markOccupied(next, occupied, typeConfigs);
+        markProtectedPath(next, protectedPaths, typeConfigs);
         removeOneType(remainingTypes, next.type);
     }
 
@@ -336,6 +601,19 @@ function getUniqueTypes(types) {
     return [...new Set(types.map((type) => type || DEFAULT_TYPE))];
 }
 
+function getLargestFootprintTypes(types, typeConfigs) {
+    let largestArea = 0;
+    const typeAreas = types.map((type) => {
+        const config = typeConfigs[type] || typeConfigs[DEFAULT_TYPE] || DefaultTypeConfigs[DEFAULT_TYPE];
+        const verticalArea = config.vertical.rowSpan * config.vertical.colSpan;
+        const horizontalArea = config.horizontal.rowSpan * config.horizontal.colSpan;
+        const area = Math.max(verticalArea, horizontalArea);
+        largestArea = Math.max(largestArea, area);
+        return { type, area };
+    });
+    return typeAreas.filter((item) => item.area === largestArea).map((item) => item.type);
+}
+
 function removeOneType(types, type) {
     const index = types.indexOf(type || DEFAULT_TYPE);
     if (index >= 0) {
@@ -347,8 +625,15 @@ function collectDenseCandidatesForTypes(occupied, centerRow, centerCol, typeConf
     return getUniqueTypes(types).flatMap((type) => collectDenseCandidates(occupied, centerRow, centerCol, typeConfigs, type));
 }
 
-function collectCandidatesForTypes(placed, occupied, centerRow, centerCol, typeConfigs, types) {
-    return getUniqueTypes(types).flatMap((type) => collectCandidates(placed, occupied, centerRow, centerCol, typeConfigs, type));
+function collectCandidatesForTypes(occupied, protectedPaths, centerRow, centerCol, typeConfigs, types) {
+    return getUniqueTypes(types).flatMap((type) => collectCandidates(
+        occupied,
+        protectedPaths,
+        centerRow,
+        centerCol,
+        typeConfigs,
+        type,
+    ));
 }
 
 function collectDenseCandidates(occupied, centerRow, centerCol, typeConfigs, type) {
@@ -372,7 +657,7 @@ function collectDenseCandidates(occupied, centerRow, centerCol, typeConfigs, typ
     return candidates;
 }
 
-function collectCandidates(placed, occupied, centerRow, centerCol, typeConfigs, type) {
+function collectCandidates(occupied, protectedPaths, centerRow, centerCol, typeConfigs, type) {
     const candidates = [];
     const directionCycle = shuffle(DirectionCycle);
     directionCycle.forEach((direction, directionIndex) => {
@@ -380,10 +665,10 @@ function collectCandidates(placed, occupied, centerRow, centerCol, typeConfigs, 
             for (let col = 0; col < COL_COUNT; col++) {
                 const item = { row, col, direction, type };
                 if (!canPlace(item, occupied, typeConfigs)) continue;
-                if (blocksAnyPlacedPath(item, placed, typeConfigs)) continue;
+                if (overlapsMarkedGrid(item, protectedPaths, typeConfigs)) continue;
 
                 const centerDistance = Math.abs(row - centerRow) + Math.abs(col - centerCol);
-                const dependencyScore = isPathBlockedByPlaced(item, placed, typeConfigs) ? 0 : 30;
+                const dependencyScore = isPathBlockedByOccupied(item, occupied, typeConfigs) ? 0 : 30;
                 candidates.push({
                     item,
                     score: dependencyScore + directionIndex * 100 + centerDistance + Math.random(),
@@ -430,16 +715,34 @@ function markOccupied(item, occupied, typeConfigs) {
     }
 }
 
-function blocksAnyPlacedPath(item, placed, typeConfigs) {
-    const itemRect = getRect(item, typeConfigs);
-    return placed.some((placedItem) => getPathRects(placedItem, typeConfigs).some((pathRect) => rectsOverlap(itemRect, pathRect)));
+function markProtectedPath(item, protectedPaths, typeConfigs) {
+    getPathRects(item, typeConfigs).forEach((rect) => {
+        for (let rowOffset = 0; rowOffset < rect.rowSpan; rowOffset++) {
+            for (let colOffset = 0; colOffset < rect.colSpan; colOffset++) {
+                protectedPaths[rect.row + rowOffset][rect.col + colOffset] = true;
+            }
+        }
+    });
 }
 
-function isPathBlockedByPlaced(item, placed, typeConfigs) {
-    const pathRects = getPathRects(item, typeConfigs);
-    return placed.some((placedItem) => {
-        const placedRect = getRect(placedItem, typeConfigs);
-        return pathRects.some((pathRect) => rectsOverlap(placedRect, pathRect));
+function overlapsMarkedGrid(item, grid, typeConfigs) {
+    const rect = getRect(item, typeConfigs);
+    for (let rowOffset = 0; rowOffset < rect.rowSpan; rowOffset++) {
+        for (let colOffset = 0; colOffset < rect.colSpan; colOffset++) {
+            if (grid[rect.row + rowOffset][rect.col + colOffset]) return true;
+        }
+    }
+    return false;
+}
+
+function isPathBlockedByOccupied(item, occupied, typeConfigs) {
+    return getPathRects(item, typeConfigs).some((rect) => {
+        for (let rowOffset = 0; rowOffset < rect.rowSpan; rowOffset++) {
+            for (let colOffset = 0; colOffset < rect.colSpan; colOffset++) {
+                if (occupied[rect.row + rowOffset][rect.col + colOffset]) return true;
+            }
+        }
+        return false;
     });
 }
 
