@@ -943,7 +943,7 @@
       "uuid": "c30cc32b-cb89-4481-b103-8f9095104ac8"
     },
     "subpackages\\game\\texture": {
-      "time": 1785751701682.898,
+      "time": 1785760608946.7383,
       "uuid": "dbdbb2c4-2818-4a64-9df1-b1a9ac920201"
     },
     "subpackages\\game\\ui": {
@@ -1346,6 +1346,13 @@
     },
     "subpackages\\game\\texture\\tigger.png.meta": {
       "time": 1785751701965.9019
+    },
+    "subpackages\\game\\texture\\xiaoji.png.meta": {
+      "time": 1785760609081.948
+    },
+    "subpackages\\game\\texture\\xiaoji.png": {
+      "time": 1785758303152.43,
+      "uuid": "52b6e732-eac5-41a3-b315-4a7ef46dcaa2"
     }
   },
   "missing": {}

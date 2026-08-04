@@ -392,3 +392,8 @@ Require stack:
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2061)
     at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:4024)
 2026-8-3 19:55:37 - log: [Scene] Using custom pipeline: Builtin
+2026-8-3 20:36:59 - warn: Object has been destroyedTypeError: Object has been destroyed
+    at WebContents._.send (node:electron/js2c/browser_init:2:74130)
+    at WindowSender.immediately (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@base\electron-base-ipc\dist\sender.ccc:1:2082)
+    at Immediate._onImmediate (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@base\electron-base-ipc\dist\sender.ccc:1:2008)
+    at processImmediate (node:internal/timers:478:21)

@@ -5448,5 +5448,30 @@
       ]
     },
     "versionCode": 1
+  },
+  "52b6e732-eac5-41a3-b315-4a7ef46dcaa2": {
+    "url": "db://assets/subpackages/game/texture/xiaoji.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "52b6e732-eac5-41a3-b315-4a7ef46dcaa2@6c48a": {
+    "url": "db://assets/subpackages/game/texture/xiaoji.png@6c48a",
+    "value": {
+      "depends": [
+        "52b6e732-eac5-41a3-b315-4a7ef46dcaa2"
+      ]
+    },
+    "versionCode": 1
+  },
+  "52b6e732-eac5-41a3-b315-4a7ef46dcaa2@f9941": {
+    "url": "db://assets/subpackages/game/texture/xiaoji.png@f9941",
+    "value": {
+      "depends": [
+        "52b6e732-eac5-41a3-b315-4a7ef46dcaa2@6c48a"
+      ]
+    },
+    "versionCode": 1
   }
 }
