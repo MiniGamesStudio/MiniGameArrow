@@ -2,7 +2,7 @@
 
 const ROW_COUNT = 19;
 const COL_COUNT = 12;
-const DEFAULT_TYPE = 'normal';
+const DEFAULT_TYPE = 'sheep';
 const GENERATE_ATTEMPTS = 80;
 
 const Direction = {
@@ -21,9 +21,25 @@ const DirectionConfigs = {
 };
 
 const DefaultTypeConfigs = {
-    [DEFAULT_TYPE]: {
+    sheep: {
         vertical: { rowSpan: 2, colSpan: 1 },
         horizontal: { rowSpan: 1, colSpan: 2 },
+    },
+    cow: {
+        vertical: { rowSpan: 2, colSpan: 1 },
+        horizontal: { rowSpan: 1, colSpan: 2 },
+    },
+    pig: {
+        vertical: { rowSpan: 2, colSpan: 1 },
+        horizontal: { rowSpan: 1, colSpan: 2 },
+    },
+    chicken: {
+        vertical: { rowSpan: 1, colSpan: 1 },
+        horizontal: { rowSpan: 1, colSpan: 1 },
+    },
+    piglet: {
+        vertical: { rowSpan: 1, colSpan: 1 },
+        horizontal: { rowSpan: 1, colSpan: 1 },
     },
 };
 

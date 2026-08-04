@@ -3619,8 +3619,8 @@
     }
   ],
   "sheepTypeConfigs": {
-    "normal": {
-      "resource": "texture/sheep/spriteFrame",
+    "sheep": {
+      "resource": "texture/game_sheep/spriteFrame",
       "vertical": {
         "rowSpan": 2,
         "colSpan": 1
@@ -3630,8 +3630,8 @@
         "colSpan": 2
       }
     },
-    "black": {
-      "resource": "texture/sheepblack/spriteFrame",
+    "cow": {
+      "resource": "texture/game_cow/spriteFrame",
       "vertical": {
         "rowSpan": 2,
         "colSpan": 1
@@ -3639,6 +3639,39 @@
       "horizontal": {
         "rowSpan": 1,
         "colSpan": 2
+      }
+    },
+    "pig": {
+      "resource": "texture/game_pig/spriteFrame",
+      "vertical": {
+        "rowSpan": 2,
+        "colSpan": 1
+      },
+      "horizontal": {
+        "rowSpan": 1,
+        "colSpan": 2
+      }
+    },
+    "chicken": {
+      "resource": "texture/game_chiken/spriteFrame",
+      "vertical": {
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      "horizontal": {
+        "rowSpan": 1,
+        "colSpan": 1
+      }
+    },
+    "piglet": {
+      "resource": "texture/game_pig2/spriteFrame",
+      "vertical": {
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      "horizontal": {
+        "rowSpan": 1,
+        "colSpan": 1
       }
     }
   }

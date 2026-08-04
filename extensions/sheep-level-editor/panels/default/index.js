@@ -8,15 +8,30 @@ const LEVEL_CONFIG_ASSET_URL = 'db://assets/subpackages/game/config/sheep_levels
 const LEVEL_CONFIG_FILE_PATH = path.join('assets', 'subpackages', 'game', 'config', 'sheep_levels.json');
 const PREVIEW_CELL_SIZE = 40;
 const DEFAULT_EDITOR_TYPE_CONFIGS = {
-    normal: {
-        resource: 'texture/sheep/spriteFrame',
+    sheep: {
+        resource: 'texture/game_sheep/spriteFrame',
         vertical: { rowSpan: 2, colSpan: 1 },
         horizontal: { rowSpan: 1, colSpan: 2 },
     },
-    black: {
-        resource: 'texture/sheepblack/spriteFrame',
+    cow: {
+        resource: 'texture/game_cow/spriteFrame',
         vertical: { rowSpan: 2, colSpan: 1 },
         horizontal: { rowSpan: 1, colSpan: 2 },
+    },
+    pig: {
+        resource: 'texture/game_pig/spriteFrame',
+        vertical: { rowSpan: 2, colSpan: 1 },
+        horizontal: { rowSpan: 1, colSpan: 2 },
+    },
+    chicken: {
+        resource: 'texture/game_chiken/spriteFrame',
+        vertical: { rowSpan: 1, colSpan: 1 },
+        horizontal: { rowSpan: 1, colSpan: 1 },
+    },
+    piglet: {
+        resource: 'texture/game_pig2/spriteFrame',
+        vertical: { rowSpan: 1, colSpan: 1 },
+        horizontal: { rowSpan: 1, colSpan: 1 },
     },
 };
 
@@ -76,18 +91,7 @@ module.exports = Editor.Panel.define({
             const filePath = getLevelConfigPath();
             if (!fs.existsSync(filePath)) {
                 this.levelFile = {
-                    sheepTypeConfigs: {
-                        normal: {
-                            resource: 'texture/sheep/spriteFrame',
-                            vertical: { rowSpan: 2, colSpan: 1 },
-                            horizontal: { rowSpan: 1, colSpan: 2 },
-                        },
-                        black: {
-                            resource: 'texture/sheepblack/spriteFrame',
-                            vertical: { rowSpan: 2, colSpan: 1 },
-                            horizontal: { rowSpan: 1, colSpan: 2 },
-                        },
-                    },
+                    sheepTypeConfigs: { ...DEFAULT_EDITOR_TYPE_CONFIGS },
                     levels: [],
                 };
                 this.setStatus(`未找到关卡文件，将在保存时创建：${LEVEL_CONFIG_FILE_PATH}`);
@@ -208,7 +212,7 @@ module.exports = Editor.Panel.define({
         parseTypeCounts() {
             const value = String(this.$.typeCounts.value || '').trim();
             if (!value) {
-                throw new Error('请填写小羊种类及数量');
+                throw new Error('请填写动物种类及数量');
             }
 
             const typeCounts = value.split(',').map((segment) => {
@@ -225,7 +229,7 @@ module.exports = Editor.Panel.define({
             }).filter((item) => item.count > 0);
 
             if (typeCounts.length <= 0) {
-                throw new Error('小羊总数量必须大于 0');
+                throw new Error('动物总数量必须大于 0');
             }
 
             return typeCounts;
@@ -333,7 +337,7 @@ module.exports = Editor.Panel.define({
             if (existingIndex >= 0) {
                 sheepList.splice(existingIndex, 1);
                 this.renderLevel(levelData);
-                this.setStatus(`已移除 (${row}, ${col}) 处小羊，剩余 ${sheepList.length}`);
+                this.setStatus(`已移除 (${row}, ${col}) 处动物，剩余 ${sheepList.length}`);
                 return;
             }
 
@@ -352,7 +356,7 @@ module.exports = Editor.Panel.define({
                 );
             });
             if (overlap) {
-                this.setStatus(`放不下：与已有小羊重叠 (${row}, ${col})`);
+                this.setStatus(`放不下：与已有动物重叠 (${row}, ${col})`);
                 return;
             }
 
@@ -366,7 +370,7 @@ module.exports = Editor.Panel.define({
             const levelData = this.ensureEditableLevel();
             levelData.sheep = [];
             this.renderLevel(levelData);
-            this.setStatus('已清空小羊，可手动放置');
+            this.setStatus('已清空动物，可手动放置');
         },
 
         cellInRect(row, col, rectRow, rectCol, rowSpan, colSpan) {
@@ -583,7 +587,7 @@ module.exports = Editor.Panel.define({
 
         getSheepImageUrl(type, typeConfigs) {
             const config = typeConfigs[type || generator.DEFAULT_TYPE] || typeConfigs[generator.DEFAULT_TYPE];
-            const resource = config && config.resource ? config.resource : DEFAULT_EDITOR_TYPE_CONFIGS.normal.resource;
+            const resource = config && config.resource ? config.resource : DEFAULT_EDITOR_TYPE_CONFIGS.sheep.resource;
             const assetPath = this.resolveResourceFilePath(resource);
             return this.toFileUrl(assetPath);
         },

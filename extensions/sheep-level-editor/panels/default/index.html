@@ -1,12 +1,12 @@
 <div class="panel">
-    <h2>小羊关卡工具</h2>
+    <h2>动物关卡工具</h2>
     <div class="row">
         <label>关卡</label>
         <ui-input id="level" value="1"></ui-input>
     </div>
     <div class="row">
-        <label>小羊种类及数量</label>
-        <ui-input id="type-counts" value="normal:8,black:4"></ui-input>
+        <label>动物种类及数量</label>
+        <ui-input id="type-counts" value="sheep:8,cow:4,pig:4,chicken:4,piglet:4"></ui-input>
     </div>
     <div class="row">
         <label>要求有解</label>
@@ -20,7 +20,7 @@
         <label>围挡消除数</label>
         <ui-input id="fence-eliminate" value=""></ui-input>
     </div>
-    <div class="hint">格式：normal:8 或 normal:8,black:4。围挡数量为 0 时不生成围挡。围挡消除数留空则取非围挡小羊数的一半（自动）。</div>
+    <div class="hint">格式：sheep:8,cow:4,pig:4,chicken:4,piglet:4。围挡数量为 0 时不生成围挡。围挡消除数留空则取围挡外动物数的一半（自动）。</div>
     <div class="row">
         <label>编辑模式</label>
         <ui-checkbox id="edit-mode"></ui-checkbox>
@@ -38,7 +38,7 @@
             <option value="Left">左</option>
         </select>
     </div>
-    <div class="hint">编辑模式下：点击空格放置小羊（以点击格为左上角），点击已有小羊则移除。</div>
+    <div class="hint">编辑模式下：点击空格放置动物（以点击格为左上角），点击已有动物则移除。</div>
     <div class="row">
         <label>围挡编辑</label>
         <div class="fence-toolbar">
