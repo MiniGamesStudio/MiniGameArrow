@@ -154,7 +154,7 @@ export class LoginPanel extends UIBase {
         this.m_EnterButton = this.CreateUIButton(
             this.node,
             'EnterGame',
-            '进入游戏',
+            '',
             'buttons/Button01_145_Orange',
             () => {
                 if (this.m_BundlesLoaded) {

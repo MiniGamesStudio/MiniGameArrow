@@ -4183,7 +4183,7 @@
     "url": "db://assets/subpackages/game/ui/TransitionPanel.prefab",
     "value": {
       "depends": [
-        "f9a454c9-13b1-424b-8a96-402bf62d6ad6@f9941",
+        "0b025332-a07a-4aa1-87da-7b3802e85833@f9941",
         "2075fbad-9c2c-488e-a39a-bbaaf578cca7@f9941"
       ],
       "dependScripts": [

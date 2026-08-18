@@ -832,7 +832,7 @@
       "time": 1782110618406.1548
     },
     "scripts\\Game\\CommonGame\\ui\\RankPanel.ts": {
-      "time": 1785824349186.7417,
+      "time": 1787034070893.9653,
       "uuid": "b45da2d2-3f4c-4b69-a2bb-ea92ed3a7852"
     },
     "scripts\\engine\\PlatformManager.ts": {
@@ -850,7 +850,7 @@
       "time": 1782204801434.8628
     },
     "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts": {
-      "time": 1785657146691.3884,
+      "time": 1787034097458.708,
       "uuid": "11111111-1111-4111-8111-111111111111"
     },
     "scripts\\Game\\CommonGame\\ui\\PausePanel.ts.meta": {
@@ -1022,7 +1022,7 @@
       "uuid": "2c8b954c-0045-4bcb-8ec1-847ad387b338"
     },
     "subpackages\\game\\ui\\TransitionPanel.prefab": {
-      "time": 1785747325301.8762,
+      "time": 1787034333010.0527,
       "uuid": "83902b23-c019-4bc5-8a63-c1703769b66e"
     },
     "subpackages\\rank\\ranking\\Menu_TopBtn.png": {
@@ -1311,7 +1311,7 @@
       "time": 1785760609081.948
     },
     "subpackages\\game\\texture\\game_chiken.png": {
-      "time": 1785823780160.4468,
+      "time": 1787033374281.0886,
       "uuid": "763aeaf5-62e5-495e-b79d-55cc461b62f0"
     },
     "subpackages\\game\\texture\\game_cow.png": {
@@ -1340,7 +1340,7 @@
       "time": 1787031520915.2488
     },
     "subpackages\\game\\texture\\game_chiken.png.meta": {
-      "time": 1785824054075.2158
+      "time": 1787033695208.733
     },
     "subpackages\\game\\texture\\game_sheep.png.meta": {
       "time": 1787031520914.2478

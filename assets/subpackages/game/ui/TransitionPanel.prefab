@@ -221,13 +221,13 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 77,
+      "r": 255,
       "g": 255,
-      "b": 141,
+      "b": 255,
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "f9a454c9-13b1-424b-8a96-402bf62d6ad6@f9941",
+      "__uuid__": "0b025332-a07a-4aa1-87da-7b3802e85833@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -325,7 +325,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": -150,
       "z": 0
     },
     "_lrot": {
@@ -337,8 +337,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
+      "x": 0.5,
+      "y": 0.5,
       "z": 1
     },
     "_mobility": 0,
@@ -440,7 +440,7 @@
     "_target": null,
     "_left": 0,
     "_right": 0,
-    "_top": 417,
+    "_top": 692,
     "_bottom": 0,
     "_horizontalCenter": 0,
     "_verticalCenter": 0,
