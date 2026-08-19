@@ -5598,5 +5598,24 @@
       ]
     },
     "versionCode": 1
+  },
+  "9e3d8d57-d75d-489b-b7e2-c183c7ef5e83": {
+    "url": "db://assets/subpackages/sound",
+    "value": {},
+    "versionCode": 1
+  },
+  "9748988b-d0d8-4fb6-8263-8b23863677c8": {
+    "url": "db://assets/subpackages/sound/btnclick.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "e0cc9ba2-03bd-4674-b8af-5ad0e96ae942": {
+    "url": "db://assets/subpackages/sound/select.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
   }
 }

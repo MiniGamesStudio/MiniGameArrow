@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 6360.857,
+      "mTimestamp": 10690.2751,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -514,7 +514,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 428973.7302,
+      "mTimestamp": 7199199.6837,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2827,7 +2827,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1787033670369,
+      "mTimestamp": 1787109168647,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -21440,7 +21440,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/ui/GamePanel.ts": {
       "mTimestamp": {
-        "mtime": 1785839299651.375,
+        "mtime": 1787109531604.7244,
         "uuid": "0f6f935e-dd32-4f8f-870f-858c31678dec"
       },
       "chunkId": "ef86ebe3233e182dfa62af99ec41911a1234b1da",
@@ -21469,85 +21469,99 @@
           }
         },
         {
-          "value": "../../../engine/PlatformManager",
+          "value": "../../../engine/AudioManager",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 2,
-              "column": 48
+              "column": 29
             },
             "end": {
               "line": 2,
+              "column": 59
+            }
+          }
+        },
+        {
+          "value": "../../../engine/PlatformManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 48
+            },
+            "end": {
+              "line": 3,
               "column": 81
             }
           }
         },
         {
           "value": "../../../engine/ResManager",
-          "resolved": "__unresolved_2",
+          "resolved": "__unresolved_3",
           "loc": {
             "start": {
-              "line": 3,
+              "line": 4,
               "column": 27
             },
             "end": {
-              "line": 3,
+              "line": 4,
               "column": 55
             }
           }
         },
         {
           "value": "../../../engine/ui/UIBase",
-          "resolved": "__unresolved_3",
+          "resolved": "__unresolved_4",
           "loc": {
             "start": {
-              "line": 4,
+              "line": 5,
               "column": 23
             },
             "end": {
-              "line": 4,
+              "line": 5,
               "column": 50
             }
           }
         },
         {
           "value": "../../../engine/ui/UIManager",
-          "resolved": "__unresolved_4",
+          "resolved": "__unresolved_5",
           "loc": {
             "start": {
-              "line": 5,
+              "line": 6,
               "column": 26
             },
             "end": {
-              "line": 5,
+              "line": 6,
               "column": 56
             }
           }
         },
         {
           "value": "../CommonGameProgress",
-          "resolved": "__unresolved_5",
+          "resolved": "__unresolved_6",
           "loc": {
             "start": {
-              "line": 6,
+              "line": 7,
               "column": 35
             },
             "end": {
-              "line": 6,
+              "line": 7,
               "column": 58
             }
           }
         },
         {
           "value": "../CommonUIConfig",
-          "resolved": "__unresolved_6",
+          "resolved": "__unresolved_7",
           "loc": {
             "start": {
-              "line": 7,
+              "line": 8,
               "column": 45
             },
             "end": {
-              "line": 7,
+              "line": 8,
               "column": 64
             }
           }
@@ -21580,6 +21594,13 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/engine/AudioManager.ts"
           },
           "messages": []
         },
@@ -22122,7 +22143,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/engine/AudioManager.ts": {
       "mTimestamp": {
-        "mtime": 1781946493800.2888,
+        "mtime": 1787109522774.1729,
         "uuid": "65d5d2c0-a506-4f38-a37c-2aa3fe8e9c81"
       },
       "chunkId": "3411e02c1e6f5120696d4e99d66fe2265bccd345",
@@ -22138,11 +22159,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 56
+              "column": 84
             },
             "end": {
               "line": 1,
-              "column": 60
+              "column": 88
             }
           }
         }
@@ -22866,7 +22887,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/engine/ui/UIBase.ts": {
       "mTimestamp": {
-        "mtime": 1782357305943.31,
+        "mtime": 1787109526838.1584,
         "uuid": "6678fc54-bd49-4733-92a7-08e548ca8181"
       },
       "chunkId": "8de2cbec7f0d996344ff0a001398e74a9db65353",
@@ -22895,15 +22916,29 @@
           }
         },
         {
-          "value": "./UIManager",
+          "value": "../AudioManager",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 2,
-              "column": 26
+              "column": 29
             },
             "end": {
               "line": 2,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./UIManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 26
+            },
+            "end": {
+              "line": 3,
               "column": 39
             }
           }
@@ -22936,6 +22971,13 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/engine/AudioManager.ts"
           },
           "messages": []
         },
@@ -23453,7 +23495,7 @@
     },
     "file:///D:/Works/Cocos/WxMiniGames/MiniGameArrow/assets/scripts/Game/CommonGame/ui/RankPanel.ts": {
       "mTimestamp": {
-        "mtime": 1787034070893.9653,
+        "mtime": 1787109084336.6985,
         "uuid": "b45da2d2-3f4c-4b69-a2bb-ea92ed3a7852"
       },
       "chunkId": "6628c7b1e1921055677524acd90ec7f35c5d6612",

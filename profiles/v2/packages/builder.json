@@ -27,8 +27,8 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2026-8-18 14:25:59 build success in 10 s!",
-        "detailMessage": "// ---- build task wechatgame：onAfterBuild ----\r",
+        "message": "2026-8-19 13:18:31 build success in 1 min 26 s!",
+        "detailMessage": "Asset DB is resume!\r",
         "options": {
           "name": "SheepRunning",
           "server": "",
@@ -89,7 +89,7 @@
           "__version__": "1.3.9",
           "logDest": "project://temp/builder/log/wechatgame2026-6-23 13-14.log"
         },
-        "time": "2026-8-18 14:25:49",
+        "time": "2026-8-19 13:17:05",
         "dirty": false
       },
       "1782460742675": {

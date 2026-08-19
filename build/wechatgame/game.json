@@ -22,6 +22,10 @@
             "root": "subpackages/rank/"
         },
         {
+            "name": "sound",
+            "root": "subpackages/sound/"
+        },
+        {
             "name": "main",
             "root": "subpackages/main/"
         },

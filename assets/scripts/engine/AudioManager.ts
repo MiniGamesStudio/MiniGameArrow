@@ -1,4 +1,6 @@
-import { AudioClip, AudioSource, Node, resources } from 'cc';
+import { AssetManager, AudioClip, AudioSource, Node, assetManager, resources } from 'cc';
+
+const DEFAULT_AUDIO_BUNDLE_NAME = 'resources';
 
 /**
  * 音频管理器 — 管理背景音乐和音效的播放
@@ -46,14 +48,14 @@ export class AudioManager {
 
     // ==================== BGM ====================
 
-    playBGM(path: string): void {
+    playBGM(path: string, bundleName: string = DEFAULT_AUDIO_BUNDLE_NAME): void {
         this.loadClip(path, (clip) => {
             if (!this._bgmSource) return;
             this._bgmSource.stop();
             this._bgmSource.clip = clip;
             this._bgmSource.volume = this._bgmMuted ? 0 : this._bgmVolume;
             this._bgmSource.play();
-        });
+        }, bundleName);
     }
 
     stopBGM(): void {
@@ -88,12 +90,12 @@ export class AudioManager {
 
     // ==================== SFX ====================
 
-    playSFX(path: string): void {
+    playSFX(path: string, bundleName: string = DEFAULT_AUDIO_BUNDLE_NAME): void {
         if (this._sfxMuted) return;
         this.loadClip(path, (clip) => {
             if (!this._sfxSource) return;
             this._sfxSource.playOneShot(clip, this._sfxVolume);
-        });
+        }, bundleName);
     }
 
     setSFXVolume(vol: number): void {
@@ -108,21 +110,60 @@ export class AudioManager {
 
     // ==================== 内部 ====================
 
-    private loadClip(path: string, callback: (clip: AudioClip) => void): void {
-        const cached = this._clipCache.get(path);
+    private loadClip(path: string, callback: (clip: AudioClip) => void, bundleName: string = DEFAULT_AUDIO_BUNDLE_NAME): void {
+        const cacheKey = this.getClipCacheKey(bundleName, path);
+        const cached = this._clipCache.get(cacheKey);
         if (cached) {
             callback(cached);
             return;
         }
 
-        resources.load(path, AudioClip, (err, clip) => {
-            if (err) {
-                console.warn(`AudioManager: 加载音频失败 [${path}]`, err);
+        if (!bundleName || bundleName === DEFAULT_AUDIO_BUNDLE_NAME) {
+            resources.load(path, AudioClip, (err, clip) => {
+                this.onClipLoaded(cacheKey, path, err, clip, callback);
+            });
+            return;
+        }
+
+        this.loadClipFromBundle(bundleName, path, (err, clip) => {
+            this.onClipLoaded(cacheKey, `${bundleName}/${path}`, err, clip, callback);
+        });
+    }
+
+    private loadClipFromBundle(bundleName: string, path: string, callback: (err: Error | null, clip: AudioClip | null) => void): void {
+        const cachedBundle = assetManager.getBundle(bundleName);
+        if (cachedBundle) {
+            this.loadClipByBundle(cachedBundle, path, callback);
+            return;
+        }
+
+        assetManager.loadBundle(bundleName, (bundleErr, bundle) => {
+            if (bundleErr || !bundle) {
+                callback(bundleErr || new Error(`Bundle 不存在: ${bundleName}`), null);
                 return;
             }
-            this._clipCache.set(path, clip);
-            callback(clip);
+            this.loadClipByBundle(bundle, path, callback);
         });
+    }
+
+    private loadClipByBundle(bundle: AssetManager.Bundle, path: string, callback: (err: Error | null, clip: AudioClip | null) => void): void {
+        bundle.load(path, AudioClip, (err, clip) => {
+            callback(err, clip || null);
+        });
+    }
+
+    private onClipLoaded(cacheKey: string, displayPath: string, err: Error | null, clip: AudioClip | null, callback: (clip: AudioClip) => void): void {
+            if (err) {
+                console.warn(`AudioManager: 加载音频失败 [${displayPath}]`, err);
+                return;
+            }
+            if (!clip) return;
+            this._clipCache.set(cacheKey, clip);
+            callback(clip);
+    }
+
+    private getClipCacheKey(bundleName: string, path: string): string {
+        return `${bundleName || DEFAULT_AUDIO_BUNDLE_NAME}:${path}`;
     }
 
     clearCache(): void {

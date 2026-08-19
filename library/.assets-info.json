@@ -221,7 +221,7 @@
       "uuid": "7df16e00-9eaa-45d0-9e40-b833854a2188"
     },
     "scripts\\engine\\AudioManager.ts": {
-      "time": 1781946493800.2888,
+      "time": 1787109522774.1729,
       "uuid": "65d5d2c0-a506-4f38-a37c-2aa3fe8e9c81"
     },
     "scripts\\engine\\ConfigManager.ts": {
@@ -285,7 +285,7 @@
       "uuid": "2bfe76bf-68a1-4227-a1bd-b584166c5e39"
     },
     "scripts\\engine\\ui\\UIBase.ts": {
-      "time": 1782357305943.31,
+      "time": 1787109526838.1584,
       "uuid": "6678fc54-bd49-4733-92a7-08e548ca8181"
     },
     "scripts\\engine\\ui\\UIData.ts": {
@@ -819,7 +819,7 @@
       "time": 1781946493798.2878
     },
     "scripts\\Game\\CommonGame\\ui\\GamePanel.ts": {
-      "time": 1785839299651.375,
+      "time": 1787109531604.7244,
       "uuid": "0f6f935e-dd32-4f8f-870f-858c31678dec"
     },
     "scripts\\Game\\CommonGame\\level.meta": {
@@ -832,7 +832,7 @@
       "time": 1782110618406.1548
     },
     "scripts\\Game\\CommonGame\\ui\\RankPanel.ts": {
-      "time": 1787034070893.9653,
+      "time": 1787109084336.6985,
       "uuid": "b45da2d2-3f4c-4b69-a2bb-ea92ed3a7852"
     },
     "scripts\\engine\\PlatformManager.ts": {
@@ -923,7 +923,7 @@
       "time": 1782353631778.507
     },
     "subpackages": {
-      "time": 1782353621648.2646,
+      "time": 1787109179000.5183,
       "uuid": "8df71d4f-5f7d-4e61-9b2a-2c8b33b1a101"
     },
     "subpackages\\game": {
@@ -1344,6 +1344,27 @@
     },
     "subpackages\\game\\texture\\game_sheep.png.meta": {
       "time": 1787031520914.2478
+    },
+    "subpackages\\sound": {
+      "time": 1787116593528.8901,
+      "uuid": "9e3d8d57-d75d-489b-b7e2-c183c7ef5e83"
+    },
+    "subpackages\\sound.meta": {
+      "time": 1787109385447.162
+    },
+    "subpackages\\sound\\btnclick.wav": {
+      "time": 1561035970000,
+      "uuid": "9748988b-d0d8-4fb6-8263-8b23863677c8"
+    },
+    "subpackages\\sound\\select.wav": {
+      "time": 1561036003000,
+      "uuid": "e0cc9ba2-03bd-4674-b8af-5ad0e96ae942"
+    },
+    "subpackages\\sound\\select.wav.meta": {
+      "time": 1787116593528.8901
+    },
+    "subpackages\\sound\\btnclick.wav.meta": {
+      "time": 1787109184246.2207
     }
   },
   "missing": {}

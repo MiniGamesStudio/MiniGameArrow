@@ -1,6 +1,10 @@
 import { _decorator, Button, Color, Component, instantiate, Label, Node, Prefab, resources, Sprite, SpriteFrame, UITransform } from 'cc';
+import { AudioManager } from '../AudioManager';
 import { UIManager } from './UIManager';
 const { ccclass } = _decorator;
+
+const BUTTON_CLICK_SOUND_BUNDLE = 'sound';
+const BUTTON_CLICK_SOUND_PATH = 'btnclick';
 
 export type UIButtonClickHandler = () => void;
 
@@ -80,10 +84,15 @@ export abstract class UIBase extends Component {
     }
 
     /** 安全绑定按钮事件（自动移除旧监听，防止重复绑定） */
-    SetBtnEvent(btn: Button, callback: () => void, eventName: string = "click"): void {
+    SetBtnEvent(btn: Button, callback: () => void, eventName: string = "click", playClickSound: boolean = true): void {
         if (btn && btn.node) {
             btn.node.off(eventName);
-            btn.node.on(eventName, callback, this);
+            btn.node.on(eventName, () => {
+                if (playClickSound) {
+                    AudioManager.getInstance().playSFX(BUTTON_CLICK_SOUND_PATH, BUTTON_CLICK_SOUND_BUNDLE);
+                }
+                callback();
+            }, this);
         }
     }
 

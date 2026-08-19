@@ -1,0 +1,1 @@
+{"importBase":"import","nativeBase":"native","name":"sound","deps":[],"uuids":["97SJiL0NhPtoJjiyOGNnfI","e0zJuiA71GdLivWtDpaulC"],"paths":{"0":["btnclick",0,1],"1":["select",0,1]},"scenes":{},"packs":{},"versions":{"import":[],"native":[]},"redirect":[],"debug":false,"extensionMap":{},"hasPreloadScript":true,"dependencyRelationships":{},"types":["cc.AudioClip"]}

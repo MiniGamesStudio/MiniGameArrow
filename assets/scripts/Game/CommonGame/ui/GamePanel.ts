@@ -1,4 +1,5 @@
 import { _decorator, Button, Color, Graphics, HorizontalTextAlignment, JsonAsset, Label, Node, RichText, Sprite, SpriteFrame, tween, UITransform, Vec3, VerticalTextAlignment, view } from 'cc';
+import { AudioManager } from '../../../engine/AudioManager';
 import { PlatformManager, PlatformResult } from '../../../engine/PlatformManager';
 import { ResManager } from '../../../engine/ResManager';
 import { UIBase } from '../../../engine/ui/UIBase';
@@ -26,6 +27,8 @@ const DESIGN_ROOT_HEIGHT = 1334;
 const MOVE_DURATION_PER_CELL = 0.08;
 const MIN_MOVE_DURATION = 0.12;
 const RUN_OUT_EXTRA_CELL = 2;
+const SELECT_SOUND_BUNDLE = 'sound';
+const SELECT_SOUND_PATH = 'select';
 
 enum SheepDirection {
     Up = 0,
@@ -690,7 +693,7 @@ export class GamePanel extends UIBase {
         node.setScale(this.m_SheepScale, this.m_SheepScale, 1);
 
         const button = node.addComponent(Button);
-        this.SetBtnEvent(button, () => this.onSheepClick(sheep));
+        this.SetBtnEvent(button, () => this.onSheepClick(sheep), "click", false);
 
         const footprint = this.getSheepFootprint(direction, type);
 
@@ -721,6 +724,8 @@ export class GamePanel extends UIBase {
     private onSheepClick(sheep: SheepData): void {
         if (!sheep || sheep.removed || sheep.moving || this.m_LevelEnded || this.m_IsPaused || this.m_IsTransitioning) return;
         if (this.isSheepFenced(sheep)) return;
+
+        AudioManager.getInstance().playSFX(SELECT_SOUND_PATH, SELECT_SOUND_BUNDLE);
 
         if (this.m_SkillMode === 'removeTwo') {
             this.removeSheepBySkill(sheep);
