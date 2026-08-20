@@ -116,7 +116,8 @@
         "a6660959-86b3-45ab-8657-157eabca6c48@f9941",
         "cab4e68c-1c1e-48d5-99f8-de9cb5b84a59",
         "44f25ea4-0bae-4c44-b956-c589a7fe0cc7@f9941",
-        "dc0e3e75-7237-44c7-ab16-f748c67753bb@f9941"
+        "dc0e3e75-7237-44c7-ab16-f748c67753bb@f9941",
+        "30210765-ce32-4ea5-af9a-2e919df064f5"
       ],
       "dependScripts": [
         "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
@@ -3926,7 +3927,8 @@
         "a6660959-86b3-45ab-8657-157eabca6c48@f9941",
         "cab4e68c-1c1e-48d5-99f8-de9cb5b84a59",
         "44f25ea4-0bae-4c44-b956-c589a7fe0cc7@f9941",
-        "dc0e3e75-7237-44c7-ab16-f748c67753bb@f9941"
+        "dc0e3e75-7237-44c7-ab16-f748c67753bb@f9941",
+        "30210765-ce32-4ea5-af9a-2e919df064f5"
       ],
       "dependScripts": [
         "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
@@ -5615,6 +5617,39 @@
     "url": "db://assets/subpackages/sound/select.wav",
     "value": {
       "depends": []
+    },
+    "versionCode": 1
+  },
+  "30210765-ce32-4ea5-af9a-2e919df064f5": {
+    "url": "db://assets/resources/ui/HealthyAdvice.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "62f80ade-b1e1-4d9c-a8f4-c603826a1a9e": {
+    "url": "db://assets/resources/background/sheeptitle.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "62f80ade-b1e1-4d9c-a8f4-c603826a1a9e@6c48a": {
+    "url": "db://assets/resources/background/sheeptitle.png@6c48a",
+    "value": {
+      "depends": [
+        "62f80ade-b1e1-4d9c-a8f4-c603826a1a9e"
+      ]
+    },
+    "versionCode": 1
+  },
+  "62f80ade-b1e1-4d9c-a8f4-c603826a1a9e@f9941": {
+    "url": "db://assets/resources/background/sheeptitle.png@f9941",
+    "value": {
+      "depends": [
+        "62f80ade-b1e1-4d9c-a8f4-c603826a1a9e@6c48a"
+      ]
     },
     "versionCode": 1
   }

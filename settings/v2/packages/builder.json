@@ -13,9 +13,10 @@
     },
     "logo": {
       "type": "custom",
-      "image": "project://settings/sheep.png"
+      "image": "project://settings/sheeptitle.png"
     },
-    "totalTime": 500
+    "totalTime": 500,
+    "displayRatio": 2.6
   },
   "bundleConfig": {
     "custom": {

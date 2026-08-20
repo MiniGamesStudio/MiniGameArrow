@@ -55,14 +55,14 @@
       "time": 1781946493793.289
     },
     "resources\\ui": {
-      "time": 1785388180216.5652,
+      "time": 1787203274170.1704,
       "uuid": "6c60be67-475a-43dc-a592-251e41add936"
     },
     "resources\\ui\\LoadingPanel.prefab.meta": {
       "time": 1781946493794.2876
     },
     "resources\\ui\\LoadingPanel.prefab": {
-      "time": 1785388180200.052,
+      "time": 1787203279283.0952,
       "uuid": "55f8e988-f02b-41a3-8681-5a467e621d1b"
     },
     "scripts\\UIScripts\\LoadingPanel.ts.meta": {
@@ -132,7 +132,7 @@
       "time": 1781946493780.2888
     },
     "resources\\background": {
-      "time": 1785388974333.2124,
+      "time": 1787204654811.525,
       "uuid": "e0980062-77e2-404d-a33b-b2572af00af1"
     },
     "resources\\buttons\\PictoIcon_Close.Png.meta": {
@@ -843,7 +843,7 @@
       "time": 1782111127963.8745
     },
     "resources\\ui\\LoginPanel.prefab": {
-      "time": 1785388180202.052,
+      "time": 1787203294656.0215,
       "uuid": "b6b4c5ef-8ac7-4533-a50a-dadbc41c189e"
     },
     "scripts\\Game\\CommonGame\\ui\\LoginPanel.ts.meta": {
@@ -1365,6 +1365,20 @@
     },
     "subpackages\\sound\\btnclick.wav.meta": {
       "time": 1787109184246.2207
+    },
+    "resources\\ui\\HealthyAdvice.prefab.meta": {
+      "time": 1787203274183.1707
+    },
+    "resources\\ui\\HealthyAdvice.prefab": {
+      "time": 1787203274178.17,
+      "uuid": "30210765-ce32-4ea5-af9a-2e919df064f5"
+    },
+    "resources\\background\\sheeptitle.png.meta": {
+      "time": 1787204654852.5256
+    },
+    "resources\\background\\sheeptitle.png": {
+      "time": 1787204606939.5642,
+      "uuid": "62f80ade-b1e1-4d9c-a8f4-c603826a1a9e"
     }
   },
   "missing": {}

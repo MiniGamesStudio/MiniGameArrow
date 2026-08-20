@@ -123,7 +123,9 @@
             "subpackages\\rank\\ranking\\Menu_TopBtn.png",
             "subpackages\\rank\\ranking\\RankingBackground.png",
             "subpackages\\rank\\ui\\Mask.prefab",
-            "subpackages\\rank\\ui\\RankPanel.prefab"
+            "subpackages\\rank\\ui\\RankPanel.prefab",
+            "resources\\ui\\HealthyAdvice.prefab",
+            "resources\\background\\sheeptitle.png"
         ]
     }
 }
